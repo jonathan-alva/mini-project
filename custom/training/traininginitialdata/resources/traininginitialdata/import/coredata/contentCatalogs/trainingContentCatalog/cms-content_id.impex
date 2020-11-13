@@ -9,7 +9,7 @@ $contentCatalog = trainingContentCatalog
 $contentCV = catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]), CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
 
 # Language
-$lang = en
+$lang = id
 
 # Content Pages
 UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]           ; title[lang = $lang]
@@ -32,6 +32,7 @@ UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]           ; ti
                   ;                          ; storefinderPage              ; "StoreFinder"
                   ;                          ; termsAndConditions           ; "Terms and Conditions"
                   ;                          ; updatePassword               ; "Update Forgotten Password"
+                  ;                          ; product-recommendation       ; "Product Recommendation"
 
 # Category Pages
 UPDATE CategoryPage; $contentCV[unique = true]; uid[unique = true]; title[lang = $lang]
