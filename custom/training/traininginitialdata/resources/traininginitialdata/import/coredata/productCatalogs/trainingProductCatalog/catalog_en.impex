@@ -6,7 +6,11 @@
 #
 
 # Language
-$lang=en
+$lang = en
 
 # Create Catalog
-UPDATE Catalog;id[unique=true];name[lang=$lang]
+UPDATE Catalog; id[unique = true]      ; name[lang = $lang]
+              ; trainingProductCatalog ; "Training Product Catalog"
+
+UPDATE ClassificationSystem; id[unique = true]             ; name[lang = $lang]
+                           ; trainingClassificationCatalog ; "Training Classification Catalog"

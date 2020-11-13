@@ -2,11 +2,12 @@
 # Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
 # -----------------------------------------------------------------------
 #
-# Import the BaseStore
+# Import the CMS Site configuration for the store
 #
 
 # Language
-$lang=en
+$lang = id
 
-# Create Base Store
-UPDATE BaseStore;uid[unique=true];name[lang=$lang]
+# Create CMS Site
+UPDATE CMSSite; uid[unique = true]; name[lang = $lang]; locale[lang = $lang]
+              ; training          ; training          ; "Training Site"
