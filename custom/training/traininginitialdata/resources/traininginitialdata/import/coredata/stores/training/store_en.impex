@@ -2,11 +2,12 @@
 # Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
 # -----------------------------------------------------------------------
 #
-# Import the Content Catalog
+# Import the BaseStore
 #
 
 # Language
-$lang=en
+$lang = en
 
-# Create Content Catalog
-UPDATE ContentCatalog;id[unique=true];name[lang=$lang]
+# Create Base Store
+UPDATE BaseStore; uid[unique = true]; name[lang = $lang]
+                ; training          ; "Training Store"
