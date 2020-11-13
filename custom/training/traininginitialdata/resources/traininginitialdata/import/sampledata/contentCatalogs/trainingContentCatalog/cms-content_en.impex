@@ -5,14 +5,27 @@
 # English Localisation
 
 # Macros / Replacement Parameter definitions
-$contentCatalog=__CONTENT_CATALOG_NAME__
+$contentCatalog = trainingContentCatalog
+$contentCatalogName = Training Content Catalog
+$productCatalog = trainingProductCatalog
+$productCatalogName = Training Product Catalog
 
-$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
-$picture=media(code, $contentCV);
-$siteResource=jar:org.training.initialdata.setup.InitialDataSystemSetup&/traininginitialdata/import/contentCatalogs/$contentCatalog
+$contentCV = catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]), CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
+$productCV = catalogVersion(catalog(id[default=$productCatalog]), version[default='Staged'])[unique=true, default=$productCatalog:Staged]
+
+$picture = media(code, $contentCV);
+$medias = medias(code, $contentCV);
+$mediaContainer = media(qualifier, $contentCV)[lang=$lang];
+$siteResource = jar:org.training.initialdata.setup.InitialDataSystemSetup&/traininginitialdata/import/sampledata/contentCatalogs/$contentCatalog
+$productResource = jar:org.training.initialdata.setup.InitialDataSystemSetup&/traininginitialdata/import/sampledata/productCatalogs/$productCatalog
 
 # Language
 $lang=en
+
+$backGroundImage = backGroundImage(code, $contentCV)
+$hoverOverImage = hoverOverImage(code, $contentCV)
+$Image = image(code, $contentCV)
+
 
 # Site Logo Component
 UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
