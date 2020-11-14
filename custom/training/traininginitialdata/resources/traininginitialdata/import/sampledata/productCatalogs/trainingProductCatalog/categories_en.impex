@@ -14,3 +14,6 @@ $lang = en
 
 # Create Categories
 UPDATE Category; code[unique = true]; $catalogVersion; name[lang = $lang]
+               ; FASHION            ;                ; Fashion
+               ; SHIRT              ;                ; Shirt
+               ; TROUSER            ;                ; Trouser

@@ -810,3 +810,40 @@ INSERT_UPDATE CategoryPage; $contentCV[unique = true]; uid[unique = true]; name 
                           ;                          ; productList       ; Product List          ; ProductListPageTemplate        ; true       ;
                           ;                          ; productGrid       ; Product Grid          ; ProductGridPageTemplate        ; false      ;
                           ;                          ; category          ; Default Category Page ; CategoryPageTemplate           ; false      ;
+
+
+### Product Recommendation Page Start
+INSERT_UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]                ; name                                 ; frontendTemplateName          ; restrictedPageTypes(code); active[default = true]
+                          ;                          ; ProductRecommendationPageTemplate ; Product Recommendation Page Template ; product/productRecommendation ; ContentPage
+
+UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]                ; velocityTemplate[translator = de.hybris.platform.commerceservices.impex.impl.FileLoaderValueTranslator]
+                   ;                          ; ProductRecommendationPageTemplate ; $jarResourceCms/structure-view/structure_productRecommendationPageTemplate.vm
+
+INSERT_UPDATE ContentSlotName; name[unique = true]    ; template(uid, $contentCV)[unique = true][default = 'ProductRecommendationPageTemplate']; validComponentTypes(code)       ; compTypeGroup(code)
+                             ; SiteLogo               ;                                                                                        ;                                 ; logo
+                             ; HeaderLinks            ;                                                                                        ;                                 ; headerlinks
+                             ; SearchBox              ;                                                                                        ;                                 ; searchbox
+                             ; MiniCart               ;                                                                                        ;                                 ; minicart
+                             ; NavigationBar          ;                                                                                        ;                                 ; navigation
+                             ; TopBanner              ;                                                                                        ; SimpleResponsiveBannerComponent ;
+                             ; Footer                 ;                                                                                        ;                                 ; footer
+                             ; TopHeaderSlot          ;                                                                                        ;                                 ; wide
+                             ; BottomHeaderSlot       ;                                                                                        ;                                 ; wide
+                             ; PlaceholderContentSlot ;                                                                                        ;                                 ;
+
+# Bind Content Slots to Page Templates
+INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = true]                               ; position[unique = true]; pageTemplate(uid, $contentCV)[unique = true][default = 'ProductRecommendationPageTemplate']; contentSlot(uid, $contentCV)[unique = true]; allowOverwrite
+                                    ;                          ; SiteLogo-ProductRecommendationPage               ; SiteLogo               ;                                                                                            ; SiteLogoSlot                               ; true
+                                    ;                          ; HomepageLink-ProductRecommendationPage           ; HomepageNavLink        ;                                                                                            ; HomepageNavLinkSlot                        ; true
+                                    ;                          ; NavigationBar-ProductRecommendationPage          ; NavigationBar          ;                                                                                            ; NavigationBarSlot                          ; true
+                                    ;                          ; MiniCart-ProductRecommendationPage               ; MiniCart               ;                                                                                            ; MiniCartSlot                               ; true
+                                    ;                          ; Footer-ProductRecommendationPage                 ; Footer                 ;                                                                                            ; FooterSlot                                 ; true
+                                    ;                          ; HeaderLinks-ProductRecommendationPage            ; HeaderLinks            ;                                                                                            ; HeaderLinksSlot                            ; true
+                                    ;                          ; SearchBox-ProductRecommendationPage              ; SearchBox              ;                                                                                            ; SearchBoxSlot                              ; true
+                                    ;                          ; TopHeaderSlot-ProductRecommendationPage          ; TopHeaderSlot          ;                                                                                            ; TopHeaderSlot                              ; true
+                                    ;                          ; BottomHeaderSlot-ProductRecommendationPage       ; BottomHeaderSlot       ;                                                                                            ; BottomHeaderSlot                           ; true
+                                    ;                          ; PlaceholderContentSlot-ProductRecommendationPage ; PlaceholderContentSlot ;                                                                                            ; PlaceholderContentSlot                     ; true
+
+# Simple Content Pages
+INSERT_UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]     ; name                   ; masterTemplate(uid, $contentCV)   ; label; defaultPage[default = 'true']; approvalStatus(code)[default = 'approved']; homepage[default = 'false']
+                         ;                          ; product-recommendation ; Product Recommendation ; ProductRecommendationPageTemplate ; product-recommendation
