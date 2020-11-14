@@ -4,13 +4,26 @@
 # ImpEx for Importing Products
 
 # Macros / Replacement Parameter definitions
-$productCatalog=__PRODUCT_CATALOG_NAME__
-$productCatalogName=__PRODUCT_CATALOG_FULL_NAME__
+$productCatalog = trainingProductCatalog
+$productCatalogName = Training Product Catalog
 
-$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
-$supercategories=supercategories(code, $catalogVersion)
-$baseProduct=baseProduct(code,$catalogVersion)
-$approved=approvalstatus(code)[default='check']
+$catalogVersion = catalogversion(catalog(id[default=$productCatalog]), version[default='Staged'])[unique=true, default=$productCatalog:Staged]
+$supercategories = supercategories(code, $catalogVersion)
+$baseProduct = baseProduct(code, $catalogVersion)
+$approved = approvalstatus(code)[default='approved']
 
 # Insert Products
-INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
+INSERT_UPDATE TrainingProduct; code[unique = true]; name        ; $supercategories; variantType(code)[default = 'TrainingVariantProduct']; $approved; unit(code)[default = pieces]; $catalogVersion
+                             ; PULLNBEAR          ; Pull & Bear ; "SHIRT"         ;                                                      ;          ;                             ;
+                             ; CONVERSE           ; Converse    ; "SHIRT"         ;                                                      ;          ;                             ;
+                             ; HURLEY             ; Hurley      ; "SHIRT"         ;                                                      ;          ;                             ;
+                             ; COLE               ; Cole        ; "TROUSER"       ;                                                      ;          ;                             ;
+
+INSERT_UPDATE TrainingVariantProduct; $baseProduct; code[unique = true]; size ; unit()[pieces]; $approved; $catalogVersion; $supercategories; description
+                                    ; PULLNBEAR   ; PB-SHIRT-1         ; 10 ;               ;          ;                ; "SHIRT"         ;
+                                    ; PULLNBEAR   ; PB-SHIRT-2         ; 20 ;               ;          ;                ; "SHIRT"         ; Pull & Bear T-Shirt
+                                    ; CONVERSE    ; CV-S1              ; 21 ;               ;          ;                ; "SHIRT"         ; Pull & Bear T-Shirt
+                                    ; CONVERSE    ; CV-S2              ; 12 ;               ;          ;                ; "SHIRT"         ; Converse T-Shirt
+                                    ; HURLEY      ; HURLEY-T-1         ; 13  ;               ;          ;                ; "SHIRT"         ; Hurley T-Shirt
+                                    ; HURLEY      ; HURLEY-T-2         ; 14  ;               ;          ;                ; "SHIRT"         ; Hurley T-Shirt
+                                    ; COLE        ; COLE-T-1           ; 31 ;               ;          ;                ; "TROUSER"       ; Cole Jeans

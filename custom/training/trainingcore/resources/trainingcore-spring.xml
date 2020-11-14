@@ -538,4 +538,21 @@
 		<property name="itemCleanupHooks" ref="csTicketRetentionHooks"/>
 		<property name="ticketBusinessService" ref="ticketBusinessService"/>
 	</bean>
+
+
+	<alias alias="productService" name="defaultTrainingProductService"/>
+	<bean id="defaultTrainingProductService" class="org.training.core.service.impl.DefaultTrainingProductService"
+		  parent="defaultProductService">
+	</bean>
+
+	<alias alias="productDao" name="defaultTrainingProductDao"/>
+	<bean id="defaultTrainingProductDao" class="org.training.core.dao.impl.DefaultTrainingProductDao"
+		  parent="defaultProductDao">
+		<property name="flexibleSearchService" ref="flexibleSearchService"/>
+	</bean>
+
+	<alias name="defaultGenericProductDao" alias="trainingGenericProductDao"/>
+	<bean name="defaultGenericProductDao" class="de.hybris.platform.servicelayer.internal.dao.DefaultGenericDao">
+		<constructor-arg value="Product"/>
+	</bean>
 </beans>

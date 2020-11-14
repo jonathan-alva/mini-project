@@ -182,4 +182,9 @@
 	</bean>
 
 	<bean id="genderData" class="org.training.facades.product.data.GenderData" scope="prototype"/>
+
+	<alias name="defaultTrainingProductFacade" alias="trainingProductFacade"/>
+	<bean id="defaultTrainingProductFacade" class="org.training.facades.product.impl.DefaultTrainingProductFacade">
+	</bean>
+
 </beans>
