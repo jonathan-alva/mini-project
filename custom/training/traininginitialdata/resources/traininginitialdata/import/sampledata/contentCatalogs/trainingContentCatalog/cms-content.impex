@@ -319,7 +319,7 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]     ; n
 INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'homepage']; contentSlot(uid, $contentCV)[unique = true]
                                 ;                          ; Section1-Homepage  ; Section1               ;                                                           ; Section1Slot-Homepage
                                 ;                          ; Section2A-Homepage ; Section2A              ;                                                           ; Section2ASlot-Homepage
-                                ;                          ; Section2B-Homepage ; Section2B              ;                                                           ; Section2BSlot-Homepage
+#                                ;                          ; Section2B-Homepage ; Section2B              ;                                                           ; Section2BSlot-Homepage
                                 ;                          ; Section3A-Homepage ; Section3A              ;                                                           ; Section3ASlot-Homepage
                                 ;                          ; Section3B-Homepage ; Section3B              ;                                                           ; Section3BSlot-Homepage
                                 ;                          ; Section3C-Homepage ; Section3C              ;                                                           ; Section3CSlot-Homepage
@@ -698,12 +698,14 @@ INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[un
                                              ;                          ; DemoHompageSplashBannerComponent-2 ; Electronics Homepage Splash Banner Component 2 ; /Bed/Sofa/c/SOFA ; DemoHompageSplashBannerComponent-2
                                              ;                          ; DemoHompageSplashBannerComponent-3 ; Electronics Homepage Splash Banner Component 3 ; /Bed/Sofa/c/SOFA ; DemoHompageSplashBannerComponent-3
                                              ;                          ; DemoHompageSplashBannerComponent-4 ; Electronics Homepage Splash Banner Component 4 ; /Bed/Sofa/c/SOFA ; DemoHompageSplashBannerComponent-4
+                                             ;                          ; DemoHompageSplashBannerComponent-5 ; Electronics Homepage Splash Banner Component 5 ; /Bed/Sofa/c/SOFA ; DemoHompageSplashBannerComponent-5
+                                             ;                          ; DemoHompageSplashBannerComponent-6 ; Electronics Homepage Splash Banner Component 6 ; /Bed/Sofa/c/SOFA ; DemoHompageSplashBannerComponent-6
 
 INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]                 ; name                                           ; urlLink                    ; &componentRef
                                              ;                          ; DemoHompageDiscountBannerComponent ; Electronics Homepage Discount Banner Component ; /Bed/Springbed/c/SPRINGBED ; DemoHompageDiscountBannerComponent
 
 INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]    ; active; cmsComponents(&componentRef)
-                         ;                          ; Section1Slot-Homepage ; true  ; DemoHompageSplashBannerComponent-1,DemoHompageSplashBannerComponent-2,DemoHompageSplashBannerComponent-3,DemoHompageSplashBannerComponent-4
+                         ;                          ; Section1Slot-Homepage ; true  ; DemoHompageSplashBannerComponent-1,DemoHompageSplashBannerComponent-2,DemoHompageSplashBannerComponent-3,DemoHompageSplashBannerComponent-4,DemoHompageSplashBannerComponent-5,DemoHompageSplashBannerComponent-6
 #                         ;;Section1Slot-Homepage;true;DemoHompageDiscountBannerComponent
 
 
@@ -1184,7 +1186,7 @@ INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]; n
 
 ## level 4. children of NavNode (the following order of children is the display order on the site) ##
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; name       ; &nodeRef        ; children(uid, $contentCV)       ; links(&linkRef);
-                               ; BedLinksNavNode   ;                          ; Beds links ; BedLinksNavNode ; SpringbedNavNode,SofabedNavNode ;
+#                               ; BedLinksNavNode   ;                          ; Beds links ; BedLinksNavNode ; SpringbedNavNode,SofabedNavNode ;
 
 
 ## level 5. children of above (level 4) nodes ##

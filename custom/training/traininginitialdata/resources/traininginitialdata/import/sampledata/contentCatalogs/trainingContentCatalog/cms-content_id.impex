@@ -32,17 +32,17 @@ UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]; $pi
                             ;                          ; SiteLogoComponent ; /images/theme/logo-hybris.png ;
 
 # CMS Link Components
-UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]        ; linkName[lang = $lang]
-                       ;                          ; AboutSAPCommerceLink      ; "About SAP Commerce Cloud"
-                       ;                          ; AgileCommerceBlogLink     ; "Agile Commerce Blog"
-                       ;                          ; AllBrandsCategoryLink     ; "Brands"
-                       ;                          ; AllFashionsCategoryLink   ; "All Fashions"
-                       ;                          ; ShirtCategoryLink         ; "Shirt"
-                       ;                          ; TrouserCategoryLink       ; "Trouser"
-                       ;                          ; AboutUsLink               ; "About Us"
-                       ;                          ; BlogsLink                 ; "Blogs"
-                       ;                          ; GuaranteeLink             ; "Garansi"
-                       ;                          ; ConfirmationLink          ; "Konfirmasi"
+UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]           ; linkName[lang = $lang]
+                       ;                          ; AboutSAPCommerceLink         ; "About SAP Commerce Cloud"
+                       ;                          ; AgileCommerceBlogLink        ; "Agile Commerce Blog"
+#                       ;                          ; AllBrandsCategoryLink        ; "Brands"
+                       ;                          ; AllFashionsCategoryLink      ; "All Fashions"
+                       ;                          ; ShirtCategoryLink            ; "Shirt"
+                       ;                          ; TrouserCategoryLink          ; "Trouser"
+                       ;                          ; AboutUsLink                  ; "About Us"
+                       ;                          ; BlogsLink                    ; "Blogs"
+                       ;                          ; GuaranteeLink                ; "Garansi"
+                       ;                          ; ConfirmationLink             ; "Konfirmasi"
 #                       ;;BlackAndWhiteFilmsCategoryLink;"Black & White Films"
 #                       ;;BlankVideotapesCategoryLink;"Blank Videotapes"
 #                       ;;CameraAccessoriesCategoryLink;"Camera Accessories & Supplies"
@@ -52,22 +52,22 @@ UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]        ; 
 #                       ;;CanonBrandCategoryLink;"Canon"
 #                       ;;ColourFilmsCategoryLink;"Color Films"
 #                       ;;ComponentsCategoryLink;"Components"
-                       ;                          ; ContactUsLink             ; "Contact Us"
+                       ;                          ; ContactUsLink                ; "Contact Us"
 #                       ;;DigitalCamerasCategoryLink;"Digital Cameras"
 #                       ;;DigitalCompactsCategoryLink;"Compact Cameras"
 #                       ;;DigitalSLRCategoryLink;"SLR Cameras"
-                       ;                          ; DocumentationLink         ; "Documentation"
-                       ;                          ; FAQLink                   ; "FAQ"
-                       ;                          ; FacebookLink              ; "Facebook"
+                       ;                          ; DocumentationLink            ; "Documentation"
+                       ;                          ; FAQLink                      ; "FAQ"
+                       ;                          ; FacebookLink                 ; "Facebook"
 #                       ;;FilmCamerasCategoryLink;"Film Cameras"
 #                       ;;FlashMemoryCategoryLink;"Flash Memory"
 #                       ;;FujifilmBrandCategoryLink;"Fujifilm"
 #                       ;;HandheldCamcordersCategoryLink;"Hand Held Camcorders"
-                       ;                          ; HomepageNavLink           ; "Home"
+                       ;                          ; HomepageNavLink              ; "Home"
 #                       ;;IciduBrandCategoryLink;"Icidu"
 #                       ;;KingstonBrandCategoryLink;"Kingston"
 #                       ;;KodakBrandCategoryLink;"Kodak"
-                       ;                          ; LinkedInLink              ; "Linked In"
+                       ;                          ; LinkedInLink                 ; "Linked In"
 #                       ;;PowerSuppliesCategoryLink;"Power Supplies"
 #                       ;;SamsungBrandCategoryLink;"Samsung"
 #                       ;;SonyBrandCategoryLink;"Sony"
@@ -76,10 +76,10 @@ UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]        ; 
 #                       ;;TDKBrandCategoryLink;"TDK"
 #                       ;;ToshibaBrandCategoryLink;"Toshiba"
 #                       ;;TripodsCategoryLink;"Tripods"
-                       ;                          ; TwitterLink               ; "Twitter"
-                       ;                          ; VisitSAPLink              ; "Visit SAP"
-                       ;                          ; TermsAndConditionsLink    ; "Terms And Conditions"
-                       ;                          ; ProductRecommendationLink ; "Product Recommendation"
+                       ;                          ; TwitterLink                  ; "Twitter"
+                       ;                          ; VisitSAPLink                 ; "Visit SAP"
+                       ;                          ; TermsAndConditionsLink       ; "Terms And Conditions"
+                       ;                          ; ProductRecommendationLink    ; "Product Recommendation"
                        ;                          ; ProductRecommendationTopLink ; "Product Recommendation"
 
 # Lightbox Banner for Mini Cart (banner is not localizable so we must create a separate banner per language)
@@ -111,7 +111,7 @@ UPDATE ProductReferencesComponent; $contentCV[unique = true]; uid[unique = true]
                                  ;                          ; accessories       ; "Accessories"
 
 # CMS PurchasedCategorySuggestion Components
-UPDATE PurchasedCategorySuggestionComponent; $contentCV[unique = true]; uid[unique = true]           ; title[lang = $lang]
+UPDATE PurchasedCategorySuggestionComponent; $contentCV[unique = true]; uid[unique = true]; title[lang = $lang]
 #                                           ;                          ; PurchasedCategorySuggestions ; "You may also like..."
 
 # CMS CartSuggestion Components
@@ -128,8 +128,8 @@ UPDATE CMSNavigationNode; $contentCV[unique = true]; uid[unique = true]         
 #                        ;;AccessoriesNavNode;"Accessories"
 #                        ;;AccessoryBrandLinksNavNode;"Accessories"
 #                        ;;BrandLinksNavNode;"Cameras"
-                        ;                          ; BrandsNavNode                ; "Brands"
-                        ;                          ; AllBedsNavNode               ; "All Beds"
+#                        ;                          ; BrandsNavNode                ; "Brands"
+#                        ;                          ; AllBedsNavNode               ; "All Beds"
 #                        ;;CameraAccessoriesNavNode;"Camera Accessories & Supplies"
 #                        ;;DigitalCamerasNavNode;"Digital Cameras"
                         ;                          ; DemoNavNode                  ; "Demo Site"
@@ -208,12 +208,12 @@ UPDATE BannerComponent; $contentCV[unique = true]; uid[unique = true]           
 #                      ;                          ; SonyDSCBannerComponent               ; Sony DSC-H20                                                       ; 1978440-Sony-DSC-H20-114081.jpg              ; "Perfect for serious performance in a compact design."
 
 UPDATE ProductCarouselComponent; $contentCV[unique = true]; uid[unique = true]                          ; title[lang = $lang]
-                               ;                          ; ElectronicsHomepageProductCarouselComponent ; Our Bestselling Products
+#                               ;                          ; ElectronicsHomepageProductCarouselComponent ; Our Bestselling Products
 
 # Electronics Camera Accessories and Supplies Category Landing Page
 
 UPDATE CategoryPage; $contentCV[unique = true]; uid[unique = true]                        ; title[lang = $lang]
-                   ;                          ; CamerasAccessoriesAndSuppliesCategoryPage ; Cameras Accessories & Supplies
+#                   ;                          ; CamerasAccessoriesAndSuppliesCategoryPage ; Cameras Accessories & Supplies
 
 # Media Content
 INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]             ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; folder(qualifier)[default = 'images']; altText
@@ -268,7 +268,7 @@ UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]     
 
 #above is the desktop data, below is the responsive data
 UPDATE ProductCarouselComponent; $contentCV[unique = true]; uid[unique = true]                             ; title[lang = $lang]
-                               ;                          ; NewElectronicsHomepageProductCarouselComponent ; What's New
+#                               ;                          ; NewElectronicsHomepageProductCarouselComponent ; What's New
 
 # Home Page Splash
 
@@ -296,13 +296,22 @@ INSERT_UPDATE Media; mediaFormat(qualifier); $contentCV[unique = true]; code[uni
                    ; desktop               ;                          ; banner-3-demo-960x330.png             ; $siteResource/images/banners/homepage/responsive/banner-demo-960x330.png                       ;                             ; banner-demo-960x330.png               ;                                      ; "Save Big On Select SLR & DSLR Cameras"
                    ; desktop               ;                          ; banner-4-demo-960x330.png             ; $siteResource/images/banners/homepage/responsive/banner-demo-960x330.png                       ;                             ; banner-demo-960x330.png               ;                                      ; "Save Big On Select SLR & DSLR Cameras"
                    ; desktop               ;                          ; discount-banner-960.png               ; $siteResource/images/banners/homepage/responsive/discount-banner-960.png                       ;                             ; discount-banner-960.png               ;                                      ; "Save Big on Select Camera Accessories & Supplies"
+                   ; widescreen            ;                          ; banner-1.webp                         ; $siteResource/images/banners/homepage/banner-1.webp                                            ;                             ; banner-1.webp                         ;                                      ; "Memperkenalkan INTHEBOX"
+                   ; widescreen            ;                          ; banner-2.webp                         ; $siteResource/images/banners/homepage/banner-2.webp                                            ;                             ; banner-2.webp                         ;                                      ; "Free Ongkir"
+                   ; widescreen            ;                          ; banner-3.webp                         ; $siteResource/images/banners/homepage/banner-3.webp                                            ;                             ; banner-3.webp                         ;                                      ; "INTHEBOX 101"
+                   ; widescreen            ;                          ; banner-4.webp                         ; $siteResource/images/banners/homepage/banner-4.webp                                            ;                             ; banner-4.webp                         ;                                      ; "INTHEBOX Hybrid"
+                   ; widescreen            ;                          ; banner-5.webp                         ; $siteResource/images/banners/homepage/banner-5.webp                                            ;                             ; banner-5.webp                         ;                                      ; "Kasur INTHEBOX"
+                   ; widescreen            ;                          ; banner-6.webp                         ; $siteResource/images/banners/homepage/banner-6.webp                                            ;                             ; banner-6.webp                         ;                                      ; "Kasur INTHEBOX 101"
+
 
 INSERT_UPDATE MediaContainer; qualifier[unique = true]          ; $medias; $contentCV[unique = true]
                             ; demo-homepage-discount-en         ; discount-banner-1400.png,discount-banner-960.png,discount-banner-770.png,discount-banner-480.png
-                            ; demo-homepage-spalsh-1-en         ; banner-demo-1400x440.jpg,banner-demo-480x320.jpg,banner-demo-770x350.jpg,banner-demo-960x330.png
-                            ; demo-homepage-spalsh-2-en         ; banner-2-demo-1400x440.jpg,banner-2-demo-480x320.jpg,banner-2-demo-770x350.jpg,banner-2-demo-960x330.png
-                            ; demo-homepage-spalsh-3-en         ; banner-3-demo-1400x440.jpg,banner-3-demo-480x320.jpg,banner-3-demo-770x350.jpg,banner-3-demo-960x330.png
-                            ; demo-homepage-spalsh-4-en         ; banner-4-demo-1400x440.jpg,banner-4-demo-480x320.jpg,banner-4-demo-770x350.jpg,banner-4-demo-960x330.png
+                            ; demo-homepage-spalsh-1-en         ; banner-1.webp
+                            ; demo-homepage-spalsh-2-en         ; banner-2.webp
+                            ; demo-homepage-spalsh-3-en         ; banner-3.webp
+                            ; demo-homepage-spalsh-4-en         ; banner-4.webp
+                            ; demo-homepage-spalsh-5-en         ; banner-5.webp
+                            ; demo-homepage-spalsh-6-en         ; banner-6.webp
                             ; top-banner                        ; top-banner.jpg
                             ; top-banner-product-recommendation ; top-banner-product-recommendation.jpg
 
@@ -312,6 +321,8 @@ INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[un
                                              ;                          ; DemoHompageSplashBannerComponent-2      ; demo-homepage-spalsh-2-en
                                              ;                          ; DemoHompageSplashBannerComponent-3      ; demo-homepage-spalsh-3-en
                                              ;                          ; DemoHompageSplashBannerComponent-4      ; demo-homepage-spalsh-4-en
+                                             ;                          ; DemoHompageSplashBannerComponent-5      ; demo-homepage-spalsh-5-en
+                                             ;                          ; DemoHompageSplashBannerComponent-6      ; demo-homepage-spalsh-6-en
                                              ;                          ; Section0BannerComponent                 ; top-banner
                                              ;                          ; MiddleContentTopBannerComponent         ; top-banner
                                              ;                          ; TopBannerProductRecommendationComponent ; top-banner-product-recommendation
@@ -572,7 +583,7 @@ UPDATE CMSNavigationNode; $contentCV[unique = true]; uid[unique = true]; title[l
                         ;                          ; MyAccountNavNode  ; "My Account"
 
 # Content Pages
-UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]     ; title[lang = $lang]
+UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]; title[lang = $lang]
 #                  ;                          ; importCSVSavedCartPage ; "Import Saved Cart"
 #                  ;                          ; saved-carts            ; "Saved Carts"
 #                  ;                          ; savedCartDetailsPage   ; "Saved Cart Details"
@@ -602,7 +613,7 @@ INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[un
 UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique = true]        ; notice[lang = en][translator = de.hybris.platform.acceleratorservices.dataimport.batch.converter.CopyrightTranslator, dateFormat = yyyy]
                                 ;                          ; FooterNavigationComponent ; "Copyright © {0} SAP SE or an SAP affiliate company. All rights reserved."
 
-UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                  ; content[lang = en];
+UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]; content[lang = en];
 #                            ;                          ; TrainingParagraphComponent          ; "Test Training Page"
 #                            ;                          ; TrainingParagraphComponent2         ; "Test Training Page Bottom Content"
 #                            ;                          ; NewParagraphComponent               ; "New Page"
