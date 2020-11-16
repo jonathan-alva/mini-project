@@ -306,29 +306,51 @@ INSERT_UPDATE RotatingImagesComponent; $contentCV[unique = true]; uid[unique = t
 INSERT_UPDATE ProductCarouselComponent; $contentCV[unique = true]; uid[unique = true]; name; products(code, $productCV); scroll(code); popup; &componentRef
 #                                      ;                          ; ElectronicsHomepageProductCarouselComponent ; Electronics Homepage Product Carousel ; SUPERKINGX,KINGX,QUEENSIZEX,FULLSIZEX,SUPERSINGLEX,SINGLESIZEX ; allVisible  ; false ; ElectronicsHomepageProductCarouselComponent
 
-INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]     ; name                        ; active; cmsComponents(&componentRef)
-                         ;                          ; Section1Slot-Homepage  ; Section1 Slot for Homepage  ; true  ; BrandsGaloreBanner
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]              ; name                                    ; active; cmsComponents(&componentRef)
+                         ;                          ; Section1Slot-Homepage           ; Section1 Slot for Homepage              ; true  ; BrandsGaloreBanner
 #                         ;                          ; Section2ASlot-Homepage ; Section2A Slot for Homepage ; true  ; ElectronicsHomepageProductCarouselComponent,PurchasedCategorySuggestions
 #                         ;                          ; Section2BSlot-Homepage ; Section2B Slot for Homepage ; true  ; ElectronicsHomepageProductCarouselComponent,PurchasedCategorySuggestions
-                         ;                          ; Section3ASlot-Homepage ; Section3A Slot for Homepage ; true  ; CanonPowershotBannerComponent,SonyCybershotBannerComponent,KodakEasyshareBannerComponent,SonyDSCBannerComponent
-                         ;                          ; Section3BSlot-Homepage ; Section3B Slot for Homepage ; true  ; CamcordersBanner,LensesBanner
-                         ;                          ; Section3CSlot-Homepage ; Section3C Slot for Homepage ; true  ; ElectronicsHomepageCarouselComponent
-                         ;                          ; Section4Slot-Homepage  ; Section4 Slot for Homepage  ; true  ; DigitalCompactCamerasBannerComponent,DigitalSLRCamerasBannerComponent,MemoryBannerComponent,AccessoriesBannerComponent
-                         ;                          ; Section5Slot-Homepage  ; Section5 Slot for Homepage  ; true  ; NextDayDeliveryBanner
+                         ;                          ; Section3ASlot-Homepage          ; Section3A Slot for Homepage             ; true  ; CanonPowershotBannerComponent,SonyCybershotBannerComponent,KodakEasyshareBannerComponent,SonyDSCBannerComponent
+                         ;                          ; Section3BSlot-Homepage          ; Section3B Slot for Homepage             ; true  ; CamcordersBanner,LensesBanner
+                         ;                          ; Section3CSlot-Homepage          ; Section3C Slot for Homepage             ; true  ; ElectronicsHomepageCarouselComponent
+                         ;                          ; Section4Slot-Homepage           ; Section4 Slot for Homepage              ; true  ; DigitalCompactCamerasBannerComponent,DigitalSLRCamerasBannerComponent,MemoryBannerComponent,AccessoriesBannerComponent
+                         ;                          ; Section5Slot-Homepage           ; Section5 Slot for Homepage              ; true  ; NextDayDeliveryBanner
+                         ;                          ; SectionUnboxingSlot-Homepage    ; Section Unboxing Slot for Homepage      ; true  ;
+                         ;                          ; UnboxingItem1TitleSlot-Homepage ; Unboxing Item 1 Title Slot for Homepage ; true  ;
+                         ;                          ; UnboxingItem1DescSlot-Homepage  ; Unboxing Item 1 Desc Slot for Homepage  ; true  ;
+                         ;                          ; UnboxingItem2TitleSlot-Homepage ; Unboxing Item 2 Title Slot for Homepage ; true  ;
+                         ;                          ; UnboxingItem2DescSlot-Homepage  ; Unboxing Item 2 Desc Slot for Homepage  ; true  ;
+                         ;                          ; UnboxingItem3TitleSlot-Homepage ; Unboxing Item 3 Title Slot for Homepage ; true  ;
+                         ;                          ; UnboxingItem3DescSlot-Homepage  ; Unboxing Item 3 Desc Slot for Homepage  ; true  ;
+                         ;                          ; UnboxingItem4TitleSlot-Homepage ; Unboxing Item 4 Title Slot for Homepage ; true  ;
+                         ;                          ; UnboxingItem4DescSlot-Homepage  ; Unboxing Item 4 Desc Slot for Homepage  ; true  ;
 
-INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'homepage']; contentSlot(uid, $contentCV)[unique = true]
-                                ;                          ; Section1-Homepage  ; Section1               ;                                                           ; Section1Slot-Homepage
-                                ;                          ; Section2A-Homepage ; Section2A              ;                                                           ; Section2ASlot-Homepage
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]              ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'homepage']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; Section1-Homepage               ; Section1               ;                                                           ; Section1Slot-Homepage
+                                ;                          ; Section2A-Homepage              ; Section2A              ;                                                           ; Section2ASlot-Homepage
 #                                ;                          ; Section2B-Homepage ; Section2B              ;                                                           ; Section2BSlot-Homepage
-                                ;                          ; Section3A-Homepage ; Section3A              ;                                                           ; Section3ASlot-Homepage
-                                ;                          ; Section3B-Homepage ; Section3B              ;                                                           ; Section3BSlot-Homepage
-                                ;                          ; Section3C-Homepage ; Section3C              ;                                                           ; Section3CSlot-Homepage
-                                ;                          ; Section4-Homepage  ; Section4               ;                                                           ; Section4Slot-Homepage
-                                ;                          ; Section5-Homepage  ; Section5               ;                                                           ; Section5Slot-Homepage
-                                ;                          ; Section6-Homepage  ; Section6               ;                                                           ; Section6Slot-Homepage
-                                ;                          ; Section7-Homepage  ; Section7               ;                                                           ; Section7Slot-Homepage
+                                ;                          ; Section3A-Homepage              ; Section3A              ;                                                           ; Section3ASlot-Homepage
+                                ;                          ; Section3B-Homepage              ; Section3B              ;                                                           ; Section3BSlot-Homepage
+                                ;                          ; Section3C-Homepage              ; Section3C              ;                                                           ; Section3CSlot-Homepage
+                                ;                          ; Section4-Homepage               ; Section4               ;                                                           ; Section4Slot-Homepage
+                                ;                          ; Section5-Homepage               ; Section5               ;                                                           ; Section5Slot-Homepage
+                                ;                          ; Section6-Homepage               ; Section6               ;                                                           ; Section6Slot-Homepage
+                                ;                          ; Section7-Homepage               ; Section7               ;                                                           ; Section7Slot-Homepage
 #                                ;                          ; Section8-Homepage  ; Section8               ;                                                           ; Section8Slot-Homepage
 #                                ;                          ; Section9-Homepage  ; Section9               ;                                                           ; Section9Slot-Homepage
+                                ;                          ; SectionUnboxingSlot-Homepage    ; SectionUnboxing        ;                                                           ; SectionUnboxingSlot-Homepage
+                                ;                          ; UnboxingItem1TitleSlot-Homepage ; UnboxingItem1Title     ;                                                           ; UnboxingItem1TitleSlot-Homepage
+                                ;                          ; UnboxingItem1DescSlot-Homepage  ; UnboxingItem1Desc      ;                                                           ; UnboxingItem1DescSlot-Homepage
+                                ;                          ; UnboxingItem1Slot-Homepage      ; UnboxingItem1          ;                                                           ; UnboxingItem1Slot-Homepage
+                                ;                          ; UnboxingItem2TitleSlot-Homepage ; UnboxingItem2Title     ;                                                           ; UnboxingItem2TitleSlot-Homepage
+                                ;                          ; UnboxingItem2DescSlot-Homepage  ; UnboxingItem2Desc      ;                                                           ; UnboxingItem2DescSlot-Homepage
+                                ;                          ; UnboxingItem2Slot-Homepage      ; UnboxingItem2          ;                                                           ; UnboxingItem2Slot-Homepage
+                                ;                          ; UnboxingItem3TitleSlot-Homepage ; UnboxingItem3Title     ;                                                           ; UnboxingItem3TitleSlot-Homepage
+                                ;                          ; UnboxingItem3DescSlot-Homepage  ; UnboxingItem3Desc      ;                                                           ; UnboxingItem3DescSlot-Homepage
+                                ;                          ; UnboxingItem3Slot-Homepage      ; UnboxingItem3          ;                                                           ; UnboxingItem3Slot-Homepage
+                                ;                          ; UnboxingItem4TitleSlot-Homepage ; UnboxingItem4Title     ;                                                           ; UnboxingItem4TitleSlot-Homepage
+                                ;                          ; UnboxingItem4DescSlot-Homepage  ; UnboxingItem4Desc      ;                                                           ; UnboxingItem4DescSlot-Homepage
+                                ;                          ; UnboxingItem4Slot-Homepage      ; UnboxingItem4          ;                                                           ; UnboxingItem4Slot-Homepage
 
 ###### Electronics Search Results Page ######
 
@@ -708,6 +730,48 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]    ; ac
                          ;                          ; Section1Slot-Homepage ; true  ; DemoHompageSplashBannerComponent-1,DemoHompageSplashBannerComponent-2,DemoHompageSplashBannerComponent-3,DemoHompageSplashBannerComponent-4,DemoHompageSplashBannerComponent-5,DemoHompageSplashBannerComponent-6
 #                         ;;Section1Slot-Homepage;true;DemoHompageDiscountBannerComponent
 
+## Home Section Unboxing
+INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                   ; name                             ; &componentRef
+                                   ;                          ; UnboxingTitleParagraphComponent      ; Unboxing Section Title Paragraph ; UnboxingTitleParagraphComponent
+                                   ;                          ; UnboxingItem1TitleParagraphComponent ; Unboxing Item 1 Title Paragraph  ; UnboxingItem1TitleParagraphComponent
+                                   ;                          ; UnboxingItem1DescParagraphComponent  ; Unboxing Item 1 Desc Paragraph   ; UnboxingItem1DescParagraphComponent
+                                   ;                          ; UnboxingItem2TitleParagraphComponent ; Unboxing Item 2 Title Paragraph  ; UnboxingItem2TitleParagraphComponent
+                                   ;                          ; UnboxingItem2DescParagraphComponent  ; Unboxing Item 2 Desc Paragraph   ; UnboxingItem2DescParagraphComponent
+                                   ;                          ; UnboxingItem3TitleParagraphComponent ; Unboxing Item 3 Title Paragraph  ; UnboxingItem3TitleParagraphComponent
+                                   ;                          ; UnboxingItem3DescParagraphComponent  ; Unboxing Item 3 Desc Paragraph   ; UnboxingItem3DescParagraphComponent
+                                   ;                          ; UnboxingItem4TitleParagraphComponent ; Unboxing Item 4 Title Paragraph  ; UnboxingItem4TitleParagraphComponent
+                                   ;                          ; UnboxingItem4DescParagraphComponent  ; Unboxing Item 4 Desc Paragraph   ; UnboxingItem4DescParagraphComponent
+
+
+# Unboxing Items Image
+INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]                       ; realfilename     ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText           ; folder(qualifier)[default = 'images']
+                   ;                          ; /images/banners/homepage/experience_1.png ; experience_1.png ; $siteResource/images/banners/homepage/experience_1.png                      ; image/png                   ; Keluarkan         ;
+                   ;                          ; /images/banners/homepage/experience_2.png ; experience_2.png ; $siteResource/images/banners/homepage/experience_2.png                      ; image/png                   ; Posisikan         ;
+                   ;                          ; /images/banners/homepage/experience_3.png ; experience_3.png ; $siteResource/images/banners/homepage/experience_3.png                      ; image/png                   ; Buka Plastik      ;
+                   ;                          ; /images/banners/homepage/experience_4.png ; experience_4.png ; $siteResource/images/banners/homepage/experience_4.png                      ; image/png                   ; Tunggu Mengembang ;
+
+# Site Logo Component
+INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]          ; name                            ; &componentRef               ; urlLink
+                                   ;                          ; UnboxingItem1ImageComponent ; Unboxing Item 1 Image Component ; UnboxingItem1ImageComponent ;
+                                   ;                          ; UnboxingItem2ImageComponent ; Unboxing Item 2 Image Component ; UnboxingItem2ImageComponent ;
+                                   ;                          ; UnboxingItem3ImageComponent ; Unboxing Item 3 Image Component ; UnboxingItem3ImageComponent ;
+                                   ;                          ; UnboxingItem4ImageComponent ; Unboxing Item 4 Image Component ; UnboxingItem4ImageComponent ;
+
+
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]              ; cmsComponents(&componentRef)
+                         ;                          ; SectionUnboxingSlot-Homepage    ; UnboxingTitleParagraphComponent
+                         ;                          ; UnboxingItem1Slot-Homepage      ; UnboxingItem1ImageComponent
+                         ;                          ; UnboxingItem1TitleSlot-Homepage ; UnboxingItem1TitleParagraphComponent
+                         ;                          ; UnboxingItem1DescSlot-Homepage  ; UnboxingItem1DescParagraphComponent
+                         ;                          ; UnboxingItem2Slot-Homepage      ; UnboxingItem2ImageComponent
+                         ;                          ; UnboxingItem2TitleSlot-Homepage ; UnboxingItem2TitleParagraphComponent
+                         ;                          ; UnboxingItem2DescSlot-Homepage  ; UnboxingItem2DescParagraphComponent
+                         ;                          ; UnboxingItem3Slot-Homepage      ; UnboxingItem3ImageComponent
+                         ;                          ; UnboxingItem3TitleSlot-Homepage ; UnboxingItem3TitleParagraphComponent
+                         ;                          ; UnboxingItem3DescSlot-Homepage  ; UnboxingItem3DescParagraphComponent
+                         ;                          ; UnboxingItem4Slot-Homepage      ; UnboxingItem4ImageComponent
+                         ;                          ; UnboxingItem4TitleSlot-Homepage ; UnboxingItem4TitleParagraphComponent
+                         ;                          ; UnboxingItem4DescSlot-Homepage  ; UnboxingItem4DescParagraphComponent
 
 ## Home section 2A
 INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]            ; name                             ; &componentRef
@@ -1185,7 +1249,7 @@ INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]; n
 
 
 ## level 4. children of NavNode (the following order of children is the display order on the site) ##
-INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; name       ; &nodeRef        ; children(uid, $contentCV)       ; links(&linkRef);
+INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; name; &nodeRef; children(uid, $contentCV); links(&linkRef);
 #                               ; BedLinksNavNode   ;                          ; Beds links ; BedLinksNavNode ; SpringbedNavNode,SofabedNavNode ;
 
 

@@ -232,6 +232,19 @@ INSERT_UPDATE ContentSlotName; name[unique = true]    ; template(uid, $contentCV
                              ; MiniCart               ;                                                                           ;                          ; minicart
                              ; NavigationBar          ;                                                                           ;                          ; navigation
                              ; Section1               ;                                                                           ;                          ; wide
+                             ; SectionUnboxing        ;                                                                           ;                          ; wide
+                             ; UnboxingItem1          ;                                                                           ;                          ; narrow
+                             ; UnboxingItem1Title     ;                                                                           ;                          ; narrow
+                             ; UnboxingItem1Desc      ;                                                                           ;                          ; narrow
+                             ; UnboxingItem2          ;                                                                           ;                          ; narrow
+                             ; UnboxingItem2Title     ;                                                                           ;                          ; narrow
+                             ; UnboxingItem2Desc      ;                                                                           ;                          ; narrow
+                             ; UnboxingItem3          ;                                                                           ;                          ; narrow
+                             ; UnboxingItem3Title     ;                                                                           ;                          ; narrow
+                             ; UnboxingItem3Desc      ;                                                                           ;                          ; narrow
+                             ; UnboxingItem4          ;                                                                           ;                          ; narrow
+                             ; UnboxingItem4Title     ;                                                                           ;                          ; narrow
+                             ; UnboxingItem4Desc      ;                                                                           ;                          ; narrow
                              ; Section2A              ;                                                                           ;                          ; narrow
                              ; Section2B              ;                                                                           ;                          ; narrow
                              ; Section2C              ;                                                                           ;                          ; wide

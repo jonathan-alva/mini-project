@@ -17644,6 +17644,36 @@ select[multiple].input-sm {
 .section4 .disp-img .action {
   display: none;
 }
+.unboxing {
+  background-color: #d4effc;
+  color: #6086c2;
+  padding: 40px 0;
+  height: 450px !important;
+}
+p-0 {
+  padding: 0 !important;
+}
+.section-unboxing-header {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.unboxing-item {
+  height: 300px;
+  text-align: center;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.unboxing-item-title {
+  font-weight: 700;
+}
+.unboxing-items {
+  height: 300px;
+}
+.unboxing-item-img {
+  position: relative !important;
+}
 .product-details-toggle {
   position: relative;
   cursor: pointer;

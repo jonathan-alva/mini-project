@@ -14,8 +14,19 @@ if (!window.ACC) {
                 arrows: false,
                 dots: true,
                 infinite: true,
+                autoplay:true,
                 speed: 300,
                 slidesToShow: 1,
+                adaptiveHeight: true,
+                swipe: true,
+                swipeToSlide: true
+            });
+            var unboxingItems = $(".unboxing-items");
+            unboxingItems.find("img").addClass("unboxing-item-img");
+            unboxingItems.slick({
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
                 adaptiveHeight: true,
                 swipe: true,
                 swipeToSlide: true
