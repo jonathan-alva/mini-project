@@ -31,6 +31,8 @@ if (!window.ACC) {
                 swipe: true,
                 swipeToSlide: true
             });
+            var totalStars = $(".total-stars");
+            totalStars.find("img").addClass("total-stars-img");
         },
         init: function () {
             var _self = demo.global;

@@ -245,6 +245,11 @@ INSERT_UPDATE ContentSlotName; name[unique = true]    ; template(uid, $contentCV
                              ; UnboxingItem4          ;                                                                           ;                          ; narrow
                              ; UnboxingItem4Title     ;                                                                           ;                          ; narrow
                              ; UnboxingItem4Desc      ;                                                                           ;                          ; narrow
+                             ; SectionTestimoni       ;                                                                           ;                          ; narrow
+                             ; TestimoniSubtitle1     ;                                                                           ;                          ; narrow
+                             ; TestimoniSubtitle2     ;                                                                           ;                          ; narrow
+                             ; TotalReview            ;                                                                           ;                          ; narrow
+                             ; TotalStar              ;                                                                           ;                          ; narrow
                              ; Section2A              ;                                                                           ;                          ; narrow
                              ; Section2B              ;                                                                           ;                          ; narrow
                              ; Section2C              ;                                                                           ;                          ; wide

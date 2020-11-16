@@ -14,7 +14,7 @@
         <%--Beli Kasur--%>
     </section>
     <section class="unboxing">
-        <div class="container p-0">
+        <div class="container my-0">
             <cms:pageSlot position="SectionUnboxing" var="comp" element="div" class="container">
                 <cms:component component="${comp}" element="h2" class="section-unboxing-header"/>
             </cms:pageSlot>
@@ -77,41 +77,172 @@
                 </div>
             </div>
         </div>
-        <%--Unboxing--%>
     </section>
-    <div>
+    <section class="testimoni-section">
         <%--Testimoni--%>
-    </div>
+        <div class="container my-0">
+            <cms:pageSlot position="SectionTestimoni" var="comp" element="div" class="container">
+                <cms:component component="${comp}" element="h2" class="section-testimoni-header"/>
+            </cms:pageSlot>
+            <div class="testimoni-section-subtitle">
+                <div class="mb-2">
+                    <cms:pageSlot position="TestimoniSubtitle1" var="comp">
+                        <cms:component component="${comp}" element="p" />
+                    </cms:pageSlot>
+                </div>
+                <cms:pageSlot position="TestimoniSubtitle2" var="comp">
+                    <cms:component component="${comp}" element="p" />
+                </cms:pageSlot>
+            </div>
+            <div class="testimoni-section-total-stars text-right">
+                <div class="total-stars-container">
+                    <div class="total-stars">
+                        <cms:pageSlot position="TotalStars" var="feature">
+                            <cms:component component="${feature}" element="div" class="star-container"/>
+                        </cms:pageSlot>
+                    </div>
+                    <div class="total-stars-review">
+                        <cms:pageSlot position="TotalReview" var="comp">
+                            <cms:component component="${comp}" element="p" />
+                        </cms:pageSlot>
+                    </div>
+                </div>
+            </div>
+            <div class="testimoni-card-container">
+                <div class="testimoni-card">
+                    <div class="testimoni-card-header">
+                        <div class="testimoni-card-header-name">
+                            <cms:pageSlot position="Review1Name" var="comp">
+                                <cms:component component="${comp}" element="p" />
+                            </cms:pageSlot>
+                            Baim Wong
+                        </div>
+                        <div class="testimoni-card-header-image">
+
+                        </div>
+                    </div>
+                    <div class="testimoni-card-body">
+                        <div class="testimoni-card-stars">
+                            <div class="total-stars">
+                            <%--<cms:pageSlot position="Review1TotalStars" var="feature">--%>
+                            <%--<cms:component component="${feature}" element="div" class="star-container star-review"/>--%>
+                            <%--</cms:pageSlot>--%>
+                            </div>
+                        </div>
+                        <div class="testimoni-card-content">
+                            <div class="testimoni-card-content-title">
+                            <%--<cms:pageSlot position="Review1Title" var="comp">--%>
+                            <%--<cms:component component="${comp}" element="strong" />--%>
+                            <%--</cms:pageSlot>--%>Mantap Banget
+                            </div>
+                            <div class="testimoni-card-content-desc">
+                            <%--<cms:pageSlot position="Review1Desc" var="comp">--%>
+                            <%--<cms:component component="${comp}" element="p" />--%>
+                            <%--</cms:pageSlot>--%>
+
+                            Kasur baru yang packing nya simple banget, masuk ke dalam box! Kasur @inthebox.id dengan teknologi Pocket Springbed ini enak banget, nyaman dan empuk! Ada Free Bantal dan Free Ongkirnya juga lhoo! Mantap banget
+
+                            </div>
+                            <div class="testimoni-card-content-datetime">
+                            <%--<cms:pageSlot position="Review1Datetime" var="comp">--%>
+                            <%--<cms:component component="${comp}" element="p" />--%>
+                            <%--</cms:pageSlot>--%>
+                            9 Sep 2020 - 11:22 am
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="testimoni-card">
+                <div class="testimoni-card-header">
+                <div class="testimoni-card-header-name">
+                <%--<cms:pageSlot position="Review1Name" var="comp">--%>
+                <%--<cms:component component="${comp}" element="p" />--%>
+                <%--</cms:pageSlot>--%>
+                Baim Wong
+                </div>
+                <div class="testimoni-card-header-image">
+
+                </div>
+                </div>
+                <div class="testimoni-card-body">
+                <div class="testimoni-card-stars">
+                <div class="total-stars">
+                <%--<cms:pageSlot position="Review1TotalStars" var="feature">--%>
+                <%--<cms:component component="${feature}" element="div" class="star-container star-review"/>--%>
+                <%--</cms:pageSlot>--%>
+                </div>
+                </div>
+                <div class="testimoni-card-content">
+                <div class="testimoni-card-content-title">
+                <%--<cms:pageSlot position="Review1Title" var="comp">--%>
+                <%--<cms:component component="${comp}" element="strong" />--%>
+                <%--</cms:pageSlot>--%>Mantap Banget
+                </div>
+                <div class="testimoni-card-content-desc">
+                <%--<cms:pageSlot position="Review1Desc" var="comp">--%>
+                <%--<cms:component component="${comp}" element="p" />--%>
+                <%--</cms:pageSlot>--%>
+
+                Kasur baru yang packing nya simple banget, masuk ke dalam box! Kasur @inthebox.id dengan teknologi Pocket Springbed ini enak banget, nyaman dan empuk! Ada Free Bantal dan Free Ongkirnya juga lhoo! Mantap banget
+
+                </div>
+                <div class="testimoni-card-content-datetime">
+                <%--<cms:pageSlot position="Review1Datetime" var="comp">--%>
+                <%--<cms:component component="${comp}" element="p" />--%>
+                <%--</cms:pageSlot>--%>
+                9 Sep 2020 - 11:22 am
+                </div>
+
+                </div>
+                </div>
+                </div>
+                <div class="testimoni-card">
+                <div class="testimoni-card-header">
+                <div class="testimoni-card-header-name">
+                <%--<cms:pageSlot position="Review1Name" var="comp">--%>
+                <%--<cms:component component="${comp}" element="p" />--%>
+                <%--</cms:pageSlot>--%>
+                Baim Wong
+                </div>
+                <div class="testimoni-card-header-image">
+
+                </div>
+                </div>
+                <div class="testimoni-card-body">
+                <div class="testimoni-card-stars">
+                <div class="total-stars">
+                <%--<cms:pageSlot position="Review1TotalStars" var="feature">--%>
+                <%--<cms:component component="${feature}" element="div" class="star-container star-review"/>--%>
+                <%--</cms:pageSlot>--%>
+                </div>
+                </div>
+                <div class="testimoni-card-content">
+                <div class="testimoni-card-content-title">
+                <%--<cms:pageSlot position="Review1Title" var="comp">--%>
+                <%--<cms:component component="${comp}" element="strong" />--%>
+                <%--</cms:pageSlot>--%>Mantap Banget
+                </div>
+                <div class="testimoni-card-content-desc">
+                <%--<cms:pageSlot position="Review1Desc" var="comp">--%>
+                <%--<cms:component component="${comp}" element="p" />--%>
+                <%--</cms:pageSlot>--%>
+
+                Kasur baru yang packing nya simple banget, masuk ke dalam box! Kasur @inthebox.id dengan teknologi Pocket Springbed ini enak banget, nyaman dan empuk! Ada Free Bantal dan Free Ongkirnya juga lhoo! Mantap banget
+
+                </div>
+                <div class="testimoni-card-content-datetime">
+                <%--<cms:pageSlot position="Review1Datetime" var="comp">--%>
+                <%--<cms:component component="${comp}" element="p" />--%>
+                <%--</cms:pageSlot>--%>
+                9 Sep 2020 - 11:22 am
+                </div>
+
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
-
-    <%--<div class="row no-margin">--%>
-        <%--<div class="col-xs-12 col-md-6 no-space">--%>
-            <%--<cms:pageSlot position="Section2A" var="feature" element="div" class="row no-margin">--%>
-                <%--<cms:component component="${feature}" element="div" class="col-xs-12 col-sm-6 no-space yComponentWrapper"/>--%>
-            <%--</cms:pageSlot>--%>
-        <%--</div>--%>
-        <%--<div class="col-xs-12 col-md-6 no-space">--%>
-            <%--<cms:pageSlot position="Section2B" var="feature" element="div" class="row no-margin">--%>
-                <%--<cms:component component="${feature}" element="div" class="col-xs-12 col-sm-6 no-space yComponentWrapper"/>--%>
-            <%--</cms:pageSlot>--%>
-        <%--</div>--%>
-        <%--<div class="col-xs-12">--%>
-            <%--<cms:pageSlot position="Section2C" var="feature" element="div" class="landingLayout2PageSection2C">--%>
-                <%--<cms:component component="${feature}" element="div" class="yComponentWrapper"/>--%>
-            <%--</cms:pageSlot>--%>
-        <%--</div>--%>
-    <%--</div>--%>
-
-    <%--<cms:pageSlot position="Section3" var="feature" element="div" class="row no-margin" >--%>
-        <%--<cms:component component="${feature}" element="div" class="no-space yComponentWrapper"/>--%>
-    <%--</cms:pageSlot>--%>
-
-    <%--<cms:pageSlot position="Section4" var="feature" element="div" class="row no-margin">--%>
-        <%--<cms:component component="${feature}" element="div" class="col-xs-6 col-md-3 no-space yComponentWrapper"/>--%>
-    <%--</cms:pageSlot>--%>
-
-    <%--<cms:pageSlot position="Section5" var="feature" element="div">--%>
-        <%--<cms:component component="${feature}" element="div" class="yComponentWrapper"/>--%>
-    <%--</cms:pageSlot>--%>
-
 </template:page>
