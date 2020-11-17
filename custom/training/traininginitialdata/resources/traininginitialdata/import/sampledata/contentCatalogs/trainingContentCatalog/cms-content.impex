@@ -344,6 +344,8 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        
                          ;                          ; Review1DatetimeSlot-Homepage    ; Review 1 Datetime Slot for Homepage            ; true  ;
                          ;                          ; Review2DatetimeSlot-Homepage    ; Review 2 Datetime Slot for Homepage            ; true  ;
                          ;                          ; Review3DatetimeSlot-Homepage    ; Review 3 Datetime Slot for Homepage            ; true  ;
+                         ;                          ; PhoneNumber                     ; Phone Number Slot                              ; true  ;
+                         ;                          ; TextNumber                      ; Text Number Slot                               ; true  ;
 
 INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]              ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'homepage']; contentSlot(uid, $contentCV)[unique = true]
                                 ;                          ; Section1-Homepage               ; Section1               ;                                                           ; Section1Slot-Homepage
@@ -394,6 +396,10 @@ INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] 
                                 ;                          ; Review1AvatarSlot-Homepage      ; Review1Avatar          ;                                                           ; Review1AvatarSlot-Homepage
                                 ;                          ; Review2AvatarSlot-Homepage      ; Review2Avatar          ;                                                           ; Review2AvatarSlot-Homepage
                                 ;                          ; Review3AvatarSlot-Homepage      ; Review3Avatar          ;                                                           ; Review3AvatarSlot-Homepage
+                                ;                          ; PhoneNumber                     ; PhoneNumber            ;                                                           ; PhoneNumber
+                                ;                          ; TextNumber                      ; TextNumber             ;                                                           ; TextNumber
+                                ;                          ; PhoneNumberImg                  ; PhoneNumberImg         ;                                                           ; PhoneNumberImg
+                                ;                          ; TextNumberImg                   ; TextNumberImg          ;                                                           ; TextNumberImg
 
 ###### Electronics Search Results Page ######
 
@@ -800,17 +806,21 @@ INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = tru
                                    ;                          ; Review1DatetimeParagraphComponent    ; Review 1 Datetime Paragraph       ; Review1DatetimeParagraphComponent
                                    ;                          ; Review2DatetimeParagraphComponent    ; Review 2 Datetime Paragraph       ; Review2DatetimeParagraphComponent
                                    ;                          ; Review3DatetimeParagraphComponent    ; Review 3 Datetime Paragraph       ; Review3DatetimeParagraphComponent
+                                   ;                          ; PhoneNumberParagraphComponent        ; Phone Number Paragraph            ; PhoneNumberParagraphComponent
+                                   ;                          ; TextNumberParagraphComponent         ; Text Number Paragraph             ; TextNumberParagraphComponent
 
 
 # Unboxing Items Image
-INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]                         ; realfilename       ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText           ; folder(qualifier)[default = 'images']
-                   ;                          ; /images/banners/homepage/experience_1.png   ; experience_1.png   ; $siteResource/images/banners/homepage/experience_1.png                      ; image/png                   ; Keluarkan         ;
-                   ;                          ; /images/banners/homepage/experience_2.png   ; experience_2.png   ; $siteResource/images/banners/homepage/experience_2.png                      ; image/png                   ; Posisikan         ;
-                   ;                          ; /images/banners/homepage/experience_3.png   ; experience_3.png   ; $siteResource/images/banners/homepage/experience_3.png                      ; image/png                   ; Buka Plastik      ;
-                   ;                          ; /images/banners/homepage/experience_4.png   ; experience_4.png   ; $siteResource/images/banners/homepage/experience_4.png                      ; image/png                   ; Tunggu Mengembang ;
-                   ;                          ; /images/banners/homepage/star-full.webp     ; star-full.webp     ; $siteResource/images/banners/homepage/star-full.webp                        ; image/png                   ; Star Full         ;
-                   ;                          ; /images/banners/homepage/star-half.webp     ; star-half.webp     ; $siteResource/images/banners/homepage/star-half.webp                        ; image/png                   ; Star Half         ;
-                   ;                          ; /images/banners/homepage/review-avatar.webp ; review-avatar.webp ; $siteResource/images/banners/homepage/review-avatar.webp                    ; image/png                   ; Avatar            ;
+INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]                              ; realfilename            ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText           ; folder(qualifier)[default = 'images']
+                   ;                          ; /images/banners/homepage/experience_1.png        ; experience_1.png        ; $siteResource/images/banners/homepage/experience_1.png                      ; image/png                   ; Keluarkan         ;
+                   ;                          ; /images/banners/homepage/experience_2.png        ; experience_2.png        ; $siteResource/images/banners/homepage/experience_2.png                      ; image/png                   ; Posisikan         ;
+                   ;                          ; /images/banners/homepage/experience_3.png        ; experience_3.png        ; $siteResource/images/banners/homepage/experience_3.png                      ; image/png                   ; Buka Plastik      ;
+                   ;                          ; /images/banners/homepage/experience_4.png        ; experience_4.png        ; $siteResource/images/banners/homepage/experience_4.png                      ; image/png                   ; Tunggu Mengembang ;
+                   ;                          ; /images/banners/homepage/star-full.webp          ; star-full.webp          ; $siteResource/images/banners/homepage/star-full.webp                        ; image/png                   ; Star Full         ;
+                   ;                          ; /images/banners/homepage/star-half.webp          ; star-half.webp          ; $siteResource/images/banners/homepage/star-half.webp                        ; image/png                   ; Star Half         ;
+                   ;                          ; /images/banners/homepage/review-avatar.webp      ; review-avatar.webp      ; $siteResource/images/banners/homepage/review-avatar.webp                    ; image/png                   ; Avatar            ;
+                   ;                          ; /images/banners/homepage/footer-icon-call.png    ; footer-icon-call.png    ; $siteResource/images/banners/homepage/footer-icon-call.png                  ; image/png                   ; Call Icon         ;
+                   ;                          ; /images/banners/homepage/footer-icon-message.png ; footer-icon-message.png ; $siteResource/images/banners/homepage/footer-icon-message.png               ; image/png                   ; Message Icon      ;
 
 # Site Logo Component
 INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]          ; name                            ; &componentRef               ; urlLink
@@ -841,6 +851,8 @@ INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = tru
                                    ;                          ; Review1AvatarComponent      ; Review 1 Avatar Component       ; Review1AvatarComponent      ;
                                    ;                          ; Review2AvatarComponent      ; Review 2 Avatar Component       ; Review2AvatarComponent      ;
                                    ;                          ; Review3AvatarComponent      ; Review 3 Avatar Component       ; Review3AvatarComponent      ;
+                                   ;                          ; PhoneNumberImgComponent     ; Phone Number Image Component    ; PhoneNumberImgComponent     ;
+                                   ;                          ; TextNumberImgComponent      ; Text Number Image Component     ; TextNumberImgComponent      ;
 
 
 INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]              ; cmsComponents(&componentRef)
@@ -880,6 +892,10 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        
                          ;                          ; Review1AvatarSlot-Homepage      ; Review1AvatarComponent
                          ;                          ; Review2AvatarSlot-Homepage      ; Review2AvatarComponent
                          ;                          ; Review3AvatarSlot-Homepage      ; Review3AvatarComponent
+                         ;                          ; PhoneNumber                     ; PhoneNumberParagraphComponent
+                         ;                          ; TextNumber                      ; TextNumberParagraphComponent
+                         ;                          ; PhoneNumberImg                  ; PhoneNumberImgComponent
+                         ;                          ; TextNumberImg                   ; TextNumberImgComponent
 
 ## Home section 2A
 INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]            ; name                             ; &componentRef

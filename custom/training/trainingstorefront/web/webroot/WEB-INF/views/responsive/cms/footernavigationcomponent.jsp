@@ -5,14 +5,27 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <c:if test="${component.visible}">
-	<div class="container-fluid">
+	<div class="container">
 	    <div class="footer__top">
 	        <div class="row">
-	            <div class="footer__left col-xs-12 col-sm-12 col-md-9">
+				<div class="footer__left col-xs-12 col-sm-12 col-md-6">
+					<div>
+						<div>
+							Logo
+						</div>
+						<div>
+
+						</div>
+						<div>
+
+						</div>
+					</div>
+				</div>
+	            <div class="footer__right col-xs-12 col-md-6">
 	                <div class="row">
 	                	<c:forEach items="${component.navigationNode.children}" var="childLevel1">
 		                	<c:forEach items="${childLevel1.children}" step="${component.wrapAfter}" varStatus="i">
-							   <div class="footer__nav--container col-xs-12 col-sm-3">
+							   <div class="footer__nav--container col-xs-12 col-sm-4">
 		                	       <c:if test="${component.wrapAfter > i.index}">
 	                                   <div class="title">${fn:escapeXml(childLevel1.title)}</div>
 	                               </c:if>
@@ -28,25 +41,33 @@
 	                	</c:forEach>
 	               </div>
 	           </div>
-	           <div class="footer__right col-xs-12 col-md-3">
-	               <c:if test="${showLanguageCurrency}">
-	                   <div class="row">
-	                       <div class="col-xs-6 col-md-6 footer__dropdown">
-	                           <footer:languageSelector languages="${languages}" currentLanguage="${currentLanguage}" />
-	                       </div>
-	                       <div class="col-xs-6 col-md-6 footer__dropdown">
-	                           <footer:currencySelector currencies="${currencies}" currentCurrency="${currentCurrency}" />
-	                       </div>
-	                   </div>
-	               </c:if>
-	            </div>
 	        </div>
 	    </div>
 	</div>
 	
 	<div class="footer__bottom">
-	    <div class="footer__copyright">
-	        <div class="container">${fn:escapeXml(notice)}</div>
-	    </div>
+		<div class="display-flex flex-wrap justify-content-between container-fluid wrapper">
+			<div class="footer-contact display-flex flex-wrap">
+				<div class="display-flex mr-5 flex-wrap">
+					<cms:pageSlot position="PhoneNumberImg" var="feature">
+						<cms:component component="${feature}" element="div" class="display-flex"/>
+					</cms:pageSlot>
+					<cms:pageSlot position="PhoneNumber" var="comp" >
+						<cms:component component="${comp}" element="div" class="display-flex footer-bottom-text"/>
+					</cms:pageSlot>
+				</div>
+				<div class="display-flex">
+					<cms:pageSlot position="TextNumberImg" var="feature">
+						<cms:component component="${feature}" element="div" class="display-flex"/>
+					</cms:pageSlot>
+					<cms:pageSlot position="TextNumber" var="comp">
+						<cms:component component="${comp}" element="div" class="display-flex footer-bottom-text"/>
+					</cms:pageSlot>
+				</div>
+			</div>
+			<div class="footer__copyright display-flex">
+				<div class="">${fn:escapeXml(notice)}</div>
+			</div>
+		</div>
 	</div>
 </c:if>

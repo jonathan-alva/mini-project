@@ -8443,7 +8443,7 @@ output {
   color: #3c3c3c;
 }
 .well.well-tertiary {
-  background-color: #142939;
+  background-color: #7fc5f9;
   color: #ffffff;
 }
 .well.well-tertiary .item-label {
@@ -8470,7 +8470,7 @@ output {
   padding-right: 0;
 }
 .well.well-quinary .well-headline {
-  background-color: #142939;
+  background-color: #7fc5f9;
   color: #ffffff;
 }
 .well.well-quinary .well-content {
@@ -8573,8 +8573,7 @@ output {
   }
 }
 footer {
-  margin-top: 30px;
-  background: #142939;
+  background: #7fc5f9;
   color: #ffffff;
   font-weight: 300;
 }
@@ -8641,7 +8640,7 @@ footer {
 }
 .footer__right .footer__dropdown .form-control {
   cursor: pointer;
-  background-color: #142939;
+  background-color: #7fc5f9;
   color: #ffffff;
   padding: 7px 10px;
   height: 26px;
@@ -8649,16 +8648,20 @@ footer {
   font-size: 14px;
 }
 .footer__right .footer__dropdown .form-control option {
-  background-color: #142939;
+  background-color: #7fc5f9;
 }
 .footer__right .footer__dropdown .form-control:focus::-ms-value {
-  background-color: #142939;
+  background-color: #7fc5f9;
 }
-.footer__copyright {
-  background: #ffffff;
-  padding: 25px 0;
-  color: #3c3c3c;
-  text-align: center;
+.footer__bottom {
+  background: #6086c2;
+  color: #f3f4f4;
+  padding: 1rem 0;
+  font-weight: 400;
+}
+.footer-bottom-text {
+  line-height: 25px;
+  margin-left: 10px;
 }
 ul.nav__links::after {
   content: "";
@@ -9272,8 +9275,8 @@ ul.nav__links::after {
   top: 2px;
 }
 .navigation--bottom {
-  background-color: #142939;
-  border-bottom: 1px solid #142939;
+  background-color: #7fc5f9;
+  border-bottom: 1px solid #7fc5f9;
 }
 @media (max-width: 1023px) {
   .navigation--bottom {
@@ -9986,7 +9989,7 @@ ul.nav__links::after {
   font-weight: bold;
 }
 .top-header {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: #6086c2;
 }
 .flex-wrap {
@@ -12678,7 +12681,7 @@ a.product__listing .product__listing--promo:focus {
 }
 .item__list .item__list--header li {
   display: table-cell;
-  background-color: #142939;
+  background-color: #7fc5f9;
   color: #7f919e;
   font-size: 13px;
   text-transform: uppercase;
@@ -13565,7 +13568,7 @@ a.product__listing .product__listing--promo:focus {
 }
 .cart__quote__edit .quote__head {
   color: #ffffff;
-  background-color: #142939;
+  background-color: #7fc5f9;
   padding: 20px 0;
   padding-left: 30px;
   padding-right: 30px;
@@ -13652,7 +13655,7 @@ textarea.quote__comments--textarea {
 .quote__comments--toggle:focus,
 .quote__form--toggle:focus {
   border: none;
-  outline: #142939;
+  outline: #7fc5f9;
 }
 .quote__form--toggle {
   color: #ffffff;
@@ -15047,10 +15050,10 @@ form .forgotten-password {
   background-color: #f4f4f4;
 }
 .checkout-order-summary .checkout-order-summary-list .checkout-order-summary-list-heading {
-  background-color: #142939 !important;
+  background-color: #7fc5f9 !important;
   color: #ffffff;
   padding: 15px 20px;
-  border-bottom: 1px solid #142939;
+  border-bottom: 1px solid #7fc5f9;
 }
 .checkout-order-summary .checkout-order-summary-list .checkout-order-summary-list-heading > div {
   float: left;
@@ -17198,7 +17201,7 @@ table th {
   font-size: 13px;
   font-weight: 400;
   text-transform: uppercase;
-  background-color: #142939;
+  background-color: #7fc5f9;
   color: #7f919e;
   padding: 8px 10px;
   vertical-align: top;
@@ -17648,7 +17651,6 @@ select[multiple].input-sm {
   background-color: #f3f4f4;
   color: #6086c2;
   padding: 40px 0;
-  height: 810px !important;
 }
 .testimoni-section-subtitle {
   font-size: 1.5rem;
@@ -17683,6 +17685,9 @@ select[multiple].input-sm {
 }
 .total-stars-img {
   width: 20px !important;
+  display: unset !important;
+  position: unset !important;
+  height: auto !important;
 }
 .total-stars-container {
   display: flex;
@@ -17747,25 +17752,16 @@ select[multiple].input-sm {
   height: 100%;
   border-radius: 16px;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid #ebedf2;
-  width: 320px;
+  margin: 0 10px;
+  padding: 2%;
 }
-.testimoni-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  height: 370px;
+.testimoni-card-space {
+  height: inherit !important;
 }
 .testimoni-card-header {
   background-color: transparent;
@@ -17792,6 +17788,9 @@ select[multiple].input-sm {
 }
 .testimoni-card-header-img {
   width: 40px !important;
+  display: unset !important;
+  position: unset !important;
+  height: auto !important;
 }
 .testimoni-card-header:first-child {
   border-radius: calc(-0.75rem) calc(-0.75rem) 0 0;
@@ -17815,6 +17814,11 @@ select[multiple].input-sm {
 .testimoni-card-content-datetime {
   color: #aaa;
   margin-top: 20px;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: red !important;
+  z-index: 1000;
 }
 .product-details-toggle {
   position: relative;
@@ -19130,7 +19134,7 @@ header {
   border: 1px solid #e5e5e5;
 }
 .cts-msg-history-item .well.well-tertiary {
-  border: 1px solid #142939;
+  border: 1px solid #7fc5f9;
   opacity: .5;
 }
 .cts-msg-history-item .well.well-closed {

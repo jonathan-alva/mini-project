@@ -14,7 +14,7 @@ if (!window.ACC) {
                 arrows: false,
                 dots: true,
                 infinite: true,
-                autoplay:true,
+                autoplay: true,
                 speed: 300,
                 slidesToShow: 1,
                 adaptiveHeight: true,
@@ -24,18 +24,66 @@ if (!window.ACC) {
             var unboxingItems = $(".unboxing-items");
             unboxingItems.find("img").addClass("unboxing-item-img");
             unboxingItems.slick({
-                infinite: true,
+                infinite: false,
                 speed: 300,
                 slidesToShow: 4,
                 adaptiveHeight: true,
                 swipe: true,
-                swipeToSlide: true
+                swipeToSlide: true,
+                responsive: [
+                    {
+                        breakpoint: 715,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 530,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        }
+                    }
+
+                ]
             });
             var totalStars = $(".total-stars");
             totalStars.find("img").addClass("total-stars-img");
 
             var reviewAvatar = $(".testimoni-card-header-image");
             reviewAvatar.find("img").addClass("testimoni-card-header-img")
+
+            var testimoniCardList = $(".testimoni-card-container");
+            testimoniCardList.slick({
+                infinite: false,
+                speed: 300,
+                slidesToShow: 3,
+                adaptiveHeight: true,
+                arrows: false,
+                rows: 0,
+                responsive: [
+                    {
+                        breakpoint: 630,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 470,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            })
+                .on('setPosition', function (event, slick) {
+                    slick.$slides.css('height', slick.$slideTrack.height() + 'px');
+                });
+            testimoniCardList.find('.slick-track').addClass('display-flex');
+            testimoniCardList.find(".slick-slide").addClass("testimoni-card-space");
         },
         init: function () {
             var _self = demo.global;

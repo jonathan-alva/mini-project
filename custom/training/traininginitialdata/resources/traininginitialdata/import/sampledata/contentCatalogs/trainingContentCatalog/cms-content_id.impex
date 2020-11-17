@@ -647,32 +647,36 @@ UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]     
                             ;                          ; Review1DatetimeParagraphComponent    ; "9 Sep 2020 - 11:22 am"
                             ;                          ; Review2DatetimeParagraphComponent    ; "10 Aug 2020 - 4:41 pm"
                             ;                          ; Review3DatetimeParagraphComponent    ; "8 Jun 2020 - 1:00 pm"
+                            ;                          ; PhoneNumberParagraphComponent        ; "(021) 30306286"
+                            ;                          ; TextNumberParagraphComponent         ; "+62 819 234 659"
 
 UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]          ; $picture[lang = $lang]
-                            ;                          ; UnboxingItem1ImageComponent ; /images/banners/homepage/experience_1.png   ;
-                            ;                          ; UnboxingItem2ImageComponent ; /images/banners/homepage/experience_2.png   ;
-                            ;                          ; UnboxingItem3ImageComponent ; /images/banners/homepage/experience_3.png   ;
-                            ;                          ; UnboxingItem4ImageComponent ; /images/banners/homepage/experience_4.png   ;
-                            ;                          ; ReviewStar1Component        ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; ReviewStar2Component        ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; ReviewStar3Component        ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; ReviewStar4Component        ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; ReviewStar5Component        ; /images/banners/homepage/star-half.webp     ;
-                            ;                          ; Review1Star1Component       ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; Review1Star2Component       ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; Review1Star3Component       ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; Review1Star4Component       ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; Review1Star5Component       ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; Review2Star1Component       ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; Review2Star2Component       ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; Review2Star3Component       ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; Review2Star4Component       ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; Review2Star5Component       ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; Review3Star1Component       ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; Review3Star2Component       ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; Review3Star3Component       ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; Review3Star4Component       ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; Review3Star5Component       ; /images/banners/homepage/star-full.webp     ;
-                            ;                          ; Review1AvatarComponent      ; /images/banners/homepage/review-avatar.webp ;
-                            ;                          ; Review2AvatarComponent      ; /images/banners/homepage/review-avatar.webp ;
-                            ;                          ; Review3AvatarComponent      ; /images/banners/homepage/review-avatar.webp ;
+                            ;                          ; UnboxingItem1ImageComponent ; /images/banners/homepage/experience_1.png        ;
+                            ;                          ; UnboxingItem2ImageComponent ; /images/banners/homepage/experience_2.png        ;
+                            ;                          ; UnboxingItem3ImageComponent ; /images/banners/homepage/experience_3.png        ;
+                            ;                          ; UnboxingItem4ImageComponent ; /images/banners/homepage/experience_4.png        ;
+                            ;                          ; ReviewStar1Component        ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; ReviewStar2Component        ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; ReviewStar3Component        ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; ReviewStar4Component        ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; ReviewStar5Component        ; /images/banners/homepage/star-half.webp          ;
+                            ;                          ; Review1Star1Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review1Star2Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review1Star3Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review1Star4Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review1Star5Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review2Star1Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review2Star2Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review2Star3Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review2Star4Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review2Star5Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review3Star1Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review3Star2Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review3Star3Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review3Star4Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review3Star5Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review1AvatarComponent      ; /images/banners/homepage/review-avatar.webp      ;
+                            ;                          ; Review2AvatarComponent      ; /images/banners/homepage/review-avatar.webp      ;
+                            ;                          ; Review3AvatarComponent      ; /images/banners/homepage/review-avatar.webp      ;
+                            ;                          ; PhoneNumberImgComponent     ; /images/banners/homepage/footer-icon-call.png    ;
+                            ;                          ; TextNumberImgComponent      ; /images/banners/homepage/footer-icon-message.png ;
