@@ -103,6 +103,7 @@
                 </attributes>
             </itemtype>
         </typegroup>
+
         <typegroup name="Training">
             <itemtype code="TrainingProduct" autocreate="true" generate="true" extends="Product">
                 <attributes>
@@ -144,5 +145,17 @@
                 <!--</attributes>-->
             <!--</itemtype>-->
         </typegroup>
+
+        <typegroup>
+            <itemtype code="Customer" generate="false" autocreate="false">
+                <attributes>
+                    <attribute qualifier="id" type="java.lang.String">
+                        <modifiers/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+        </typegroup>
+
     </itemtypes>
 </items>

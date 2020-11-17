@@ -18,6 +18,16 @@ public class RegisterForm
 	private ConsentForm consentForm;
 	private boolean termsCheck;
 
+	private String id;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
 	/**
 	 * @return the titleCode
 	 */
