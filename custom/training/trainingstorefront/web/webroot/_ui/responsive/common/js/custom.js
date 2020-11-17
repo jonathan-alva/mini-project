@@ -33,6 +33,9 @@ if (!window.ACC) {
             });
             var totalStars = $(".total-stars");
             totalStars.find("img").addClass("total-stars-img");
+
+            var reviewAvatar = $(".testimoni-card-header-image");
+            reviewAvatar.find("img").addClass("testimoni-card-header-img")
         },
         init: function () {
             var _self = demo.global;

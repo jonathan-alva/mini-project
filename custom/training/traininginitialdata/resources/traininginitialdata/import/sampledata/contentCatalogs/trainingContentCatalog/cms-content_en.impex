@@ -635,14 +635,44 @@ UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]     
                             ;                          ; TestimoniSubtitle1ParagraphComponent ; "Banyak pembeli yang merasa puas dengan kualitas kasur INTHEBOX"
                             ;                          ; TestimoniSubtitle2ParagraphComponent ; "Kami menerima beragam komentar positif dari pembeli di seluruh Indonesia, bahkan dari kalangan artis. Bukan hanya pengalaman membeli kasur sping bed atau kasur busa, banyak juga yang merasa puas dengan produk INTHEBOX lainnya yang terdiri dari bantal, guling, dan sofa bed."
                             ;                          ; TotalReviewParagraphComponent        ; "4.9/5 (268 Reviews)"
+                            ;                          ; Review1NameParagraphComponent        ; "Baim Wong"
+                            ;                          ; Review2NameParagraphComponent        ; "Raffi Ahmad"
+                            ;                          ; Review3NameParagraphComponent        ; "Melaney Ricardo"
+                            ;                          ; Review1TitleParagraphComponent       ; "Mantap anget"
+                            ;                          ; Review2TitleParagraphComponent       ; "Pilih kasur INTHEBOX aja!"
+                            ;                          ; Review3TitleParagraphComponent       ; "Terima kasih Inthebox!"
+                            ;                          ; Review1DescParagraphComponent        ; "Kasur baru yang packing nya simple banget, masuk ke dalam box! Kasur @inthebox.id dengan teknologi Pocket Springbed ini enak banget, nyaman dan empuk! Ada Free Bantal dan Free Ongkirnya juga lhoo! Mantap banget"
+                            ;                          ; Review2DescParagraphComponent        ; "Pokoknya kalau mau beli spring bed yang bagus, materialnya berkualitas, nyaman, dan harganya murah, langsung pilih kasur INTHEBOX aja. Apalagi INTHEBOX+ ini nih bagus banget. Selama gue pakai kasur INTHEBOX di rumah itu bikin tidur jadi nyenyak, pas bangun langsung segar badannya."
+                            ;                          ; Review3DescParagraphComponent        ; "Produk memuaskaan sekalii.. dan seru waktu unboxing ya :-D Nyaman sekalii. Pas dapet harga ﬂash sale lagi. Mantap banget sihh klo ini Semoga aweet ya. Trimakasih Inthebox. Trimakasih Tokopedia."
+                            ;                          ; Review1DatetimeParagraphComponent    ; "9 Sep 2020 - 11:22 am"
+                            ;                          ; Review2DatetimeParagraphComponent    ; "10 Aug 2020 - 4:41 pm"
+                            ;                          ; Review3DatetimeParagraphComponent    ; "8 Jun 2020 - 1:00 pm"
 
 UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]          ; $picture[lang = $lang]
-                            ;                          ; UnboxingItem1ImageComponent ; /images/banners/homepage/experience_1.png ;
-                            ;                          ; UnboxingItem2ImageComponent ; /images/banners/homepage/experience_2.png ;
-                            ;                          ; UnboxingItem3ImageComponent ; /images/banners/homepage/experience_3.png ;
-                            ;                          ; UnboxingItem4ImageComponent ; /images/banners/homepage/experience_4.png ;
-                            ;                          ; ReviewStar1Component        ; /images/banners/homepage/star-full.webp   ;
-                            ;                          ; ReviewStar2Component        ; /images/banners/homepage/star-full.webp   ;
-                            ;                          ; ReviewStar3Component        ; /images/banners/homepage/star-full.webp   ;
-                            ;                          ; ReviewStar4Component        ; /images/banners/homepage/star-full.webp   ;
-                            ;                          ; ReviewStar5Component        ; /images/banners/homepage/star-half.webp   ;
+                            ;                          ; UnboxingItem1ImageComponent ; /images/banners/homepage/experience_1.png   ;
+                            ;                          ; UnboxingItem2ImageComponent ; /images/banners/homepage/experience_2.png   ;
+                            ;                          ; UnboxingItem3ImageComponent ; /images/banners/homepage/experience_3.png   ;
+                            ;                          ; UnboxingItem4ImageComponent ; /images/banners/homepage/experience_4.png   ;
+                            ;                          ; ReviewStar1Component        ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; ReviewStar2Component        ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; ReviewStar3Component        ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; ReviewStar4Component        ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; ReviewStar5Component        ; /images/banners/homepage/star-half.webp     ;
+                            ;                          ; Review1Star1Component       ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; Review1Star2Component       ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; Review1Star3Component       ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; Review1Star4Component       ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; Review1Star5Component       ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; Review2Star1Component       ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; Review2Star2Component       ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; Review2Star3Component       ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; Review2Star4Component       ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; Review2Star5Component       ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; Review3Star1Component       ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; Review3Star2Component       ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; Review3Star3Component       ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; Review3Star4Component       ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; Review3Star5Component       ; /images/banners/homepage/star-full.webp     ;
+                            ;                          ; Review1AvatarComponent      ; /images/banners/homepage/review-avatar.webp ;
+                            ;                          ; Review2AvatarComponent      ; /images/banners/homepage/review-avatar.webp ;
+                            ;                          ; Review3AvatarComponent      ; /images/banners/homepage/review-avatar.webp ;

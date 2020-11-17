@@ -250,6 +250,24 @@ INSERT_UPDATE ContentSlotName; name[unique = true]    ; template(uid, $contentCV
                              ; TestimoniSubtitle2     ;                                                                           ;                          ; narrow
                              ; TotalReview            ;                                                                           ;                          ; narrow
                              ; TotalStar              ;                                                                           ;                          ; narrow
+                             ; Review1Name            ;                                                                           ;                          ; narrow
+                             ; Review2Name            ;                                                                           ;                          ; narrow
+                             ; Review3Name            ;                                                                           ;                          ; narrow
+                             ; Review1TotalStars      ;                                                                           ;                          ; narrow
+                             ; Review2TotalStars      ;                                                                           ;                          ; narrow
+                             ; Review3TotalStars      ;                                                                           ;                          ; narrow
+                             ; Review1Title           ;                                                                           ;                          ; narrow
+                             ; Review2Title           ;                                                                           ;                          ; narrow
+                             ; Review3Title           ;                                                                           ;                          ; narrow
+                             ; Review1Desc            ;                                                                           ;                          ; narrow
+                             ; Review2Desc            ;                                                                           ;                          ; narrow
+                             ; Review3Desc            ;                                                                           ;                          ; narrow
+                             ; Review1Datetime        ;                                                                           ;                          ; narrow
+                             ; Review2Datetime        ;                                                                           ;                          ; narrow
+                             ; Review3Datetime        ;                                                                           ;                          ; narrow
+                             ; Review1Avatar          ;                                                                           ;                          ; narrow
+                             ; Review2Avatar          ;                                                                           ;                          ; narrow
+                             ; Review3Avatar          ;                                                                           ;                          ; narrow
                              ; Section2A              ;                                                                           ;                          ; narrow
                              ; Section2B              ;                                                                           ;                          ; narrow
                              ; Section2C              ;                                                                           ;                          ; wide

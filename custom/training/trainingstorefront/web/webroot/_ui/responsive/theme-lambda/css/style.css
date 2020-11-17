@@ -1074,7 +1074,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Rubik", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #3c3c3c;
@@ -5980,7 +5980,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Rubik", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6098,7 +6098,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Rubik", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -17589,7 +17589,7 @@ select[multiple].input-sm {
 }
 .stripTransmitter {
   overflow: auto;
-  padding: 0 15px ;
+  padding: 0 15px;
   width: 438px !important;
   height: 51px;
   border-bottom: 1px dotted #A5A5A5;
@@ -17655,6 +17655,27 @@ select[multiple].input-sm {
   text-align: center;
   color: black;
   font-weight: 600;
+  line-height: 28px;
+}
+.testimoni-section-total-stars {
+  margin: 20px 0;
+}
+.testimoni-section-button-container {
+  text-align: center;
+  margin-top: 40px;
+}
+.testimoni-section-button {
+  background-color: #6086c2;
+  border: none;
+  color: #fff !important;
+  font-weight: 700;
+  padding: 11px 25px 8px;
+  font-size: medium;
+  border-radius: 5px;
+}
+.testimoni-section-button:hover {
+  background-color: #7fc5f9;
+  color: #6086c2 !important;
 }
 .total-stars {
   display: flex;
@@ -17716,7 +17737,7 @@ select[multiple].input-sm {
   padding: 0 !important;
 }
 .my-0 {
-  margin-bottom: 0!important;
+  margin-bottom: 0 !important;
   margin-top: 0 !important;
 }
 .mb-2 {
@@ -17744,6 +17765,7 @@ select[multiple].input-sm {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  height: 370px;
 }
 .testimoni-card-header {
   background-color: transparent;
@@ -17756,11 +17778,20 @@ select[multiple].input-sm {
   -ms-flex-align: center !important;
   align-items: center !important;
   margin-bottom: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .testimoni-card-header-name {
   color: #6086c2;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
+  display: flex;
+}
+.testimoni-card-header-image {
+  display: flex;
+}
+.testimoni-card-header-img {
+  width: 40px !important;
 }
 .testimoni-card-header:first-child {
   border-radius: calc(-0.75rem) calc(-0.75rem) 0 0;
@@ -17773,9 +17804,13 @@ select[multiple].input-sm {
 }
 .testimoni-card-content {
   margin-top: 20px;
+  color: black;
 }
 .testimoni-card-content-title {
   margin-bottom: 10px !important;
+}
+.testimoni-card-content-desc {
+  line-height: 23px;
 }
 .testimoni-card-content-datetime {
   color: #aaa;

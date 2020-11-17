@@ -115,132 +115,123 @@
                             <cms:pageSlot position="Review1Name" var="comp">
                                 <cms:component component="${comp}" element="p" />
                             </cms:pageSlot>
-                            Baim Wong
                         </div>
                         <div class="testimoni-card-header-image">
-
+                            <cms:pageSlot position="Review1Avatar" var="feature">
+                                <cms:component component="${feature}" element="div" class=""/>
+                            </cms:pageSlot>
                         </div>
                     </div>
                     <div class="testimoni-card-body">
                         <div class="testimoni-card-stars">
                             <div class="total-stars">
-                            <%--<cms:pageSlot position="Review1TotalStars" var="feature">--%>
-                            <%--<cms:component component="${feature}" element="div" class="star-container star-review"/>--%>
-                            <%--</cms:pageSlot>--%>
+                                <cms:pageSlot position="Review1TotalStars" var="feature">
+                                <cms:component component="${feature}" element="div" class="star-container star-review"/>
+                                </cms:pageSlot>
                             </div>
                         </div>
                         <div class="testimoni-card-content">
                             <div class="testimoni-card-content-title">
-                            <%--<cms:pageSlot position="Review1Title" var="comp">--%>
-                            <%--<cms:component component="${comp}" element="strong" />--%>
-                            <%--</cms:pageSlot>--%>Mantap Banget
+                                <cms:pageSlot position="Review1Title" var="comp">
+                                <cms:component component="${comp}" element="strong" />
+                                </cms:pageSlot>
                             </div>
                             <div class="testimoni-card-content-desc">
-                            <%--<cms:pageSlot position="Review1Desc" var="comp">--%>
-                            <%--<cms:component component="${comp}" element="p" />--%>
-                            <%--</cms:pageSlot>--%>
-
-                            Kasur baru yang packing nya simple banget, masuk ke dalam box! Kasur @inthebox.id dengan teknologi Pocket Springbed ini enak banget, nyaman dan empuk! Ada Free Bantal dan Free Ongkirnya juga lhoo! Mantap banget
-
+                                <cms:pageSlot position="Review1Desc" var="comp">
+                                <cms:component component="${comp}" element="p" />
+                                </cms:pageSlot>
                             </div>
                             <div class="testimoni-card-content-datetime">
-                            <%--<cms:pageSlot position="Review1Datetime" var="comp">--%>
-                            <%--<cms:component component="${comp}" element="p" />--%>
-                            <%--</cms:pageSlot>--%>
-                            9 Sep 2020 - 11:22 am
+                                <cms:pageSlot position="Review1Datetime" var="comp">
+                                <cms:component component="${comp}" element="p" />
+                                </cms:pageSlot>
                             </div>
-
                         </div>
                     </div>
                 </div>
                 <div class="testimoni-card">
-                <div class="testimoni-card-header">
-                <div class="testimoni-card-header-name">
-                <%--<cms:pageSlot position="Review1Name" var="comp">--%>
-                <%--<cms:component component="${comp}" element="p" />--%>
-                <%--</cms:pageSlot>--%>
-                Baim Wong
-                </div>
-                <div class="testimoni-card-header-image">
-
-                </div>
-                </div>
-                <div class="testimoni-card-body">
-                <div class="testimoni-card-stars">
-                <div class="total-stars">
-                <%--<cms:pageSlot position="Review1TotalStars" var="feature">--%>
-                <%--<cms:component component="${feature}" element="div" class="star-container star-review"/>--%>
-                <%--</cms:pageSlot>--%>
-                </div>
-                </div>
-                <div class="testimoni-card-content">
-                <div class="testimoni-card-content-title">
-                <%--<cms:pageSlot position="Review1Title" var="comp">--%>
-                <%--<cms:component component="${comp}" element="strong" />--%>
-                <%--</cms:pageSlot>--%>Mantap Banget
-                </div>
-                <div class="testimoni-card-content-desc">
-                <%--<cms:pageSlot position="Review1Desc" var="comp">--%>
-                <%--<cms:component component="${comp}" element="p" />--%>
-                <%--</cms:pageSlot>--%>
-
-                Kasur baru yang packing nya simple banget, masuk ke dalam box! Kasur @inthebox.id dengan teknologi Pocket Springbed ini enak banget, nyaman dan empuk! Ada Free Bantal dan Free Ongkirnya juga lhoo! Mantap banget
-
-                </div>
-                <div class="testimoni-card-content-datetime">
-                <%--<cms:pageSlot position="Review1Datetime" var="comp">--%>
-                <%--<cms:component component="${comp}" element="p" />--%>
-                <%--</cms:pageSlot>--%>
-                9 Sep 2020 - 11:22 am
-                </div>
-
-                </div>
-                </div>
+                    <div class="testimoni-card-header">
+                        <div class="testimoni-card-header-name">
+                            <cms:pageSlot position="Review2Name" var="comp">
+                                <cms:component component="${comp}" element="p" />
+                            </cms:pageSlot>
+                        </div>
+                    <div class="testimoni-card-header-image">
+                        <cms:pageSlot position="Review2Avatar" var="feature">
+                            <cms:component component="${feature}" element="div" class=""/>
+                        </cms:pageSlot>
+                    </div>
+                    </div>
+                    <div class="testimoni-card-body">
+                        <div class="testimoni-card-stars">
+                            <div class="total-stars">
+                                <cms:pageSlot position="Review2TotalStars" var="feature">
+                                    <cms:component component="${feature}" element="div" class="star-container star-review"/>
+                                </cms:pageSlot>
+                            </div>
+                        </div>
+                        <div class="testimoni-card-content">
+                            <div class="testimoni-card-content-title">
+                                <cms:pageSlot position="Review2Title" var="comp">
+                                    <cms:component component="${comp}" element="strong" />
+                                </cms:pageSlot>
+                            </div>
+                            <div class="testimoni-card-content-desc">
+                                <cms:pageSlot position="Review2Desc" var="comp">
+                                    <cms:component component="${comp}" element="p" />
+                                </cms:pageSlot>
+                            </div>
+                            <div class="testimoni-card-content-datetime">
+                                <cms:pageSlot position="Review2Datetime" var="comp">
+                                    <cms:component component="${comp}" element="p" />
+                                </cms:pageSlot>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="testimoni-card">
-                <div class="testimoni-card-header">
-                <div class="testimoni-card-header-name">
-                <%--<cms:pageSlot position="Review1Name" var="comp">--%>
-                <%--<cms:component component="${comp}" element="p" />--%>
-                <%--</cms:pageSlot>--%>
-                Baim Wong
+                    <div class="testimoni-card-header">
+                        <div class="testimoni-card-header-name">
+                            <cms:pageSlot position="Review3Name" var="comp">
+                                <cms:component component="${comp}" element="p" />
+                            </cms:pageSlot>
+                        </div>
+                        <div class="testimoni-card-header-image">
+                            <cms:pageSlot position="Review3Avatar" var="feature">
+                                <cms:component component="${feature}" element="div" class=""/>
+                            </cms:pageSlot>
+                        </div>
+                    </div>
+                    <div class="testimoni-card-body">
+                        <div class="testimoni-card-stars">
+                            <div class="total-stars">
+                                <cms:pageSlot position="Review3TotalStars" var="feature">
+                                    <cms:component component="${feature}" element="div" class="star-container star-review"/>
+                                </cms:pageSlot>
+                            </div>
+                        </div>
+                        <div class="testimoni-card-content">
+                            <div class="testimoni-card-content-title">
+                                <cms:pageSlot position="Review3Title" var="comp">
+                                    <cms:component component="${comp}" element="strong" />
+                                </cms:pageSlot>
+                            </div>
+                            <div class="testimoni-card-content-desc">
+                                <cms:pageSlot position="Review3Desc" var="comp">
+                                    <cms:component component="${comp}" element="p" />
+                                </cms:pageSlot>
+                            </div>
+                            <div class="testimoni-card-content-datetime">
+                                <cms:pageSlot position="Review3Datetime" var="comp">
+                                    <cms:component component="${comp}" element="p" />
+                                </cms:pageSlot>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimoni-card-header-image">
-
-                </div>
-                </div>
-                <div class="testimoni-card-body">
-                <div class="testimoni-card-stars">
-                <div class="total-stars">
-                <%--<cms:pageSlot position="Review1TotalStars" var="feature">--%>
-                <%--<cms:component component="${feature}" element="div" class="star-container star-review"/>--%>
-                <%--</cms:pageSlot>--%>
-                </div>
-                </div>
-                <div class="testimoni-card-content">
-                <div class="testimoni-card-content-title">
-                <%--<cms:pageSlot position="Review1Title" var="comp">--%>
-                <%--<cms:component component="${comp}" element="strong" />--%>
-                <%--</cms:pageSlot>--%>Mantap Banget
-                </div>
-                <div class="testimoni-card-content-desc">
-                <%--<cms:pageSlot position="Review1Desc" var="comp">--%>
-                <%--<cms:component component="${comp}" element="p" />--%>
-                <%--</cms:pageSlot>--%>
-
-                Kasur baru yang packing nya simple banget, masuk ke dalam box! Kasur @inthebox.id dengan teknologi Pocket Springbed ini enak banget, nyaman dan empuk! Ada Free Bantal dan Free Ongkirnya juga lhoo! Mantap banget
-
-                </div>
-                <div class="testimoni-card-content-datetime">
-                <%--<cms:pageSlot position="Review1Datetime" var="comp">--%>
-                <%--<cms:component component="${comp}" element="p" />--%>
-                <%--</cms:pageSlot>--%>
-                9 Sep 2020 - 11:22 am
-                </div>
-
-                </div>
-                </div>
-                </div>
+            </div>
+            <div class="testimoni-section-button-container">
+                <a class="testimoni-section-button" href="#">Lihat Semua Testimoni</a>
             </div>
         </div>
     </section>
