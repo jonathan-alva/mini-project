@@ -9,7 +9,6 @@
 <spring:htmlEscape defaultHtmlEscape="true" />
 
 <div class="image-gallery js-gallery">
-    <span class="image-gallery__zoom-icon glyphicon glyphicon-resize-full"></span>
 
     <c:choose>
         <c:when test="${galleryImages == null || galleryImages.size() == 0}">
