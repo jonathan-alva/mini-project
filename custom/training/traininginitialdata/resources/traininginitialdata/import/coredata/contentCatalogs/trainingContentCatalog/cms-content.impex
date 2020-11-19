@@ -232,7 +232,9 @@ INSERT_UPDATE ContentSlotName; name[unique = true]    ; template(uid, $contentCV
                              ; MiniCart               ;                                                                           ;                          ; minicart
                              ; NavigationBar          ;                                                                           ;                          ; navigation
                              ; Section1               ;                                                                           ;                          ; wide
-                             ; SectionProduct          ;                                                                           ;                          ; wide
+                             ; SectionProduct         ;                                                                           ;                          ; wide
+                             ; SectionProductText1    ;                                                                           ;                          ; wide
+                             ; SectionProductText2    ;                                                                           ;                          ; wide
                              ; SectionUnboxing        ;                                                                           ;                          ; wide
                              ; UnboxingItem1          ;                                                                           ;                          ; narrow
                              ; UnboxingItem1Title     ;                                                                           ;                          ; narrow

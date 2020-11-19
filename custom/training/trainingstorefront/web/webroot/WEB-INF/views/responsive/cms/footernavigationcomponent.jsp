@@ -11,7 +11,6 @@
                 <div class="footer__left col-xs-12 col-sm-12 col-md-6">
                     <div>
                         <div class="footer-logo">
-                            <%--<div>${fn:escapeXml(footerLogo)}</div>--%>
                             <div class="display-flex footer-bottom-text">
                                 <cms:pageSlot position="SiteLogo" var="logo" limit="1">
                                     <cms:component component="${logo}" element="div" class="yComponentWrapper"/>

@@ -18,12 +18,12 @@
                 </cms:pageSlot>
             </div>
             <div class="product-section-subtitle">
-                <p>
-                    Tersedia beragam jenis kasur INTHEBOX dengan kualitas premium.
-                </p>
-                <p>
-                    Pilih spring bed berkualitas dengan ukuran kasur sesuai kebutuhan.
-                </p>
+                <cms:pageSlot position="SectionProductText1" var="comp" element="div" class="container">
+                    <cms:component component="${comp}" element="p" class=""/>
+                </cms:pageSlot>
+                <cms:pageSlot position="SectionProductText2" var="comp" element="div" class="container">
+                    <cms:component component="${comp}" element="p" class=""/>
+                </cms:pageSlot>
             </div>
         </div>
         <div class="container">

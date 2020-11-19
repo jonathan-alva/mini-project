@@ -662,8 +662,8 @@ UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]     
                             ;                          ; Review1DatetimeParagraphComponent    ; "9 Sep 2020 - 11:22 am"
                             ;                          ; Review2DatetimeParagraphComponent    ; "10 Aug 2020 - 4:41 pm"
                             ;                          ; Review3DatetimeParagraphComponent    ; "8 Jun 2020 - 1:00 pm"
-                            ;                          ; PhoneNumberParagraphComponent        ; "(021) 30306286"
-                            ;                          ; TextNumberParagraphComponent         ; "+62 819 234 659"
+#                            ;                          ; PhoneNumberParagraphComponent        ; "(021) 30306286"
+#                            ;                          ; TextNumberParagraphComponent         ; "+62 819 234 659"
 
 UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]          ; $picture[lang = $lang]
                             ;                          ; UnboxingItem1ImageComponent ; /images/banners/homepage/experience_1.png        ;
@@ -695,4 +695,4 @@ UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]     
                             ;                          ; Review3AvatarComponent      ; /images/banners/homepage/review-avatar.webp      ;
                             ;                          ; PhoneNumberImgComponent     ; /images/banners/homepage/footer-icon-call.png    ;
                             ;                          ; TextNumberImgComponent      ; /images/banners/homepage/footer-icon-message.png ;
-                            ;                          ; FooterLogoComponent         ; /images/banners/homepage/header-logo-white.png   ;
+#                            ;                          ; FooterLogoComponent         ; /images/banners/homepage/header-logo-white.png   ;

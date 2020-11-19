@@ -18,20 +18,33 @@
 <header class="js-mainHeader wrapper header">
     <div class="container top-header display-flex flex-wrap justify-content-between align-items-center py-3">
         <div class="display-flex flex-wrap ">
-            <div class="display-flex align-items-center mr-5">
-                <cms:pageSlot position="Garansi10TahunImg" var="logo" limit="1">
-                    <cms:component component="${logo}" element="div" class="yComponentWrapper"/>
+            <div class="display-flex align-items-center mr-5 flex-wrap">
+                <cms:pageSlot position="Garansi10TahunImg" var="feature">
+                    <cms:component component="${feature}" element="div" class="display-flex"/>
                 </cms:pageSlot>
-                Garansi 10 Tahun
+                <cms:pageSlot position="Garansi10TahunText" var="comp">
+                    <cms:component component="${comp}" element="div" class="display-flex top-header-text"/>
+                </cms:pageSlot>
             </div>
-            <div class="display-flex align-items-center">
-                Free Shipping pulau Jawa & Sumatera
+            <div class="display-flex align-items-center flex-wrap">
+                <cms:pageSlot position="FreeShippingImg" var="feature">
+                    <cms:component component="${feature}" element="div" class="display-flex"/>
+                </cms:pageSlot>
+                <cms:pageSlot position="FreeShippingText" var="comp">
+                    <cms:component component="${comp}" element="div" class="display-flex top-header-text"/>
+                </cms:pageSlot>
             </div>
         </div>
         <div class="display-flex flex-wrap ">
-            <a class="mr-5" href="#">Garansi</a>
-            <a class="mr-5" href="#">Konfirmasi</a>
-            <a href="#">Cek Resi</a>
+            <cms:pageSlot position="GaransiTopHeaderText" var="comp">
+                <cms:component component="${comp}" element="div" class="display-flex top-header-menu"/>
+            </cms:pageSlot>
+            <cms:pageSlot position="KonfirmasiTopHeaderText" var="comp">
+                <cms:component component="${comp}" element="div" class="display-flex top-header-menu"/>
+            </cms:pageSlot>
+            <cms:pageSlot position="CekResiTopHeaderText" var="comp">
+                <cms:component component="${comp}" element="div" class="display-flex top-header-menu"/>
+            </cms:pageSlot>
         </div>
     </div>
     <nav class="navigation navigation--top hidden-xs hidden-sm">

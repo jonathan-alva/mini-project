@@ -8750,9 +8750,6 @@ ul.nav__links::after {
     padding-right: 20px;
   }
 }
-.navigation--top .nav__left {
-  padding: 9px 0 7px;
-}
 .navigation--top .nav__left .simple-banner-component img,
 .navigation--top .nav__left .banner__component img {
   width: auto;
@@ -10117,6 +10114,12 @@ ul.nav__links::after {
 }
 .acc-btn a:hover {
   color: #6086c2 !important;
+}
+.top-header-text {
+  margin-left: 10px;
+}
+.top-header-menu {
+  padding: 1rem;
 }
 header {
   background: #f4f4f4;
@@ -17925,6 +17928,10 @@ select[multiple].input-sm {
   background-color: #6086c2;
   color: #fff;
   padding: 50px 0;
+}
+.product-section-subtitle {
+  margin: 30px 0 !important;
+  font-size: 1.5rem;
 }
 .kasur-text {
   color: #7fc5f9 !important;
