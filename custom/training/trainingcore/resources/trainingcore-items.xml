@@ -143,6 +143,24 @@
                     <!--</attribute>-->
                 <!--</attributes>-->
             <!--</itemtype>-->
+            <itemtype code="FooterNavigationComponent" autocreate="false"
+            generate="true" extends="NavigationComponent">
+                <attributes>
+                    <attribute qualifier="phoneNumber" type="java.lang.String">
+                        <description>Phone Number</description>
+                        <modifiers optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="textNumber" type="java.lang.String">
+                        <description>Text Number</description>
+                        <modifiers optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="footerLogo" type="Media">
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
         </typegroup>
     </itemtypes>
 </items>

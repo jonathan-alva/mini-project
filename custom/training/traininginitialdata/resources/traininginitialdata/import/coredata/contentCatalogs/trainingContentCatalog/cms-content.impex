@@ -232,6 +232,7 @@ INSERT_UPDATE ContentSlotName; name[unique = true]    ; template(uid, $contentCV
                              ; MiniCart               ;                                                                           ;                          ; minicart
                              ; NavigationBar          ;                                                                           ;                          ; navigation
                              ; Section1               ;                                                                           ;                          ; wide
+                             ; SectionProduct          ;                                                                           ;                          ; wide
                              ; SectionUnboxing        ;                                                                           ;                          ; wide
                              ; UnboxingItem1          ;                                                                           ;                          ; narrow
                              ; UnboxingItem1Title     ;                                                                           ;                          ; narrow
@@ -268,10 +269,7 @@ INSERT_UPDATE ContentSlotName; name[unique = true]    ; template(uid, $contentCV
                              ; Review1Avatar          ;                                                                           ;                          ; narrow
                              ; Review2Avatar          ;                                                                           ;                          ; narrow
                              ; Review3Avatar          ;                                                                           ;                          ; narrow
-                             ; PhoneNumberImg         ;                                                                           ;                          ; narrow
-                             ; TextNumberImg          ;                                                                           ;                          ; narrow
-                             ; PhoneNumber            ;                                                                           ;                          ; narrow
-                             ; TextNumber             ;                                                                           ;                          ; narrow
+                             ; FooterLogo             ;                                                                           ;                          ; narrow
                              ; Section2A              ;                                                                           ;                          ; narrow
                              ; Section2B              ;                                                                           ;                          ; narrow
                              ; Section2C              ;                                                                           ;                          ; wide
@@ -281,6 +279,7 @@ INSERT_UPDATE ContentSlotName; name[unique = true]    ; template(uid, $contentCV
                              ; Footer                 ;                                                                           ;                          ; footer
                              ; TopHeaderSlot          ;                                                                           ;                          ; wide
                              ; BottomHeaderSlot       ;                                                                           ;                          ; wide
+                             ; PlaceholderContentSlot ;                                                                           ;                          ;
                              ; PlaceholderContentSlot ;                                                                           ;                          ;
 
 INSERT_UPDATE ContentSlotName; name[unique = true]    ; template(uid, $contentCV)[unique = true][default = 'LandingPage3Template']; validComponentTypes(code); compTypeGroup(code)

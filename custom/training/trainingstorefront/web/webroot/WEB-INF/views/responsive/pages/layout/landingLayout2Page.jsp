@@ -10,8 +10,26 @@
             <cms:component component="${feature}" />
         </cms:pageSlot>
     </section>
-    <section>
-        <%--Beli Kasur--%>
+    <section class="product-section">
+        <div class="container">
+            <div class="product-section-header">
+                <cms:pageSlot position="SectionProduct" var="comp" element="div" class="container">
+                    <cms:component component="${comp}" element="h1" class=""/>
+                </cms:pageSlot>
+            </div>
+            <div class="product-section-subtitle">
+                <p>
+                    Tersedia beragam jenis kasur INTHEBOX dengan kualitas premium.
+                </p>
+                <p>
+                    Pilih spring bed berkualitas dengan ukuran kasur sesuai kebutuhan.
+                </p>
+            </div>
+        </div>
+        <div class="container">
+        <%--Product Carousel--%>
+
+        </div>
     </section>
     <section class="unboxing">
         <div class="container my-0">

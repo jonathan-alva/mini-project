@@ -15,10 +15,13 @@
     <cms:component component="${component}"/>
 </cms:pageSlot>
 
-<header class="js-mainHeader">
+<header class="js-mainHeader wrapper header">
     <div class="container top-header display-flex flex-wrap justify-content-between align-items-center py-3">
         <div class="display-flex flex-wrap ">
             <div class="display-flex align-items-center mr-5">
+                <cms:pageSlot position="Garansi10TahunImg" var="logo" limit="1">
+                    <cms:component component="${logo}" element="div" class="yComponentWrapper"/>
+                </cms:pageSlot>
                 Garansi 10 Tahun
             </div>
             <div class="display-flex align-items-center">
@@ -35,67 +38,67 @@
         <div class="row">
             <div class="col-sm-12 col-md-4">
                 <div class="nav__left js-site-logo">
-                    <cms:pageSlot position="SiteLogo" var="logo" limit="1">
-                        <cms:component component="${logo}" element="div" class="yComponentWrapper"/>
-                    </cms:pageSlot>
+                    <%--<cms:pageSlot position="SiteLogo" var="logo" limit="1">--%>
+                        <%--<cms:component component="${logo}" element="div" class="yComponentWrapper"/>--%>
+                    <%--</cms:pageSlot>--%>
                 </div>
             </div>
             <div class="col-sm-12 col-md-8">
                 <div class="nav__right">
-                    <ul class="nav__links nav__links--account">
-                        <c:if test="${empty hideHeaderLinks}">
-                            <c:if test="${uiExperienceOverride}">
-                                <li class="backToMobileLink">
-                                    <c:url value="/_s/ui-experience?level=" var="backToMobileStoreUrl"/>
-                                    <a href="${fn:escapeXml(backToMobileStoreUrl)}">
-                                        <spring:theme code="text.backToMobileStore"/>
-                                    </a>
-                                </li>
-                            </c:if>
+                    <%--<ul class="nav__links nav__links--account">--%>
+                        <%--<c:if test="${empty hideHeaderLinks}">--%>
+                            <%--<c:if test="${uiExperienceOverride}">--%>
+                                <%--<li class="backToMobileLink">--%>
+                                    <%--<c:url value="/_s/ui-experience?level=" var="backToMobileStoreUrl"/>--%>
+                                    <%--<a href="${fn:escapeXml(backToMobileStoreUrl)}">--%>
+                                        <%--<spring:theme code="text.backToMobileStore"/>--%>
+                                    <%--</a>--%>
+                                <%--</li>--%>
+                            <%--</c:if>--%>
 
-                            <sec:authorize access="!hasAnyRole('ROLE_ANONYMOUS')">
-                                <c:set var="maxNumberChars" value="25"/>
-                                <c:if test="${fn:length(user.firstName) gt maxNumberChars}">
-                                    <c:set target="${user}" property="firstName"
-                                           value="${fn:substring(user.firstName, 0, maxNumberChars)}..."/>
-                                </c:if>
+                            <%--<sec:authorize access="!hasAnyRole('ROLE_ANONYMOUS')">--%>
+                                <%--<c:set var="maxNumberChars" value="25"/>--%>
+                                <%--<c:if test="${fn:length(user.firstName) gt maxNumberChars}">--%>
+                                    <%--<c:set target="${user}" property="firstName"--%>
+                                           <%--value="${fn:substring(user.firstName, 0, maxNumberChars)}..."/>--%>
+                                <%--</c:if>--%>
 
-                                <li class="logged_in js-logged_in">
-                                    <ycommerce:testId code="header_LoggedUser">
-                                        <spring:theme code="header.welcome"
-                                                      arguments="${user.firstName},${user.lastName}"/>
-                                    </ycommerce:testId>
-                                </li>
-                            </sec:authorize>
+                                <%--<li class="logged_in js-logged_in">--%>
+                                    <%--<ycommerce:testId code="header_LoggedUser">--%>
+                                        <%--<spring:theme code="header.welcome"--%>
+                                                      <%--arguments="${user.firstName},${user.lastName}"/>--%>
+                                    <%--</ycommerce:testId>--%>
+                                <%--</li>--%>
+                            <%--</sec:authorize>--%>
 
-                            <cms:pageSlot position="HeaderLinks" var="link">
-                                <cms:component component="${link}" element="li"/>
-                            </cms:pageSlot>
+                            <%--<cms:pageSlot position="HeaderLinks" var="link">--%>
+                                <%--<cms:component component="${link}" element="li"/>--%>
+                            <%--</cms:pageSlot>--%>
 
-                            <sec:authorize access="hasAnyRole('ROLE_ANONYMOUS')">
-                                <li class="liOffcanvas">
-                                    <ycommerce:testId code="header_Login_link">
-                                        <c:url value="/login" var="loginUrl"/>
-                                        <a href="${fn:escapeXml(loginUrl)}">
-                                            <spring:theme code="header.link.login"/>
-                                        </a>
-                                    </ycommerce:testId>
-                                </li>
-                            </sec:authorize>
+                            <%--<sec:authorize access="hasAnyRole('ROLE_ANONYMOUS')">--%>
+                                <%--<li class="liOffcanvas">--%>
+                                    <%--<ycommerce:testId code="header_Login_link">--%>
+                                        <%--<c:url value="/login" var="loginUrl"/>--%>
+                                        <%--<a href="${fn:escapeXml(loginUrl)}">--%>
+                                            <%--<spring:theme code="header.link.login"/>--%>
+                                        <%--</a>--%>
+                                    <%--</ycommerce:testId>--%>
+                                <%--</li>--%>
+                            <%--</sec:authorize>--%>
 
-                            <sec:authorize access="!hasAnyRole('ROLE_ANONYMOUS')">
-                                <li class="liOffcanvas">
-                                    <ycommerce:testId code="header_signOut">
-                                        <c:url value="/logout" var="logoutUrl"/>
-                                        <a href="${fn:escapeXml(logoutUrl)}">
-                                            <spring:theme code="header.link.logout"/>
-                                        </a>
-                                    </ycommerce:testId>
-                                </li>
-                            </sec:authorize>
+                            <%--<sec:authorize access="!hasAnyRole('ROLE_ANONYMOUS')">--%>
+                                <%--<li class="liOffcanvas">--%>
+                                    <%--<ycommerce:testId code="header_signOut">--%>
+                                        <%--<c:url value="/logout" var="logoutUrl"/>--%>
+                                        <%--<a href="${fn:escapeXml(logoutUrl)}">--%>
+                                            <%--<spring:theme code="header.link.logout"/>--%>
+                                        <%--</a>--%>
+                                    <%--</ycommerce:testId>--%>
+                                <%--</li>--%>
+                            <%--</sec:authorize>--%>
 
-                        </c:if>
-                    </ul>
+                        <%--</c:if>--%>
+                    <%--</ul>--%>
                 </div>
             </div>
         </div>
@@ -124,26 +127,26 @@
                                 </button>
                             </div>
 
-                            <div class="mobile__nav__row--table-cell visible-xs mobile__nav__row--seperator">
-                                <ycommerce:testId code="header_search_activation_button">
-                                    <button class="mobile__nav__row--btn btn mobile__nav__row--btn-search js-toggle-xs-search hidden-sm hidden-md hidden-lg"
-                                            type="button">
-                                        <span class="glyphicon glyphicon-search"></span>
-                                    </button>
-                                </ycommerce:testId>
-                            </div>
+                            <%--<div class="mobile__nav__row--table-cell visible-xs mobile__nav__row--seperator">--%>
+                                <%--<ycommerce:testId code="header_search_activation_button">--%>
+                                    <%--<button class="mobile__nav__row--btn btn mobile__nav__row--btn-search js-toggle-xs-search hidden-sm hidden-md hidden-lg"--%>
+                                            <%--type="button">--%>
+                                        <%--<span class="glyphicon glyphicon-search"></span>--%>
+                                    <%--</button>--%>
+                                <%--</ycommerce:testId>--%>
+                            <%--</div>--%>
 
-                            <c:if test="${empty hideHeaderLinks}">
-                                <ycommerce:testId code="header_StoreFinder_link">
-                                    <div class="mobile__nav__row--table-cell hidden-sm hidden-md hidden-lg mobile__nav__row--seperator">
-                                        <c:url value="/store-finder" var="storeFinderUrl"/>
-                                        <a href="${fn:escapeXml(storeFinderUrl)}"
-                                           class="mobile__nav__row--btn mobile__nav__row--btn-location btn">
-                                            <span class="glyphicon glyphicon-map-marker"></span>
-                                        </a>
-                                    </div>
-                                </ycommerce:testId>
-                            </c:if>
+                            <%--<c:if test="${empty hideHeaderLinks}">--%>
+                                <%--<ycommerce:testId code="header_StoreFinder_link">--%>
+                                    <%--<div class="mobile__nav__row--table-cell hidden-sm hidden-md hidden-lg mobile__nav__row--seperator">--%>
+                                        <%--<c:url value="/store-finder" var="storeFinderUrl"/>--%>
+                                        <%--<a href="${fn:escapeXml(storeFinderUrl)}"--%>
+                                           <%--class="mobile__nav__row--btn mobile__nav__row--btn-location btn">--%>
+                                            <%--<span class="glyphicon glyphicon-map-marker"></span>--%>
+                                        <%--</a>--%>
+                                    <%--</div>--%>
+                                <%--</ycommerce:testId>--%>
+                            <%--</c:if>--%>
 
                             <cms:pageSlot position="MiniCart" var="cart" element="div"
                                           class="miniCartSlot componentContainer mobile__nav__row--table hidden-sm hidden-md hidden-lg">
@@ -154,45 +157,45 @@
                     </div>
                 </div>
             </div>
-            <div class="row desktop__nav">
-                <div class="nav__left col-xs-12 col-sm-6">
-                    <div class="row">
-                        <div class="col-sm-2 hidden-xs visible-sm mobile-menu">
-                            <button class="btn js-toggle-sm-navigation" type="button">
-                                <span class="glyphicon glyphicon-align-justify"></span>
-                            </button>
-                        </div>
-                        <div class="col-sm-10">
-                            <div class="site-search">
-                                <cms:pageSlot position="SearchBox" var="component">
-                                    <cms:component component="${component}" element="div"/>
-                                </cms:pageSlot>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="nav__right col-xs-6 col-xs-6 hidden-xs">
-                    <ul class="nav__links nav__links--shop_info">
-                        <li>
-                            <c:if test="${empty hideHeaderLinks}">
-                                <ycommerce:testId code="header_StoreFinder_link">
-                                    <div class="nav-location hidden-xs">
-                                        <c:url value="/store-finder" var="storeFinderUrl"/>
-                                        <a href="${fn:escapeXml(storeFinderUrl)}" class="btn">
-                                            <span class="glyphicon glyphicon-map-marker"></span>
-                                        </a>
-                                    </div>
-                                </ycommerce:testId>
-                            </c:if>
-                        </li>
-                        <li>
-                            <cms:pageSlot position="MiniCart" var="cart" element="div" class="componentContainer">
-                                <cms:component component="${cart}" element="div"/>
-                            </cms:pageSlot>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <%--<div class="row desktop__nav">--%>
+                <%--<div class="nav__left col-xs-12 col-sm-6">--%>
+                    <%--<div class="row">--%>
+                        <%--<div class="col-sm-2 hidden-xs visible-sm mobile-menu">--%>
+                            <%--<button class="btn js-toggle-sm-navigation" type="button">--%>
+                                <%--<span class="glyphicon glyphicon-align-justify"></span>--%>
+                            <%--</button>--%>
+                        <%--</div>--%>
+                        <%--<div class="col-sm-10">--%>
+                            <%--<div class="site-search">--%>
+                                <%--<cms:pageSlot position="SearchBox" var="component">--%>
+                                    <%--<cms:component component="${component}" element="div"/>--%>
+                                <%--</cms:pageSlot>--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+                <%--<div class="nav__right col-xs-6 col-xs-6 hidden-xs">--%>
+                    <%--<ul class="nav__links nav__links--shop_info">--%>
+                        <%--<li>--%>
+                            <%--<c:if test="${empty hideHeaderLinks}">--%>
+                                <%--<ycommerce:testId code="header_StoreFinder_link">--%>
+                                    <%--<div class="nav-location hidden-xs">--%>
+                                        <%--<c:url value="/store-finder" var="storeFinderUrl"/>--%>
+                                        <%--<a href="${fn:escapeXml(storeFinderUrl)}" class="btn">--%>
+                                            <%--<span class="glyphicon glyphicon-map-marker"></span>--%>
+                                        <%--</a>--%>
+                                    <%--</div>--%>
+                                <%--</ycommerce:testId>--%>
+                            <%--</c:if>--%>
+                        <%--</li>--%>
+                        <%--<li>--%>
+                            <%--<cms:pageSlot position="MiniCart" var="cart" element="div" class="componentContainer">--%>
+                                <%--<cms:component component="${cart}" element="div"/>--%>
+                            <%--</cms:pageSlot>--%>
+                        <%--</li>--%>
+                    <%--</ul>--%>
+                <%--</div>--%>
+            <%--</div>--%>
         </div>
     </nav>
     <a id="skiptonavigation"></a>

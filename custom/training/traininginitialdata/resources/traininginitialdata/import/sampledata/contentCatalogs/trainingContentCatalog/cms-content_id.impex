@@ -29,7 +29,7 @@ $Image = image(code, $contentCV)
 
 # Site Logo Component
 UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]; $picture[lang = $lang]
-                            ;                          ; SiteLogoComponent ; /images/theme/logo-hybris.png ;
+                            ;                          ; SiteLogoComponent ; /images/banner/homepage/header-logo-white.png ;
 
 # CMS Link Components
 UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]           ; linkName[lang = $lang]
@@ -81,6 +81,17 @@ UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]          
                        ;                          ; TermsAndConditionsLink       ; "Terms And Conditions"
                        ;                          ; ProductRecommendationLink    ; "Product Recommendation"
                        ;                          ; ProductRecommendationTopLink ; "Product Recommendation"
+                       ;                          ; ProductFooterLink            ; "Produk"
+                       ;                          ; AktivasiGaransiFooterLink    ; "Aktivasi Garansi"
+                       ;                          ; CekResiFooterLink            ; "Cek Resi"
+                       ;                          ; FAQFooterLink                ; "FAQ"
+                       ;                          ; BantuanFooterLink            ; "Bantuan"
+                       ;                          ; SyaratKetentuanFooterLink    ; "Syarat & Ketentuan"
+                       ;                          ; KebijakanPrivasiFooterLink   ; "Kebijakan Privasi"
+                       ;                          ; TentangKamiFooterLink        ; "Tentang Kami"
+                       ;                          ; TokoOfflineFooterLink        ; "Toko Offline"
+                       ;                          ; BlogFooterLink               ; "Blog"
+                       ;                          ; TestimoniFooterLink          ; "Testimoni"
 
 # Lightbox Banner for Mini Cart (banner is not localizable so we must create a separate banner per language)
 INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]                      ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; &imageRef                                ; folder(qualifier)[default = 'images']; altText
@@ -148,6 +159,10 @@ UPDATE CMSNavigationNode; $contentCV[unique = true]; uid[unique = true]         
                         ;                          ; BlogsNavNode                 ; "Blogs"
                         ;                          ; GuaranteeNavNode             ; "Garansi"
                         ;                          ; ConfirmationNavNode          ; "Konfirmasi"
+                        ;                          ; ProductFooterNavNode         ; "Produk"
+                        ;                          ; SupportFooterNavNode         ; "Support"
+                        ;                          ; AboutFooterNavNode           ; "About"
+
 
 #Bottom Header Slot
 UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]; content[lang = en];
@@ -612,7 +627,7 @@ INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[un
 
 # CMS Footer Navigation Component
 UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique = true]        ; notice[lang = en][translator = de.hybris.platform.acceleratorservices.dataimport.batch.converter.CopyrightTranslator, dateFormat = yyyy]
-                                ;                          ; FooterNavigationComponent ; "Copyright © {0} SAP SE or an SAP affiliate company. All rights reserved."
+                                ;                          ; FooterNavigationComponent ; "Copyright © 2019-2020 INTHEBOX. All Rights Reserved."
 
 UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                   ; content[lang = en];
 #                            ;                          ; TrainingParagraphComponent          ; "Test Training Page"
@@ -680,3 +695,4 @@ UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]     
                             ;                          ; Review3AvatarComponent      ; /images/banners/homepage/review-avatar.webp      ;
                             ;                          ; PhoneNumberImgComponent     ; /images/banners/homepage/footer-icon-call.png    ;
                             ;                          ; TextNumberImgComponent      ; /images/banners/homepage/footer-icon-message.png ;
+                            ;                          ; FooterLogoComponent         ; /images/banners/homepage/header-logo-white.png   ;

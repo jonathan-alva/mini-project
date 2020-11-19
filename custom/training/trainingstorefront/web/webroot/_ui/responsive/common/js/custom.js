@@ -84,6 +84,8 @@ if (!window.ACC) {
                 });
             testimoniCardList.find('.slick-track').addClass('display-flex');
             testimoniCardList.find(".slick-slide").addClass("testimoni-card-space");
+            var footerLogoImg = $(".footer-logo");
+            footerLogoImg.find('img').addClass("footer-logo-img");
         },
         init: function () {
             var _self = demo.global;

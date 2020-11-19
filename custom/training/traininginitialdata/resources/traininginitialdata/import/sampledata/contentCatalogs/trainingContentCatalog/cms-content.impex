@@ -27,9 +27,11 @@ UPDATE CMSSite; uid[unique = true]; defaultPreviewCategory(code, $productCV); de
 #              ; training          ; BED                                     ; SUPERKINGX                             ; $productCatalog
 
 # Site Logo
-INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]              ; realfilename       ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText            ; folder(qualifier)[default = 'images']
-                   ;                          ; /images/theme/logo-hybris.png    ; logo-hybris.png    ; $siteResource/images/theme/logo-hybris.png                                  ; image/png                   ; hybris Accelerator ;
-                   ;                          ; /images/theme/logo-hybris_zh.png ; logo-hybris_zh.png ; $siteResource/images/theme/logo-hybris_zh.png                               ; image/png                   ; hybris Accelerator ;
+INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]                                   ; realfilename                 ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText  ; folder(qualifier)[default = 'images']
+#                   ;                          ; /images/theme/logo-hybris.png                 ; logo-hybris.png       ; $siteResource/images/theme/logo-hybris.png                                  ; image/png                   ; hybris Accelerator ;
+#                   ;                          ; /images/theme/logo-hybris_zh.png              ; logo-hybris_zh.png    ; $siteResource/images/theme/logo-hybris_zh.png                               ; image/png                   ; hybris Accelerator ;
+                   ;                          ; /images/banners/homepage/header-logo-white.png        ; header-logo-white.png        ; $siteResource/images/banners/homepage/header-logo-white.png                 ; image/png                   ; INTHEBOX ;
+                   ;                          ; /images/banners/homepage/header-icon-10y-warranty.png ; header-icon-10y-warranty.png ; $siteResource/images/banners/homepage/header-icon-10y-warranty.png          ; image/png                   ;          ;
 
 # Site Logo Component
 INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]; name                ; &componentRef     ; urlLink
@@ -44,8 +46,8 @@ INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]   
                               ;                          ; AllFashionsCategoryLink      ; All Fashions Link             ; /c/FASHION                                ; AllFashionsCategoryLink      ; AllFashionsCategoryLink      ;                                     ; FASHION  ;         ;
                               ;                          ; ShirtCategoryLink            ; Shirt Category Link           ; /c/SHIRT                                  ; ShirtCategoryLink            ; ShirtCategoryLink            ;                                     ; SHIRT    ;         ;
                               ;                          ; TrouserCategoryLink          ; Trouser Category Link         ; /c/TROUSER                                ; TrouserCategoryLink          ; TrouserCategoryLink          ;                                     ; TROUSER  ;         ;
-                              ;                          ; AboutUsLink                  ; About us Link                 ; /Bed/Sofa/c/SOFA                          ; AboutUsLink                  ; AboutUsLink                  ;                                     ;          ;         ;
-                              ;                          ; BlogsLink                    ; Blogs Link                    ; /Bed/Sofa/c/SOFA                          ; BlogsLink                    ; BlogsLink                    ;                                     ;          ;         ;
+                              ;                          ; AboutUsLink                  ; About us Link                 ; /#                                        ; AboutUsLink                  ; AboutUsLink                  ;                                     ;          ;         ;
+                              ;                          ; BlogsLink                    ; Blogs Link                    ; /#                                        ; BlogsLink                    ; BlogsLink                    ;                                     ;          ;         ;
                               ;                          ; GuaranteeLink                ; Guarantee Link                ; /Bed/Sofa/c/SOFA                          ; GuaranteeLink                ; GuaranteeLink                ;                                     ;          ;         ;
                               ;                          ; ConfirmationLink             ; Guarantee Link                ; /Bed/Sofa/c/SOFA                          ; ConfirmationLink             ; ConfirmationLink             ;                                     ;          ;         ;
                               ;                          ; AboutSAPCommerceLink         ; About SAP Commerce Cloud Link ; "http://www.cx.sap.com/products/commerce" ; AboutSAPCommerceLink         ; AboutSAPCommerceLink         ; newWindow                           ;          ;         ;
@@ -60,6 +62,19 @@ INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]   
                               ;                          ; TermsAndConditionsLink       ; Terms and Conditions Link     ; /termsAndConditions                       ; TermsAndConditionsLink       ; TermsAndConditionsLink       ;                                     ;          ;         ;
                               ;                          ; ProductRecommendationLink    ; Product Recommendation Link   ; /product-recommendation                   ; ProductRecommendationLink    ; ProductRecommendationLink    ;                                     ;          ;         ;
                               ;                          ; ProductRecommendationTopLink ; Product Recommendation Link   ; /product-recommendation                   ; ProductRecommendationTopLink ; ProductRecommendationTopLink ;                                     ;          ;         ;
+                              ;                          ; ProductLink                  ; Product Link                  ; /#                                        ; ProductLink                  ; ProductLink                  ;                                     ;          ;         ;
+                              ;                          ; TestimoniLink                ; Testimoni Link                ; /#                                        ; TestimoniLink                ; TestimoniLink                ;                                     ;          ;         ;
+                              ;                          ; ProductFooterLink            ; Product Footer Link           ; /#                                        ; ProductFooterLink            ; ProductFooterLink            ;                                     ;          ;         ;
+                              ;                          ; AktivasiGaransiFooterLink    ; Aktivasi Garansi Footer Link  ; /#                                        ; AktivasiGaransiFooterLink    ; AktivasiGaransiFooterLink    ;                                     ;          ;         ;
+                              ;                          ; CekResiFooterLink            ; Cek Resi Footer Link          ; /#                                        ; CekResiFooterLink            ; CekResiFooterLink            ;                                     ;          ;         ;
+                              ;                          ; FAQFooterLink                ; FAQ Footer Link               ; /#                                        ; FAQFooterLink                ; FAQFooterLink                ;                                     ;          ;         ;
+                              ;                          ; BantuanFooterLink            ; Bantuan Footer Link           ; /#                                        ; BantuanFooterLink            ; BantuanFooterLink            ;                                     ;          ;         ;
+                              ;                          ; SyaratKetentuanFooterLink    ; Syarat Ketentuan Footer Link  ; /#                                        ; SyaratKetentuanFooterLink    ; SyaratKetentuanFooterLink    ;                                     ;          ;         ;
+                              ;                          ; KebijakanPrivasiFooterLink   ; Kebijakan Privasi Footer Link ; /#                                        ; KebijakanPrivasiFooterLink   ; KebijakanPrivasiFooterLink   ;                                     ;          ;         ;
+                              ;                          ; TentangKamiFooterLink        ; Tentang Kami Footer Link      ; /#                                        ; TentangKamiFooterLink        ; TentangKamiFooterLink        ;                                     ;          ;         ;
+                              ;                          ; TokoOfflineFooterLink        ; Toko Offline Footer Link      ; /#                                        ; TokoOfflineFooterLink        ; TokoOfflineFooterLink        ;                                     ;          ;         ;
+                              ;                          ; BlogFooterLink               ; Blog Footer Link              ; /#                                        ; BlogFooterLink               ; BlogFooterLink               ;                                     ;          ;         ;
+                              ;                          ; TestimoniFooterLink          ; Testimoni Footer Link         ; /#                                        ; TestimoniFooterLink          ; TestimoniFooterLink          ;                                     ;          ;         ;
 
 # Lightbox Banner for Mini Cart
 INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]                  ; name                                    ; &componentRef                       ; urlLink
@@ -182,22 +197,25 @@ INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; 
                                ; root              ;                          ; root ; ;
 
 # CMS Navigation Nodes
-INSERT_UPDATE CMSNavigationNode; uid[unique = true]           ; $contentCV[unique = true]; name                          ; parent(uid, $contentCV); links(&linkRef)                                             ; &nodeRef
-                               ; SiteRootNode                 ;                          ; SiteRootNode                  ; root                   ;                                                             ; SiteRootNode
-                               ; ElectronicsNavNode           ;                          ; Electronics Site              ; SiteRootNode           ; HomepageNavLink                                             ; ElectronicsNavNode
-                               ; DemoNavNode                  ;                          ; trainings Site                ; SiteRootNode           ; HomepageNavLink                                             ; trainingNavNode
+INSERT_UPDATE CMSNavigationNode; uid[unique = true]           ; $contentCV[unique = true]; name                          ; parent(uid, $contentCV); links(&linkRef)                                                                                                                  ; &nodeRef
+                               ; SiteRootNode                 ;                          ; SiteRootNode                  ; root                   ;                                                                                                                                  ; SiteRootNode
+                               ; ElectronicsNavNode           ;                          ; Electronics Site              ; SiteRootNode           ; HomepageNavLink                                                                                                                  ; ElectronicsNavNode
+                               ; DemoNavNode                  ;                          ; trainings Site                ; SiteRootNode           ; HomepageNavLink                                                                                                                  ; trainingNavNode
 #                               ; AllBedsNavNode               ;                          ; Beds Links                    ; DemoNavNode            ; AllBedsCategoryLink                                         ; AllBedsNavNode
 #                               ; BrandsNavNode                ;                          ; Brand Links                   ; DemoNavNode            ; AllBrandsCategoryLink                                       ; BrandsNavNode
-                               ; AboutUsNavNode               ;                          ; About Us Links                ; DemoNavNode            ; AboutUsLink                                                 ; AboutUsNavNode
-                               ; BlogsNavNode                 ;                          ; Blogs Links                   ; DemoNavNode            ; BlogsLink                                                   ; BlogsNavNode
-                               ; GuaranteeNavNode             ;                          ; Guarantee Links               ; DemoNavNode            ; GuaranteeLink                                               ; GuaranteeNavNode
-                               ; ConfirmationNavNode          ;                          ; Confirmation Links            ; DemoNavNode            ; ConfirmationLink                                            ; ConfirmationNavNode
+                               ; AboutUsNavNode               ;                          ; About Us Links                ; DemoNavNode            ; AboutUsLink                                                                                                                      ; AboutUsNavNode
+                               ; BlogsNavNode                 ;                          ; Blogs Links                   ; DemoNavNode            ; BlogsLink                                                                                                                        ; BlogsNavNode
+                               ; GuaranteeNavNode             ;                          ; Guarantee Links               ; DemoNavNode            ; GuaranteeLink                                                                                                                    ; GuaranteeNavNode
+                               ; ConfirmationNavNode          ;                          ; Confirmation Links            ; DemoNavNode            ; ConfirmationLink                                                                                                                 ; ConfirmationNavNode
 #                               ; BedLinksNavNode              ;                          ; Bed Links                     ; AllBedsNavNode         ; SpringBedCategoryLink,SofaBedCategoryLink                   ; BedLinksNavNode
 #                               ; SpringbedNavNode             ;                          ; Springbed Links               ; BedLinksNavNode        ; SpringBedCategoryLink                                       ; SpringbedNavNode
 #                               ; SofabedNavNode               ;                          ; Sofabed Links                 ; BedLinksNavNode        ; SofaBedCategoryLink                                         ; SofabedNavNode
-                               ; SAPCommerceNavNode           ;                          ; SAP Commerce Cloud Pages      ; ElectronicsNavNode     ; AboutSAPCommerceLink,FAQLink                                ; SAPCommerceNavNode
-                               ; SAPCustomerExperienceNavNode ;                          ; SAP Customer Experience Pages ; ElectronicsNavNode     ; VisitSAPLink,ContactUsLink                                  ; SAPCustomerExperienceNavNode
-                               ; FollowUsNavNode              ;                          ; Follow Us Pages               ; ElectronicsNavNode     ; AgileCommerceBlogLink,LinkedInLink,FacebookLink,TwitterLink ; FollowUsNavNode
+                               ; SAPCommerceNavNode           ;                          ; SAP Commerce Cloud Pages      ; ElectronicsNavNode     ; AboutSAPCommerceLink,FAQLink                                                                                                     ; SAPCommerceNavNode
+                               ; SAPCustomerExperienceNavNode ;                          ; SAP Customer Experience Pages ; ElectronicsNavNode     ; VisitSAPLink,ContactUsLink                                                                                                       ; SAPCustomerExperienceNavNode
+                               ; FollowUsNavNode              ;                          ; Follow Us Pages               ; ElectronicsNavNode     ; AgileCommerceBlogLink,LinkedInLink,FacebookLink,TwitterLink                                                                      ; FollowUsNavNode
+                               ; ProductFooterNavNode         ;                          ; Product Links                 ; ElectronicsNavNode     ; ProductFooterLink                                                                                                                ; ProductFooterNavNode
+                               ; SupportFooterNavNode         ;                          ; Support Links                 ; ElectronicsNavNode     ; AktivasiGaransiFooterLink,CekResiFooterLink,FAQFooterLink,BantuanFooterLink,SyaratKetentuanFooterLink,KebijakanPrivasiFooterLink ; SupportFooterNavNode
+                               ; AboutFooterNavNode           ;                          ; About Links                   ; ElectronicsNavNode     ; TentangKamiFooterLink,TokoOfflineFooterLink,BlogFooterLink,TestimoniFooterLink                                                   ; AboutFooterNavNode
 
 
 # Preview Image for use in the CMS Cockpit for special ContentPages
@@ -315,6 +333,7 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        
                          ;                          ; Section3CSlot-Homepage          ; Section3C Slot for Homepage                    ; true  ; ElectronicsHomepageCarouselComponent
                          ;                          ; Section4Slot-Homepage           ; Section4 Slot for Homepage                     ; true  ; DigitalCompactCamerasBannerComponent,DigitalSLRCamerasBannerComponent,MemoryBannerComponent,AccessoriesBannerComponent
                          ;                          ; Section5Slot-Homepage           ; Section5 Slot for Homepage                     ; true  ; NextDayDeliveryBanner
+                         ;                          ; SectionProductSlot-Homepage     ; Section Product Slot for Homepage              ; true  ;
                          ;                          ; SectionUnboxingSlot-Homepage    ; Section Unboxing Slot for Homepage             ; true  ;
                          ;                          ; SectionTestimoniSlot-Homepage   ; Section Testimoni Slot for Homepage            ; true  ;
                          ;                          ; TestimoniSubtitle1Slot-Homepage ; Section Testimoni Subtitle 1 Slot for Homepage ; true  ;
@@ -344,8 +363,6 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        
                          ;                          ; Review1DatetimeSlot-Homepage    ; Review 1 Datetime Slot for Homepage            ; true  ;
                          ;                          ; Review2DatetimeSlot-Homepage    ; Review 2 Datetime Slot for Homepage            ; true  ;
                          ;                          ; Review3DatetimeSlot-Homepage    ; Review 3 Datetime Slot for Homepage            ; true  ;
-                         ;                          ; PhoneNumber                     ; Phone Number Slot                              ; true  ;
-                         ;                          ; TextNumber                      ; Text Number Slot                               ; true  ;
 
 INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]              ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'homepage']; contentSlot(uid, $contentCV)[unique = true]
                                 ;                          ; Section1-Homepage               ; Section1               ;                                                           ; Section1Slot-Homepage
@@ -360,6 +377,7 @@ INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] 
                                 ;                          ; Section7-Homepage               ; Section7               ;                                                           ; Section7Slot-Homepage
 #                                ;                          ; Section8-Homepage  ; Section8               ;                                                           ; Section8Slot-Homepage
 #                                ;                          ; Section9-Homepage  ; Section9               ;                                                           ; Section9Slot-Homepage
+                                ;                          ; SectionProductSlot-Homepage     ; SectionProduct         ;                                                           ; SectionProductSlot-Homepage
                                 ;                          ; SectionUnboxingSlot-Homepage    ; SectionUnboxing        ;                                                           ; SectionUnboxingSlot-Homepage
                                 ;                          ; SectionTestimoniSlot-Homepage   ; SectionTestimoni       ;                                                           ; SectionTestimoniSlot-Homepage
                                 ;                          ; TestimoniSubtitle1Slot-Homepage ; TestimoniSubtitle1     ;                                                           ; TestimoniSubtitle1Slot-Homepage
@@ -396,10 +414,11 @@ INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] 
                                 ;                          ; Review1AvatarSlot-Homepage      ; Review1Avatar          ;                                                           ; Review1AvatarSlot-Homepage
                                 ;                          ; Review2AvatarSlot-Homepage      ; Review2Avatar          ;                                                           ; Review2AvatarSlot-Homepage
                                 ;                          ; Review3AvatarSlot-Homepage      ; Review3Avatar          ;                                                           ; Review3AvatarSlot-Homepage
-                                ;                          ; PhoneNumber                     ; PhoneNumber            ;                                                           ; PhoneNumber
-                                ;                          ; TextNumber                      ; TextNumber             ;                                                           ; TextNumber
-                                ;                          ; PhoneNumberImg                  ; PhoneNumberImg         ;                                                           ; PhoneNumberImg
-                                ;                          ; TextNumberImg                   ; TextNumberImg          ;                                                           ; TextNumberImg
+#                                ;                          ; PhoneNumber                     ; PhoneNumber            ;                                                           ; PhoneNumber
+#                                ;                          ; TextNumber                      ; TextNumber             ;                                                           ; TextNumber
+#                                ;                          ; PhoneNumberImg                  ; PhoneNumberImg         ;                                                           ; PhoneNumberImg
+#                                ;                          ; TextNumberImg                   ; TextNumberImg          ;                                                           ; TextNumberImg
+#                                ;                          ; FooterLogo                      ; FooterLogo             ;                                                           ; FooterLogo
 
 ###### Electronics Search Results Page ######
 
@@ -781,6 +800,7 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]    ; ac
 
 ## Home Section Unboxing
 INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                   ; name                              ; &componentRef
+                                   ;                          ; ProductTitleParagraphComponent       ; Product Section Title Paragraph   ; ProductTitleParagraphComponent
                                    ;                          ; UnboxingTitleParagraphComponent      ; Unboxing Section Title Paragraph  ; UnboxingTitleParagraphComponent
                                    ;                          ; TestimoniTitleParagraphComponent     ; Testimoni Section Title Paragraph ; TestimoniTitleParagraphComponent
                                    ;                          ; TestimoniSubtitle1ParagraphComponent ; Testimoni Subtitle 1 Paragraph    ; TestimoniSubtitle1ParagraphComponent
@@ -821,6 +841,7 @@ INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]             
                    ;                          ; /images/banners/homepage/review-avatar.webp      ; review-avatar.webp      ; $siteResource/images/banners/homepage/review-avatar.webp                    ; image/png                   ; Avatar            ;
                    ;                          ; /images/banners/homepage/footer-icon-call.png    ; footer-icon-call.png    ; $siteResource/images/banners/homepage/footer-icon-call.png                  ; image/png                   ; Call Icon         ;
                    ;                          ; /images/banners/homepage/footer-icon-message.png ; footer-icon-message.png ; $siteResource/images/banners/homepage/footer-icon-message.png               ; image/png                   ; Message Icon      ;
+                   ;                          ; /images/banners/homepage/header-logo-white.png   ; header-logo-white.png   ; $siteResource/images/banners/homepage/header-logo-white.png                 ; image/png                   ; Logo              ;
 
 # Site Logo Component
 INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]          ; name                            ; &componentRef               ; urlLink
@@ -851,11 +872,13 @@ INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = tru
                                    ;                          ; Review1AvatarComponent      ; Review 1 Avatar Component       ; Review1AvatarComponent      ;
                                    ;                          ; Review2AvatarComponent      ; Review 2 Avatar Component       ; Review2AvatarComponent      ;
                                    ;                          ; Review3AvatarComponent      ; Review 3 Avatar Component       ; Review3AvatarComponent      ;
-                                   ;                          ; PhoneNumberImgComponent     ; Phone Number Image Component    ; PhoneNumberImgComponent     ;
-                                   ;                          ; TextNumberImgComponent      ; Text Number Image Component     ; TextNumberImgComponent      ;
+#                                   ;                          ; PhoneNumberImgComponent     ; Phone Number Image Component    ; PhoneNumberImgComponent     ;
+#                                   ;                          ; TextNumberImgComponent      ; Text Number Image Component     ; TextNumberImgComponent      ;
+#                                   ;                          ; FooterLogoComponent         ; Footer Logo Component           ; FooterLogoComponent         ;
 
 
 INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]              ; cmsComponents(&componentRef)
+                         ;                          ; SectionProductSlot-Homepage     ; ProductTitleParagraphComponent
                          ;                          ; SectionUnboxingSlot-Homepage    ; UnboxingTitleParagraphComponent
                          ;                          ; SectionTestimoniSlot-Homepage   ; TestimoniTitleParagraphComponent
                          ;                          ; TestimoniSubtitle1Slot-Homepage ; TestimoniSubtitle1ParagraphComponent
@@ -894,8 +917,9 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        
                          ;                          ; Review3AvatarSlot-Homepage      ; Review3AvatarComponent
                          ;                          ; PhoneNumber                     ; PhoneNumberParagraphComponent
                          ;                          ; TextNumber                      ; TextNumberParagraphComponent
-                         ;                          ; PhoneNumberImg                  ; PhoneNumberImgComponent
-                         ;                          ; TextNumberImg                   ; TextNumberImgComponent
+#                         ;                          ; PhoneNumberImg                  ; PhoneNumberImgComponent
+#                         ;                          ; TextNumberImg                   ; TextNumberImgComponent
+#                         ;                          ; FooterLogo                      ; FooterLogoComponent
 
 ## Home section 2A
 INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]            ; name                             ; &componentRef
@@ -1155,7 +1179,7 @@ INSERT_UPDATE NavigationComponent; $contentCV[unique = true]; uid[unique = true]
 
 # Content Slots
 INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; cmsComponents(uid, $contentCV)
-                         ;                          ; MiniCartSlot      ; OrderComponent,MiniCart
+                         ;                          ; MiniCartSlot      ; MiniCart
 
 # create a user restriction
 INSERT_UPDATE CMSUserRestriction; $contentCV[unique = true]; &userRestriction         ; name                       ; uid[unique = true]       ; users(uid)
@@ -1343,7 +1367,7 @@ INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; 
 ## level 2. children of SiteRoot ##
 # the following order of children is the display order on the site
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]  ; $contentCV[unique = true]; name       ; parent(uid, $contentCV); &nodeRef            ; children(uid, $contentCV)
-                               ; DemoCategoryNavNode ;                          ; Categories ; DemoNavNode            ; DemoCategoryNavNode ; AllFashionsNavNode,AboutUsNavNode,BlogsNavNode,GuaranteeNavNode,ConfirmationNavNode,ProductRecommendationTopNavNode
+                               ; DemoCategoryNavNode ;                          ; Categories ; DemoNavNode            ; DemoCategoryNavNode ; ProductNavNode,AboutUsNavNode,BlogsNavNode,TestimoniNavNode
 
 ## level 3. children of Category Nav ##
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]              ; $contentCV[unique = true]; name                         ; &nodeRef                        ; children(uid, $contentCV)   ; links(&linkRef);
@@ -1355,6 +1379,8 @@ INSERT_UPDATE CMSNavigationNode; uid[unique = true]              ; $contentCV[un
                                ; ConfirmationNavNode             ;                          ; Confirmation Links           ; ConfirmationNavNode             ;                             ;
                                ; TermsAndConditionsNavNode       ;                          ; Terms And Conditions Links   ; TermsAndConditionsNavNode       ;                             ;
                                ; ProductRecommendationTopNavNode ;                          ; Product Recommendation Links ; ProductRecommendationTopNavNode ;                             ;
+                               ; ProductNavNode                  ;                          ; Product Links                ; ProductNavNode                  ;                             ;
+                               ; TestimoniNavNode                ;                          ; Testimoni Links              ; TestimoniNavNode                ;                             ;
 
 ## entries of the above navigation nodes ##
 INSERT_UPDATE CMSNavigationEntry; uid[unique = true]                   ; $contentCV[unique = true]; name                                         ; navigationNode(&nodeRef)        ; item(CMSLinkComponent.uid, CMSLinkComponent.$contentCV);
@@ -1366,6 +1392,8 @@ INSERT_UPDATE CMSNavigationEntry; uid[unique = true]                   ; $conten
                                 ; AllFashionsNavNodeEntry              ;                          ; All Fashions Navigation Node Entry           ; AllFashionsNavNode              ; AllFashionsCategoryLink                                ;
                                 ; TermsAndConditionsNavNodeEntry       ;                          ; Terms And Conditions Navigation Node Entry   ; TermsAndConditionsNavNode       ; TermsAndConditionsLink                                 ;
                                 ; ProductRecommendationTopNavNodeEntry ;                          ; Product Recommendation Navigation Node Entry ; ProductRecommendationTopNavNode ; ProductRecommendationTopLink                           ;
+                                ; ProductNavNodeEntry                  ;                          ; Product Navigation Node Entry                ; ProductNavNode                  ; ProductLink                                            ;
+                                ; TestimoniNavNodeEntry                ;                          ; Testimoni Navigation Node Entry              ; TestimoniNavNode                ; TestimoniLink                                          ;
 
 # CMS Link Components
 INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]; name; url; &linkRef; &componentRef; target(code)[default = 'sameWindow']; $category; $product;
@@ -1397,17 +1425,20 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; cmsCom
                          ;                          ; FooterSlot        ; FooterNavigationComponent
 
 INSERT_UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique = true]        ; wrapAfter; &componentRef             ; showLanguageCurrency; navigationNode(&nodeRef)
-                                       ;                          ; FooterNavigationComponent ; 4        ; FooterNavigationComponent ; true                ; FooterNavNode ;
+                                       ;                          ; FooterNavigationComponent ; 6        ; FooterNavigationComponent ; true                ; FooterNavNode ;
 
 # the order of children is the same as the display order on the site
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; name         ; parent(uid, $contentCV); &nodeRef      ; children(uid, $contentCV)
-                               ; FooterNavNode     ;                          ; Footer Pages ; DemoNavNode            ; FooterNavNode ; SAPCommerceNavNode,SAPCustomerExperienceNavNode,FollowUsNavNode
+                               ; FooterNavNode     ;                          ; Footer Pages ; DemoNavNode            ; FooterNavNode ; ProductFooterNavNode,SupportFooterNavNode,AboutFooterNavNode
 
 # children of FooterNavNode #
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]           ; $contentCV[unique = true]; name                          ; &nodeRef                     ; children(uid, $contentCV); links(&linkRef)
                                ; SAPCommerceNavNode           ;                          ; SAP Commerce Cloud Pages      ; SAPCommerceNavNode           ; AboutSAPCommerceNavNode,FAQNavNode,ProductRecommendationNavNode
                                ; SAPCustomerExperienceNavNode ;                          ; SAP Customer Experience Pages ; SAPCustomerExperienceNavNode ; AboutSAPCustomerExperienceNavNode,ContactUsNavNode
                                ; FollowUsNavNode              ;                          ; Follow Us Pages               ; FollowUsNavNode              ; AgileCommerceBlogNavNode,LinkedInNavNode,FacebookNavNode,TwitterNavNode
+                               ; ProductFooterNavNode         ;                          ; Product Footer Link           ; ProductFooterNavNode         ; ProductFooterChildNavNode
+                               ; SupportFooterNavNode         ;                          ; Support Footer Link           ; SupportFooterNavNode         ; AktivasiGaransiFooterNavNode,CekResiFooterNavNode,FAQFooterNavNode,BantuanFooterNavNode,SyaratKetentuanFooterNavNode,KebijakanPrivasiFooterNavNode
+                               ; AboutFooterNavNode           ;                          ; About Footer Link             ; AboutFooterNavNode           ; TentangKamiFooterNavNode,TokoOfflineFooterNavNode,BlogFooterNavNode,TestimoniFooterNavNode
 
 # children of above navigation nodes #
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]                ; $contentCV[unique = true]; name                          ; &nodeRef; children(uid, $contentCV); links(&linkRef);
@@ -1420,6 +1451,17 @@ INSERT_UPDATE CMSNavigationNode; uid[unique = true]                ; $contentCV[
                                ; FacebookNavNode                   ;                          ; Facebook Page                 ; FacebookNavNode
                                ; TwitterNavNode                    ;                          ; Twitter Page                  ; TwitterNavNode
                                ; ProductRecommendationNavNode      ;                          ; Product Recommendation        ; ProductRecommendationNavNode
+                               ; ProductFooterChildNavNode         ;                          ; Product                       ; ProductFooterChildNavNode
+                               ; AktivasiGaransiFooterNavNode      ;                          ; Aktivasi Garansi              ; AktivasiGaransiFooterNavNode
+                               ; CekResiFooterNavNode              ;                          ; Cek Resi                      ; CekResiFooterNavNode
+                               ; FAQFooterNavNode                  ;                          ; FAQ                           ; FAQFooterNavNode
+                               ; BantuanFooterNavNode              ;                          ; Bantuan                       ; BantuanFooterNavNode
+                               ; SyaratKetentuanFooterNavNode      ;                          ; Syarat & Ketentuan            ; SyaratKetentuanFooterNavNode
+                               ; KebijakanPrivasiFooterNavNode     ;                          ; Kebijakan Privasi             ; KebijakanPrivasiFooterNavNode
+                               ; TentangKamiFooterNavNode          ;                          ; Tentang Kami                  ; TentangKamiFooterNavNode
+                               ; TokoOfflineFooterNavNode          ;                          ; Toko Offline                  ; TokoOfflineFooterNavNode
+                               ; BlogFooterNavNode                 ;                          ; Blog                          ; BlogFooterNavNode
+                               ; TestimoniFooterNavNode            ;                          ; Testimoni                     ; TestimoniFooterNavNode
 
 # entries of the above navigation nodes ##
 INSERT_UPDATE CMSNavigationEntry; uid[unique = true]                     ; $contentCV[unique = true]; name                                           ; navigationNode(&nodeRef)          ; item(CMSLinkComponent.uid, CMSLinkComponent.$contentCV);
@@ -1432,6 +1474,17 @@ INSERT_UPDATE CMSNavigationEntry; uid[unique = true]                     ; $cont
                                 ; FacebookNavNodeEntry                   ;                          ; Facebook Navigation Node Entry                 ; FacebookNavNode                   ; FacebookLink                                           ;
                                 ; TwitterNavNodeEntry                    ;                          ; Twitter Navigation Node Entry                  ; TwitterNavNode                    ; TwitterLink                                            ;
                                 ; ProductRecommendationNavNodeEntry      ;                          ; Product Recommendation Node Entry              ; ProductRecommendationNavNode      ; ProductRecommendationLink                              ;
+                                ; ProductFooterChildNavNodeEntry         ;                          ; Product Footer Child Node Entry                ; ProductFooterChildNavNode         ; ProductFooterLink                                      ;
+                                ; AktivasiGaransiFooterNavNodeEntry      ;                          ; Aktivasi Garansi Footer Node Entry             ; AktivasiGaransiFooterNavNode      ; AktivasiGaransiFooterLink                              ;
+                                ; CekResiFooterNavNodeEntry              ;                          ; Cek Resi Footer Node Entry                     ; CekResiFooterNavNode              ; CekResiFooterLink                                      ;
+                                ; FAQFooterNavNodeEntry                  ;                          ; FAQ Footer Node Entry                          ; FAQFooterNavNode                  ; FAQFooterLink                                          ;
+                                ; BantuanFooterNavNodeEntry              ;                          ; Bantuan Footer Node Entry                      ; BantuanFooterNavNode              ; BantuanFooterLink                                      ;
+                                ; SyaratKetentuanFooterNavNodeEntry      ;                          ; Syarat & Ketentuan Footer Node Entry           ; SyaratKetentuanFooterNavNode      ; SyaratKetentuanFooterLink                              ;
+                                ; KebijakanPrivasiFooterNavNodeEntry     ;                          ; Kebijakan Privasi Footer Node Entry            ; KebijakanPrivasiFooterNavNode     ; KebijakanPrivasiFooterLink                             ;
+                                ; TentangKamiFooterNavNodeEntry          ;                          ; Tentang Kami Footer Node Entry                 ; TentangKamiFooterNavNode          ; TentangKamiFooterLink                                  ;
+                                ; TokoOfflineFooterNavNodeEntry          ;                          ; Toko Offline Footer Node Entry                 ; TokoOfflineFooterNavNode          ; TokoOfflineFooterLink                                  ;
+                                ; BlogFooterNavNodeEntry                 ;                          ; Blog Footer Node Entry                         ; BlogFooterNavNode                 ; BlogFooterLink                                         ;
+                                ; TestimoniFooterNavNodeEntry            ;                          ; Testimoni Footer Node Entry                    ; TestimoniFooterNavNode            ; TestimoniFooterLink                                    ;
 ###### Footer Component Refactor End ######
 
 ###  Product Recommendation Page #######
