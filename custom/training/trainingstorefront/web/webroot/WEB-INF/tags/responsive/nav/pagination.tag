@@ -70,7 +70,7 @@
                                                      <!-- searchPageData.currentQuery.query.value is html output encoded in the backend -->
                                         <input type="hidden" name="q" value="${searchPageData.currentQuery.query.value}"/>
                                     </c:catch>
-										
+
                                     <c:if test="${supportShowAll}">
                                         <ycommerce:testId code="searchResults_showAll_link">
                                             <input type="hidden" name="show" value="Page"/>
