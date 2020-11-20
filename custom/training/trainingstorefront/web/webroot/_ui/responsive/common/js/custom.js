@@ -21,6 +21,14 @@ if (!window.ACC) {
                 swipe: true,
                 swipeToSlide: true
             });
+            var productList = $(".product-card-list-container");
+            productList.slick({
+                infinite: true,
+                slidesToShow: 3,
+                adaptiveHeight: true,
+                swipe: true,
+                swipeToSlide: true
+            });
             var unboxingItems = $(".unboxing-items");
             unboxingItems.find("img").addClass("unboxing-item-img");
             unboxingItems.slick({

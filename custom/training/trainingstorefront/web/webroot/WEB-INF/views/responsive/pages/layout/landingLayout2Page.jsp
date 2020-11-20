@@ -26,9 +26,27 @@
                 </cms:pageSlot>
             </div>
         </div>
-        <div class="container">
+        <div class="container product-card-list-container">
         <%--Product Carousel--%>
-
+            <div class="product-card">
+                <div class="product-card-body">
+                    <%--IMG--%>
+                    <div class="product-card-title">
+                        <h3>INTHEBOX</h3>
+                    </div>
+                    <div class="product-card-subtitle">
+                        Pocket Spring &
+                        <br/>
+                        Busa Medium Soft
+                    </div>
+                    <div class="product-card-price">
+                        Rp1.299.000
+                    </div>
+                    <a class="product-card-btn" href="/#">
+                        Beli Sekarang
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
     <section class="unboxing">

@@ -17936,6 +17936,59 @@ select[multiple].input-sm {
 .kasur-text {
   color: #7fc5f9 !important;
 }
+.product-card {
+  border-radius: 16px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #ebedf2;
+}
+.product-card-body {
+  text-align: center !important;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+.product-card-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #000;
+  margin-top: 15px;
+}
+.product-card-subtitle {
+  color: #666;
+  margin: 5px 0 10px;
+}
+.product-card-price {
+  font-size: 3rem;
+  color: #7fc5f9;
+  line-height: .5;
+  margin-bottom: 20px;
+}
+.product-card-btn {
+  background-color: #6086c2;
+  border: none;
+  color: white !important;
+  font-weight: 700;
+  padding: 6px 25px 8px !important;
+  border-radius: .25rem !important;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+}
+.product-card-btn:hover {
+  background-color: #7fc5f9;
+  color: #6086c2 !important;
+}
 .product-details-toggle {
   position: relative;
   cursor: pointer;
