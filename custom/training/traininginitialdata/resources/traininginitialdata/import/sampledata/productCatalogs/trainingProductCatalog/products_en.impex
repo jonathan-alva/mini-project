@@ -14,17 +14,38 @@ $lang = en
 
 # Update allProducts with localisations
 UPDATE TrainingProduct; code[unique = true]; $catalogVersion; name[lang = $lang]; description[lang = $lang]
-                      ; PULLNBEAR          ;                ; Pull & Bear       ; Pull & Bear T-Shirt
-                      ; CONVERSE           ;                ; Converse          ; Converse T-Shirt
-                      ; HURLEY             ;                ; Hurley            ; Hurley T-Shirt
-                      ; COLE               ;                ; Cole              ; Cole Jeans
+                      ; KASURINTHEBOX      ;                ; Kasur INTHEBOX    ; Kasur INTHEBOX
+                      ; INTHEBOXX          ;                ; INTHEBOX X        ; INTHEBOX X
+                      ; INTHEBOX101        ;                ; INTHEBOX 101      ; INTHEBOX 101
+                      ; INTHEBOXHYBRID     ;                ; INTHEBOX Hybrid   ; INTHEBOX HYBRID
+                      ; PROPSINTHEBOX      ;                ; PROPS INTHEBOX    ; Props INTHEBOX
+                      ; SOFABED            ;                ; SOFA BED          ; SOFA BED
 
-UPDATE TrainingVariantProduct; code[unique = true]; name[lang = $lang]
-                             ; PB-SHIRT-1         ; Pull & Bear Shirt 1
-                             ; PB-SHIRT-2         ; Pull & Bear Shirt 2
-                             ; CV-S1              ; Converse Shirt 1
-                             ; CV-S2              ; Converse Shirt 2
-                             ; HURLEY-T-1         ; Hurley Shirt 1
-                             ; HURLEY-T-2         ; Hurley Shirt 2
-                             ; COLE-T-1           ; Cole Jeans 1
-
+UPDATE TrainingVariantProduct; code[unique = true]    ; name[lang = $lang]
+                             ; ITB-SINGLE             ; Single Size
+                             ; ITB-SUPER-SINGLE       ; Super Single Size
+                             ; ITB-FULL               ; Full Size
+                             ; ITB-QUEEN              ; Queen Size
+                             ; ITB-KING               ; King Size
+                             ; ITB-SUPER-KING         ; Super King Size
+                             ; ITBX-SINGLE            ; Single Size
+                             ; ITBX-SUPER-SINGLE      ; Super Single Size
+                             ; ITBX-FULL              ; Full Size
+                             ; ITBX-QUEEN             ; Queen Size
+                             ; ITBX-KING              ; King Size
+                             ; ITBX-SUPER-KING        ; Super King Size
+                             ; ITB101-SINGLE          ; Single Size
+                             ; ITB101-SUPER-SINGLE    ; Super Single Size
+                             ; ITB101-FULL            ; Full Size
+                             ; ITB101-QUEEN           ; Queen Size
+                             ; ITB101-KING            ; King Size
+                             ; ITB101-SUPER-KING      ; Super King Size
+                             ; ITBHYBRID-SINGLE       ; Single Size
+                             ; ITBHYBRID-SUPER-SINGLE ; Super Single Size
+                             ; ITBHYBRID-FULL         ; Full Size
+                             ; ITBHYBRID-QUEEN        ; Queen Size
+                             ; ITBHYBRID-KING         ; King Size
+                             ; ITBHYBRID-SUPER-KING   ; Super King Size
+                             ; PROPS-GULING           ; Guling INTHEBOX
+                             ; PROPS-BANTAL           ; Bantal INTHEBOX
+                             ; SOFA-BED               ; Super Single
