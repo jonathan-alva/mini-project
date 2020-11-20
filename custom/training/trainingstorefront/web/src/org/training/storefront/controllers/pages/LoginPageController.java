@@ -4,7 +4,7 @@
 package org.training.storefront.controllers.pages;
 
 import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractLoginPageController;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.RegisterForm;
+import org.training.storefront.forms.RegistrationForm;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.model.pages.AbstractPageModel;
 import de.hybris.platform.cms2.model.pages.ContentPageModel;
@@ -88,7 +88,7 @@ public class LoginPageController extends AbstractLoginPageController
 	}
 
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
-	public String doRegister(@RequestHeader(value = "referer", required = false) final String referer, final RegisterForm form,
+	public String doRegister(@RequestHeader(value = "referer", required = false) final String referer, final RegistrationForm form,
 			final BindingResult bindingResult, final Model model, final HttpServletRequest request,
 			final HttpServletResponse response, final RedirectAttributes redirectModel) throws CMSItemNotFoundException
 	{
