@@ -187,4 +187,21 @@
 	<bean id="defaultTrainingProductFacade" class="org.training.facades.product.impl.DefaultTrainingProductFacade">
 	</bean>
 
+	<alias name="defaultProductMattressPopulator" alias="productMattressPopulator"/>
+	<bean id="defaultProductMattressPopulator" class="org.training.facades.populators.ProductMattressPopulator">
+	</bean>
+
+	<alias name="defaultProductFoamPopulator" alias="productFoamPopulator"/>
+	<bean id="defaultProductFoamPopulator" class="org.training.facades.populators.ProductFoamPopulator">
+	</bean>
+
+	<bean parent="modifyPopulatorList">
+		<property name="list" ref="productConverter"/>
+		<property name="add" ref="productMattressPopulator"/>
+	</bean>
+
+	<bean parent="modifyPopulatorList">
+		<property name="list" ref="productConverter"/>
+		<property name="add" ref="productFoamPopulator"/>
+	</bean>
 </beans>

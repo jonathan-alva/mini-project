@@ -4,26 +4,80 @@
 # ImPex for Importing Product Media
 
 # Macros / Replacement Parameter definitions
-$productCatalog=__PRODUCT_CATALOG_NAME__
+$productCatalog = trainingProductCatalog
 
-$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog]
-$media=@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator]
-$thumbnail=thumbnail(code, $catalogVersion)
-$picture=picture(code, $catalogVersion)
-$thumbnails=thumbnails(code, $catalogVersion)
-$detail=detail(code, $catalogVersion)
-$normal=normal(code, $catalogVersion)
-$others=others(code, $catalogVersion)
-$data_sheet=data_sheet(code, $catalogVersion)
-$medias=medias(code, $catalogVersion)
-$galleryImages=galleryImages(qualifier, $catalogVersion)
-$siteResource=jar:org.training.initialdata.setup.InitialDataSystemSetup&/traininginitialdata/import/productCatalogs/$productCatalog
+$catalogVersion = catalogversion(catalog(id[default=$productCatalog]), version[default='Staged'])[unique=true, default=$productCatalog]
+$media = @media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator]
+$thumbnail = thumbnail(code, $catalogVersion)
+$picture = picture(code, $catalogVersion)
+$thumbnails = thumbnails(code, $catalogVersion)
+$detail = detail(code, $catalogVersion)
+$normal = normal(code, $catalogVersion)
+$others = others(code, $catalogVersion)
+$data_sheet = data_sheet(code, $catalogVersion)
+$medias = medias(code, $catalogVersion)
+$galleryImages = galleryImages(qualifier, $catalogVersion)
+$siteResource = jar:org.training.initialdata.setup.InitialDataSystemSetup&/traininginitialdata/import/sampledata/productCatalogs/$productCatalog
 
 # Create Media
-INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];$media;mime[default='image/jpeg'];$catalogVersion;folder(qualifier)
+INSERT_UPDATE Media; mediaFormat(qualifier); code[unique = true]        ; $media                                               ; mime[default = 'image/jpeg']; $catalogVersion; folder(qualifier)
+                   ; 1200Wx1200H           ; media-101-picture          ; $siteResource/images/product/home-shop-101.png       ;                             ;                ; images ;
+                   ; 515Wx515H             ; media-101-thumbnail        ; $siteResource/images/product/home-shop-101.png       ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-101-detail           ; $siteResource/images/product/home-shop-101.png       ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-101-other            ; $siteResource/images/product/home-shop-101.png       ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-101-normal           ; $siteResource/images/product/home-shop-101.png       ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-101-thumbnails       ; $siteResource/images/product/home-shop-101.png       ;                             ;                ; images ;
+                   ; 1200Wx1200H           ; media-hybrid-picture       ; $siteResource/images/product/home-shop-hybrid.png    ;                             ;                ; images ;
+                   ; 515Wx515H             ; media-hybrid-thumbnail     ; $siteResource/images/product/home-shop-hybrid.png    ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-hybrid-detail        ; $siteResource/images/product/home-shop-hybrid.png    ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-hybrid-other         ; $siteResource/images/product/home-shop-hybrid.png    ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-hybrid-normal        ; $siteResource/images/product/home-shop-hybrid.png    ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-hybrid-thumbnails    ; $siteResource/images/product/home-shop-hybrid.png    ;                             ;                ; images ;
+                   ; 1200Wx1200H           ; media-inthebox2-picture    ; $siteResource/images/product/home-shop-inthebox2.png ;                             ;                ; images ;
+                   ; 515Wx515H             ; media-inthebox2-thumbnail  ; $siteResource/images/product/home-shop-inthebox2.png ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-inthebox2-detail     ; $siteResource/images/product/home-shop-inthebox2.png ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-inthebox2-other      ; $siteResource/images/product/home-shop-inthebox2.png ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-inthebox2-normal     ; $siteResource/images/product/home-shop-inthebox2.png ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-inthebox2-thumbnails ; $siteResource/images/product/home-shop-inthebox2.png ;                             ;                ; images ;
+                   ; 1200Wx1200H           ; media-x-picture            ; $siteResource/images/product/home-shop-x.png         ;                             ;                ; images ;
+                   ; 515Wx515H             ; media-x-thumbnail          ; $siteResource/images/product/home-shop-x.png         ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-x-detail             ; $siteResource/images/product/home-shop-x.png         ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-x-other              ; $siteResource/images/product/home-shop-x.png         ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-x-normal             ; $siteResource/images/product/home-shop-x.png         ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-x-thumbnails         ; $siteResource/images/product/home-shop-x.png         ;                             ;                ; images ;
+
+
 
 # Create Media Containers
-INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$catalogVersion
+INSERT_UPDATE MediaContainer; qualifier[unique = true]; $medias                                                                                                                                          ; $catalogVersion
+                            ; 101-medias              ; media-101-picture,media-101-thumbnail,media-101-detail,media-101-other,media-101-normal,media-101-thumbnails                                     ;
+                            ; hybrid-medias           ; media-hybrid-picture,media-hybrid-thumbnail,media-hybrid-detail,media-hybrid-other,media-hybrid-normal,media-hybrid-thumbnails                   ;
+                            ; inthebox2-medias        ; media-inthebox2-picture,media-inthebox2-thumbnail,media-inthebox2-detail,media-inthebox2-other,media-inthebox2-normal,media-inthebox2-thumbnails ;
+                            ; x-medias                ; media-x-picture,media-x-thumbnail,media-x-detail,media-x-other,media-x-normal,media-x-thumbnails                                                 ;
 
-# Update Products with Media and Media Containers
-UPDATE Product;code[unique=true];$picture;$thumbnail;$detail;$others;$normal;$thumbnails;$galleryImages;$catalogVersion
+## Update Products with Media and Media Containers
+UPDATE Product; code[unique = true]    ; $picture                ; $thumbnail                ; $detail                ; $others               ; $normal                ; $thumbnails                ; $galleryImages   ; $catalogVersion
+              ; ITB-SINGLE             ; media-inthebox2-picture ; media-inthebox2-thumbnail ; media-inthebox2-detail ; media-inthebox2-other ; media-inthebox2-normal ; media-inthebox2-thumbnails ; inthebox2-medias ;
+              ; ITB-SUPER-SINGLE       ; media-inthebox2-picture ; media-inthebox2-thumbnail ; media-inthebox2-detail ; media-inthebox2-other ; media-inthebox2-normal ; media-inthebox2-thumbnails ; inthebox2-medias ;
+              ; ITB-FULL               ; media-inthebox2-picture ; media-inthebox2-thumbnail ; media-inthebox2-detail ; media-inthebox2-other ; media-inthebox2-normal ; media-inthebox2-thumbnails ; inthebox2-medias ;
+              ; ITB-QUEEN              ; media-inthebox2-picture ; media-inthebox2-thumbnail ; media-inthebox2-detail ; media-inthebox2-other ; media-inthebox2-normal ; media-inthebox2-thumbnails ; inthebox2-medias ;
+              ; ITB-KING               ; media-inthebox2-picture ; media-inthebox2-thumbnail ; media-inthebox2-detail ; media-inthebox2-other ; media-inthebox2-normal ; media-inthebox2-thumbnails ; inthebox2-medias ;
+              ; ITB-SUPER-KING         ; media-inthebox2-picture ; media-inthebox2-thumbnail ; media-inthebox2-detail ; media-inthebox2-other ; media-inthebox2-normal ; media-inthebox2-thumbnails ; inthebox2-medias ;
+              ; ITBX-SINGLE            ; media-x-picture         ; media-x-thumbnail         ; media-x-detail         ; media-x-other         ; media-x-normal         ; media-x-thumbnails         ; x-medias         ;
+              ; ITBX-SUPER-SINGLE      ; media-x-picture         ; media-x-thumbnail         ; media-x-detail         ; media-x-other         ; media-x-normal         ; media-x-thumbnails         ; x-medias         ;
+              ; ITBX-FULL              ; media-x-picture         ; media-x-thumbnail         ; media-x-detail         ; media-x-other         ; media-x-normal         ; media-x-thumbnails         ; x-medias         ;
+              ; ITBX-QUEEN             ; media-x-picture         ; media-x-thumbnail         ; media-x-detail         ; media-x-other         ; media-x-normal         ; media-x-thumbnails         ; x-medias         ;
+              ; ITBX-KING              ; media-x-picture         ; media-x-thumbnail         ; media-x-detail         ; media-x-other         ; media-x-normal         ; media-x-thumbnails         ; x-medias         ;
+              ; ITBX-SUPER-KING        ; media-x-picture         ; media-x-thumbnail         ; media-x-detail         ; media-x-other         ; media-x-normal         ; media-x-thumbnails         ; x-medias         ;
+              ; ITB101-SINGLE          ; media-101-picture       ; media-101-thumbnail       ; media-101-detail       ; media-101-other       ; media-101-normal       ; media-101-thumbnails       ; 101-medias       ;
+              ; ITB101-SUPER-SINGLE    ; media-101-picture       ; media-101-thumbnail       ; media-101-detail       ; media-101-other       ; media-101-normal       ; media-101-thumbnails       ; 101-medias       ;
+              ; ITB101-FULL            ; media-101-picture       ; media-101-thumbnail       ; media-101-detail       ; media-101-other       ; media-101-normal       ; media-101-thumbnails       ; 101-medias       ;
+              ; ITB101-QUEEN           ; media-101-picture       ; media-101-thumbnail       ; media-101-detail       ; media-101-other       ; media-101-normal       ; media-101-thumbnails       ; 101-medias       ;
+              ; ITB101-KING            ; media-101-picture       ; media-101-thumbnail       ; media-101-detail       ; media-101-other       ; media-101-normal       ; media-101-thumbnails       ; 101-medias       ;
+              ; ITB101-SUPER-KING      ; media-101-picture       ; media-101-thumbnail       ; media-101-detail       ; media-101-other       ; media-101-normal       ; media-101-thumbnails       ; 101-medias       ;
+              ; ITBHYBRID-SINGLE       ; media-hybrid-picture    ; media-hybrid-thumbnail    ; media-hybrid-detail    ; media-hybrid-other    ; media-hybrid-normal    ; media-hybrid-thumbnails    ; hybrid-medias    ;
+              ; ITBHYBRID-SUPER-SINGLE ; media-hybrid-picture    ; media-hybrid-thumbnail    ; media-hybrid-detail    ; media-hybrid-other    ; media-hybrid-normal    ; media-hybrid-thumbnails    ; hybrid-medias    ;
+              ; ITBHYBRID-FULL         ; media-hybrid-picture    ; media-hybrid-thumbnail    ; media-hybrid-detail    ; media-hybrid-other    ; media-hybrid-normal    ; media-hybrid-thumbnails    ; hybrid-medias    ;
+              ; ITBHYBRID-QUEEN        ; media-hybrid-picture    ; media-hybrid-thumbnail    ; media-hybrid-detail    ; media-hybrid-other    ; media-hybrid-normal    ; media-hybrid-thumbnails    ; hybrid-medias    ;
+              ; ITBHYBRID-KING         ; media-hybrid-picture    ; media-hybrid-thumbnail    ; media-hybrid-detail    ; media-hybrid-other    ; media-hybrid-normal    ; media-hybrid-thumbnails    ; hybrid-medias    ;
+              ; ITBHYBRID-SUPER-KING   ; media-hybrid-picture    ; media-hybrid-thumbnail    ; media-hybrid-detail    ; media-hybrid-other    ; media-hybrid-normal    ; media-hybrid-thumbnails    ; hybrid-medias    ;

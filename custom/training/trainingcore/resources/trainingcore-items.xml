@@ -112,6 +112,16 @@
                         <defaultvalue>Boolean.valueOf(true)</defaultvalue>
                         <persistence type="property"/>
                     </attribute>
+                    <attribute qualifier="mattress" type="java.lang.String">
+                        <description>Mattress Type</description>
+                        <modifiers optional="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="foam" type="java.lang.String">
+                        <description>Foam Type</description>
+                        <modifiers optional="true"/>
+                        <persistence type="property"/>
+                    </attribute>
                 </attributes>
             </itemtype>
             <itemtype code="TrainingVariantProduct" autocreate="true" generate="true" extends="VariantProduct">

@@ -10,12 +10,18 @@ import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.model.pages.AbstractPageModel;
 import de.hybris.platform.cms2.model.pages.ContentPageModel;
 
+import de.hybris.platform.commercefacades.product.data.ProductData;
+import de.hybris.platform.core.model.product.ProductModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.training.facades.product.impl.DefaultTrainingProductFacade;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 
 /**
@@ -25,6 +31,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @RequestMapping("/")
 public class HomePageController extends AbstractPageController
 {
+
+	@Resource(name = "trainingProductFacade")
+	private DefaultTrainingProductFacade productFacade;
+
 	private static final String LOGOUT = "logout";
 	private static final String ACCOUNT_CONFIRMATION_SIGNOUT_TITLE = "account.confirmation.signout.title";
 	private static final String ACCOUNT_CONFIRMATION_CLOSE_TITLE = "account.confirmation.close.title";
@@ -48,6 +58,9 @@ public class HomePageController extends AbstractPageController
 		storeCmsPageInModel(model, contentPage);
 		setUpMetaDataForContentPage(model, contentPage);
 		updatePageTitle(model, contentPage);
+
+		List<ProductData> productBedDataList = productFacade.getSomeBedsProductData();
+		model.addAttribute("productBedDataList", productBedDataList);
 
 		return getViewForPage(model);
 	}
