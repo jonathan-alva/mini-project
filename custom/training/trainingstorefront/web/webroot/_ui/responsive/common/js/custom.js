@@ -22,13 +22,20 @@ if (!window.ACC) {
                 swipeToSlide: true
             });
             var productList = $(".product-card-list-container");
+            productList.find("img").addClass("product-list-home-img");
             productList.slick({
                 infinite: true,
                 slidesToShow: 3,
                 adaptiveHeight: true,
                 swipe: true,
+                arrows:false,
                 swipeToSlide: true
+            }).on('setPosition', function (event, slick) {
+                slick.$slides.css('height', slick.$slideTrack.height() + 'px');
             });
+            productList.find('.slick-track').addClass('display-flex');
+            productList.find(".slick-slide").addClass("testimoni-card-space");
+
             var unboxingItems = $(".unboxing-items");
             unboxingItems.find("img").addClass("unboxing-item-img");
             unboxingItems.slick({

@@ -2,6 +2,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="template" tagdir="/WEB-INF/tags/responsive/template"%>
 <%@ taglib prefix="cms" uri="http://hybris.com/tld/cmstags"%>
+<%@ taglib prefix="product" tagdir="/WEB-INF/tags/responsive/product" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <template:page pageTitle="${pageTitle}">
 <div class="wrapper">
@@ -28,25 +30,28 @@
         </div>
         <div class="container product-card-list-container">
         <%--Product Carousel--%>
-            <div class="product-card">
-                <div class="product-card-body">
-                    <%--IMG--%>
-                    <div class="product-card-title">
-                        <h3>INTHEBOX</h3>
-                    </div>
-                    <div class="product-card-subtitle">
-                        Pocket Spring &
+            <c:forEach items="${productBedDataList}" var="product">
+                <div class="product-card-home">
+                    <div class="product-card-home-body">
+                    <%--IMG--%><product:productPrimaryImage product="${product[0]}" format="thumbnail"/>
+                        <div class="product-card-home-title">
+                            <h3>${product[1].getBaseProduct().getName()}</h3>
+                        </div>
+                        <div class="product-card-home-subtitle">
+                            ${product[1].getBaseProduct().getFoam()}
                         <br/>
-                        Busa Medium Soft
+                            ${product[1].getBaseProduct().getMattress()}
+                        </div>
+                        <div class="product-card-home-price">
+                            <product:productListerItemPrice product="${product[0]}"/>
+                        </div>
+                        <a class="product-card-home-btn" href=".${fn:escapeXml(product[0].url)}">
+                            Beli Sekarang
+                        </a>
                     </div>
-                    <div class="product-card-price">
-                        Rp1.299.000
-                    </div>
-                    <a class="product-card-btn" href="/#">
-                        Beli Sekarang
-                    </a>
                 </div>
-            </div>
+            </c:forEach>
+
         </div>
     </section>
     <section class="unboxing">

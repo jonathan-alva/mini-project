@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface TrainingProductFacade {
     List<ProductData> getAllProductsData();
-    List<ProductData> getSomeBedsProductData();
+    List<Object> getSomeBedsProductData();
 }

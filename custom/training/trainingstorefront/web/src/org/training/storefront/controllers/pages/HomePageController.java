@@ -59,7 +59,7 @@ public class HomePageController extends AbstractPageController
 		setUpMetaDataForContentPage(model, contentPage);
 		updatePageTitle(model, contentPage);
 
-		List<ProductData> productBedDataList = productFacade.getSomeBedsProductData();
+		List<Object> productBedDataList = productFacade.getSomeBedsProductData();
 		model.addAttribute("productBedDataList", productBedDataList);
 
 		return getViewForPage(model);
