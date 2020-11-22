@@ -151,6 +151,7 @@ public abstract class AbstractRegisterPageController extends AbstractPageControl
 		data.setFirstName(form.getFirstName());
 		data.setLastName(form.getLastName());
 		data.setLogin(form.getEmail());
+		data.setId(form.getId());
 		data.setPassword(form.getPwd());
 		data.setTitleCode(form.getTitleCode());
 		try

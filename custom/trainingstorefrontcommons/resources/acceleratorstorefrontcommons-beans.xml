@@ -12,4 +12,10 @@
 		  extends="de.hybris.platform.commercefacades.consent.data.AnonymousConsentData"
 		  deprecated="Since 1905. Use {@link AnonymousConsentData} instead"/>
 
+	<bean class="de.hybris.platform.acceleratorstorefrontcommons.forms.RegisterForm">
+		<attributes>
+			<property name="id" type="String"/>
+		</attributes>
+	</bean>
+
 </beans>
