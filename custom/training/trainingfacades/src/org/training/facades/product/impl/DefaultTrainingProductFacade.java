@@ -50,17 +50,19 @@ public class DefaultTrainingProductFacade implements TrainingProductFacade {
             List<String> baseProductNameList = new ArrayList<>();
             for(final ProductModel productModel: productModels){
                 // Check if category code of the product is "BED"
-                String productCategory = productModel.getSupercategories().iterator().next().getCode();
-                if(productCategory.equals("BED")){
-                    String baseProductName = ((TrainingVariantProductModel) productModel).getBaseProduct().getName();
-                    if(!baseProductNameList.contains(baseProductName)){
-                        final List<ProductOption> options = new ArrayList<>(Arrays.asList(ProductOption.PRICE));
-                        final ProductData productDataConvert = productFacade.getProductForCodeAndOptions(productModel.getCode(), options);
+                if(productModel.getSupercategories().size()>0){
+                    String productCategory = productModel.getSupercategories().iterator().next().getCode();
+                    if(productCategory.equals("BED")){
+                        String baseProductName = ((TrainingVariantProductModel) productModel).getBaseProduct().getName();
+                        if(!baseProductNameList.contains(baseProductName)){
+                            final List<ProductOption> options = new ArrayList<>(Arrays.asList(ProductOption.PRICE));
+                            final ProductData productDataConvert = productFacade.getProductForCodeAndOptions(productModel.getCode(), options);
 //                        ProductData productDataConvert = productConverter.convert(productModel);
-                        Object object[] = {productDataConvert,productModel};
-                        baseProductNameList.add(baseProductName);
+                            Object object[] = {productDataConvert,productModel};
+                            baseProductNameList.add(baseProductName);
 //                        productDataList.add(productConverter.convert(productModel));
-                        data.add(object);
+                            data.add(object);
+                        }
                     }
                 }
             }
