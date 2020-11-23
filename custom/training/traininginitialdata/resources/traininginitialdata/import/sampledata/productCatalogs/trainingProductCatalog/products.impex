@@ -13,13 +13,13 @@ $baseProduct = baseProduct(code, $catalogVersion)
 $approved = approvalstatus(code)[default='approved']
 
 # Insert Products
-INSERT_UPDATE TrainingProduct; code[unique = true]; name            ; $supercategories; variantType(code)[default = 'TrainingVariantProduct']; $approved; unit(code)[default = pieces]; $catalogVersion
-                             ; KASURINTHEBOX      ; Kasur INTHEBOX  ; "BED"           ;                                                      ;          ;                             ;
-                             ; INTHEBOXX          ; INTHEBOX X      ; "BED"           ;                                                      ;          ;                             ;
-                             ; INTHEBOX101        ; INTHEBOX 101    ; "BED"           ;                                                      ;          ;                             ;
-                             ; INTHEBOXHYBRID     ; INTHEBOX Hybrid ; "BED"           ;                                                      ;          ;                             ;
-                             ; PROPSINTHEBOX      ; Props INTHEBOX  ; "PROPS"         ;                                                      ;          ;                             ;
-                             ; SOFABED            ; SOFA BED        ; "SOFA"          ;                                                      ;          ;                             ;
+INSERT_UPDATE TrainingProduct; code[unique = true]; name            ; $supercategories; variantType(code)[default = 'TrainingVariantProduct']; $approved; unit(code)[default = pieces]; $catalogVersion; foam          ; mattress
+                             ; KASURINTHEBOX      ; Kasur INTHEBOX  ; "BED"           ;                                                      ;          ;                             ;                ; Pocket Spring ; Busa Medium Soft
+                             ; INTHEBOXX          ; INTHEBOX X      ; "BED"           ;                                                      ;          ;                             ;                ; Plush TOP     ; Busa Medium Soft
+                             ; INTHEBOX101        ; INTHEBOX 101    ; "BED"           ;                                                      ;          ;                             ;                ; Pocket Spring ; Busa Medium
+                             ; INTHEBOXHYBRID     ; INTHEBOX Hybrid ; "BED"           ;                                                      ;          ;                             ;                ; Memory Foam   ; Busa Medium Soft
+                             ; PROPSINTHEBOX      ; Props INTHEBOX  ; "PROPS"         ;                                                      ;          ;                             ;                ;               ;
+                             ; SOFABED            ; SOFA BED        ; "SOFA"          ;                                                      ;          ;                             ;                ;               ;
 
 INSERT_UPDATE TrainingVariantProduct; $baseProduct   ; code[unique = true]    ; size              ; unit()[pieces]; $approved; $catalogVersion; $supercategories; description                       ; summary
                                     ; KASURINTHEBOX  ; ITB-SINGLE             ; 90 x 200 x 23 cm  ;               ;          ;                ; "BED"           ; Kasur INTHEBOX Single Size        ; Dikenal dengan ukuran kasur no 4 (ukuran kasur paling kecil). Cocok digunakan untuk tidur sendiri. Dilengkapi material premium agar tidur lebih nyenyak.

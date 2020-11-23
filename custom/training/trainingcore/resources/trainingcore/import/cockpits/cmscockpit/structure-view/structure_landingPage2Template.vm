@@ -34,6 +34,11 @@
 				</td>
 			</tr>
 			<tr>
+				<td colspan="5" style="vertical-align:top;" class="structureViewSection">
+					<cockpit code="SectionUnboxing" />
+				</td>
+			</tr>
+			<tr>
 				<td width="25%" height="249px" style="vertical-align:top;" class="structureViewSection">
 					<cockpit code="Section2A" />
 				</td>

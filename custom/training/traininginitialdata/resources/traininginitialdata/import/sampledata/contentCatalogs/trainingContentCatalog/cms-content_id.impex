@@ -29,20 +29,20 @@ $Image = image(code, $contentCV)
 
 # Site Logo Component
 UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]; $picture[lang = $lang]
-                            ;                          ; SiteLogoComponent ; /images/theme/logo-hybris.png ;
+                            ;                          ; SiteLogoComponent ; /images/banner/homepage/header-logo-white.png ;
 
 # CMS Link Components
-UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]        ; linkName[lang = $lang]
-                       ;                          ; AboutSAPCommerceLink      ; "About SAP Commerce Cloud"
-                       ;                          ; AgileCommerceBlogLink     ; "Agile Commerce Blog"
-                       ;                          ; AllBrandsCategoryLink     ; "Brands"
-                       ;                          ; AllFashionsCategoryLink   ; "All Fashions"
-                       ;                          ; ShirtCategoryLink         ; "Shirt"
-                       ;                          ; TrouserCategoryLink       ; "Trouser"
-                       ;                          ; AboutUsLink               ; "About Us"
-                       ;                          ; BlogsLink                 ; "Blogs"
-                       ;                          ; GuaranteeLink             ; "Garansi"
-                       ;                          ; ConfirmationLink          ; "Konfirmasi"
+UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]           ; linkName[lang = $lang]
+                       ;                          ; AboutSAPCommerceLink         ; "About SAP Commerce Cloud"
+                       ;                          ; AgileCommerceBlogLink        ; "Agile Commerce Blog"
+#                       ;                          ; AllBrandsCategoryLink        ; "Brands"
+                       ;                          ; AllFashionsCategoryLink      ; "All Fashions"
+                       ;                          ; ShirtCategoryLink            ; "Shirt"
+                       ;                          ; TrouserCategoryLink          ; "Trouser"
+                       ;                          ; AboutUsLink                  ; "About Us"
+                       ;                          ; BlogsLink                    ; "Blogs"
+                       ;                          ; GuaranteeLink                ; "Garansi"
+                       ;                          ; ConfirmationLink             ; "Konfirmasi"
 #                       ;;BlackAndWhiteFilmsCategoryLink;"Black & White Films"
 #                       ;;BlankVideotapesCategoryLink;"Blank Videotapes"
 #                       ;;CameraAccessoriesCategoryLink;"Camera Accessories & Supplies"
@@ -52,22 +52,22 @@ UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]        ; 
 #                       ;;CanonBrandCategoryLink;"Canon"
 #                       ;;ColourFilmsCategoryLink;"Color Films"
 #                       ;;ComponentsCategoryLink;"Components"
-                       ;                          ; ContactUsLink             ; "Contact Us"
+                       ;                          ; ContactUsLink                ; "Contact Us"
 #                       ;;DigitalCamerasCategoryLink;"Digital Cameras"
 #                       ;;DigitalCompactsCategoryLink;"Compact Cameras"
 #                       ;;DigitalSLRCategoryLink;"SLR Cameras"
-                       ;                          ; DocumentationLink         ; "Documentation"
-                       ;                          ; FAQLink                   ; "FAQ"
-                       ;                          ; FacebookLink              ; "Facebook"
+                       ;                          ; DocumentationLink            ; "Documentation"
+                       ;                          ; FAQLink                      ; "FAQ"
+                       ;                          ; FacebookLink                 ; "Facebook"
 #                       ;;FilmCamerasCategoryLink;"Film Cameras"
 #                       ;;FlashMemoryCategoryLink;"Flash Memory"
 #                       ;;FujifilmBrandCategoryLink;"Fujifilm"
 #                       ;;HandheldCamcordersCategoryLink;"Hand Held Camcorders"
-                       ;                          ; HomepageNavLink           ; "Home"
+                       ;                          ; HomepageNavLink              ; "Home"
 #                       ;;IciduBrandCategoryLink;"Icidu"
 #                       ;;KingstonBrandCategoryLink;"Kingston"
 #                       ;;KodakBrandCategoryLink;"Kodak"
-                       ;                          ; LinkedInLink              ; "Linked In"
+                       ;                          ; LinkedInLink                 ; "Linked In"
 #                       ;;PowerSuppliesCategoryLink;"Power Supplies"
 #                       ;;SamsungBrandCategoryLink;"Samsung"
 #                       ;;SonyBrandCategoryLink;"Sony"
@@ -76,11 +76,22 @@ UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]        ; 
 #                       ;;TDKBrandCategoryLink;"TDK"
 #                       ;;ToshibaBrandCategoryLink;"Toshiba"
 #                       ;;TripodsCategoryLink;"Tripods"
-                       ;                          ; TwitterLink               ; "Twitter"
-                       ;                          ; VisitSAPLink              ; "Visit SAP"
-                       ;                          ; TermsAndConditionsLink    ; "Terms And Conditions"
-                       ;                          ; ProductRecommendationLink ; "Product Recommendation"
+                       ;                          ; TwitterLink                  ; "Twitter"
+                       ;                          ; VisitSAPLink                 ; "Visit SAP"
+                       ;                          ; TermsAndConditionsLink       ; "Terms And Conditions"
+                       ;                          ; ProductRecommendationLink    ; "Product Recommendation"
                        ;                          ; ProductRecommendationTopLink ; "Product Recommendation"
+                       ;                          ; ProductFooterLink            ; "Produk"
+                       ;                          ; AktivasiGaransiFooterLink    ; "Aktivasi Garansi"
+                       ;                          ; CekResiFooterLink            ; "Cek Resi"
+                       ;                          ; FAQFooterLink                ; "FAQ"
+                       ;                          ; BantuanFooterLink            ; "Bantuan"
+                       ;                          ; SyaratKetentuanFooterLink    ; "Syarat & Ketentuan"
+                       ;                          ; KebijakanPrivasiFooterLink   ; "Kebijakan Privasi"
+                       ;                          ; TentangKamiFooterLink        ; "Tentang Kami"
+                       ;                          ; TokoOfflineFooterLink        ; "Toko Offline"
+                       ;                          ; BlogFooterLink               ; "Blog"
+                       ;                          ; TestimoniFooterLink          ; "Testimoni"
 
 # Lightbox Banner for Mini Cart (banner is not localizable so we must create a separate banner per language)
 INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]                      ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; &imageRef                                ; folder(qualifier)[default = 'images']; altText
@@ -111,7 +122,7 @@ UPDATE ProductReferencesComponent; $contentCV[unique = true]; uid[unique = true]
                                  ;                          ; accessories       ; "Accessories"
 
 # CMS PurchasedCategorySuggestion Components
-UPDATE PurchasedCategorySuggestionComponent; $contentCV[unique = true]; uid[unique = true]           ; title[lang = $lang]
+UPDATE PurchasedCategorySuggestionComponent; $contentCV[unique = true]; uid[unique = true]; title[lang = $lang]
 #                                           ;                          ; PurchasedCategorySuggestions ; "You may also like..."
 
 # CMS CartSuggestion Components
@@ -128,8 +139,8 @@ UPDATE CMSNavigationNode; $contentCV[unique = true]; uid[unique = true]         
 #                        ;;AccessoriesNavNode;"Accessories"
 #                        ;;AccessoryBrandLinksNavNode;"Accessories"
 #                        ;;BrandLinksNavNode;"Cameras"
-                        ;                          ; BrandsNavNode                ; "Brands"
-                        ;                          ; AllBedsNavNode               ; "All Beds"
+#                        ;                          ; BrandsNavNode                ; "Brands"
+#                        ;                          ; AllBedsNavNode               ; "All Beds"
 #                        ;;CameraAccessoriesNavNode;"Camera Accessories & Supplies"
 #                        ;;DigitalCamerasNavNode;"Digital Cameras"
                         ;                          ; DemoNavNode                  ; "Demo Site"
@@ -148,6 +159,10 @@ UPDATE CMSNavigationNode; $contentCV[unique = true]; uid[unique = true]         
                         ;                          ; BlogsNavNode                 ; "Blogs"
                         ;                          ; GuaranteeNavNode             ; "Garansi"
                         ;                          ; ConfirmationNavNode          ; "Konfirmasi"
+                        ;                          ; ProductFooterNavNode         ; "Produk"
+                        ;                          ; SupportFooterNavNode         ; "Support"
+                        ;                          ; AboutFooterNavNode           ; "About"
+
 
 #Bottom Header Slot
 UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]; content[lang = en];
@@ -207,13 +222,13 @@ UPDATE BannerComponent; $contentCV[unique = true]; uid[unique = true]           
 #                      ;                          ; SonyCybershotBannerComponent         ; Sony Cybershot DSC-S930                                            ; 1992695-Sony-DSC-S930P-11441.jpg             ; "Compact, easy to use and amazingly affordable."
 #                      ;                          ; SonyDSCBannerComponent               ; Sony DSC-H20                                                       ; 1978440-Sony-DSC-H20-114081.jpg              ; "Perfect for serious performance in a compact design."
 
-UPDATE ProductCarouselComponent; $contentCV[unique = true]; uid[unique = true]                          ; title[lang = $lang]
-                               ;                          ; ElectronicsHomepageProductCarouselComponent ; Our Bestselling Products
+UPDATE ProductCarouselComponent; $contentCV[unique = true]; uid[unique = true]; title[lang = $lang]
+#                               ;                          ; ElectronicsHomepageProductCarouselComponent ; Our Bestselling Products
 
 # Electronics Camera Accessories and Supplies Category Landing Page
 
-UPDATE CategoryPage; $contentCV[unique = true]; uid[unique = true]                        ; title[lang = $lang]
-                   ;                          ; CamerasAccessoriesAndSuppliesCategoryPage ; Cameras Accessories & Supplies
+UPDATE CategoryPage; $contentCV[unique = true]; uid[unique = true]; title[lang = $lang]
+#                   ;                          ; CamerasAccessoriesAndSuppliesCategoryPage ; Cameras Accessories & Supplies
 
 # Media Content
 INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]             ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; folder(qualifier)[default = 'images']; altText
@@ -267,8 +282,8 @@ UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]     
                             ;                          ; HelpParagraphComponent      ; "<strong>Need Help with your checkout process?</strong> <span>Contact Us or Call phone number.</span>"
 
 #above is the desktop data, below is the responsive data
-UPDATE ProductCarouselComponent; $contentCV[unique = true]; uid[unique = true]                             ; title[lang = $lang]
-                               ;                          ; NewElectronicsHomepageProductCarouselComponent ; What's New
+UPDATE ProductCarouselComponent; $contentCV[unique = true]; uid[unique = true]; title[lang = $lang]
+#                               ;                          ; NewElectronicsHomepageProductCarouselComponent ; What's New
 
 # Home Page Splash
 
@@ -296,13 +311,22 @@ INSERT_UPDATE Media; mediaFormat(qualifier); $contentCV[unique = true]; code[uni
                    ; desktop               ;                          ; banner-3-demo-960x330.png             ; $siteResource/images/banners/homepage/responsive/banner-demo-960x330.png                       ;                             ; banner-demo-960x330.png               ;                                      ; "Save Big On Select SLR & DSLR Cameras"
                    ; desktop               ;                          ; banner-4-demo-960x330.png             ; $siteResource/images/banners/homepage/responsive/banner-demo-960x330.png                       ;                             ; banner-demo-960x330.png               ;                                      ; "Save Big On Select SLR & DSLR Cameras"
                    ; desktop               ;                          ; discount-banner-960.png               ; $siteResource/images/banners/homepage/responsive/discount-banner-960.png                       ;                             ; discount-banner-960.png               ;                                      ; "Save Big on Select Camera Accessories & Supplies"
+                   ; widescreen            ;                          ; banner-1.webp                         ; $siteResource/images/banners/homepage/banner-1.webp                                            ;                             ; banner-1.webp                         ;                                      ; "Memperkenalkan INTHEBOX"
+                   ; widescreen            ;                          ; banner-2.webp                         ; $siteResource/images/banners/homepage/banner-2.webp                                            ;                             ; banner-2.webp                         ;                                      ; "Free Ongkir"
+                   ; widescreen            ;                          ; banner-3.webp                         ; $siteResource/images/banners/homepage/banner-3.webp                                            ;                             ; banner-3.webp                         ;                                      ; "INTHEBOX 101"
+                   ; widescreen            ;                          ; banner-4.webp                         ; $siteResource/images/banners/homepage/banner-4.webp                                            ;                             ; banner-4.webp                         ;                                      ; "INTHEBOX Hybrid"
+                   ; widescreen            ;                          ; banner-5.webp                         ; $siteResource/images/banners/homepage/banner-5.webp                                            ;                             ; banner-5.webp                         ;                                      ; "Kasur INTHEBOX"
+                   ; widescreen            ;                          ; banner-6.webp                         ; $siteResource/images/banners/homepage/banner-6.webp                                            ;                             ; banner-6.webp                         ;                                      ; "Kasur INTHEBOX 101"
+
 
 INSERT_UPDATE MediaContainer; qualifier[unique = true]          ; $medias; $contentCV[unique = true]
                             ; demo-homepage-discount-en         ; discount-banner-1400.png,discount-banner-960.png,discount-banner-770.png,discount-banner-480.png
-                            ; demo-homepage-spalsh-1-en         ; banner-demo-1400x440.jpg,banner-demo-480x320.jpg,banner-demo-770x350.jpg,banner-demo-960x330.png
-                            ; demo-homepage-spalsh-2-en         ; banner-2-demo-1400x440.jpg,banner-2-demo-480x320.jpg,banner-2-demo-770x350.jpg,banner-2-demo-960x330.png
-                            ; demo-homepage-spalsh-3-en         ; banner-3-demo-1400x440.jpg,banner-3-demo-480x320.jpg,banner-3-demo-770x350.jpg,banner-3-demo-960x330.png
-                            ; demo-homepage-spalsh-4-en         ; banner-4-demo-1400x440.jpg,banner-4-demo-480x320.jpg,banner-4-demo-770x350.jpg,banner-4-demo-960x330.png
+                            ; demo-homepage-spalsh-1-en         ; banner-1.webp
+                            ; demo-homepage-spalsh-2-en         ; banner-2.webp
+                            ; demo-homepage-spalsh-3-en         ; banner-3.webp
+                            ; demo-homepage-spalsh-4-en         ; banner-4.webp
+                            ; demo-homepage-spalsh-5-en         ; banner-5.webp
+                            ; demo-homepage-spalsh-6-en         ; banner-6.webp
                             ; top-banner                        ; top-banner.jpg
                             ; top-banner-product-recommendation ; top-banner-product-recommendation.jpg
 
@@ -312,9 +336,12 @@ INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[un
                                              ;                          ; DemoHompageSplashBannerComponent-2      ; demo-homepage-spalsh-2-en
                                              ;                          ; DemoHompageSplashBannerComponent-3      ; demo-homepage-spalsh-3-en
                                              ;                          ; DemoHompageSplashBannerComponent-4      ; demo-homepage-spalsh-4-en
+                                             ;                          ; DemoHompageSplashBannerComponent-5      ; demo-homepage-spalsh-5-en
+                                             ;                          ; DemoHompageSplashBannerComponent-6      ; demo-homepage-spalsh-6-en
                                              ;                          ; Section0BannerComponent                 ; top-banner
                                              ;                          ; MiddleContentTopBannerComponent         ; top-banner
                                              ;                          ; TopBannerProductRecommendationComponent ; top-banner-product-recommendation
+
 
 # Home page slot 2A
 
@@ -572,7 +599,7 @@ UPDATE CMSNavigationNode; $contentCV[unique = true]; uid[unique = true]; title[l
                         ;                          ; MyAccountNavNode  ; "My Account"
 
 # Content Pages
-UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]     ; title[lang = $lang]
+UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]; title[lang = $lang]
 #                  ;                          ; importCSVSavedCartPage ; "Import Saved Cart"
 #                  ;                          ; saved-carts            ; "Saved Carts"
 #                  ;                          ; savedCartDetailsPage   ; "Saved Cart Details"
@@ -600,9 +627,9 @@ INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[un
 
 # CMS Footer Navigation Component
 UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique = true]        ; notice[lang = en][translator = de.hybris.platform.acceleratorservices.dataimport.batch.converter.CopyrightTranslator, dateFormat = yyyy]
-                                ;                          ; FooterNavigationComponent ; "Copyright © {0} SAP SE or an SAP affiliate company. All rights reserved."
+                                ;                          ; FooterNavigationComponent ; "Copyright © 2019-2020 INTHEBOX. All Rights Reserved."
 
-UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                  ; content[lang = en];
+UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                   ; content[lang = en];
 #                            ;                          ; TrainingParagraphComponent          ; "Test Training Page"
 #                            ;                          ; TrainingParagraphComponent2         ; "Test Training Page Bottom Content"
 #                            ;                          ; NewParagraphComponent               ; "New Page"
@@ -610,4 +637,62 @@ UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]     
 #                            ;                          ; NewParagraphSection2HeaderComponent ; "Section 2"
 #                            ;                          ; NewParagraphSection1Component       ; "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur nibh eget augue elementum, nec elementum felis ultricies. Nulla est justo, dictum a augue sed, molestie pretium ex. Morbi elementum condimentum orci, at pulvinar dui tincidunt at. Praesent eget felis elit. Quisque eu turpis ornare, feugiat lectus nec, facilisis leo. Mauris scelerisque tellus in aliquam dignissim. Donec sed molestie nisl."
 #                            ;                          ; NewParagraphSection2Component       ; "Ut quis lorem nec purus tempus interdum sit amet et neque. Cras vel orci et augue tristique efficitur. Vivamus vestibulum sodales lobortis. Quisque lorem risus, consectetur id gravida non, blandit eget felis. Donec non nisl eu eros euismod finibus. Aliquam erat volutpat. Suspendisse eget augue quis tortor volutpat sagittis non vitae ipsum. Morbi ut suscipit ex. Nullam non nibh a lorem sollicitudin venenatis vitae fringilla augue. Praesent aliquam ex vitae vehicula efficitur. Nam eget mauris consectetur, imperdiet enim non, luctus velit."
+                            ;                          ; UnboxingTitleParagraphComponent      ; "UNBOXING INTHEBOX"
+                            ;                          ; TestimoniTitleParagraphComponent     ; "TESTIMONI"
+                            ;                          ; UnboxingItem1TitleParagraphComponent ; "Keluarkan"
+                            ;                          ; UnboxingItem1DescParagraphComponent  ; "Keluarkan kasur INTHEBOX dari kemasannnya secara perlahan-lahan"
+                            ;                          ; UnboxingItem2TitleParagraphComponent ; "Posisikan"
+                            ;                          ; UnboxingItem2DescParagraphComponent  ; "Posisikan kasur INTHEBOX di atas permukaan tempat tidur atau divan"
+                            ;                          ; UnboxingItem3TitleParagraphComponent ; "Buka Plastik"
+                            ;                          ; UnboxingItem3DescParagraphComponent  ; "Lepaskan plastik pembungkus dan pastikan logo INTHEBOX ada di bawah"
+                            ;                          ; UnboxingItem4TitleParagraphComponent ; "Tunggu Mengembang"
+                            ;                          ; UnboxingItem4DescParagraphComponent  ; "Kasur INTHEBOX akan langsung mengembang. Tunggu 60 menit untuk digunakan."
+                            ;                          ; TestimoniSubtitle1ParagraphComponent ; "Banyak pembeli yang merasa puas dengan kualitas kasur INTHEBOX"
+                            ;                          ; TestimoniSubtitle2ParagraphComponent ; "Kami menerima beragam komentar positif dari pembeli di seluruh Indonesia, bahkan dari kalangan artis. Bukan hanya pengalaman membeli kasur sping bed atau kasur busa, banyak juga yang merasa puas dengan produk INTHEBOX lainnya yang terdiri dari bantal, guling, dan sofa bed."
+                            ;                          ; TotalReviewParagraphComponent        ; "4.9/5 (268 Reviews)"
+                            ;                          ; Review1NameParagraphComponent        ; "Baim Wong"
+                            ;                          ; Review2NameParagraphComponent        ; "Raffi Ahmad"
+                            ;                          ; Review3NameParagraphComponent        ; "Melaney Ricardo"
+                            ;                          ; Review1TitleParagraphComponent       ; "Mantap anget"
+                            ;                          ; Review2TitleParagraphComponent       ; "Pilih kasur INTHEBOX aja!"
+                            ;                          ; Review3TitleParagraphComponent       ; "Terima kasih Inthebox!"
+                            ;                          ; Review1DescParagraphComponent        ; "Kasur baru yang packing nya simple banget, masuk ke dalam box! Kasur @inthebox.id dengan teknologi Pocket Springbed ini enak banget, nyaman dan empuk! Ada Free Bantal dan Free Ongkirnya juga lhoo! Mantap banget"
+                            ;                          ; Review2DescParagraphComponent        ; "Pokoknya kalau mau beli spring bed yang bagus, materialnya berkualitas, nyaman, dan harganya murah, langsung pilih kasur INTHEBOX aja. Apalagi INTHEBOX+ ini nih bagus banget. Selama gue pakai kasur INTHEBOX di rumah itu bikin tidur jadi nyenyak, pas bangun langsung segar badannya."
+                            ;                          ; Review3DescParagraphComponent        ; "Produk memuaskaan sekalii.. dan seru waktu unboxing ya :-D Nyaman sekalii. Pas dapet harga ﬂash sale lagi. Mantap banget sihh klo ini Semoga aweet ya. Trimakasih Inthebox. Trimakasih Tokopedia."
+                            ;                          ; Review1DatetimeParagraphComponent    ; "9 Sep 2020 - 11:22 am"
+                            ;                          ; Review2DatetimeParagraphComponent    ; "10 Aug 2020 - 4:41 pm"
+                            ;                          ; Review3DatetimeParagraphComponent    ; "8 Jun 2020 - 1:00 pm"
+#                            ;                          ; PhoneNumberParagraphComponent        ; "(021) 30306286"
+#                            ;                          ; TextNumberParagraphComponent         ; "+62 819 234 659"
 
+UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]          ; $picture[lang = $lang]
+                            ;                          ; UnboxingItem1ImageComponent ; /images/banners/homepage/experience_1.png        ;
+                            ;                          ; UnboxingItem2ImageComponent ; /images/banners/homepage/experience_2.png        ;
+                            ;                          ; UnboxingItem3ImageComponent ; /images/banners/homepage/experience_3.png        ;
+                            ;                          ; UnboxingItem4ImageComponent ; /images/banners/homepage/experience_4.png        ;
+                            ;                          ; ReviewStar1Component        ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; ReviewStar2Component        ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; ReviewStar3Component        ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; ReviewStar4Component        ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; ReviewStar5Component        ; /images/banners/homepage/star-half.webp          ;
+                            ;                          ; Review1Star1Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review1Star2Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review1Star3Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review1Star4Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review1Star5Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review2Star1Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review2Star2Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review2Star3Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review2Star4Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review2Star5Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review3Star1Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review3Star2Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review3Star3Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review3Star4Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review3Star5Component       ; /images/banners/homepage/star-full.webp          ;
+                            ;                          ; Review1AvatarComponent      ; /images/banners/homepage/review-avatar.webp      ;
+                            ;                          ; Review2AvatarComponent      ; /images/banners/homepage/review-avatar.webp      ;
+                            ;                          ; Review3AvatarComponent      ; /images/banners/homepage/review-avatar.webp      ;
+                            ;                          ; PhoneNumberImgComponent     ; /images/banners/homepage/footer-icon-call.png    ;
+                            ;                          ; TextNumberImgComponent      ; /images/banners/homepage/footer-icon-message.png ;
+#                            ;                          ; FooterLogoComponent         ; /images/banners/homepage/header-logo-white.png   ;

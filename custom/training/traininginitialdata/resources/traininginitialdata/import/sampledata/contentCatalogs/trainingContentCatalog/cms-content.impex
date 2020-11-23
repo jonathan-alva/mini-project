@@ -27,9 +27,10 @@ UPDATE CMSSite; uid[unique = true]; defaultPreviewCategory(code, $productCV); de
 #              ; training          ; BED                                     ; SUPERKINGX                             ; $productCatalog
 
 # Site Logo
-INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]              ; realfilename       ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText            ; folder(qualifier)[default = 'images']
-                   ;                          ; /images/theme/logo-hybris.png    ; logo-hybris.png    ; $siteResource/images/theme/logo-hybris.png                                  ; image/png                   ; hybris Accelerator ;
-                   ;                          ; /images/theme/logo-hybris_zh.png ; logo-hybris_zh.png ; $siteResource/images/theme/logo-hybris_zh.png                               ; image/png                   ; hybris Accelerator ;
+INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]                            ; realfilename          ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText  ; folder(qualifier)[default = 'images']
+#                   ;                          ; /images/theme/logo-hybris.png                 ; logo-hybris.png       ; $siteResource/images/theme/logo-hybris.png                                  ; image/png                   ; hybris Accelerator ;
+#                   ;                          ; /images/theme/logo-hybris_zh.png              ; logo-hybris_zh.png    ; $siteResource/images/theme/logo-hybris_zh.png                               ; image/png                   ; hybris Accelerator ;
+                   ;                          ; /images/banners/homepage/header-logo-white.png ; header-logo-white.png ; $siteResource/images/banners/homepage/header-logo-white.png                 ; image/png                   ; INTHEBOX ;
 
 # Site Logo Component
 INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]; name                ; &componentRef     ; urlLink
@@ -44,8 +45,8 @@ INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]   
                               ;                          ; AllFashionsCategoryLink      ; All Fashions Link             ; /c/FASHION                                ; AllFashionsCategoryLink      ; AllFashionsCategoryLink      ;                                     ; FASHION  ;         ;
                               ;                          ; ShirtCategoryLink            ; Shirt Category Link           ; /c/SHIRT                                  ; ShirtCategoryLink            ; ShirtCategoryLink            ;                                     ; SHIRT    ;         ;
                               ;                          ; TrouserCategoryLink          ; Trouser Category Link         ; /c/TROUSER                                ; TrouserCategoryLink          ; TrouserCategoryLink          ;                                     ; TROUSER  ;         ;
-                              ;                          ; AboutUsLink                  ; About us Link                 ; /Bed/Sofa/c/SOFA                          ; AboutUsLink                  ; AboutUsLink                  ;                                     ;          ;         ;
-                              ;                          ; BlogsLink                    ; Blogs Link                    ; /Bed/Sofa/c/SOFA                          ; BlogsLink                    ; BlogsLink                    ;                                     ;          ;         ;
+                              ;                          ; AboutUsLink                  ; About us Link                 ; /#                                        ; AboutUsLink                  ; AboutUsLink                  ;                                     ;          ;         ;
+                              ;                          ; BlogsLink                    ; Blogs Link                    ; /#                                        ; BlogsLink                    ; BlogsLink                    ;                                     ;          ;         ;
                               ;                          ; GuaranteeLink                ; Guarantee Link                ; /Bed/Sofa/c/SOFA                          ; GuaranteeLink                ; GuaranteeLink                ;                                     ;          ;         ;
                               ;                          ; ConfirmationLink             ; Guarantee Link                ; /Bed/Sofa/c/SOFA                          ; ConfirmationLink             ; ConfirmationLink             ;                                     ;          ;         ;
                               ;                          ; AboutSAPCommerceLink         ; About SAP Commerce Cloud Link ; "http://www.cx.sap.com/products/commerce" ; AboutSAPCommerceLink         ; AboutSAPCommerceLink         ; newWindow                           ;          ;         ;
@@ -60,6 +61,22 @@ INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]   
                               ;                          ; TermsAndConditionsLink       ; Terms and Conditions Link     ; /termsAndConditions                       ; TermsAndConditionsLink       ; TermsAndConditionsLink       ;                                     ;          ;         ;
                               ;                          ; ProductRecommendationLink    ; Product Recommendation Link   ; /product-recommendation                   ; ProductRecommendationLink    ; ProductRecommendationLink    ;                                     ;          ;         ;
                               ;                          ; ProductRecommendationTopLink ; Product Recommendation Link   ; /product-recommendation                   ; ProductRecommendationTopLink ; ProductRecommendationTopLink ;                                     ;          ;         ;
+                              ;                          ; ProductLink                  ; Product Link                  ; /#                                        ; ProductLink                  ; ProductLink                  ;                                     ;          ;         ;
+                              ;                          ; TestimoniLink                ; Testimoni Link                ; /#                                        ; TestimoniLink                ; TestimoniLink                ;                                     ;          ;         ;
+                              ;                          ; ProductFooterLink            ; Product Footer Link           ; /#                                        ; ProductFooterLink            ; ProductFooterLink            ;                                     ;          ;         ;
+                              ;                          ; AktivasiGaransiFooterLink    ; Aktivasi Garansi Footer Link  ; /#                                        ; AktivasiGaransiFooterLink    ; AktivasiGaransiFooterLink    ;                                     ;          ;         ;
+                              ;                          ; CekResiFooterLink            ; Cek Resi Footer Link          ; /#                                        ; CekResiFooterLink            ; CekResiFooterLink            ;                                     ;          ;         ;
+                              ;                          ; FAQFooterLink                ; FAQ Footer Link               ; /#                                        ; FAQFooterLink                ; FAQFooterLink                ;                                     ;          ;         ;
+                              ;                          ; BantuanFooterLink            ; Bantuan Footer Link           ; /#                                        ; BantuanFooterLink            ; BantuanFooterLink            ;                                     ;          ;         ;
+                              ;                          ; SyaratKetentuanFooterLink    ; Syarat Ketentuan Footer Link  ; /#                                        ; SyaratKetentuanFooterLink    ; SyaratKetentuanFooterLink    ;                                     ;          ;         ;
+                              ;                          ; KebijakanPrivasiFooterLink   ; Kebijakan Privasi Footer Link ; /#                                        ; KebijakanPrivasiFooterLink   ; KebijakanPrivasiFooterLink   ;                                     ;          ;         ;
+                              ;                          ; TentangKamiFooterLink        ; Tentang Kami Footer Link      ; /#                                        ; TentangKamiFooterLink        ; TentangKamiFooterLink        ;                                     ;          ;         ;
+                              ;                          ; TokoOfflineFooterLink        ; Toko Offline Footer Link      ; /#                                        ; TokoOfflineFooterLink        ; TokoOfflineFooterLink        ;                                     ;          ;         ;
+                              ;                          ; BlogFooterLink               ; Blog Footer Link              ; /#                                        ; BlogFooterLink               ; BlogFooterLink               ;                                     ;          ;         ;
+                              ;                          ; TestimoniFooterLink          ; Testimoni Footer Link         ; /#                                        ; TestimoniFooterLink          ; TestimoniFooterLink          ;                                     ;          ;         ;
+                              ;                          ; GaransiTopHeaderLink         ; Garansi Top Header Link       ; /#                                        ; GaransiTopHeaderLink         ; GaransiTopHeaderLink         ;                                     ;          ;         ;
+                              ;                          ; KonfirmasiTopHeaderLink      ; Konfirmasi Top Header Link    ; /#                                        ; KonfirmasiTopHeaderLink      ; KonfirmasiTopHeaderLink      ;                                     ;          ;         ;
+                              ;                          ; CekResiTopHeaderLink         ; Cek Resi Top Header Link      ; /#                                        ; CekResiTopHeaderLink         ; CekResiTopHeaderLink         ;                                     ;          ;         ;
 
 # Lightbox Banner for Mini Cart
 INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]                  ; name                                    ; &componentRef                       ; urlLink
@@ -182,22 +199,25 @@ INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; 
                                ; root              ;                          ; root ; ;
 
 # CMS Navigation Nodes
-INSERT_UPDATE CMSNavigationNode; uid[unique = true]           ; $contentCV[unique = true]; name                          ; parent(uid, $contentCV); links(&linkRef)                                             ; &nodeRef
-                               ; SiteRootNode                 ;                          ; SiteRootNode                  ; root                   ;                                                             ; SiteRootNode
-                               ; ElectronicsNavNode           ;                          ; Electronics Site              ; SiteRootNode           ; HomepageNavLink                                             ; ElectronicsNavNode
-                               ; DemoNavNode                  ;                          ; trainings Site                ; SiteRootNode           ; HomepageNavLink                                             ; trainingNavNode
+INSERT_UPDATE CMSNavigationNode; uid[unique = true]           ; $contentCV[unique = true]; name                          ; parent(uid, $contentCV); links(&linkRef)                                                                                                                  ; &nodeRef
+                               ; SiteRootNode                 ;                          ; SiteRootNode                  ; root                   ;                                                                                                                                  ; SiteRootNode
+                               ; ElectronicsNavNode           ;                          ; Electronics Site              ; SiteRootNode           ; HomepageNavLink                                                                                                                  ; ElectronicsNavNode
+                               ; DemoNavNode                  ;                          ; trainings Site                ; SiteRootNode           ; HomepageNavLink                                                                                                                  ; trainingNavNode
 #                               ; AllBedsNavNode               ;                          ; Beds Links                    ; DemoNavNode            ; AllBedsCategoryLink                                         ; AllBedsNavNode
 #                               ; BrandsNavNode                ;                          ; Brand Links                   ; DemoNavNode            ; AllBrandsCategoryLink                                       ; BrandsNavNode
-                               ; AboutUsNavNode               ;                          ; About Us Links                ; DemoNavNode            ; AboutUsLink                                                 ; AboutUsNavNode
-                               ; BlogsNavNode                 ;                          ; Blogs Links                   ; DemoNavNode            ; BlogsLink                                                   ; BlogsNavNode
-                               ; GuaranteeNavNode             ;                          ; Guarantee Links               ; DemoNavNode            ; GuaranteeLink                                               ; GuaranteeNavNode
-                               ; ConfirmationNavNode          ;                          ; Confirmation Links            ; DemoNavNode            ; ConfirmationLink                                            ; ConfirmationNavNode
+                               ; AboutUsNavNode               ;                          ; About Us Links                ; DemoNavNode            ; AboutUsLink                                                                                                                      ; AboutUsNavNode
+                               ; BlogsNavNode                 ;                          ; Blogs Links                   ; DemoNavNode            ; BlogsLink                                                                                                                        ; BlogsNavNode
+                               ; GuaranteeNavNode             ;                          ; Guarantee Links               ; DemoNavNode            ; GuaranteeLink                                                                                                                    ; GuaranteeNavNode
+                               ; ConfirmationNavNode          ;                          ; Confirmation Links            ; DemoNavNode            ; ConfirmationLink                                                                                                                 ; ConfirmationNavNode
 #                               ; BedLinksNavNode              ;                          ; Bed Links                     ; AllBedsNavNode         ; SpringBedCategoryLink,SofaBedCategoryLink                   ; BedLinksNavNode
 #                               ; SpringbedNavNode             ;                          ; Springbed Links               ; BedLinksNavNode        ; SpringBedCategoryLink                                       ; SpringbedNavNode
 #                               ; SofabedNavNode               ;                          ; Sofabed Links                 ; BedLinksNavNode        ; SofaBedCategoryLink                                         ; SofabedNavNode
-                               ; SAPCommerceNavNode           ;                          ; SAP Commerce Cloud Pages      ; ElectronicsNavNode     ; AboutSAPCommerceLink,FAQLink                                ; SAPCommerceNavNode
-                               ; SAPCustomerExperienceNavNode ;                          ; SAP Customer Experience Pages ; ElectronicsNavNode     ; VisitSAPLink,ContactUsLink                                  ; SAPCustomerExperienceNavNode
-                               ; FollowUsNavNode              ;                          ; Follow Us Pages               ; ElectronicsNavNode     ; AgileCommerceBlogLink,LinkedInLink,FacebookLink,TwitterLink ; FollowUsNavNode
+                               ; SAPCommerceNavNode           ;                          ; SAP Commerce Cloud Pages      ; ElectronicsNavNode     ; AboutSAPCommerceLink,FAQLink                                                                                                     ; SAPCommerceNavNode
+                               ; SAPCustomerExperienceNavNode ;                          ; SAP Customer Experience Pages ; ElectronicsNavNode     ; VisitSAPLink,ContactUsLink                                                                                                       ; SAPCustomerExperienceNavNode
+                               ; FollowUsNavNode              ;                          ; Follow Us Pages               ; ElectronicsNavNode     ; AgileCommerceBlogLink,LinkedInLink,FacebookLink,TwitterLink                                                                      ; FollowUsNavNode
+                               ; ProductFooterNavNode         ;                          ; Product Links                 ; ElectronicsNavNode     ; ProductFooterLink                                                                                                                ; ProductFooterNavNode
+                               ; SupportFooterNavNode         ;                          ; Support Links                 ; ElectronicsNavNode     ; AktivasiGaransiFooterLink,CekResiFooterLink,FAQFooterLink,BantuanFooterLink,SyaratKetentuanFooterLink,KebijakanPrivasiFooterLink ; SupportFooterNavNode
+                               ; AboutFooterNavNode           ;                          ; About Links                   ; ElectronicsNavNode     ; TentangKamiFooterLink,TokoOfflineFooterLink,BlogFooterLink,TestimoniFooterLink                                                   ; AboutFooterNavNode
 
 
 # Preview Image for use in the CMS Cockpit for special ContentPages
@@ -306,29 +326,112 @@ INSERT_UPDATE RotatingImagesComponent; $contentCV[unique = true]; uid[unique = t
 INSERT_UPDATE ProductCarouselComponent; $contentCV[unique = true]; uid[unique = true]; name; products(code, $productCV); scroll(code); popup; &componentRef
 #                                      ;                          ; ElectronicsHomepageProductCarouselComponent ; Electronics Homepage Product Carousel ; SUPERKINGX,KINGX,QUEENSIZEX,FULLSIZEX,SUPERSINGLEX,SINGLESIZEX ; allVisible  ; false ; ElectronicsHomepageProductCarouselComponent
 
-INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]     ; name                        ; active; cmsComponents(&componentRef)
-                         ;                          ; Section1Slot-Homepage  ; Section1 Slot for Homepage  ; true  ; BrandsGaloreBanner
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]               ; name                                           ; active; cmsComponents(&componentRef)
+                         ;                          ; Section1Slot-Homepage            ; Section1 Slot for Homepage                     ; true  ; BrandsGaloreBanner
 #                         ;                          ; Section2ASlot-Homepage ; Section2A Slot for Homepage ; true  ; ElectronicsHomepageProductCarouselComponent,PurchasedCategorySuggestions
 #                         ;                          ; Section2BSlot-Homepage ; Section2B Slot for Homepage ; true  ; ElectronicsHomepageProductCarouselComponent,PurchasedCategorySuggestions
-                         ;                          ; Section3ASlot-Homepage ; Section3A Slot for Homepage ; true  ; CanonPowershotBannerComponent,SonyCybershotBannerComponent,KodakEasyshareBannerComponent,SonyDSCBannerComponent
-                         ;                          ; Section3BSlot-Homepage ; Section3B Slot for Homepage ; true  ; CamcordersBanner,LensesBanner
-                         ;                          ; Section3CSlot-Homepage ; Section3C Slot for Homepage ; true  ; ElectronicsHomepageCarouselComponent
-                         ;                          ; Section4Slot-Homepage  ; Section4 Slot for Homepage  ; true  ; DigitalCompactCamerasBannerComponent,DigitalSLRCamerasBannerComponent,MemoryBannerComponent,AccessoriesBannerComponent
-                         ;                          ; Section5Slot-Homepage  ; Section5 Slot for Homepage  ; true  ; NextDayDeliveryBanner
+                         ;                          ; Section3ASlot-Homepage           ; Section3A Slot for Homepage                    ; true  ; CanonPowershotBannerComponent,SonyCybershotBannerComponent,KodakEasyshareBannerComponent,SonyDSCBannerComponent
+                         ;                          ; Section3BSlot-Homepage           ; Section3B Slot for Homepage                    ; true  ; CamcordersBanner,LensesBanner
+                         ;                          ; Section3CSlot-Homepage           ; Section3C Slot for Homepage                    ; true  ; ElectronicsHomepageCarouselComponent
+                         ;                          ; Section4Slot-Homepage            ; Section4 Slot for Homepage                     ; true  ; DigitalCompactCamerasBannerComponent,DigitalSLRCamerasBannerComponent,MemoryBannerComponent,AccessoriesBannerComponent
+                         ;                          ; Section5Slot-Homepage            ; Section5 Slot for Homepage                     ; true  ; NextDayDeliveryBanner
+                         ;                          ; SectionProductSlot-Homepage      ; Section Product Slot for Homepage              ; true  ;
+                         ;                          ; SectionProductText1Slot-Homepage ; Section Product Text 1 Slot for Homepage       ; true  ;
+                         ;                          ; SectionProductText2Slot-Homepage ; Section Product Text 2 Slot for Homepage       ; true  ;
+                         ;                          ; SectionUnboxingSlot-Homepage     ; Section Unboxing Slot for Homepage             ; true  ;
+                         ;                          ; SectionTestimoniSlot-Homepage    ; Section Testimoni Slot for Homepage            ; true  ;
+                         ;                          ; TestimoniSubtitle1Slot-Homepage  ; Section Testimoni Subtitle 1 Slot for Homepage ; true  ;
+                         ;                          ; TestimoniSubtitle2Slot-Homepage  ; Section Testimoni Subtitle 2 Slot for Homepage ; true  ;
+                         ;                          ; TotalReviewSlot-Homepage         ; Total Review Slot for Testimoni Homepage       ; true  ;
+                         ;                          ; TotalStarsSlot-Homepage          ; Total Stars Slot for Testimoni Homepage        ; true  ;
+                         ;                          ; UnboxingItem1TitleSlot-Homepage  ; Unboxing Item 1 Title Slot for Homepage        ; true  ;
+                         ;                          ; UnboxingItem1DescSlot-Homepage   ; Unboxing Item 1 Desc Slot for Homepage         ; true  ;
+                         ;                          ; UnboxingItem2TitleSlot-Homepage  ; Unboxing Item 2 Title Slot for Homepage        ; true  ;
+                         ;                          ; UnboxingItem2DescSlot-Homepage   ; Unboxing Item 2 Desc Slot for Homepage         ; true  ;
+                         ;                          ; UnboxingItem3TitleSlot-Homepage  ; Unboxing Item 3 Title Slot for Homepage        ; true  ;
+                         ;                          ; UnboxingItem3DescSlot-Homepage   ; Unboxing Item 3 Desc Slot for Homepage         ; true  ;
+                         ;                          ; UnboxingItem4TitleSlot-Homepage  ; Unboxing Item 4 Title Slot for Homepage        ; true  ;
+                         ;                          ; UnboxingItem4DescSlot-Homepage   ; Unboxing Item 4 Desc Slot for Homepage         ; true  ;
+                         ;                          ; Review1NameSlot-Homepage         ; Review 1 Name Slot for Homepage                ; true  ;
+                         ;                          ; Review2NameSlot-Homepage         ; Review 2 Name Slot for Homepage                ; true  ;
+                         ;                          ; Review3NameSlot-Homepage         ; Review 3 Name Slot for Homepage                ; true  ;
+                         ;                          ; Review1TotalStarsSlot-Homepage   ; Review 1 Total Star Slot for Homepage          ; true  ;
+                         ;                          ; Review2TotalStarsSlot-Homepage   ; Review 2 Total Star Slot for Homepage          ; true  ;
+                         ;                          ; Review3TotalStarsSlot-Homepage   ; Review 3 Total Star Slot for Homepage          ; true  ;
+                         ;                          ; Review1TitleSlot-Homepage        ; Review 1 Title Slot for Homepage               ; true  ;
+                         ;                          ; Review2TitleSlot-Homepage        ; Review 2 Title Slot for Homepage               ; true  ;
+                         ;                          ; Review3TitleSlot-Homepage        ; Review 3 Title Slot for Homepage               ; true  ;
+                         ;                          ; Review1DescSlot-Homepage         ; Review 1 Desc Slot for Homepage                ; true  ;
+                         ;                          ; Review2DescSlot-Homepage         ; Review 2 Desc Slot for Homepage                ; true  ;
+                         ;                          ; Review3DescSlot-Homepage         ; Review 3 Desc Slot for Homepage                ; true  ;
+                         ;                          ; Review1DatetimeSlot-Homepage     ; Review 1 Datetime Slot for Homepage            ; true  ;
+                         ;                          ; Review2DatetimeSlot-Homepage     ; Review 2 Datetime Slot for Homepage            ; true  ;
+                         ;                          ; Review3DatetimeSlot-Homepage     ; Review 3 Datetime Slot for Homepage            ; true  ;
 
-INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'homepage']; contentSlot(uid, $contentCV)[unique = true]
-                                ;                          ; Section1-Homepage  ; Section1               ;                                                           ; Section1Slot-Homepage
-                                ;                          ; Section2A-Homepage ; Section2A              ;                                                           ; Section2ASlot-Homepage
-                                ;                          ; Section2B-Homepage ; Section2B              ;                                                           ; Section2BSlot-Homepage
-                                ;                          ; Section3A-Homepage ; Section3A              ;                                                           ; Section3ASlot-Homepage
-                                ;                          ; Section3B-Homepage ; Section3B              ;                                                           ; Section3BSlot-Homepage
-                                ;                          ; Section3C-Homepage ; Section3C              ;                                                           ; Section3CSlot-Homepage
-                                ;                          ; Section4-Homepage  ; Section4               ;                                                           ; Section4Slot-Homepage
-                                ;                          ; Section5-Homepage  ; Section5               ;                                                           ; Section5Slot-Homepage
-                                ;                          ; Section6-Homepage  ; Section6               ;                                                           ; Section6Slot-Homepage
-                                ;                          ; Section7-Homepage  ; Section7               ;                                                           ; Section7Slot-Homepage
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]               ; position[unique = true] ; page(uid, $contentCV)[unique = true][default = 'homepage']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; Section1-Homepage                ; Section1                ;                                                           ; Section1Slot-Homepage
+                                ;                          ; Section2A-Homepage               ; Section2A               ;                                                           ; Section2ASlot-Homepage
+#                                ;                          ; Section2B-Homepage ; Section2B              ;                                                           ; Section2BSlot-Homepage
+                                ;                          ; Section3A-Homepage               ; Section3A               ;                                                           ; Section3ASlot-Homepage
+                                ;                          ; Section3B-Homepage               ; Section3B               ;                                                           ; Section3BSlot-Homepage
+                                ;                          ; Section3C-Homepage               ; Section3C               ;                                                           ; Section3CSlot-Homepage
+                                ;                          ; Section4-Homepage                ; Section4                ;                                                           ; Section4Slot-Homepage
+                                ;                          ; Section5-Homepage                ; Section5                ;                                                           ; Section5Slot-Homepage
+                                ;                          ; Section6-Homepage                ; Section6                ;                                                           ; Section6Slot-Homepage
+                                ;                          ; Section7-Homepage                ; Section7                ;                                                           ; Section7Slot-Homepage
 #                                ;                          ; Section8-Homepage  ; Section8               ;                                                           ; Section8Slot-Homepage
 #                                ;                          ; Section9-Homepage  ; Section9               ;                                                           ; Section9Slot-Homepage
+                                ;                          ; SectionProductSlot-Homepage      ; SectionProduct          ;                                                           ; SectionProductSlot-Homepage
+                                ;                          ; SectionProductText1Slot-Homepage ; SectionProductText1     ;                                                           ; SectionProductText1Slot-Homepage
+                                ;                          ; SectionProductText2Slot-Homepage ; SectionProductText2     ;                                                           ; SectionProductText2Slot-Homepage
+                                ;                          ; SectionUnboxingSlot-Homepage     ; SectionUnboxing         ;                                                           ; SectionUnboxingSlot-Homepage
+                                ;                          ; SectionTestimoniSlot-Homepage    ; SectionTestimoni        ;                                                           ; SectionTestimoniSlot-Homepage
+                                ;                          ; TestimoniSubtitle1Slot-Homepage  ; TestimoniSubtitle1      ;                                                           ; TestimoniSubtitle1Slot-Homepage
+                                ;                          ; TestimoniSubtitle2Slot-Homepage  ; TestimoniSubtitle2      ;                                                           ; TestimoniSubtitle2Slot-Homepage
+                                ;                          ; TotalReviewSlot-Homepage         ; TotalReview             ;                                                           ; TotalReviewSlot-Homepage
+                                ;                          ; TotalStarsSlot-Homepage          ; TotalStars              ;                                                           ; TotalStarsSlot-Homepage
+                                ;                          ; UnboxingItem1TitleSlot-Homepage  ; UnboxingItem1Title      ;                                                           ; UnboxingItem1TitleSlot-Homepage
+                                ;                          ; UnboxingItem1DescSlot-Homepage   ; UnboxingItem1Desc       ;                                                           ; UnboxingItem1DescSlot-Homepage
+                                ;                          ; UnboxingItem1Slot-Homepage       ; UnboxingItem1           ;                                                           ; UnboxingItem1Slot-Homepage
+                                ;                          ; UnboxingItem2TitleSlot-Homepage  ; UnboxingItem2Title      ;                                                           ; UnboxingItem2TitleSlot-Homepage
+                                ;                          ; UnboxingItem2DescSlot-Homepage   ; UnboxingItem2Desc       ;                                                           ; UnboxingItem2DescSlot-Homepage
+                                ;                          ; UnboxingItem2Slot-Homepage       ; UnboxingItem2           ;                                                           ; UnboxingItem2Slot-Homepage
+                                ;                          ; UnboxingItem3TitleSlot-Homepage  ; UnboxingItem3Title      ;                                                           ; UnboxingItem3TitleSlot-Homepage
+                                ;                          ; UnboxingItem3DescSlot-Homepage   ; UnboxingItem3Desc       ;                                                           ; UnboxingItem3DescSlot-Homepage
+                                ;                          ; UnboxingItem3Slot-Homepage       ; UnboxingItem3           ;                                                           ; UnboxingItem3Slot-Homepage
+                                ;                          ; UnboxingItem4TitleSlot-Homepage  ; UnboxingItem4Title      ;                                                           ; UnboxingItem4TitleSlot-Homepage
+                                ;                          ; UnboxingItem4DescSlot-Homepage   ; UnboxingItem4Desc       ;                                                           ; UnboxingItem4DescSlot-Homepage
+                                ;                          ; UnboxingItem4Slot-Homepage       ; UnboxingItem4           ;                                                           ; UnboxingItem4Slot-Homepage
+                                ;                          ; Review1NameSlot-Homepage         ; Review1Name             ;                                                           ; Review1NameSlot-Homepage
+                                ;                          ; Review2NameSlot-Homepage         ; Review2Name             ;                                                           ; Review2NameSlot-Homepage
+                                ;                          ; Review3NameSlot-Homepage         ; Review3Name             ;                                                           ; Review3NameSlot-Homepage
+                                ;                          ; Review1TotalStarsSlot-Homepage   ; Review1TotalStars       ;                                                           ; Review1TotalStarsSlot-Homepage
+                                ;                          ; Review2TotalStarsSlot-Homepage   ; Review2TotalStars       ;                                                           ; Review2TotalStarsSlot-Homepage
+                                ;                          ; Review3TotalStarsSlot-Homepage   ; Review3TotalStars       ;                                                           ; Review3TotalStarsSlot-Homepage
+                                ;                          ; Review1TitleSlot-Homepage        ; Review1Title            ;                                                           ; Review1TitleSlot-Homepage
+                                ;                          ; Review2TitleSlot-Homepage        ; Review2Title            ;                                                           ; Review2TitleSlot-Homepage
+                                ;                          ; Review3TitleSlot-Homepage        ; Review3Title            ;                                                           ; Review3TitleSlot-Homepage
+                                ;                          ; Review1DescSlot-Homepage         ; Review1Desc             ;                                                           ; Review1DescSlot-Homepage
+                                ;                          ; Review2DescSlot-Homepage         ; Review2Desc             ;                                                           ; Review2DescSlot-Homepage
+                                ;                          ; Review3DescSlot-Homepage         ; Review3Desc             ;                                                           ; Review3DescSlot-Homepage
+                                ;                          ; Review1DatetimeSlot-Homepage     ; Review1Datetime         ;                                                           ; Review1DatetimeSlot-Homepage
+                                ;                          ; Review2DatetimeSlot-Homepage     ; Review2Datetime         ;                                                           ; Review2DatetimeSlot-Homepage
+                                ;                          ; Review3DatetimeSlot-Homepage     ; Review3Datetime         ;                                                           ; Review3DatetimeSlot-Homepage
+                                ;                          ; Review1AvatarSlot-Homepage       ; Review1Avatar           ;                                                           ; Review1AvatarSlot-Homepage
+                                ;                          ; Review2AvatarSlot-Homepage       ; Review2Avatar           ;                                                           ; Review2AvatarSlot-Homepage
+                                ;                          ; Review3AvatarSlot-Homepage       ; Review3Avatar           ;                                                           ; Review3AvatarSlot-Homepage
+#                                ;                          ; PhoneNumber                     ; PhoneNumber            ;                                                           ; PhoneNumber
+#                                ;                          ; TextNumber                      ; TextNumber             ;                                                           ; TextNumber
+                                ;                          ; PhoneNumberImg                   ; PhoneNumberImg          ;                                                           ; PhoneNumberImg
+                                ;                          ; TextNumberImg                    ; TextNumberImg           ;                                                           ; TextNumberImg
+                                ;                          ; Garansi10TahunImg                ; Garansi10TahunImg       ;                                                           ; Garansi10TahunImg
+                                ;                          ; FreeShippingImg                  ; FreeShippingImg         ;                                                           ; FreeShippingImg
+                                ;                          ; Garansi10TahunText               ; Garansi10TahunText      ;                                                           ; Garansi10TahunText
+                                ;                          ; FreeShippingText                 ; FreeShippingText        ;                                                           ; FreeShippingText
+                                ;                          ; GaransiTopHeaderText             ; GaransiTopHeaderText    ;                                                           ; GaransiTopHeaderText
+                                ;                          ; KonfirmasiTopHeaderText          ; KonfirmasiTopHeaderText ;                                                           ; KonfirmasiTopHeaderText
+                                ;                          ; CekResiTopHeaderText             ; CekResiTopHeaderText    ;                                                           ; CekResiTopHeaderText
+#                                ;                          ; FooterLogo                      ; FooterLogo             ;                                                           ; FooterLogo
 
 ###### Electronics Search Results Page ######
 
@@ -698,14 +801,155 @@ INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[un
                                              ;                          ; DemoHompageSplashBannerComponent-2 ; Electronics Homepage Splash Banner Component 2 ; /Bed/Sofa/c/SOFA ; DemoHompageSplashBannerComponent-2
                                              ;                          ; DemoHompageSplashBannerComponent-3 ; Electronics Homepage Splash Banner Component 3 ; /Bed/Sofa/c/SOFA ; DemoHompageSplashBannerComponent-3
                                              ;                          ; DemoHompageSplashBannerComponent-4 ; Electronics Homepage Splash Banner Component 4 ; /Bed/Sofa/c/SOFA ; DemoHompageSplashBannerComponent-4
+                                             ;                          ; DemoHompageSplashBannerComponent-5 ; Electronics Homepage Splash Banner Component 5 ; /Bed/Sofa/c/SOFA ; DemoHompageSplashBannerComponent-5
+                                             ;                          ; DemoHompageSplashBannerComponent-6 ; Electronics Homepage Splash Banner Component 6 ; /Bed/Sofa/c/SOFA ; DemoHompageSplashBannerComponent-6
 
 INSERT_UPDATE SimpleResponsiveBannerComponent; $contentCV[unique = true]; uid[unique = true]                 ; name                                           ; urlLink                    ; &componentRef
                                              ;                          ; DemoHompageDiscountBannerComponent ; Electronics Homepage Discount Banner Component ; /Bed/Springbed/c/SPRINGBED ; DemoHompageDiscountBannerComponent
 
 INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]    ; active; cmsComponents(&componentRef)
-                         ;                          ; Section1Slot-Homepage ; true  ; DemoHompageSplashBannerComponent-1,DemoHompageSplashBannerComponent-2,DemoHompageSplashBannerComponent-3,DemoHompageSplashBannerComponent-4
+                         ;                          ; Section1Slot-Homepage ; true  ; DemoHompageSplashBannerComponent-1,DemoHompageSplashBannerComponent-2,DemoHompageSplashBannerComponent-3,DemoHompageSplashBannerComponent-4,DemoHompageSplashBannerComponent-5,DemoHompageSplashBannerComponent-6
 #                         ;;Section1Slot-Homepage;true;DemoHompageDiscountBannerComponent
 
+## Home Section Unboxing
+INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                   ; name                              ; &componentRef
+                                   ;                          ; ProductTitleParagraphComponent       ; Product Section Title Paragraph   ; ProductTitleParagraphComponent
+                                   ;                          ; ProductText1ParagraphComponent       ; Product Section Text 1 Paragraph  ; ProductText1ParagraphComponent
+                                   ;                          ; ProductText2ParagraphComponent       ; Product Section Text 2 Paragraph  ; ProductText2ParagraphComponent
+                                   ;                          ; UnboxingTitleParagraphComponent      ; Unboxing Section Title Paragraph  ; UnboxingTitleParagraphComponent
+                                   ;                          ; TestimoniTitleParagraphComponent     ; Testimoni Section Title Paragraph ; TestimoniTitleParagraphComponent
+                                   ;                          ; TestimoniSubtitle1ParagraphComponent ; Testimoni Subtitle 1 Paragraph    ; TestimoniSubtitle1ParagraphComponent
+                                   ;                          ; TestimoniSubtitle2ParagraphComponent ; Testimoni Subtitle 1 Paragraph    ; TestimoniSubtitle2ParagraphComponent
+                                   ;                          ; TotalReviewParagraphComponent        ; Total Review Paragraph            ; TotalReviewParagraphComponent
+                                   ;                          ; UnboxingItem1TitleParagraphComponent ; Unboxing Item 1 Title Paragraph   ; UnboxingItem1TitleParagraphComponent
+                                   ;                          ; UnboxingItem1DescParagraphComponent  ; Unboxing Item 1 Desc Paragraph    ; UnboxingItem1DescParagraphComponent
+                                   ;                          ; UnboxingItem2TitleParagraphComponent ; Unboxing Item 2 Title Paragraph   ; UnboxingItem2TitleParagraphComponent
+                                   ;                          ; UnboxingItem2DescParagraphComponent  ; Unboxing Item 2 Desc Paragraph    ; UnboxingItem2DescParagraphComponent
+                                   ;                          ; UnboxingItem3TitleParagraphComponent ; Unboxing Item 3 Title Paragraph   ; UnboxingItem3TitleParagraphComponent
+                                   ;                          ; UnboxingItem3DescParagraphComponent  ; Unboxing Item 3 Desc Paragraph    ; UnboxingItem3DescParagraphComponent
+                                   ;                          ; UnboxingItem4TitleParagraphComponent ; Unboxing Item 4 Title Paragraph   ; UnboxingItem4TitleParagraphComponent
+                                   ;                          ; UnboxingItem4DescParagraphComponent  ; Unboxing Item 4 Desc Paragraph    ; UnboxingItem4DescParagraphComponent
+                                   ;                          ; Review1NameParagraphComponent        ; Review 1 Name Paragraph           ; Review1NameParagraphComponent
+                                   ;                          ; Review2NameParagraphComponent        ; Review 2 Name Paragraph           ; Review2NameParagraphComponent
+                                   ;                          ; Review3NameParagraphComponent        ; Review 3 Name Paragraph           ; Review3NameParagraphComponent
+                                   ;                          ; Review1TitleParagraphComponent       ; Review 1 Title Paragraph          ; Review1TitleParagraphComponent
+                                   ;                          ; Review2TitleParagraphComponent       ; Review 2 Title Paragraph          ; Review2TitleParagraphComponent
+                                   ;                          ; Review3TitleParagraphComponent       ; Review 3 Title Paragraph          ; Review3TitleParagraphComponent
+                                   ;                          ; Review1DescParagraphComponent        ; Review 1 Desc Paragraph           ; Review1DescParagraphComponent
+                                   ;                          ; Review2DescParagraphComponent        ; Review 2 Desc Paragraph           ; Review2DescParagraphComponent
+                                   ;                          ; Review3DescParagraphComponent        ; Review 3 Desc Paragraph           ; Review3DescParagraphComponent
+                                   ;                          ; Review1DatetimeParagraphComponent    ; Review 1 Datetime Paragraph       ; Review1DatetimeParagraphComponent
+                                   ;                          ; Review2DatetimeParagraphComponent    ; Review 2 Datetime Paragraph       ; Review2DatetimeParagraphComponent
+                                   ;                          ; Review3DatetimeParagraphComponent    ; Review 3 Datetime Paragraph       ; Review3DatetimeParagraphComponent
+                                   ;                          ; PhoneNumberParagraphComponent        ; Phone Number Paragraph            ; PhoneNumberParagraphComponent
+                                   ;                          ; TextNumberParagraphComponent         ; Text Number Paragraph             ; TextNumberParagraphComponent
+                                   ;                          ; Garansi10TahunTextComponent          ; Garansi 10 Tahun Paragraph        ; Garansi10TahunTextComponent
+                                   ;                          ; FreeShippingTextComponent            ; Free Shipping Paragraph           ; FreeShippingTextComponent
+
+
+# Unboxing Items Image
+INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]                                    ; realfilename                  ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/jpeg']; altText           ; folder(qualifier)[default = 'images']
+                   ;                          ; /images/banners/homepage/experience_1.png              ; experience_1.png              ; $siteResource/images/banners/homepage/experience_1.png                      ; image/png                   ; Keluarkan         ;
+                   ;                          ; /images/banners/homepage/experience_2.png              ; experience_2.png              ; $siteResource/images/banners/homepage/experience_2.png                      ; image/png                   ; Posisikan         ;
+                   ;                          ; /images/banners/homepage/experience_3.png              ; experience_3.png              ; $siteResource/images/banners/homepage/experience_3.png                      ; image/png                   ; Buka Plastik      ;
+                   ;                          ; /images/banners/homepage/experience_4.png              ; experience_4.png              ; $siteResource/images/banners/homepage/experience_4.png                      ; image/png                   ; Tunggu Mengembang ;
+                   ;                          ; /images/banners/homepage/star-full.webp                ; star-full.webp                ; $siteResource/images/banners/homepage/star-full.webp                        ; image/png                   ; Star Full         ;
+                   ;                          ; /images/banners/homepage/star-half.webp                ; star-half.webp                ; $siteResource/images/banners/homepage/star-half.webp                        ; image/png                   ; Star Half         ;
+                   ;                          ; /images/banners/homepage/review-avatar.webp            ; review-avatar.webp            ; $siteResource/images/banners/homepage/review-avatar.webp                    ; image/png                   ; Avatar            ;
+                   ;                          ; /images/banners/homepage/footer-icon-call.png          ; footer-icon-call.png          ; $siteResource/images/banners/homepage/footer-icon-call.png                  ; image/png                   ; Call Icon         ;
+                   ;                          ; /images/banners/homepage/footer-icon-message.png       ; footer-icon-message.png       ; $siteResource/images/banners/homepage/footer-icon-message.png               ; image/png                   ; Message Icon      ;
+                   ;                          ; /images/banners/homepage/header-logo-white.png         ; header-logo-white.png         ; $siteResource/images/banners/homepage/header-logo-white.png                 ; image/png                   ; Logo              ;
+                   ;                          ; /images/banners/homepage/header-icon-10y-warranty.png  ; header-icon-10y-warranty.png  ; $siteResource/images/banners/homepage/header-icon-10y-warranty.png          ; image/png                   ; Logo              ;
+                   ;                          ; /images/banners/homepage/header-icon-free-shipping.png ; header-icon-free-shipping.png ; $siteResource/images/banners/homepage/header-icon-free-shipping.png         ; image/png                   ; Logo              ;
+
+# Site Logo Component
+INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]          ; name                             ; &componentRef               ; urlLink
+                                   ;                          ; UnboxingItem1ImageComponent ; Unboxing Item 1 Image Component  ; UnboxingItem1ImageComponent ;
+                                   ;                          ; UnboxingItem2ImageComponent ; Unboxing Item 2 Image Component  ; UnboxingItem2ImageComponent ;
+                                   ;                          ; UnboxingItem3ImageComponent ; Unboxing Item 3 Image Component  ; UnboxingItem3ImageComponent ;
+                                   ;                          ; UnboxingItem4ImageComponent ; Unboxing Item 4 Image Component  ; UnboxingItem4ImageComponent ;
+                                   ;                          ; ReviewStar1Component        ; Review Star 1 Image Component    ; ReviewStar1Component        ;
+                                   ;                          ; ReviewStar2Component        ; Review Star 2 Image Component    ; ReviewStar2Component        ;
+                                   ;                          ; ReviewStar3Component        ; Review Star 3 Image Component    ; ReviewStar3Component        ;
+                                   ;                          ; ReviewStar4Component        ; Review Star 4 Image Component    ; ReviewStar4Component        ;
+                                   ;                          ; ReviewStar5Component        ; Review Star 5 Image Component    ; ReviewStar5Component        ;
+                                   ;                          ; Review1Star1Component       ; Review 1 Star 1 Image Component  ; Review1Star1Component       ;
+                                   ;                          ; Review1Star2Component       ; Review 1 Star 2 Image Component  ; Review1Star2Component       ;
+                                   ;                          ; Review1Star3Component       ; Review 1 Star 3 Image Component  ; Review1Star3Component       ;
+                                   ;                          ; Review1Star4Component       ; Review 1 Star 4 Image Component  ; Review1Star4Component       ;
+                                   ;                          ; Review1Star5Component       ; Review 1 Star 5 Image Component  ; Review1Star5Component       ;
+                                   ;                          ; Review2Star1Component       ; Review 2 Star 1 Image Component  ; Review2Star1Component       ;
+                                   ;                          ; Review2Star2Component       ; Review 2 Star 2 Image Component  ; Review2Star2Component       ;
+                                   ;                          ; Review2Star3Component       ; Review 2 Star 3 Image Component  ; Review2Star3Component       ;
+                                   ;                          ; Review2Star4Component       ; Review 2 Star 4 Image Component  ; Review2Star4Component       ;
+                                   ;                          ; Review2Star5Component       ; Review 2 Star 5 Image Component  ; Review2Star5Component       ;
+                                   ;                          ; Review3Star1Component       ; Review 3 Star 1 Image Component  ; Review3Star1Component       ;
+                                   ;                          ; Review3Star2Component       ; Review 3 Star 2 Image Component  ; Review3Star2Component       ;
+                                   ;                          ; Review3Star3Component       ; Review 3 Star 3 Image Component  ; Review3Star3Component       ;
+                                   ;                          ; Review3Star4Component       ; Review 3 Star 4 Image Component  ; Review3Star4Component       ;
+                                   ;                          ; Review3Star5Component       ; Review 3 Star 5 Image Component  ; Review3Star5Component       ;
+                                   ;                          ; Review1AvatarComponent      ; Review 1 Avatar Component        ; Review1AvatarComponent      ;
+                                   ;                          ; Review2AvatarComponent      ; Review 2 Avatar Component        ; Review2AvatarComponent      ;
+                                   ;                          ; Review3AvatarComponent      ; Review 3 Avatar Component        ; Review3AvatarComponent      ;
+                                   ;                          ; PhoneNumberImgComponent     ; Phone Number Image Component     ; PhoneNumberImgComponent     ;
+                                   ;                          ; TextNumberImgComponent      ; Text Number Image Component      ; TextNumberImgComponent      ;
+                                   ;                          ; Garansi10TahunImgComponent  ; Garansi 10 Tahun Image Component ; Garansi10TahunImgComponent  ;
+                                   ;                          ; FreeShippingImgComponent    ; Free Shipping Image Component    ; FreeShippingImgComponent    ;
+#                                   ;                          ; FooterLogoComponent         ; Footer Logo Component           ; FooterLogoComponent         ;
+
+
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]               ; cmsComponents(&componentRef)
+                         ;                          ; SectionProductSlot-Homepage      ; ProductTitleParagraphComponent
+                         ;                          ; SectionProductText1Slot-Homepage ; ProductText1ParagraphComponent
+                         ;                          ; SectionProductText2Slot-Homepage ; ProductText2ParagraphComponent
+                         ;                          ; SectionUnboxingSlot-Homepage     ; UnboxingTitleParagraphComponent
+                         ;                          ; SectionTestimoniSlot-Homepage    ; TestimoniTitleParagraphComponent
+                         ;                          ; TestimoniSubtitle1Slot-Homepage  ; TestimoniSubtitle1ParagraphComponent
+                         ;                          ; TestimoniSubtitle2Slot-Homepage  ; TestimoniSubtitle2ParagraphComponent
+                         ;                          ; TotalReviewSlot-Homepage         ; TotalReviewParagraphComponent
+                         ;                          ; TotalStarsSlot-Homepage          ; ReviewStar1Component,ReviewStar2Component,ReviewStar3Component,ReviewStar4Component,ReviewStar5Component
+                         ;                          ; UnboxingItem1Slot-Homepage       ; UnboxingItem1ImageComponent
+                         ;                          ; UnboxingItem1TitleSlot-Homepage  ; UnboxingItem1TitleParagraphComponent
+                         ;                          ; UnboxingItem1DescSlot-Homepage   ; UnboxingItem1DescParagraphComponent
+                         ;                          ; UnboxingItem2Slot-Homepage       ; UnboxingItem2ImageComponent
+                         ;                          ; UnboxingItem2TitleSlot-Homepage  ; UnboxingItem2TitleParagraphComponent
+                         ;                          ; UnboxingItem2DescSlot-Homepage   ; UnboxingItem2DescParagraphComponent
+                         ;                          ; UnboxingItem3Slot-Homepage       ; UnboxingItem3ImageComponent
+                         ;                          ; UnboxingItem3TitleSlot-Homepage  ; UnboxingItem3TitleParagraphComponent
+                         ;                          ; UnboxingItem3DescSlot-Homepage   ; UnboxingItem3DescParagraphComponent
+                         ;                          ; UnboxingItem4Slot-Homepage       ; UnboxingItem4ImageComponent
+                         ;                          ; UnboxingItem4TitleSlot-Homepage  ; UnboxingItem4TitleParagraphComponent
+                         ;                          ; UnboxingItem4DescSlot-Homepage   ; UnboxingItem4DescParagraphComponent
+                         ;                          ; Review1NameSlot-Homepage         ; Review1NameParagraphComponent
+                         ;                          ; Review2NameSlot-Homepage         ; Review2NameParagraphComponent
+                         ;                          ; Review3NameSlot-Homepage         ; Review3NameParagraphComponent
+                         ;                          ; Review1TotalStarsSlot-Homepage   ; Review1Star1Component,Review1Star2Component,Review1Star3Component,Review1Star4Component,Review1Star5Component
+                         ;                          ; Review2TotalStarsSlot-Homepage   ; Review2Star1Component,Review2Star2Component,Review2Star3Component,Review2Star4Component,Review2Star5Component
+                         ;                          ; Review3TotalStarsSlot-Homepage   ; Review3Star1Component,Review3Star2Component,Review3Star3Component,Review3Star4Component,Review3Star5Component
+                         ;                          ; Review1TitleSlot-Homepage        ; Review1TitleParagraphComponent
+                         ;                          ; Review2TitleSlot-Homepage        ; Review2TitleParagraphComponent
+                         ;                          ; Review3TitleSlot-Homepage        ; Review3TitleParagraphComponent
+                         ;                          ; Review1DescSlot-Homepage         ; Review1DescParagraphComponent
+                         ;                          ; Review2DescSlot-Homepage         ; Review2DescParagraphComponent
+                         ;                          ; Review3DescSlot-Homepage         ; Review3DescParagraphComponent
+                         ;                          ; Review1DatetimeSlot-Homepage     ; Review1DatetimeParagraphComponent
+                         ;                          ; Review2DatetimeSlot-Homepage     ; Review2DatetimeParagraphComponent
+                         ;                          ; Review3DatetimeSlot-Homepage     ; Review3DatetimeParagraphComponent
+                         ;                          ; Review1AvatarSlot-Homepage       ; Review1AvatarComponent
+                         ;                          ; Review2AvatarSlot-Homepage       ; Review2AvatarComponent
+                         ;                          ; Review3AvatarSlot-Homepage       ; Review3AvatarComponent
+#                         ;                          ; PhoneNumber                      ; PhoneNumberParagraphComponent
+#                         ;                          ; TextNumber                       ; TextNumberParagraphComponent
+                         ;                          ; PhoneNumberImg                   ; PhoneNumberImgComponent
+                         ;                          ; TextNumberImg                    ; TextNumberImgComponent
+                         ;                          ; Garansi10TahunImg                ; Garansi10TahunImgComponent
+                         ;                          ; FreeShippingImg                  ; FreeShippingImgComponent
+                         ;                          ; Garansi10TahunText               ; Garansi10TahunTextComponent
+                         ;                          ; FreeShippingText                 ; FreeShippingTextComponent
+                         ;                          ; GaransiTopHeaderText             ; GaransiTopHeaderLink
+                         ;                          ; KonfirmasiTopHeaderText          ; KonfirmasiTopHeaderLink
+                         ;                          ; CekResiTopHeaderText             ; CekResiTopHeaderLink
+#                         ;                          ; FooterLogo                      ; FooterLogoComponent
 
 ## Home section 2A
 INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]            ; name                             ; &componentRef
@@ -965,7 +1209,7 @@ INSERT_UPDATE NavigationComponent; $contentCV[unique = true]; uid[unique = true]
 
 # Content Slots
 INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; cmsComponents(uid, $contentCV)
-                         ;                          ; MiniCartSlot      ; OrderComponent,MiniCart
+                         ;                          ; MiniCartSlot      ; MiniCart
 
 # create a user restriction
 INSERT_UPDATE CMSUserRestriction; $contentCV[unique = true]; &userRestriction         ; name                       ; uid[unique = true]       ; users(uid)
@@ -1153,7 +1397,7 @@ INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; 
 ## level 2. children of SiteRoot ##
 # the following order of children is the display order on the site
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]  ; $contentCV[unique = true]; name       ; parent(uid, $contentCV); &nodeRef            ; children(uid, $contentCV)
-                               ; DemoCategoryNavNode ;                          ; Categories ; DemoNavNode            ; DemoCategoryNavNode ; AllFashionsNavNode,AboutUsNavNode,BlogsNavNode,GuaranteeNavNode,ConfirmationNavNode,ProductRecommendationTopNavNode
+                               ; DemoCategoryNavNode ;                          ; Categories ; DemoNavNode            ; DemoCategoryNavNode ; ProductNavNode,AboutUsNavNode,BlogsNavNode,TestimoniNavNode
 
 ## level 3. children of Category Nav ##
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]              ; $contentCV[unique = true]; name                         ; &nodeRef                        ; children(uid, $contentCV)   ; links(&linkRef);
@@ -1165,6 +1409,8 @@ INSERT_UPDATE CMSNavigationNode; uid[unique = true]              ; $contentCV[un
                                ; ConfirmationNavNode             ;                          ; Confirmation Links           ; ConfirmationNavNode             ;                             ;
                                ; TermsAndConditionsNavNode       ;                          ; Terms And Conditions Links   ; TermsAndConditionsNavNode       ;                             ;
                                ; ProductRecommendationTopNavNode ;                          ; Product Recommendation Links ; ProductRecommendationTopNavNode ;                             ;
+                               ; ProductNavNode                  ;                          ; Product Links                ; ProductNavNode                  ;                             ;
+                               ; TestimoniNavNode                ;                          ; Testimoni Links              ; TestimoniNavNode                ;                             ;
 
 ## entries of the above navigation nodes ##
 INSERT_UPDATE CMSNavigationEntry; uid[unique = true]                   ; $contentCV[unique = true]; name                                         ; navigationNode(&nodeRef)        ; item(CMSLinkComponent.uid, CMSLinkComponent.$contentCV);
@@ -1176,6 +1422,8 @@ INSERT_UPDATE CMSNavigationEntry; uid[unique = true]                   ; $conten
                                 ; AllFashionsNavNodeEntry              ;                          ; All Fashions Navigation Node Entry           ; AllFashionsNavNode              ; AllFashionsCategoryLink                                ;
                                 ; TermsAndConditionsNavNodeEntry       ;                          ; Terms And Conditions Navigation Node Entry   ; TermsAndConditionsNavNode       ; TermsAndConditionsLink                                 ;
                                 ; ProductRecommendationTopNavNodeEntry ;                          ; Product Recommendation Navigation Node Entry ; ProductRecommendationTopNavNode ; ProductRecommendationTopLink                           ;
+                                ; ProductNavNodeEntry                  ;                          ; Product Navigation Node Entry                ; ProductNavNode                  ; ProductLink                                            ;
+                                ; TestimoniNavNodeEntry                ;                          ; Testimoni Navigation Node Entry              ; TestimoniNavNode                ; TestimoniLink                                          ;
 
 # CMS Link Components
 INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]; name; url; &linkRef; &componentRef; target(code)[default = 'sameWindow']; $category; $product;
@@ -1183,8 +1431,8 @@ INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]; n
 
 
 ## level 4. children of NavNode (the following order of children is the display order on the site) ##
-INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; name       ; &nodeRef        ; children(uid, $contentCV)       ; links(&linkRef);
-                               ; BedLinksNavNode   ;                          ; Beds links ; BedLinksNavNode ; SpringbedNavNode,SofabedNavNode ;
+INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; name; &nodeRef; children(uid, $contentCV); links(&linkRef);
+#                               ; BedLinksNavNode   ;                          ; Beds links ; BedLinksNavNode ; SpringbedNavNode,SofabedNavNode ;
 
 
 ## level 5. children of above (level 4) nodes ##
@@ -1207,17 +1455,20 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; cmsCom
                          ;                          ; FooterSlot        ; FooterNavigationComponent
 
 INSERT_UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique = true]        ; wrapAfter; &componentRef             ; showLanguageCurrency; navigationNode(&nodeRef)
-                                       ;                          ; FooterNavigationComponent ; 4        ; FooterNavigationComponent ; true                ; FooterNavNode ;
+                                       ;                          ; FooterNavigationComponent ; 6        ; FooterNavigationComponent ; true                ; FooterNavNode ;
 
 # the order of children is the same as the display order on the site
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; name         ; parent(uid, $contentCV); &nodeRef      ; children(uid, $contentCV)
-                               ; FooterNavNode     ;                          ; Footer Pages ; DemoNavNode            ; FooterNavNode ; SAPCommerceNavNode,SAPCustomerExperienceNavNode,FollowUsNavNode
+                               ; FooterNavNode     ;                          ; Footer Pages ; DemoNavNode            ; FooterNavNode ; ProductFooterNavNode,SupportFooterNavNode,AboutFooterNavNode
 
 # children of FooterNavNode #
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]           ; $contentCV[unique = true]; name                          ; &nodeRef                     ; children(uid, $contentCV); links(&linkRef)
                                ; SAPCommerceNavNode           ;                          ; SAP Commerce Cloud Pages      ; SAPCommerceNavNode           ; AboutSAPCommerceNavNode,FAQNavNode,ProductRecommendationNavNode
                                ; SAPCustomerExperienceNavNode ;                          ; SAP Customer Experience Pages ; SAPCustomerExperienceNavNode ; AboutSAPCustomerExperienceNavNode,ContactUsNavNode
                                ; FollowUsNavNode              ;                          ; Follow Us Pages               ; FollowUsNavNode              ; AgileCommerceBlogNavNode,LinkedInNavNode,FacebookNavNode,TwitterNavNode
+                               ; ProductFooterNavNode         ;                          ; Product Footer Link           ; ProductFooterNavNode         ; ProductFooterChildNavNode
+                               ; SupportFooterNavNode         ;                          ; Support Footer Link           ; SupportFooterNavNode         ; AktivasiGaransiFooterNavNode,CekResiFooterNavNode,FAQFooterNavNode,BantuanFooterNavNode,SyaratKetentuanFooterNavNode,KebijakanPrivasiFooterNavNode
+                               ; AboutFooterNavNode           ;                          ; About Footer Link             ; AboutFooterNavNode           ; TentangKamiFooterNavNode,TokoOfflineFooterNavNode,BlogFooterNavNode,TestimoniFooterNavNode
 
 # children of above navigation nodes #
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]                ; $contentCV[unique = true]; name                          ; &nodeRef; children(uid, $contentCV); links(&linkRef);
@@ -1230,6 +1481,17 @@ INSERT_UPDATE CMSNavigationNode; uid[unique = true]                ; $contentCV[
                                ; FacebookNavNode                   ;                          ; Facebook Page                 ; FacebookNavNode
                                ; TwitterNavNode                    ;                          ; Twitter Page                  ; TwitterNavNode
                                ; ProductRecommendationNavNode      ;                          ; Product Recommendation        ; ProductRecommendationNavNode
+                               ; ProductFooterChildNavNode         ;                          ; Product                       ; ProductFooterChildNavNode
+                               ; AktivasiGaransiFooterNavNode      ;                          ; Aktivasi Garansi              ; AktivasiGaransiFooterNavNode
+                               ; CekResiFooterNavNode              ;                          ; Cek Resi                      ; CekResiFooterNavNode
+                               ; FAQFooterNavNode                  ;                          ; FAQ                           ; FAQFooterNavNode
+                               ; BantuanFooterNavNode              ;                          ; Bantuan                       ; BantuanFooterNavNode
+                               ; SyaratKetentuanFooterNavNode      ;                          ; Syarat & Ketentuan            ; SyaratKetentuanFooterNavNode
+                               ; KebijakanPrivasiFooterNavNode     ;                          ; Kebijakan Privasi             ; KebijakanPrivasiFooterNavNode
+                               ; TentangKamiFooterNavNode          ;                          ; Tentang Kami                  ; TentangKamiFooterNavNode
+                               ; TokoOfflineFooterNavNode          ;                          ; Toko Offline                  ; TokoOfflineFooterNavNode
+                               ; BlogFooterNavNode                 ;                          ; Blog                          ; BlogFooterNavNode
+                               ; TestimoniFooterNavNode            ;                          ; Testimoni                     ; TestimoniFooterNavNode
 
 # entries of the above navigation nodes ##
 INSERT_UPDATE CMSNavigationEntry; uid[unique = true]                     ; $contentCV[unique = true]; name                                           ; navigationNode(&nodeRef)          ; item(CMSLinkComponent.uid, CMSLinkComponent.$contentCV);
@@ -1242,6 +1504,17 @@ INSERT_UPDATE CMSNavigationEntry; uid[unique = true]                     ; $cont
                                 ; FacebookNavNodeEntry                   ;                          ; Facebook Navigation Node Entry                 ; FacebookNavNode                   ; FacebookLink                                           ;
                                 ; TwitterNavNodeEntry                    ;                          ; Twitter Navigation Node Entry                  ; TwitterNavNode                    ; TwitterLink                                            ;
                                 ; ProductRecommendationNavNodeEntry      ;                          ; Product Recommendation Node Entry              ; ProductRecommendationNavNode      ; ProductRecommendationLink                              ;
+                                ; ProductFooterChildNavNodeEntry         ;                          ; Product Footer Child Node Entry                ; ProductFooterChildNavNode         ; ProductFooterLink                                      ;
+                                ; AktivasiGaransiFooterNavNodeEntry      ;                          ; Aktivasi Garansi Footer Node Entry             ; AktivasiGaransiFooterNavNode      ; AktivasiGaransiFooterLink                              ;
+                                ; CekResiFooterNavNodeEntry              ;                          ; Cek Resi Footer Node Entry                     ; CekResiFooterNavNode              ; CekResiFooterLink                                      ;
+                                ; FAQFooterNavNodeEntry                  ;                          ; FAQ Footer Node Entry                          ; FAQFooterNavNode                  ; FAQFooterLink                                          ;
+                                ; BantuanFooterNavNodeEntry              ;                          ; Bantuan Footer Node Entry                      ; BantuanFooterNavNode              ; BantuanFooterLink                                      ;
+                                ; SyaratKetentuanFooterNavNodeEntry      ;                          ; Syarat & Ketentuan Footer Node Entry           ; SyaratKetentuanFooterNavNode      ; SyaratKetentuanFooterLink                              ;
+                                ; KebijakanPrivasiFooterNavNodeEntry     ;                          ; Kebijakan Privasi Footer Node Entry            ; KebijakanPrivasiFooterNavNode     ; KebijakanPrivasiFooterLink                             ;
+                                ; TentangKamiFooterNavNodeEntry          ;                          ; Tentang Kami Footer Node Entry                 ; TentangKamiFooterNavNode          ; TentangKamiFooterLink                                  ;
+                                ; TokoOfflineFooterNavNodeEntry          ;                          ; Toko Offline Footer Node Entry                 ; TokoOfflineFooterNavNode          ; TokoOfflineFooterLink                                  ;
+                                ; BlogFooterNavNodeEntry                 ;                          ; Blog Footer Node Entry                         ; BlogFooterNavNode                 ; BlogFooterLink                                         ;
+                                ; TestimoniFooterNavNodeEntry            ;                          ; Testimoni Footer Node Entry                    ; TestimoniFooterNavNode            ; TestimoniFooterLink                                    ;
 ###### Footer Component Refactor End ######
 
 ###  Product Recommendation Page #######
@@ -1255,5 +1528,14 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        
 
 
 # Create Content Slots for Page
-INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]                  ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'product-recommendation']; contentSlot(uid, $contentCV)[unique = true]
-                                ;                          ; TopBanner-ProductRecommendationPage ; TopBanner              ;                                                                         ; TopBanner-ProductRecommendationPage
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]                                ; position[unique = true] ; page(uid, $contentCV)[unique = true][default = 'product-recommendation']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; TopBanner-ProductRecommendationPage               ; TopBanner               ;                                                                         ; TopBanner-ProductRecommendationPage
+                                ;                          ; PhoneNumberImg-ProductRecommendationPage          ; PhoneNumberImg          ;                                                                         ; PhoneNumberImg
+                                ;                          ; TextNumberImg-ProductRecommendationPage           ; TextNumberImg           ;                                                                         ; TextNumberImg
+                                ;                          ; Garansi10TahunImg-ProductRecommendationPage       ; Garansi10TahunImg       ;                                                                         ; Garansi10TahunImg
+                                ;                          ; FreeShippingImg-ProductRecommendationPage         ; FreeShippingImg         ;                                                                         ; FreeShippingImg
+                                ;                          ; Garansi10TahunText-ProductRecommendationPage      ; Garansi10TahunText      ;                                                                         ; Garansi10TahunText
+                                ;                          ; FreeShippingText-ProductRecommendationPage        ; FreeShippingText        ;                                                                         ; FreeShippingText
+                                ;                          ; GaransiTopHeaderText-ProductRecommendationPage    ; GaransiTopHeaderText    ;                                                                         ; GaransiTopHeaderText
+                                ;                          ; KonfirmasiTopHeaderText-ProductRecommendationPage ; KonfirmasiTopHeaderText ;                                                                         ; KonfirmasiTopHeaderText
+                                ;                          ; CekResiTopHeaderText-ProductRecommendationPage    ; CekResiTopHeaderText    ;                                                                         ; CekResiTopHeaderText
