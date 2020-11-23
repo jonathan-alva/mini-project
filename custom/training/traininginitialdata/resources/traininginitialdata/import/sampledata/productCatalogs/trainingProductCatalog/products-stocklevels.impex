@@ -18,21 +18,62 @@ INSERT_UPDATE Warehouse; code[unique = true]; vendor(code); default[default = tr
                        ; warehouse_training ; $vendor     ;                        ; training
 
 INSERT_UPDATE StockLevel; available; warehouse(code)[unique = true]; inStockStatus(code); maxPreOrder; maxStockLevelHistoryCount; overSelling; preOrder; productCode[unique = true]; reserved
-                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; PB-SHIRT-1                ; 0
-                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; PB-SHIRT-2                ; 0
-                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; CV-S1                     ; 0
-                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; CV-S2                     ; 0
-                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; HURLEY-T-1                ; 0
-                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; HURLEY-T-2                ; 0
-                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; COLE-T-1                  ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITB-SINGLE                ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITB-SUPER-SINGLE          ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITB-FULL                  ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITB-QUEEN                 ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITB-KING                  ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITB-SUPER-KING            ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITBX-SINGLE               ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITBX-SUPER-SINGLE         ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITBX-FULL                 ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITBX-QUEEN                ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITBX-KING                 ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITBX-SUPER-KING           ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITB101-SINGLE             ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITB101-SUPER-SINGLE       ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITB101-FULL               ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITB101-QUEEN              ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITB101-KING               ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITB101-SUPER-KING         ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITBHYBRID-SINGLE          ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITBHYBRID-SUPER-SINGLE    ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITBHYBRID-FULL            ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITBHYBRID-QUEEN           ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITBHYBRID-KING            ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; ITBHYBRID-SUPER-KING      ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; PROPS-GULING              ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; PROPS-BANTAL              ; 0
+                        ; 100000   ; warehouse_training            ; forceInStock       ; 0          ; 0                        ; 0          ; 0       ; SOFA-BED                  ; 0
 
-UPDATE Product; code[unique = true]; $catalogVersion; stockLevels(productCode, warehouse(code)); vendors(code)
-              ; PB-SHIRT-1         ;                ; PB-SHIRT-1:warehouse_training            ; $vendor
-              ; PB-SHIRT-2         ;                ; PB-SHIRT-2:warehouse_training            ; $vendor
-              ; CV-S1              ;                ; CV-S1:warehouse_training                 ; $vendor
-              ; CV-S2              ;                ; CV-S2:warehouse_training                 ; $vendor
-              ; HURLEY-T-1         ;                ; HURLEY-T-1:warehouse_training            ; $vendor
-              ; COLE-T-1           ;                ; COLE-T-1:warehouse_training              ; $vendor
+UPDATE Product; code[unique = true]    ; $catalogVersion; stockLevels(productCode, warehouse(code)) ; vendors(code)
+              ; ITB-SINGLE             ;                ; ITB-SINGLE:warehouse_training             ; $vendor
+              ; ITB-SUPER-SINGLE       ;                ; ITB-SUPER-SINGLE:warehouse_training       ; $vendor
+              ; ITB-FULL               ;                ; ITB-FULL:warehouse_training               ; $vendor
+              ; ITB-QUEEN              ;                ; ITB-QUEEN:warehouse_training              ; $vendor
+              ; ITB-KING               ;                ; ITB-KING:warehouse_training               ; $vendor
+              ; ITB-SUPER-KING         ;                ; ITB-SUPER-KING:warehouse_training         ; $vendor
+              ; ITBX-SINGLE            ;                ; ITBX-SINGLE:warehouse_training            ; $vendor
+              ; ITBX-SUPER-SINGLE      ;                ; ITBX-SUPER-SINGLE:warehouse_training      ; $vendor
+              ; ITBX-FULL              ;                ; ITBX-FULL:warehouse_training              ; $vendor
+              ; ITBX-QUEEN             ;                ; ITBX-QUEEN:warehouse_training             ; $vendor
+              ; ITBX-KING              ;                ; ITBX-KING:warehouse_training              ; $vendor
+              ; ITBX-SUPER-KING        ;                ; ITBX-SUPER-KING:warehouse_training        ; $vendor
+              ; ITB101-SINGLE          ;                ; ITB101-SINGLE:warehouse_training          ; $vendor
+              ; ITB101-SUPER-SINGLE    ;                ; ITB101-SUPER-SINGLE:warehouse_training    ; $vendor
+              ; ITB101-FULL            ;                ; ITB101-FULL:warehouse_training            ; $vendor
+              ; ITB101-QUEEN           ;                ; ITB101-QUEEN:warehouse_training           ; $vendor
+              ; ITB101-KING            ;                ; ITB101-KING:warehouse_training            ; $vendor
+              ; ITB101-SUPER-KING      ;                ; ITB101-SUPER-KING:warehouse_training      ; $vendor
+              ; ITBHYBRID-SINGLE       ;                ; ITBHYBRID-SINGLE:warehouse_training       ; $vendor
+              ; ITBHYBRID-SUPER-SINGLE ;                ; ITBHYBRID-SUPER-SINGLE:warehouse_training ; $vendor
+              ; ITBHYBRID-FULL         ;                ; ITBHYBRID-FULL:warehouse_training         ; $vendor
+              ; ITBHYBRID-QUEEN        ;                ; ITBHYBRID-QUEEN:warehouse_training        ; $vendor
+              ; ITBHYBRID-KING         ;                ; ITBHYBRID-KING:warehouse_training         ; $vendor
+              ; ITBHYBRID-SUPER-KING   ;                ; ITBHYBRID-SUPER-KING:warehouse_training   ; $vendor
+              ; PROPS-GULING           ;                ; PROPS-GULING:warehouse_training           ; $vendor
+              ; PROPS-BANTAL           ;                ; PROPS-BANTAL:warehouse_training           ; $vendor
+              ; SOFA-BED               ;                ; SOFA-BED:warehouse_training               ; $vendor
 
 
 INSERT_UPDATE CatalogVersionToRuleEngineContextMapping; context(name)[unique = true]; catalogVersion(catalog(id), version)[unique = true]
