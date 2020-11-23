@@ -24,18 +24,35 @@ if (!window.ACC) {
             var productList = $(".product-card-list-container");
             productList.find("img").addClass("product-list-home-img");
             productList.slick({
+                arrows: true,
                 infinite: true,
                 slidesToShow: 3,
                 adaptiveHeight: true,
                 swipe: true,
-                arrows:false,
-                swipeToSlide: true
+                swipeToSlide: true,
+                responsive: [
+                    {
+                        breakpoint: 740,
+                        settings: {
+                            arrows: true,
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 550,
+                        settings: {
+                            arrows: true,
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
             }).on('setPosition', function (event, slick) {
                 slick.$slides.css('height', slick.$slideTrack.height() + 'px');
             });
             productList.find('.slick-track').addClass('display-flex');
             productList.find(".slick-slide").addClass("testimoni-card-space");
-
             var unboxingItems = $(".unboxing-items");
             unboxingItems.find("img").addClass("unboxing-item-img");
             unboxingItems.slick({
