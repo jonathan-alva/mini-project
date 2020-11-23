@@ -7,6 +7,8 @@
 	<bean class="de.hybris.platform.commercefacades.product.data.ProductData">
 		<property name="genders" type="java.util.List&lt;org.training.facades.product.data.GenderData>"/>
 		<property name="size" type="String"/>
+		<property name="mattress" type="String"/>
+		<property name="foam" type="String"/>
 		<property name="brand" type="String"/>
 	</bean>
 
