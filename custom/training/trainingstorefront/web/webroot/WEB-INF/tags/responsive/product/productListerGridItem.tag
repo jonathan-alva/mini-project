@@ -24,10 +24,9 @@
             <product:productPrimaryImage product="${product}" format="product"/>
         </a>
         <div class="details">
-
             <div>
-                <b><c:out value="${ycommerce:sanitizeHTML(product.code)}"/></div>
-            </b>
+                <b><c:out value="${ycommerce:sanitizeHTML(product.brand)}"/></b>
+            </div>
 
 
             <ycommerce:testId code="product_productName">

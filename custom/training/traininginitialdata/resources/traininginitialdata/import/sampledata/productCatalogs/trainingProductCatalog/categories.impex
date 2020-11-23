@@ -13,9 +13,10 @@ $categories = target(code, $catalogVersion)[unique=true]
 
 # Insert Categories
 INSERT_UPDATE Category; code[unique = true]; $catalogVersion; supercategories(code, $catalogVersion); allowedPrincipals(uid)[default = 'customergroup']; order
-                      ; BED                ;                ;                                       ;                                                  ;
-                      ; SOFA               ;                ; BED                                   ;                                                  ;
-                      ; PROPS              ;                ; BED                                   ;                                                  ;
+                      ; FURNITURE          ;                ;                                       ;                                                  ;
+                      ; SOFA               ;                ; FURNITURE                             ;                                                  ; 1
+                      ; BANTAL             ;                ; FURNITURE                             ;                                                  ; 2
+                      ; GULING             ;                ; FURNITURE                             ;                                                  ; 3
 
 # Insert Category Structure
 INSERT_UPDATE CategoryCategoryRelation; $categories; $supercategories

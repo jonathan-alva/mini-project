@@ -13,7 +13,6 @@ public class TrainingSearchResultProductPopulator extends SearchResultProductPop
     @Override
     public void populate(final SearchResultValueData source, final ProductData target) throws ConversionException {
         target.setSize(this.<String>getValue(source, "size"));
-        target.setBaseProduct(this.<String>getValue(source, "baseProduct"));
-        target.setDescription(this.<String>getValue(source, "description"));
+        target.setBrand(this.<String>getValue(source, "brand"));
     }
 }

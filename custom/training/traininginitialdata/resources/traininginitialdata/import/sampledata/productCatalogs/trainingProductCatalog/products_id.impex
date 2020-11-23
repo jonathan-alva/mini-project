@@ -18,34 +18,9 @@ UPDATE TrainingProduct; code[unique = true]; $catalogVersion; name[lang = $lang]
                       ; INTHEBOXX          ;                ; INTHEBOX X        ; INTHEBOX X
                       ; INTHEBOX101        ;                ; INTHEBOX 101      ; INTHEBOX 101
                       ; INTHEBOXHYBRID     ;                ; INTHEBOX Hybrid   ; INTHEBOX HYBRID
-                      ; PROPSINTHEBOX      ;                ; PROPS INTHEBOX    ; Props INTHEBOX
-                      ; SOFABED            ;                ; SOFA BED          ; SOFA BED
 
-UPDATE TrainingVariantProduct; code[unique = true]    ; name[lang = $lang]
-                             ; ITB-SINGLE             ; Single Size
-                             ; ITB-SUPER-SINGLE       ; Super Single Size
-                             ; ITB-FULL               ; Full Size
-                             ; ITB-QUEEN              ; Queen Size
-                             ; ITB-KING               ; King Size
-                             ; ITB-SUPER-KING         ; Super King Size
-                             ; ITBX-SINGLE            ; Single Size
-                             ; ITBX-SUPER-SINGLE      ; Super Single Size
-                             ; ITBX-FULL              ; Full Size
-                             ; ITBX-QUEEN             ; Queen Size
-                             ; ITBX-KING              ; King Size
-                             ; ITBX-SUPER-KING        ; Super King Size
-                             ; ITB101-SINGLE          ; Single Size
-                             ; ITB101-SUPER-SINGLE    ; Super Single Size
-                             ; ITB101-FULL            ; Full Size
-                             ; ITB101-QUEEN           ; Queen Size
-                             ; ITB101-KING            ; King Size
-                             ; ITB101-SUPER-KING      ; Super King Size
-                             ; ITBHYBRID-SINGLE       ; Single Size
-                             ; ITBHYBRID-SUPER-SINGLE ; Super Single Size
-                             ; ITBHYBRID-FULL         ; Full Size
-                             ; ITBHYBRID-QUEEN        ; Queen Size
-                             ; ITBHYBRID-KING         ; King Size
-                             ; ITBHYBRID-SUPER-KING   ; Super King Size
-                             ; PROPS-GULING           ; Guling INTHEBOX
-                             ; PROPS-BANTAL           ; Bantal INTHEBOX
-                             ; SOFA-BED               ; Super Single
+UPDATE TrainingVariantProduct; code[unique = true]; name[lang = $lang]
+                             ; ITB-SINGLE         ; Single Size
+                             ; ITBX-KING          ; King Size
+                             ; ITB101-KING        ; King Size
+                             ; ITBHYBRID-SUPER    ; Super King Size

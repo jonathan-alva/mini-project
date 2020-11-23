@@ -14,6 +14,7 @@ $lang = id
 
 # Create Categories
 UPDATE Category; code[unique = true]; $catalogVersion; name[lang = $lang]
-               ; BED                ;                ; Bed
+               ; FURNITURE          ;                ; Furniture
                ; SOFA               ;                ; Sofa Bed
-               ; PROPS              ;                ; Props
+               ; BANTAL             ;                ; Bantal
+               ; GULING             ;                ; Guling
