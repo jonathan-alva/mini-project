@@ -12,4 +12,6 @@ public interface TrainingProductService {
     boolean synchronizeProduct(ProductModel productModel, CatalogVersionModel catalogVersionModel);
 
     void syncAction(ProductModel productModel);
+
+    List<ProductModel> getAllProductVariant(ProductModel productModel);
 }

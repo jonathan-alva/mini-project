@@ -70,4 +70,17 @@ public class DefaultTrainingProductFacade implements TrainingProductFacade {
         }
         return Collections.emptyList();
     }
+
+    @Override
+    public List<ProductData> getProductVariant(ProductModel productModel) {
+        List<ProductModel> productModels = productroductService.getAllProductVariant(productModel);
+        if(CollectionUtils.isNotEmpty(productModels)){
+            final List<ProductData> productDataList = new ArrayList<>(productModels.size());
+            for(final ProductModel productModel1:productModels){
+                productDataList.add(productConverter.convert(productModel1));
+            }
+            return productDataList;
+        }
+        return Collections.emptyList();
+    }
 }

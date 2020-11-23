@@ -32,6 +32,8 @@ import de.hybris.platform.core.model.product.ProductModel;
 import de.hybris.platform.product.ProductService;
 import de.hybris.platform.servicelayer.exceptions.UnknownIdentifierException;
 import de.hybris.platform.util.Config;
+import org.training.core.model.TrainingVariantProductModel;
+import org.training.facades.product.impl.DefaultTrainingProductFacade;
 import org.training.storefront.controllers.ControllerConstants;
 
 import java.io.UnsupportedEncodingException;
@@ -92,6 +94,9 @@ public class ProductPageController extends AbstractPageController
 
 	@Resource(name = "productVariantFacade")
 	private ProductFacade productFacade;
+
+	@Resource(name = "trainingProductFacade")
+	private DefaultTrainingProductFacade trainingProductFacade;
 
 	@Resource(name = "productService")
 	private ProductService productService;
@@ -403,21 +408,33 @@ public class ProductPageController extends AbstractPageController
 
 		getRequestContextData(request).setProduct(productModel);
 
+		// Get productVariant base on current product
+		List<ProductData> productVariantDataList = trainingProductFacade.getProductVariant(productModel);
+
+		String currentBaseProductName = ((TrainingVariantProductModel) productModel).getBaseProduct().getName();
+		String currentProductSize = ((TrainingVariantProductModel) productModel).getSize();
+
 		final List<ProductOption> options = new ArrayList<>(Arrays.asList(ProductOption.VARIANT_FIRST_VARIANT, ProductOption.BASIC,
 				ProductOption.URL, ProductOption.PRICE, ProductOption.SUMMARY, ProductOption.DESCRIPTION, ProductOption.GALLERY,
 				ProductOption.CATEGORIES, ProductOption.REVIEW, ProductOption.PROMOTIONS, ProductOption.CLASSIFICATION,
 				ProductOption.VARIANT_FULL, ProductOption.STOCK, ProductOption.VOLUME_PRICES, ProductOption.PRICE_RANGE,
 				ProductOption.DELIVERY_MODE_AVAILABILITY));
-
 		options.addAll(extraOptions);
 
+		List<ProductData> productVariantList = new ArrayList<>();
 		final ProductData productData = productFacade.getProductForCodeAndOptions(productCode, options);
+		for (ProductData variant: productVariantDataList){
+			String variantCode = variant.getCode();
+			productVariantList.add(productFacade.getProductForCodeAndOptions(variantCode, options));
+		}
 
 		sortVariantOptionData(productData);
 		storeCmsPageInModel(model, getPageForProduct(productCode));
 		populateProductData(productData, model);
 		model.addAttribute(WebConstants.BREADCRUMBS_KEY, productBreadcrumbBuilder.getBreadcrumbs(productCode));
-
+		model.addAttribute("variantList", productVariantList);
+		model.addAttribute("baseProductName", currentBaseProductName);
+		model.addAttribute("productSize", currentProductSize);
 		if (CollectionUtils.isNotEmpty(productData.getVariantMatrix()))
 		{
 			model.addAttribute(WebConstants.MULTI_DIMENSIONAL_PRODUCT,
