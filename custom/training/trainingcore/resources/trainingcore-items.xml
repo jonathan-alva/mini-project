@@ -117,31 +117,36 @@
             <itemtype code="TrainingVariantProduct" autocreate="true" generate="true" extends="VariantProduct">
                 <attributes>
                     <!--<attribute qualifier="sku" type="java.lang.String">-->
-                        <!--<description>SKU Product</description>-->
-                        <!--<modifiers optional="true" initial="true"/>-->
-                        <!--<defaultvalue>Boolean.valueOf(true)</defaultvalue>-->
-                        <!--<persistence type="property"/>-->
+                    <!--<description>SKU Product</description>-->
+                    <!--<modifiers optional="true" initial="true"/>-->
+                    <!--<defaultvalue>Boolean.valueOf(true)</defaultvalue>-->
+                    <!--<persistence type="property"/>-->
                     <!--</attribute>-->
                     <attribute qualifier="size" type="java.lang.String">
                         <description>Size Product</description>
                         <modifiers optional="true" initial="true"/>
                         <persistence type="property"/>
                     </attribute>
+                    <attribute qualifier="brand" type="java.lang.String">
+                        <description>Brand Product</description>
+                        <modifiers optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
                     <!--<attribute qualifier="activeStatus" type="ActiveStatus">-->
-                        <!--<description>Active Status Product</description>-->
-                        <!--<modifiers />-->
-                        <!--<defaultvalue>em().getEnumerationValue("ActiveStatus","Active")</defaultvalue>-->
-                        <!--<persistence type="property"/>-->
+                    <!--<description>Active Status Product</description>-->
+                    <!--<modifiers />-->
+                    <!--<defaultvalue>em().getEnumerationValue("ActiveStatus","Active")</defaultvalue>-->
+                    <!--<persistence type="property"/>-->
                     <!--</attribute>-->
                 </attributes>
             </itemtype>
             <!--<itemtype code="TestActionProcess" extends="BusinessProcess" autocreate="true" generate="true" jaloclass="de.hybris.platform.commerceservices.jalo.process.TestActionProcess">-->
-                <!--<attributes>-->
-                    <!--<attribute qualifier="something" type="java.lang.String">-->
-                        <!--<persistence type="property"/>-->
-                        <!--<description>Something</description>-->
-                    <!--</attribute>-->
-                <!--</attributes>-->
+            <!--<attributes>-->
+            <!--<attribute qualifier="something" type="java.lang.String">-->
+            <!--<persistence type="property"/>-->
+            <!--<description>Something</description>-->
+            <!--</attribute>-->
+            <!--</attributes>-->
             <!--</itemtype>-->
         </typegroup>
     </itemtypes>

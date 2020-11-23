@@ -28,6 +28,8 @@
 					</div>
 				</div>
 
+				<div>Size: ${ycommerce:sanitizeHTML(product.size)}</div>
+
 				<div class="col-sm-12 col-md-9 col-lg-6">
 					<cms:pageSlot position="VariantSelector" var="component" element="div" class="page-details-variants-select">
 						<cms:component component="${component}" element="div" class="yComponentWrapper page-details-variants-select-component"/>

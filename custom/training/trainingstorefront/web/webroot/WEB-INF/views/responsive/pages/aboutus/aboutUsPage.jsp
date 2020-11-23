@@ -15,15 +15,16 @@
 
     <c:url value="/" var="homePageUrl"/>
 
-    <cms:pageSlot position="AboutUsPage" var="feature" element="div" class="errorNotFoundPageBottom">
-        <cms:component component="${feature}" element="div" class="errorNotFoundPageBottom-component"/>
+    <cms:pageSlot position="AboutUsPage" var="feature" element="div" class="aboutus-section1-slot">
+        <cms:component component="${feature}" element="div" class="yComponentWrapper aboutus-section1-component"/>
     </cms:pageSlot>
 
     <div class="aboutus-head">
         <div class="container">
             <div class="head">
-                <cms:pageSlot position="AboutUsPage2" var="feature" element="div" class="errorNotFoundPageMiddle">
-                    <cms:component component="${feature}" element="div" class="errorNotFoundPageMiddle-component"/>
+                <cms:pageSlot position="AboutUsPage2" var="feature" element="div" class="aboutus-section2-slot">
+                    <cms:component component="${feature}" element="div"
+                                   class="yComponentWrapper aboutus-section2-component"/>
                 </cms:pageSlot>
             </div>
         </div>
@@ -34,9 +35,9 @@
                 <div class="col-sm-4">
                     <div class="padding">
                         <cms:pageSlot position="AboutUsPage3" var="feature" element="div"
-                                      class="errorNotFoundPageMiddle">
+                                      class="aboutus-section3-slot">
                             <cms:component component="${feature}" element="div"
-                                           class="errorNotFoundPageMiddle-component"/>
+                                           class="yComponentWrapper aboutus-section3-component"/>
                         </cms:pageSlot>
                     </div>
                     <div class="read-more">
@@ -44,21 +45,33 @@
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <img src="https://inthebox.id/images/layout-v2/about-image-1.png" class="first">
+                    <div class="image1">
+                        <cms:pageSlot position="AboutUsPage15" var="feature" element="div"
+                                      class="aboutus-section15-slot">
+                            <cms:component component="${feature}" element="div"
+                                           class="yComponentWrapper aboutus-section15-component"/>
+                        </cms:pageSlot>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <img src="https://inthebox.id/images/layout-v2/about-image-2.png" class="second">
+                    <div class="image2">
+                        <cms:pageSlot position="AboutUsPage16" var="feature" element="div"
+                                      class="aboutus-section16-slot">
+                            <cms:component component="${feature}" element="div"
+                                           class="yComponentWrapper aboutus-section16-component"/>
+                        </cms:pageSlot>
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <div class="padding">
                         <cms:pageSlot position="AboutUsPage4" var="feature" element="div"
-                                      class="errorNotFoundPageMiddle">
+                                      class="aboutus-section4-slot">
                             <cms:component component="${feature}" element="div"
-                                           class="errorNotFoundPageMiddle-component"/>
+                                           class="yComponentWrapper aboutus-section4-component"/>
                         </cms:pageSlot>
                     </div>
                     <div class="read-more">
@@ -72,9 +85,9 @@
                 <div class="col-md-4">
                     <div class="padding">
                         <cms:pageSlot position="AboutUsPage5" var="feature" element="div"
-                                      class="errorNotFoundPageMiddle">
+                                      class="aboutus-section5-slot">
                             <cms:component component="${feature}" element="div"
-                                           class="errorNotFoundPageMiddle-component"/>
+                                           class="yComponentWrapper aboutus-section5-component"/>
                         </cms:pageSlot>
                     </div>
                     <div class="read-more">
@@ -82,7 +95,13 @@
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <img src="https://inthebox.id/images/layout-v2/about-image-3.png" class="first">
+                    <div class="image1">
+                        <cms:pageSlot position="AboutUsPage17" var="feature" element="div"
+                                      class="aboutus-section17-slot">
+                            <cms:component component="${feature}" element="div"
+                                           class="yComponentWrapper aboutus-section17-component"/>
+                        </cms:pageSlot>
+                    </div>
                 </div>
             </div>
         </div>
@@ -92,94 +111,82 @@
     <%--faq section--%>
     <div class="faq">
         <div class="judul">
-            <h2>
-                <cms:pageSlot position="AboutUsPage6" var="feature" element="div"
-                              class="errorNotFoundPageMiddle">
-                    <cms:component component="${feature}" element="div"
-                                   class="errorNotFoundPageMiddle-component"/>
-                </cms:pageSlot>
-            </h2>
+            <h1 class="title"><cms:pageSlot position="AboutUsPage6" var="feature" element="div"
+                                            class="aboutus-section6-slot">
+                <cms:component component="${feature}" element="div"
+                               class="yComponentWrapper aboutus-section6-component"/>
+            </cms:pageSlot>
+            </h1>
         </div>
 
         <a href="#que1" class="question" data-toggle="collapse">
-            <h2>
-                <span class="expanded">+</span>
-                <span class="collapse">-</span>
+            <h3>
                 <cms:pageSlot position="AboutUsPage7" var="feature" element="div"
-                              class="errorNotFoundPageMiddle">
+                              class="aboutus-section7-slot">
                     <cms:component component="${feature}" element="div"
-                                   class="errorNotFoundPageMiddle-component"/>
-                </cms:pageSlot></h2>
+                                   class="yComponentWrapper aboutus-section7-component"/>
+                </cms:pageSlot></h3>
         </a>
         <div class="answer collapse" id="que1">
             <cms:pageSlot position="AboutUsPage8" var="feature" element="div"
-                          class="errorNotFoundPageMiddle">
+                          class="aboutus-section8-slot">
                 <cms:component component="${feature}" element="div"
-                               class="errorNotFoundPageMiddle-component"/>
+                               class="yComponentWrapper aboutus-section8-component"/>
             </cms:pageSlot>
         </div>
         <a href="#que2" class="question" data-toggle="collapse">
-            <h2>
-                <span class="expanded">+</span>
-                <span class="collapse">-</span>
+            <h3>
                 <cms:pageSlot position="AboutUsPage9" var="feature" element="div"
-                              class="errorNotFoundPageMiddle">
+                              class="aboutus-section9-slot">
                     <cms:component component="${feature}" element="div"
-                                   class="errorNotFoundPageMiddle-component"/>
-                </cms:pageSlot></h2>
+                                   class="yComponentWrapper aboutus-section9-component"/>
+                </cms:pageSlot></h3>
         </a>
         <div class="answer collapse" id="que2">
             <cms:pageSlot position="AboutUsPage10" var="feature" element="div"
-                          class="errorNotFoundPageMiddle">
+                          class="aboutus-section10-slot">
                 <cms:component component="${feature}" element="div"
-                               class="errorNotFoundPageMiddle-component"/>
+                               class="yComponentWrapper aboutus-section10-component"/>
             </cms:pageSlot>
         </div>
         <a href="#que3" class="question" data-toggle="collapse">
-            <h2>
-                <span class="expanded">+</span>
-                <span class="collapse">-</span>
+            <h3>
                 <cms:pageSlot position="AboutUsPage11" var="feature" element="div"
-                              class="errorNotFoundPageMiddle">
+                              class="aboutus-section11-slot">
                     <cms:component component="${feature}" element="div"
-                                   class="errorNotFoundPageMiddle-component"/>
-                </cms:pageSlot></h2>
+                                   class="yComponentWrapper aboutus-section11-component"/>
+                </cms:pageSlot></h3>
         </a>
         <div class="answer collapse" id="que3">
             <cms:pageSlot position="AboutUsPage12" var="feature" element="div"
-                          class="errorNotFoundPageMiddle">
+                          class="aboutus-section12-slot">
                 <cms:component component="${feature}" element="div"
-                               class="errorNotFoundPageMiddle-component"/>
+                               class="yComponentWrapper aboutus-section12-component"/>
             </cms:pageSlot>
         </div>
         <a href="#que4" class="question" data-toggle="collapse">
-            <h2>
-                <span class="expanded">+</span>
-                <span class="collapse">-</span>
+            <h3>
                 <cms:pageSlot position="AboutUsPage13" var="feature" element="div"
-                              class="errorNotFoundPageMiddle">
+                              class="aboutus-section13-slot">
                     <cms:component component="${feature}" element="div"
-                                   class="errorNotFoundPageMiddle-component"/>
+                                   class="yComponentWrapper aboutus-section13-component"/>
                 </cms:pageSlot>
-            </h2>
+            </h3>
         </a>
         <div class="answer collapse" id="que4">
             <cms:pageSlot position="AboutUsPage14" var="feature" element="div"
-                          class="errorNotFoundPageMiddle">
+                          class="aboutus-section14-slot">
                 <cms:component component="${feature}" element="div"
-                               class="errorNotFoundPageMiddle-component"/>
+                               class="yComponentWrapper aboutus-section14-component"/>
             </cms:pageSlot>
         </div>
     </div>
-
 
     <script>
         $('.question').click(function () {
             $(this).find('span').toggleClass('expanded collapse');
         });
     </script>
-
-
 </template:page>
 
 

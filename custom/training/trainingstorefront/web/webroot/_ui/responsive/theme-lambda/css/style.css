@@ -18664,12 +18664,12 @@ h1.first {
 .padding {
   padding-bottom: 40px;
 }
-img.first {
+.image1 {
   width: 88%;
   height: auto;
   float: right;
 }
-img.second {
+.image2 {
   width: 88%;
   height: auto;
   float: left;
@@ -18677,8 +18677,11 @@ img.second {
 .faq {
   text-align: center;
 }
-.judul {
+h1.title {
+  padding-top: 30px;
+  padding-bottom: 30px;
   font-weight: bold;
+  text-align: center;
 }
 .skip,
 .skiptocontent,

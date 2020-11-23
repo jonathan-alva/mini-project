@@ -37,9 +37,10 @@ UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]          
                        ;                          ; AgileCommerceBlogLink        ; "Agile Commerce Blog"
                        ;                          ; AllBrandsCategoryLink        ; "Brands"
                        ;                          ; AllFashionsCategoryLink      ; "All Fashions"
+                       ;                          ; AllBedsCategoryLink          ; "Produk"
                        ;                          ; ShirtCategoryLink            ; "Shirt"
                        ;                          ; TrouserCategoryLink          ; "Trouser"
-                       ;                          ; AboutUsLink                  ; "About Us"
+                       ;                          ; AboutUsLink                  ; "Tentang Kami"
                        ;                          ; BlogsLink                    ; "Blogs"
                        ;                          ; GuaranteeLink                ; "Garansi"
                        ;                          ; ConfirmationLink             ; "Konfirmasi"
@@ -612,8 +613,11 @@ UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]; con
 #                            ;                          ; NewParagraphSection2Component       ; "Ut quis lorem nec purus tempus interdum sit amet et neque. Cras vel orci et augue tristique efficitur. Vivamus vestibulum sodales lobortis. Quisque lorem risus, consectetur id gravida non, blandit eget felis. Donec non nisl eu eros euismod finibus. Aliquam erat volutpat. Suspendisse eget augue quis tortor volutpat sagittis non vitae ipsum. Morbi ut suscipit ex. Nullam non nibh a lorem sollicitudin venenatis vitae fringilla augue. Praesent aliquam ex vitae vehicula efficitur. Nam eget mauris consectetur, imperdiet enim non, luctus velit."
 
 #custom about us
-UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]     ; $picture[lang = $lang]
-                            ;                          ; AboutUsBannerComponent ; /images/banners/site/tentang.png ;
+UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]       ; $picture[lang = $lang]
+                            ;                          ; AboutUsBannerComponent   ; /images/banners/site/tentang.png ;
+                            ;                          ; AboutUsPicture1Component ; /images/aboutus/image1.png       ;
+                            ;                          ; AboutUsPicture2Component ; /images/aboutus/image2.png       ;
+                            ;                          ; AboutUsPicture3Component ; /images/aboutus/image3.png       ;
 
 
 UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]          ; content[lang = en]                                                                                                                                                                                                                                                ;
@@ -626,18 +630,24 @@ Kasur INTHEBOX adalah spring bed yang dikemas dalam box dan akan langsung mengem
 Ada banyak kelebihan kasur INTHEBOX, khususnya bisa meningkatkan kualitas tidur dan istirahat kamu. Semua produk INTHEBOX dibuat dengan material premium, teknologi modern, dan desain yang elegan. Bisa dapat bantal gratis, free ongkir, dan garansi 10 tahun." ;
                             ;                          ; AboutUsParagraphComponent4  ; "<h1>Cara Beli Kasur INTHEBOX</h1><br>
 Bisa dibeli melalui website dengan cara cek daftar produk, masukkan ke keranjang, dan lakukan pembayaran. Mau lebih praktis? Segera WhatsApp ke 0819234659. Bisa juga dibeli online di marketplace kesayangan kamu atau langsung ke supermarket besar di kotamu." ;
-                            ;                          ; AboutUsParagraphComponent5  ; "<h2>Pertanyaan yang Sering Ditanyakan</h2>"                                                                                                                                                                                                                               ;
-                            ;                          ; AboutUsParagraphComponent6  ; "Apakah INTHEBOX Hanya Menjual Spring Bed?"                                                                                                                                                                                                                       ;
+                            ;                          ; AboutUsParagraphComponent5  ; "Pertanyaan yang Sering Ditanyakan"                                                                                                                                                                                                                               ;
+                            ;                          ; AboutUsParagraphComponent6  ; "<span class='collapse'>- </span><span class='expanded'>+ </span>Apakah INTHEBOX Hanya Menjual Spring Bed?"                                                                                                                                                       ;
                             ;                          ; AboutUsParagraphComponent7  ; "Tidak. Spring bed adalah produk utama kami, namun tersedia juga kasur busa INTHEBOX yang berkualitas.<br>
                             Selain itu, ada juga sofa bed, bantal, dan guling."                                                                                                                                                                                   ;
-                            ;                          ; AboutUsParagraphComponent8  ; "Berapa Harga Kasur INTHEBOX?"                                                                                                                                                                                                                                    ;
+                            ;                          ; AboutUsParagraphComponent8  ; "<span class='collapse'>- </span><span class='expanded'>+ </span>Berapa Harga Kasur INTHEBOX?"                                                                                                                                                                    ;
                             ;                          ; AboutUsParagraphComponent9  ; "Harga kasur INTHEBOX mulai dari Rp999.000. Harga tentu berbeda-beda berdasarkan jenis dan ukuran
 kasur."                                                                                                                                                                                                                                                           ;
-                            ;                          ; AboutUsParagraphComponent10 ; "Bagaimana Cara Beli di Website?"                                                                                                                                                                                                                                 ;
+                            ;                          ; AboutUsParagraphComponent10 ; "<span class='collapse'>- </span><span class='expanded'>+ </span>Bagaimana Cara Beli di Website?"                                                                                                                                                                 ;
                             ;                          ; AboutUsParagraphComponent11 ; "1. Pilih produk yang Anda inginkan dan masukkan ke keranjang belanja kamu.<br>
 2. Klik 'selesaikan pesanan' jika pesanan sudah sesuai.<br>
 3. Pastikan isi nama penerima dan data alamat tujuan dengan lengkap.<br>
 4. Pilih metode pembayaran dan segera selesaikan transaksi.<br>
 5. Lakukan konfirmasi pembayaran melalui menu yang ada di website agar pesananmu bisa segera diproses."                                                                                                                                                           ;
-                            ;                          ; AboutUsParagraphComponent12 ; "Bagaimana Cara Dapat Garansi Kasur?"                                                                                                                                                                                                                             ;
-                            ;                          ; AboutUsParagraphComponent13 ; "Setelah beli, segera aktifkan garansi melalui website INTHEBOX pada menu Garansi. Cukup masukkan nomor pesanan dan nomor HP yang bisa dihubungi."                                                                                                                ;
+                            ;                          ; AboutUsParagraphComponent12 ; "<span class='collapse'>- </span><span class='expanded'>+ </span>Bagaimana Cara Dapat Garansi Kasur?"                                                                                                                                                             ;
+                            ;                          ; AboutUsParagraphComponent13 ; "<span class='collapse'>- </span><span class='expanded'>+ </span>Setelah beli, segera aktifkan garansi melalui website INTHEBOX pada menu Garansi. Cukup masukkan nomor pesanan dan nomor HP yang bisa dihubungi."                                                ;
+
+UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]     ; $picture[lang = $lang]
+                            ;                          ; ProductBannerComponent ; /images/banners/site/headerproduk.png ;
+
+UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]            ; content[lang = en]        ;
+                            ;                          ; ProductGridParagraphComponent ; "PILIHAN PRODUK INTHEBOX" ;
