@@ -686,4 +686,5 @@ UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]     
                             ;                          ; TextNumberImgComponent      ; /images/banners/homepage/footer-icon-message.png       ;
                             ;                          ; Garansi10TahunImgComponent  ; /images/banners/homepage/header-icon-10y-warranty.png  ;
                             ;                          ; FreeShippingImgComponent    ; /images/banners/homepage/header-icon-free-shipping.png ;
+                            ;                          ; TestimonyAvatarComponent    ; /images/banners/homepage/review-avatar.webp            ;
 

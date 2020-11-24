@@ -644,10 +644,10 @@ UPDATE FooterNavigationComponent; $contentCV[unique = true]; uid[unique = true] 
                                 ;                          ; FooterNavigationComponent ; /images/banners/homepage/header-logo-white.png
 
 
-UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]          ; content[lang = en];
-                            ;                          ; HeaderTestimonyComponent    ; "TESTIMONI PEMBELI INTHEBOX"
-                            ;                          ; SubHeaderTestimonyComponent ; "Banyak pembeli yang merasa puas dengan kualitas kasur INTHEBOX"
-                            ;                          ; ParagraphTestimonyComponent   ; "Kami menerima beragam komentar positif dari pembeli di seluruh Indonesia, bahkan dari kalangan artis. Bukan hanya pengalaman membeli kasur sping bed atau kasur busa, banyak juga yang merasa puas dengan produk INTHEBOX lainnya yang terdiri dari bantal, guling, dan sofa bed.<br><br>Kami selalu berinovasi menghadirkan beragam jenis kasur dan produk penunjang istirahat lainnya. Kami paham bahwa istirahat yang cukup dan tidur berkualitas adalah hal yang penting. Oleh karena itu, kami selalu menggunakan material berkualitas premium, namun kamu bisa memilikinya dengan harga terjangkau."
+UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]                   ; content[lang = en];
+                            ;                          ; HeaderTestimonyComponent             ; "TESTIMONI PEMBELI INTHEBOX"
+                            ;                          ; SubHeaderTestimonyComponent          ; "Banyak pembeli yang merasa puas dengan kualitas kasur INTHEBOX"
+                            ;                          ; ParagraphTestimonyComponent          ; "Kami menerima beragam komentar positif dari pembeli di seluruh Indonesia, bahkan dari kalangan artis. Bukan hanya pengalaman membeli kasur sping bed atau kasur busa, banyak juga yang merasa puas dengan produk INTHEBOX lainnya yang terdiri dari bantal, guling, dan sofa bed.<br><br>Kami selalu berinovasi menghadirkan beragam jenis kasur dan produk penunjang istirahat lainnya. Kami paham bahwa istirahat yang cukup dan tidur berkualitas adalah hal yang penting. Oleh karena itu, kami selalu menggunakan material berkualitas premium, namun kamu bisa memilikinya dengan harga terjangkau."
                             ;                          ; ProductTitleParagraphComponent       ; "<p>BELI <span class='kasur-text'>KASUR</span> INTHEBOX</p>"
                             ;                          ; ProductText1ParagraphComponent       ; "Tersedia beragam jenis kasur INTHEBOX dengan kualitas premium."
                             ;                          ; ProductText2ParagraphComponent       ; "Pilih spring bed berkualitas dengan ukuran kasur sesuai kebutuhan."
@@ -711,4 +711,5 @@ UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]     
                             ;                          ; TextNumberImgComponent      ; /images/banners/homepage/footer-icon-message.png       ;
                             ;                          ; Garansi10TahunImgComponent  ; /images/banners/homepage/header-icon-10y-warranty.png  ;
                             ;                          ; FreeShippingImgComponent    ; /images/banners/homepage/header-icon-free-shipping.png ;
+                            ;                          ; TestimonyAvatarComponent    ; /images/banners/homepage/review-avatar.webp            ;
 
