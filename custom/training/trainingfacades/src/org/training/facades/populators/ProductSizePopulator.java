@@ -11,7 +11,6 @@ public class ProductSizePopulator implements Populator<ProductModel, ProductData
     @Override
     public void populate(ProductModel source, ProductData target) throws ConversionException {
         if (source instanceof TrainingVariantProductModel) {
-            
             TrainingVariantProductModel trainingVariantProductModel = (TrainingVariantProductModel) source;
             target.setSize((trainingVariantProductModel.getSize()));
         }

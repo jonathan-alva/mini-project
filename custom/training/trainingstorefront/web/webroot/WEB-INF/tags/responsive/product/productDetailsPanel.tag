@@ -47,14 +47,12 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-xl-7 image">
-				<product:productImagePanel galleryImages="${galleryImages}" />
+				<product:productImageCustom galleryImages="${galleryImages}" />
 			</div>
 			<div class="col-lg-6 col-xl-5 desc">
-				<h1 class="name">${fn:escapeXml(product.name)}</h1>
-				<div>${fn:escapeXml(product.code)}</div>
-				<div>
-					<product:productPricePanel product="${product}" />
-				</div>
+				<h1 class="name-product">${fn:escapeXml(product.baseProduct)}</h1>
+				<div class="code-product">${fn:escapeXml(product.code)}</div>
+				<product:productPricePanel product="${product}" />
 				<div>
 					${ycommerce:sanitizeHTML(product.size)}
 					${ycommerce:sanitizeHTML(product.description)}

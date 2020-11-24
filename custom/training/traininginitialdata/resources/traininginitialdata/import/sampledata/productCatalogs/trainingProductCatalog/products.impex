@@ -19,11 +19,11 @@ INSERT_UPDATE TrainingProduct; code[unique = true]; name        ; $supercategori
                              ; HURLEY             ; Hurley      ; "SHIRT"         ;                                                      ;          ;                             ;
                              ; COLE               ; Cole        ; "TROUSER"       ;                                                      ;          ;                             ;
 
-INSERT_UPDATE TrainingVariantProduct; $baseProduct; code[unique = true]; size ; unit()[pieces]; $approved; $catalogVersion; $supercategories; description
-                                    ; PULLNBEAR   ; PB-SHIRT-1         ; 10 ;               ;          ;                ; "SHIRT"         ;
-                                    ; PULLNBEAR   ; PB-SHIRT-2         ; 20 ;               ;          ;                ; "SHIRT"         ; Pull & Bear T-Shirt
-                                    ; CONVERSE    ; CV-S1              ; 21 ;               ;          ;                ; "SHIRT"         ; Pull & Bear T-Shirt
-                                    ; CONVERSE    ; CV-S2              ; 12 ;               ;          ;                ; "SHIRT"         ; Converse T-Shirt
+INSERT_UPDATE TrainingVariantProduct; $baseProduct; code[unique = true]; size; unit()[pieces]; $approved; $catalogVersion; $supercategories; description
+                                    ; PULLNBEAR   ; PB-SHIRT-1         ; 10  ;               ;          ;                ; "SHIRT"         ;
+                                    ; PULLNBEAR   ; PB-SHIRT-2         ; 20  ;               ;          ;                ; "SHIRT"         ; Pull & Bear T-Shirt
+                                    ; CONVERSE    ; CV-S1              ; 21  ;               ;          ;                ; "SHIRT"         ; Pull & Bear T-Shirt
+                                    ; CONVERSE    ; CV-S2              ; 12  ;               ;          ;                ; "SHIRT"         ; Converse T-Shirt
                                     ; HURLEY      ; HURLEY-T-1         ; 13  ;               ;          ;                ; "SHIRT"         ; Hurley T-Shirt
                                     ; HURLEY      ; HURLEY-T-2         ; 14  ;               ;          ;                ; "SHIRT"         ; Hurley T-Shirt
-                                    ; COLE        ; COLE-T-1           ; 31 ;               ;          ;                ; "TROUSER"       ; Cole Jeans
+                                    ; COLE        ; COLE-T-1           ; 31  ;               ;          ;                ; "TROUSER"       ; Cole Jeans

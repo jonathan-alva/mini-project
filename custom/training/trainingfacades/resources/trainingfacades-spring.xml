@@ -212,6 +212,10 @@
     <bean id="defaultTrainingProductFacade" class="org.training.facades.product.impl.DefaultTrainingProductFacade">
     </bean>
 
+    <alias name="defaultTrainingTestimonyFacade" alias="trainingTestimonyFacade"/>
+    <bean id="defaultTrainingTestimonyFacade" class="org.training.facades.testimony.Impl.DefaultTrainingTestimonyFacade">
+    </bean>
+
     <alias name="defaultProductSizePopulator" alias="productSizePopulator"/>
     <bean id="defaultProductSizePopulator" class="org.training.facades.populators.ProductSizePopulator">
     </bean>
@@ -223,9 +227,34 @@
             <map key-type="de.hybris.platform.commercefacades.product.ProductOption">
                 <entry key="PRODUCT_SIZE" value-ref="productSizePopulator"/>
                 <entry key="PRICE" value-ref="productPricePopulator"/>
-                <entry key="CATEGORIES" value-ref="productCategoriesPopulator"/>
+                <entry key="CATEGORIES" value-ref="productCategoriesPopulatorList"/>
+                <entry key="GALLERY" value-ref="productGalleryImagesPopulator"/>
                 <entry key="DESCRIPTION" value-ref="productDescriptionPopulator"/>
+                <entry key="BASIC" value-ref="productBasicPopulatorList"/>
+                <entry key="CLASSIFICATION" value-ref="productClassificationPopulatorList"/>
+                <entry key="SUMMARY" value-ref="productSummaryPopulatorList"/>
+                <entry key="REVIEW" value-ref="productReviewPopulatorList"/>
+                <entry key="CLASSIFICATION" value-ref="productClassificationPopulatorList"/>
+                <entry key="VARIANT_FULL" value-ref="productVariantFullPopulatorList"/>
+                <entry key="REFERENCES" value-ref="productReferencesPopulator"/>
+                <entry key="DELIVERY_MODE_AVAILABILITY" value-ref="productDeliveryModeAvailabilityPopulator"/>
+                <entry key="STOCK" value-ref="productStockPopulatorList"/>
             </map>
+        </property>
+    </bean>
+
+    <alias name="defaultTestimonyFacade" alias="testimonyFacade"/>
+    <bean id="defaultTestimonyFacade" class="org.training.facades.testimony.Impl.DefaultTrainingTestimonyFacade">
+    </bean>
+
+    <bean id="testimonyPopulator" class="org.training.facades.populators.TestimonyPopulator"/>
+    <alias name="defaultTestimonyConverter" alias="testimonyConverter"/>
+    <bean id="defaultTestimonyConverter" parent="abstractPopulatingConverter">
+        <property name="targetClass" value="org.training.core.data.beans.TestimonyData"/>
+        <property name="populators">
+            <list>
+                <ref bean="testimonyPopulator"/>
+            </list>
         </property>
     </bean>
 </beans>

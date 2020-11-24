@@ -49,7 +49,6 @@
                     </div>
                 </c:forEach>
             </div>
-            <product:productGalleryThumbnail galleryImages="${galleryImages}" />
         </c:otherwise>
     </c:choose>
 </div>

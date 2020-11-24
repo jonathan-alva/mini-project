@@ -135,6 +135,31 @@
                     <!--</attribute>-->
                 </attributes>
             </itemtype>
+            <itemtype code="TrainingTestimony" autocreate="true" generate="true" >
+                <deployment table="TrainingTestimony" typecode="10300"/>
+                <attributes>
+                    <attribute qualifier="name" type="java.lang.String">
+                        <description>Name of Customer</description>
+                        <modifiers optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="rate" type="java.lang.Double">
+                        <description>Rate Testimony</description>
+                        <modifiers optional="false" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="title" type="java.lang.String">
+                        <description>Title Testimony</description>
+                        <modifiers optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="textArea" type="java.lang.String">
+                        <description>Text Area Testimony</description>
+                        <modifiers optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
             <!--<itemtype code="TestActionProcess" extends="BusinessProcess" autocreate="true" generate="true" jaloclass="de.hybris.platform.commerceservices.jalo.process.TestActionProcess">-->
                 <!--<attributes>-->
                     <!--<attribute qualifier="something" type="java.lang.String">-->

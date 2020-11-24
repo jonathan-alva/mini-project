@@ -22,15 +22,15 @@
             <cms:component component="${feature}" element="div" class="col-xs-12 col-sm-12 no-space yComponentWrapper"/>
         </cms:pageSlot>
         <div class="container d-flex">
-            <c:forEach items="${productList}" var="product">
+            <c:forEach items="${testimonyList}" var="product">
                 <div class="item">
-                    <a href=".${fn:escapeXml(product.url)}"
-                       title="${fn:escapeXml(product.name)}">
+<%--                    <a href=".${fn:escapeXml(product.url)}"--%>
+<%--                       title="${fn:escapeXml(product.name)}">--%>
 
                         <div class="card">
                             <div class="card-data">
                                 <div class="card-img" >
-                                    <product:productPrimaryImage product="${product}" format="thumbnail"/>
+<%--                                    <product:productPrimaryImage product="${product}" format="thumbnail"/>--%>
 
                                     <div class="card-detail">
                                         <p class="product-name">${product.name}</p>
