@@ -194,7 +194,7 @@
                                         <p>${fn:escapeXml(testimony.textArea)}</p>
                                     </div>
                                     <div class="testimoni-card-content-datetime">
-                                        <%--<p>${fn:escapeXml(testimony.dateTestimony)}</p>--%>
+                                        <p>${fn:escapeXml(testimony.dateTestimony)}</p>
                                     </div>
                                 </div>
                             </div>

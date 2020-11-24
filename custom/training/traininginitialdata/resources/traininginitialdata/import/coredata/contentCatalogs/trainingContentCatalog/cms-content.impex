@@ -899,6 +899,8 @@ INSERT_UPDATE ContentSlotName; name[unique = true]    ; template(uid, $contentCV
                              ; TopHeaderSlot          ;                                                                            ;                          ; wide
                              ; BottomHeaderSlot       ;                                                                            ;                          ; wide
                              ; PlaceholderContentSlot ;                                                                            ;                          ;
+                             ; ReviewFullStar         ;                                                                            ;                          ; narrow
+                             ; ReviewHalfStar         ;                                                                            ;                          ; narrow
 
 # Bind Content Slots to Page Templates
 INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = true]                   ; position[unique = true]; pageTemplate(uid, $contentCV)[unique = true][default = 'TestimonyPageTemplate']; contentSlot(uid, $contentCV)[unique = true]; allowOverwrite

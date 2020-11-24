@@ -40,7 +40,22 @@
                             <div class="testimoni-card-body">
                                 <div class="testimoni-card-stars">
                                     <div class="total-stars">
+                                        <div class="star-container star-review display-flex">
+                                            <c:set var="testimonyRate" value="${testimony.rate}"/>
+                                            <c:set var="floorRate" value="${Math.floor(testimony.rate)}"/>
+                                            <c:set var="left" value="${testimonyRate - floorRate}"/>
 
+                                            <c:forEach var="i" begin="1" end="${floorRate}" varStatus="loop" step="1">
+                                                <cms:pageSlot position="ReviewFullStar" var="star">
+                                                    <cms:component component="${star}" />
+                                                </cms:pageSlot>
+                                            </c:forEach>
+                                            <c:if test="${left > 0}">
+                                                <cms:pageSlot position="ReviewHalfStar" var="star">
+                                                    <cms:component component="${star}" class=""/>
+                                                </cms:pageSlot>
+                                            </c:if>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="testimoni-card-content">
