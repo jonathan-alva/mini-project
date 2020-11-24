@@ -37,7 +37,7 @@ UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]          
                        ;                          ; AgileCommerceBlogLink        ; "Agile Commerce Blog"
                        ;                          ; AllBrandsCategoryLink        ; "Brands"
                        ;                          ; AllFashionsCategoryLink      ; "All Fashions"
-                       ;                          ; AllBedsCategoryLink          ; "Produk"
+                       ;                          ; AllFurnitureCategoryLink     ; "Produk"
                        ;                          ; ShirtCategoryLink            ; "Shirt"
                        ;                          ; TrouserCategoryLink          ; "Trouser"
                        ;                          ; AboutUsLink                  ; "Tentang Kami"

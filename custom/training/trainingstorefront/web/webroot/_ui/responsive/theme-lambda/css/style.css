@@ -8140,7 +8140,7 @@ a.ui-button:active,
   right: -25px;
 }
 .slick-prev:before {
-  content: "�?";
+  content: "←";
 }
 [dir="rtl"] .slick-prev:before {
   content: "→";
@@ -8156,7 +8156,7 @@ a.ui-button:active,
   content: "→";
 }
 [dir="rtl"] .slick-next:before {
-  content: "�?";
+  content: "←";
 }
 /* Dots */
 .slick-dotted .slick-slider {

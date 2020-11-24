@@ -45,6 +45,24 @@ INSERT_UPDATE Media; mediaFormat(qualifier); code[unique = true]        ; $media
                    ; 96Wx96H               ; media-x-other              ; $siteResource/images/product/home-shop-x.png         ;                             ;                ; images ;
                    ; 65Wx65H               ; media-x-normal             ; $siteResource/images/product/home-shop-x.png         ;                             ;                ; images ;
                    ; 30Wx30H               ; media-x-thumbnails         ; $siteResource/images/product/home-shop-x.png         ;                             ;                ; images ;
+                   ; 1200Wx1200H           ; media-guling-picture       ; $siteResource/images/product/ITBGULING.png           ;                             ;                ; images ;
+                   ; 515Wx515H             ; media-guling-thumbnail     ; $siteResource/images/product/ITBGULING.png           ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-guling-detail        ; $siteResource/images/product/ITBGULING.png           ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-guling-other         ; $siteResource/images/product/ITBGULING.png           ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-guling-normal        ; $siteResource/images/product/ITBGULING.png           ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-guling-thumbnails    ; $siteResource/images/product/ITBGULING.png           ;                             ;                ; images ;
+                   ; 1200Wx1200H           ; media-bantal-picture       ; $siteResource/images/product/ITBBANTAL.png           ;                             ;                ; images ;
+                   ; 515Wx515H             ; media-bantal-thumbnail     ; $siteResource/images/product/ITBBANTAL.png           ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-bantal-detail        ; $siteResource/images/product/ITBBANTAL.png           ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-bantal-other         ; $siteResource/images/product/ITBBANTAL.png           ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-bantal-normal        ; $siteResource/images/product/ITBBANTAL.png           ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-bantal-thumbnails    ; $siteResource/images/product/ITBBANTAL.png           ;                             ;                ; images ;
+                   ; 1200Wx1200H           ; media-sofa-picture         ; $siteResource/images/product/ITBSOFA.png             ;                             ;                ; images ;
+                   ; 515Wx515H             ; media-sofa-thumbnail       ; $siteResource/images/product/ITBSOFA.png             ;                             ;                ; images ;
+                   ; 300Wx300H             ; media-sofa-detail          ; $siteResource/images/product/ITBSOFA.png             ;                             ;                ; images ;
+                   ; 96Wx96H               ; media-sofa-other           ; $siteResource/images/product/ITBSOFA.png             ;                             ;                ; images ;
+                   ; 65Wx65H               ; media-sofa-normal          ; $siteResource/images/product/ITBSOFA.png             ;                             ;                ; images ;
+                   ; 30Wx30H               ; media-sofa-thumbnails      ; $siteResource/images/product/ITBSOFA.png             ;                             ;                ; images ;
 
 
 
@@ -54,6 +72,9 @@ INSERT_UPDATE MediaContainer; qualifier[unique = true]; $medias                 
                             ; hybrid-medias           ; media-hybrid-picture,media-hybrid-thumbnail,media-hybrid-detail,media-hybrid-other,media-hybrid-normal,media-hybrid-thumbnails                   ;
                             ; inthebox2-medias        ; media-inthebox2-picture,media-inthebox2-thumbnail,media-inthebox2-detail,media-inthebox2-other,media-inthebox2-normal,media-inthebox2-thumbnails ;
                             ; x-medias                ; media-x-picture,media-x-thumbnail,media-x-detail,media-x-other,media-x-normal,media-x-thumbnails                                                 ;
+                            ; guling-medias           ; media-guling-picture,media-guling-thumbnail,media-guling-detail,media-guling-other,media-guling-normal,media-guling-thumbnails                   ;
+                            ; bantal-medias           ; media-bantal-picture,media-bantal-thumbnail,media-bantal-detail,media-bantal-other,media-bantal-normal,media-bantal-thumbnails                   ;
+                            ; sofa-medias             ; media-sofa-picture,media-sofa-thumbnail,media-sofa-detail,media-sofa-other,media-sofa-normal,media-sofa-thumbnails                               ;
 
 ## Update Products with Media and Media Containers
 UPDATE Product; code[unique = true]    ; $picture                ; $thumbnail                ; $detail                ; $others               ; $normal                ; $thumbnails                ; $galleryImages   ; $catalogVersion
@@ -81,3 +102,6 @@ UPDATE Product; code[unique = true]    ; $picture                ; $thumbnail   
               ; ITBHYBRID-QUEEN        ; media-hybrid-picture    ; media-hybrid-thumbnail    ; media-hybrid-detail    ; media-hybrid-other    ; media-hybrid-normal    ; media-hybrid-thumbnails    ; hybrid-medias    ;
               ; ITBHYBRID-KING         ; media-hybrid-picture    ; media-hybrid-thumbnail    ; media-hybrid-detail    ; media-hybrid-other    ; media-hybrid-normal    ; media-hybrid-thumbnails    ; hybrid-medias    ;
               ; ITBHYBRID-SUPER-KING   ; media-hybrid-picture    ; media-hybrid-thumbnail    ; media-hybrid-detail    ; media-hybrid-other    ; media-hybrid-normal    ; media-hybrid-thumbnails    ; hybrid-medias    ;
+              ; ITB-GULING             ; media-guling-picture    ; media-guling-thumbnail    ; media-guling-detail    ; media-guling-other    ; media-guling-normal    ; media-guling-thumbnails    ; guling-medias    ;
+              ; ITB-BANTAL             ; media-bantal-picture    ; media-bantal-thumbnail    ; media-bantal-detail    ; media-bantal-other    ; media-bantal-normal    ; media-bantal-thumbnails    ; bantal-medias    ;
+              ; SOFA-BED               ; media-sofa-picture      ; media-sofa-thumbnail      ; media-sofa-detail      ; media-sofa-other      ; media-sofa-normal      ; media-sofa-thumbnails      ; sofa-medias      ;
