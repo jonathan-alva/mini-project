@@ -6,7 +6,7 @@
 <spring:htmlEscape defaultHtmlEscape="true" />
 
 <c:set var="isForceInStock" value="${product.stock.stockLevelStatus.code eq 'inStock' and empty product.stock.stockLevel}"/>
-<c:choose> 
+<c:choose>
   <c:when test="${isForceInStock}">
     <c:set var="maxQty" value="FORCE_IN_STOCK"/>
   </c:when>

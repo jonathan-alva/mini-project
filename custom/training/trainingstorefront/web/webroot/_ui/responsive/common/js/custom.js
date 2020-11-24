@@ -24,7 +24,6 @@ if (!window.ACC) {
             var productList = $(".product-card-list-container");
             productList.find("img").addClass("product-list-home-img");
             productList.slick({
-                arrows: true,
                 infinite: true,
                 slidesToShow: 3,
                 adaptiveHeight: true,
@@ -34,7 +33,6 @@ if (!window.ACC) {
                     {
                         breakpoint: 740,
                         settings: {
-                            arrows: true,
                             slidesToShow: 2,
                             slidesToScroll: 1
                         }
@@ -42,7 +40,6 @@ if (!window.ACC) {
                     {
                         breakpoint: 550,
                         settings: {
-                            arrows: true,
                             slidesToShow: 1,
                             slidesToScroll: 1
                         }

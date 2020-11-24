@@ -33,6 +33,7 @@ UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]           ; ti
                   ;                          ; termsAndConditions           ; "Terms and Conditions"
                   ;                          ; updatePassword               ; "Update Forgotten Password"
                   ;                          ; product-recommendation       ; "Product Recommendation"
+                  ;                          ; testimony                    ; "Testimoni INTHEBOX: Komentar Pembeli dan Pengguna"
 
 # Category Pages
 UPDATE CategoryPage; $contentCV[unique = true]; uid[unique = true]; title[lang = $lang]

@@ -122,4 +122,9 @@ public class DefaultTrainingProductService extends DefaultProductService impleme
             searchRestrictionService.enableSearchRestrictions();
         }
     }
+
+    @Override
+    public List<ProductModel> getAllProductVariant(ProductModel productModel) {
+        return trainingProductDao.getAllProductVariant(productModel);
+    }
 }

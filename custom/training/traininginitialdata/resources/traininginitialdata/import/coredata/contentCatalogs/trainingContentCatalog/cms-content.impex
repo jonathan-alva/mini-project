@@ -253,21 +253,8 @@ INSERT_UPDATE ContentSlotName; name[unique = true]    ; template(uid, $contentCV
                              ; TestimoniSubtitle2     ;                                                                           ;                          ; narrow
                              ; TotalReview            ;                                                                           ;                          ; narrow
                              ; TotalStar              ;                                                                           ;                          ; narrow
-                             ; Review1Name            ;                                                                           ;                          ; narrow
-                             ; Review2Name            ;                                                                           ;                          ; narrow
-                             ; Review3Name            ;                                                                           ;                          ; narrow
-                             ; Review1TotalStars      ;                                                                           ;                          ; narrow
-                             ; Review2TotalStars      ;                                                                           ;                          ; narrow
-                             ; Review3TotalStars      ;                                                                           ;                          ; narrow
-                             ; Review1Title           ;                                                                           ;                          ; narrow
-                             ; Review2Title           ;                                                                           ;                          ; narrow
-                             ; Review3Title           ;                                                                           ;                          ; narrow
-                             ; Review1Desc            ;                                                                           ;                          ; narrow
-                             ; Review2Desc            ;                                                                           ;                          ; narrow
-                             ; Review3Desc            ;                                                                           ;                          ; narrow
-                             ; Review1Datetime        ;                                                                           ;                          ; narrow
-                             ; Review2Datetime        ;                                                                           ;                          ; narrow
-                             ; Review3Datetime        ;                                                                           ;                          ; narrow
+                             ; ReviewFullStar         ;                                                                           ;                          ; narrow
+                             ; ReviewHalfStar         ;                                                                           ;                          ; narrow
                              ; Review1Avatar          ;                                                                           ;                          ; narrow
                              ; Review2Avatar          ;                                                                           ;                          ; narrow
                              ; Review3Avatar          ;                                                                           ;                          ; narrow
@@ -888,3 +875,46 @@ INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = tr
 # Simple Content Pages
 INSERT_UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]     ; name                   ; masterTemplate(uid, $contentCV)   ; label; defaultPage[default = 'true']; approvalStatus(code)[default = 'approved']; homepage[default = 'false']
                          ;                          ; product-recommendation ; Product Recommendation ; ProductRecommendationPageTemplate ; product-recommendation
+
+
+### Testimony Page Start
+INSERT_UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]    ; name                    ; frontendTemplateName    ; restrictedPageTypes(code); active[default = true]
+                          ;                          ; TestimonyPageTemplate ; Testimony Page Template ; testimony/testimonyPage ; ContentPage
+
+# Add Velocity templates that are in the CMS Cockpit. These give a better layout for editing pages
+# The FileLoaderValueTranslator loads a File into a String property. The templates could also be inserted in-line in this file.
+UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]    ; velocityTemplate[translator = de.hybris.platform.commerceservices.impex.impl.FileLoaderValueTranslator]
+                   ;                          ; TestimonyPageTemplate ; $jarResourceCms/structure-view/structure_testimonyPageTemplate.vm
+
+INSERT_UPDATE ContentSlotName; name[unique = true]    ; template(uid, $contentCV)[unique = true][default = 'TestimonyPageTemplate']; validComponentTypes(code); compTypeGroup(code)
+                             ; SiteLogo               ;                                                                            ;                          ; logo
+                             ; HeaderLinks            ;                                                                            ;                          ; headerlinks
+                             ; SearchBox              ;                                                                            ;                          ; searchbox
+                             ; MiniCart               ;                                                                            ;                          ; minicart
+                             ; NavigationBar          ;                                                                            ;                          ; navigation
+                             ; MiddleContent          ;                                                                            ; CMSParagraphComponent,SimpleResponsiveBannerComponent
+                             ; BottomContent          ;                                                                            ;                          ; wide
+                             ; SideContent            ;                                                                            ;                          ; narrow
+                             ; Footer                 ;                                                                            ;                          ; footer
+                             ; TopHeaderSlot          ;                                                                            ;                          ; wide
+                             ; BottomHeaderSlot       ;                                                                            ;                          ; wide
+                             ; PlaceholderContentSlot ;                                                                            ;                          ;
+                             ; ReviewFullStar         ;                                                                            ;                          ; narrow
+                             ; ReviewHalfStar         ;                                                                            ;                          ; narrow
+
+# Bind Content Slots to Page Templates
+INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = true]                   ; position[unique = true]; pageTemplate(uid, $contentCV)[unique = true][default = 'TestimonyPageTemplate']; contentSlot(uid, $contentCV)[unique = true]; allowOverwrite
+                                    ;                          ; SiteLogo-TestimonyPage               ; SiteLogo               ;                                                                                ; SiteLogoSlot                               ; true
+                                    ;                          ; HomepageLink-TestimonyPage           ; HomepageNavLink        ;                                                                                ; HomepageNavLinkSlot                        ; true
+                                    ;                          ; NavigationBar-TestimonyPage          ; NavigationBar          ;                                                                                ; NavigationBarSlot                          ; true
+                                    ;                          ; MiniCart-TestimonyPage               ; MiniCart               ;                                                                                ; MiniCartSlot                               ; true
+                                    ;                          ; Footer-TestimonyPage                 ; Footer                 ;                                                                                ; FooterSlot                                 ; true
+                                    ;                          ; HeaderLinks-TestimonyPage            ; HeaderLinks            ;                                                                                ; HeaderLinksSlot                            ; true
+                                    ;                          ; SearchBox-TestimonyPage              ; SearchBox              ;                                                                                ; SearchBoxSlot                              ; true
+                                    ;                          ; TopHeaderSlot-TestimonyPage          ; TopHeaderSlot          ;                                                                                ; TopHeaderSlot                              ; true
+                                    ;                          ; BottomHeaderSlot-TestimonyPage       ; BottomHeaderSlot       ;                                                                                ; BottomHeaderSlot                           ; true
+                                    ;                          ; PlaceholderContentSlot-TestimonyPage ; PlaceholderContentSlot ;                                                                                ; PlaceholderContentSlot                     ; true
+
+# Simple Content Pages
+INSERT_UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]; name           ; masterTemplate(uid, $contentCV); label; defaultPage[default = 'true']; approvalStatus(code)[default = 'approved']; homepage[default = 'false']
+                         ;                          ; testimony         ; Testimony Page ; TestimonyPageTemplate          ; testimony
