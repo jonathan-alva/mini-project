@@ -62,7 +62,6 @@ INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]   
                               ;                          ; ProductRecommendationLink    ; Product Recommendation Link   ; /product-recommendation                   ; ProductRecommendationLink    ; ProductRecommendationLink    ;                                     ;          ;         ;
                               ;                          ; ProductRecommendationTopLink ; Product Recommendation Link   ; /product-recommendation                   ; ProductRecommendationTopLink ; ProductRecommendationTopLink ;                                     ;          ;         ;
                               ;                          ; ProductLink                  ; Product Link                  ; /#                                        ; ProductLink                  ; ProductLink                  ;                                     ;          ;         ;
-                              ;                          ; TestimoniLink                ; Testimoni Link                ; /#                                        ; TestimoniLink                ; TestimoniLink                ;                                     ;          ;         ;
                               ;                          ; ProductFooterLink            ; Product Footer Link           ; /#                                        ; ProductFooterLink            ; ProductFooterLink            ;                                     ;          ;         ;
                               ;                          ; AktivasiGaransiFooterLink    ; Aktivasi Garansi Footer Link  ; /#                                        ; AktivasiGaransiFooterLink    ; AktivasiGaransiFooterLink    ;                                     ;          ;         ;
                               ;                          ; CekResiFooterLink            ; Cek Resi Footer Link          ; /#                                        ; CekResiFooterLink            ; CekResiFooterLink            ;                                     ;          ;         ;
@@ -77,6 +76,7 @@ INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]   
                               ;                          ; GaransiTopHeaderLink         ; Garansi Top Header Link       ; /#                                        ; GaransiTopHeaderLink         ; GaransiTopHeaderLink         ;                                     ;          ;         ;
                               ;                          ; KonfirmasiTopHeaderLink      ; Konfirmasi Top Header Link    ; /#                                        ; KonfirmasiTopHeaderLink      ; KonfirmasiTopHeaderLink      ;                                     ;          ;         ;
                               ;                          ; CekResiTopHeaderLink         ; Cek Resi Top Header Link      ; /#                                        ; CekResiTopHeaderLink         ; CekResiTopHeaderLink         ;                                     ;          ;         ;
+                              ;                          ; TestimonyLink                ; Testimony Link                ; /testimony                                ; TestimonyLink                ; TestimonyLink                ;                                     ;          ;         ;
 
 # Lightbox Banner for Mini Cart
 INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]                  ; name                                    ; &componentRef                       ; urlLink
@@ -1397,7 +1397,7 @@ INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; 
 ## level 2. children of SiteRoot ##
 # the following order of children is the display order on the site
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]  ; $contentCV[unique = true]; name       ; parent(uid, $contentCV); &nodeRef            ; children(uid, $contentCV)
-                               ; DemoCategoryNavNode ;                          ; Categories ; DemoNavNode            ; DemoCategoryNavNode ; ProductNavNode,AboutUsNavNode,BlogsNavNode,TestimoniNavNode
+                               ; DemoCategoryNavNode ;                          ; Categories ; DemoNavNode            ; DemoCategoryNavNode ; ProductNavNode,AboutUsNavNode,BlogsNavNode,TestimonyNavNode
 
 ## level 3. children of Category Nav ##
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]              ; $contentCV[unique = true]; name                         ; &nodeRef                        ; children(uid, $contentCV)   ; links(&linkRef);
@@ -1410,7 +1410,7 @@ INSERT_UPDATE CMSNavigationNode; uid[unique = true]              ; $contentCV[un
                                ; TermsAndConditionsNavNode       ;                          ; Terms And Conditions Links   ; TermsAndConditionsNavNode       ;                             ;
                                ; ProductRecommendationTopNavNode ;                          ; Product Recommendation Links ; ProductRecommendationTopNavNode ;                             ;
                                ; ProductNavNode                  ;                          ; Product Links                ; ProductNavNode                  ;                             ;
-                               ; TestimoniNavNode                ;                          ; Testimoni Links              ; TestimoniNavNode                ;                             ;
+                               ; TestimonyNavNode                ;                          ; Testimony Links              ; TestimonyNavNode                ;                             ;
 
 ## entries of the above navigation nodes ##
 INSERT_UPDATE CMSNavigationEntry; uid[unique = true]                   ; $contentCV[unique = true]; name                                         ; navigationNode(&nodeRef)        ; item(CMSLinkComponent.uid, CMSLinkComponent.$contentCV);
@@ -1423,7 +1423,7 @@ INSERT_UPDATE CMSNavigationEntry; uid[unique = true]                   ; $conten
                                 ; TermsAndConditionsNavNodeEntry       ;                          ; Terms And Conditions Navigation Node Entry   ; TermsAndConditionsNavNode       ; TermsAndConditionsLink                                 ;
                                 ; ProductRecommendationTopNavNodeEntry ;                          ; Product Recommendation Navigation Node Entry ; ProductRecommendationTopNavNode ; ProductRecommendationTopLink                           ;
                                 ; ProductNavNodeEntry                  ;                          ; Product Navigation Node Entry                ; ProductNavNode                  ; ProductLink                                            ;
-                                ; TestimoniNavNodeEntry                ;                          ; Testimoni Navigation Node Entry              ; TestimoniNavNode                ; TestimoniLink                                          ;
+                                ; TestimonyNavNodeEntry                ;                          ; Testimony Navigation Node Entry              ; TestimonyNavNode                ; TestimonyLink                                          ;
 
 # CMS Link Components
 INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]; name; url; &linkRef; &componentRef; target(code)[default = 'sameWindow']; $category; $product;
@@ -1539,3 +1539,19 @@ INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] 
                                 ;                          ; GaransiTopHeaderText-ProductRecommendationPage    ; GaransiTopHeaderText    ;                                                                         ; GaransiTopHeaderText
                                 ;                          ; KonfirmasiTopHeaderText-ProductRecommendationPage ; KonfirmasiTopHeaderText ;                                                                         ; KonfirmasiTopHeaderText
                                 ;                          ; CekResiTopHeaderText-ProductRecommendationPage    ; CekResiTopHeaderText    ;                                                                         ; CekResiTopHeaderText
+
+###  Testimony Page #######
+INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]          ; name                                    ; &componentRef
+                                   ;                          ; HeaderTestimonyComponent    ; Header Testimony Paragraph Component    ; HeaderTestimonyComponent
+                                   ;                          ; SubHeaderTestimonyComponent ; SubHeader Testimony Paragraph Component ; SubHeaderTestimonyComponent
+                                   ;                          ; ParagraphTestimonyComponent ; Content Testimony Paragraph Component   ; ParagraphTestimonyComponent
+
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]             ; name                                      ; active; cmsComponents(&componentRef); ; ;
+                         ;                          ; HeaderContent-TestimonyPage    ; Header Content Slot for Testimony Page    ; true  ; HeaderTestimonyComponent    ; ; ;
+                         ;                          ; SubHeaderContent-TestimonyPage ; SubHeader Content Slot for Testimony Page ; true  ; SubHeaderTestimonyComponent ; ; ;
+                         ;                          ; ParagraphContent-TestimonyPage ; Paragraph Content Slot for Testimony Page ; true  ; ParagraphTestimonyComponent ; ; ;
+
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]             ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'testimony']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; HeaderContent-TestimonyPage    ; HeaderContent          ;                                                            ; HeaderContent-TestimonyPage
+                                ;                          ; SubHeaderContent-TestimonyPage ; SubHeaderContent       ;                                                            ; SubHeaderContent-TestimonyPage
+                                ;                          ; ParagraphContent-TestimonyPage ; ParagraphContent       ;                                                            ; ParagraphContent-TestimonyPage

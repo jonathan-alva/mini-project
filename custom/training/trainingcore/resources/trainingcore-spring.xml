@@ -552,6 +552,17 @@
 		<property name="flexibleSearchService" ref="flexibleSearchService"/>
 	</bean>
 
+	<alias alias="productTestimonyService" name="defaultTrainingTestimonyService"/>
+	<bean id="defaultTrainingTestimonyService" class="org.training.core.service.impl.DefaultTrainingTestimonyService"
+		  parent="defaultItemService">
+	</bean>
+
+	<alias alias="productTestimonyDao" name="defaultTrainingTestimonyDao"/>
+	<bean id="defaultTrainingTestimonyDao" class="org.training.core.dao.impl.DefaultTrainingTestimonyDao"
+		  parent="defaultItemDao">
+		<property name="flexibleSearchService" ref="flexibleSearchService"/>
+	</bean>
+
 	<alias name="defaultGenericProductDao" alias="trainingGenericProductDao"/>
 	<bean name="defaultGenericProductDao" class="de.hybris.platform.servicelayer.internal.dao.DefaultGenericDao">
 		<constructor-arg value="Product"/>

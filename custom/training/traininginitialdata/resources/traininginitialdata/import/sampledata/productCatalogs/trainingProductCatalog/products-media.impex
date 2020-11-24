@@ -20,6 +20,7 @@ $galleryImages = galleryImages(qualifier, $catalogVersion)
 $siteResource = jar:org.training.initialdata.setup.InitialDataSystemSetup&/traininginitialdata/import/sampledata/productCatalogs/$productCatalog
 
 # Create Media
+
 INSERT_UPDATE Media; mediaFormat(qualifier); code[unique = true]        ; $media                                               ; mime[default = 'image/jpeg']; $catalogVersion; folder(qualifier)
                    ; 1200Wx1200H           ; media-101-picture          ; $siteResource/images/product/home-shop-101.png       ;                             ;                ; images ;
                    ; 515Wx515H             ; media-101-thumbnail        ; $siteResource/images/product/home-shop-101.png       ;                             ;                ; images ;

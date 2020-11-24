@@ -235,6 +235,7 @@
                                 <c:set var="currentSizeHtml" value="${nameStringHtml}"/>
                             </c:if>
                             <option value="${fn:escapeXml(variantOptionUrl)}" ${(variantOption.url eq product.url) ? 'selected="selected"' : ''}>
+                                <span>${fn:escapeXml(variantOption.code)}</span>
                                 <span class="variant-selected">${optionsStringHtml}&nbsp;<format:price
                                         priceData="${variantOption.priceData}"/>&nbsp;&nbsp;${fn:escapeXml(variantOption.stock.stockLevel)}</span>
                             </option>
