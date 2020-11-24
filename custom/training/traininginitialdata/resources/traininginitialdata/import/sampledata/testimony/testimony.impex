@@ -1,7 +1,19 @@
 INSERT_UPDATE TrainingTestimony; name[unique = true]; rate; title; textArea;
 ;Baim Wong;5;Mantap banget;"Kasur baru yang packing nya simple banget, masuk ke dalam box! Kasur @inthebox.id dengan teknologi Pocket Springbed ini enak banget, nyaman dan empuk! Ada Free Bantal dan Free Ongkirnya juga lhoo! Mantap banget";
-;Raffi Ahmad;5;Pilih kasur INTHEBOX aja!;"Pokoknya kalau mau beli spring bed yang bagus, materialnya berkualitas, nyaman, dan harganya murah, langsung pilih kasur INTHEBOX aja. Apalagi INTHEBOX+ ini nih bagus banget.";
+;Raffi Ahmad;4.5;Pilih kasur INTHEBOX aja!;"Pokoknya kalau mau beli spring bed yang bagus, materialnya berkualitas, nyaman, dan harganya murah, langsung pilih kasur INTHEBOX aja. Apalagi INTHEBOX+ ini nih bagus banget.";
 ;Melaney Ricardo;5;Terima kasih Inthebox!;"Produk memuaskaan sekalii.. dan seru waktu unboxing ya :-D Nyaman sekalii. Pas dapet harga ﬂash sale lagi. Mantap banget sihh klo ini Semoga aweet ya. Trimakasih Inthebox. Trimakasih Tokopedia.";
 ;novika stefani;5;worth the quality, worth the price;"awalnya bingung mau beli spring bed keq gimana blm lagi masalah harga kan, tkt beli yang murah tapi cepet rusak, tkt dpt barang jelek, akhirnya keinget sama iklan kasur yang datang nya in the box, akhirnya carilah di shopee eehh nemu donk.";
 ;Rahmatullah Rahmatullah;5;Bed In The Box;"Sangat senang dan unik, pengalaman beli kasur pertama kali langsung penasaran kepada in.the.box. Kemudian saya cari2 info produk, rata2 memuaskan. Beli dapet harga promo 1.349k (160x180) dan gratis ongkir. Sangat memuaskan dan unik saat unboxing. :D";
 ;Diana Veronica;5;Love in the box;"Awalny sempet ragu , ternyata pas brg dtg plastiknya dibuka.. Langsung ngembang keren bgt";
+#
+#REMOVE TrainingTestimony; PK[unique=true];
+#;8796093065276
+#;8796125833276
+#;8796125866044
+#;8796125898812
+#;8796125931580
+#;8796125964348
+#;8796125997116
+#;8796126029884
+#;8796126062652
+#;8796126095420
