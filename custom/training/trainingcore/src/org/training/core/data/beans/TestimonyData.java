@@ -1,5 +1,6 @@
 package org.training.core.data.beans;
 
+import javax.print.attribute.standard.Media;
 import java.io.Serializable;
 
 public class TestimonyData implements Serializable {
@@ -11,6 +12,8 @@ public class TestimonyData implements Serializable {
     private String title;
 
     private String textArea;
+
+    private String dateTestimony;
 
     public TestimonyData() {
         // default constructor
@@ -47,4 +50,13 @@ public class TestimonyData implements Serializable {
     public void setTextArea(String textArea) {
         this.textArea = textArea;
     }
+
+    public String getDateTestimony() {
+        return dateTestimony;
+    }
+
+    public void setDateTestimony(String dateTestimony) {
+        this.dateTestimony = dateTestimony;
+    }
+
 }

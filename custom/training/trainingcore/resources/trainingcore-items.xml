@@ -127,10 +127,10 @@
             <itemtype code="TrainingVariantProduct" autocreate="true" generate="true" extends="VariantProduct">
                 <attributes>
                     <!--<attribute qualifier="sku" type="java.lang.String">-->
-                        <!--<description>SKU Product</description>-->
-                        <!--<modifiers optional="true" initial="true"/>-->
-                        <!--<defaultvalue>Boolean.valueOf(true)</defaultvalue>-->
-                        <!--<persistence type="property"/>-->
+                    <!--<description>SKU Product</description>-->
+                    <!--<modifiers optional="true" initial="true"/>-->
+                    <!--<defaultvalue>Boolean.valueOf(true)</defaultvalue>-->
+                    <!--<persistence type="property"/>-->
                     <!--</attribute>-->
                     <attribute qualifier="size" type="java.lang.String">
                         <description>Size Product</description>
@@ -138,14 +138,14 @@
                         <persistence type="property"/>
                     </attribute>
                     <!--<attribute qualifier="activeStatus" type="ActiveStatus">-->
-                        <!--<description>Active Status Product</description>-->
-                        <!--<modifiers />-->
-                        <!--<defaultvalue>em().getEnumerationValue("ActiveStatus","Active")</defaultvalue>-->
-                        <!--<persistence type="property"/>-->
+                    <!--<description>Active Status Product</description>-->
+                    <!--<modifiers />-->
+                    <!--<defaultvalue>em().getEnumerationValue("ActiveStatus","Active")</defaultvalue>-->
+                    <!--<persistence type="property"/>-->
                     <!--</attribute>-->
                 </attributes>
             </itemtype>
-            <itemtype code="TrainingTestimony" autocreate="true" generate="true" >
+            <itemtype code="TrainingTestimony" autocreate="true" generate="true">
                 <deployment table="TrainingTestimony" typecode="10300"/>
                 <attributes>
                     <attribute qualifier="name" type="java.lang.String">
@@ -168,18 +168,23 @@
                         <modifiers optional="true" initial="true"/>
                         <persistence type="property"/>
                     </attribute>
+                    <attribute qualifier="dateTestimony" type="java.lang.String">
+                        <description>Date of Testimony</description>
+                        <modifiers optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
                 </attributes>
             </itemtype>
             <!--<itemtype code="TestActionProcess" extends="BusinessProcess" autocreate="true" generate="true" jaloclass="de.hybris.platform.commerceservices.jalo.process.TestActionProcess">-->
-                <!--<attributes>-->
-                    <!--<attribute qualifier="something" type="java.lang.String">-->
-                        <!--<persistence type="property"/>-->
-                        <!--<description>Something</description>-->
-                    <!--</attribute>-->
-                <!--</attributes>-->
+            <!--<attributes>-->
+            <!--<attribute qualifier="something" type="java.lang.String">-->
+            <!--<persistence type="property"/>-->
+            <!--<description>Something</description>-->
+            <!--</attribute>-->
+            <!--</attributes>-->
             <!--</itemtype>-->
             <itemtype code="FooterNavigationComponent" autocreate="false"
-            generate="true" extends="NavigationComponent">
+                      generate="true" extends="NavigationComponent">
                 <attributes>
                     <attribute qualifier="phoneNumber" type="java.lang.String">
                         <description>Phone Number</description>

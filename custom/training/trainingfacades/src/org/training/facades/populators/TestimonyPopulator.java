@@ -12,5 +12,6 @@ public class TestimonyPopulator implements Populator<TrainingTestimonyModel, Tes
         target.setTitle(source.getTitle());
         target.setRate(source.getRate());
         target.setTextArea(source.getTextArea());
+        target.setDateTestimony(source.getDateTestimony());
     }
 }

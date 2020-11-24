@@ -1546,12 +1546,18 @@ INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = tru
                                    ;                          ; SubHeaderTestimonyComponent ; SubHeader Testimony Paragraph Component ; SubHeaderTestimonyComponent
                                    ;                          ; ParagraphTestimonyComponent ; Content Testimony Paragraph Component   ; ParagraphTestimonyComponent
 
+INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]       ; name                       ; &componentRef            ; urlLink
+                                   ;                          ; TestimonyAvatarComponent ; Testimony Avatar Component ; TestimonyAvatarComponent ;
+
 INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]             ; name                                      ; active; cmsComponents(&componentRef); ; ;
                          ;                          ; HeaderContent-TestimonyPage    ; Header Content Slot for Testimony Page    ; true  ; HeaderTestimonyComponent    ; ; ;
                          ;                          ; SubHeaderContent-TestimonyPage ; SubHeader Content Slot for Testimony Page ; true  ; SubHeaderTestimonyComponent ; ; ;
                          ;                          ; ParagraphContent-TestimonyPage ; Paragraph Content Slot for Testimony Page ; true  ; ParagraphTestimonyComponent ; ; ;
+                         ;                          ; TestimonyAvatar-TestimonyPage  ;                                           ; true  ; TestimonyAvatarComponent    ; ; ;
 
 INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]             ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'testimony']; contentSlot(uid, $contentCV)[unique = true]
                                 ;                          ; HeaderContent-TestimonyPage    ; HeaderContent          ;                                                            ; HeaderContent-TestimonyPage
                                 ;                          ; SubHeaderContent-TestimonyPage ; SubHeaderContent       ;                                                            ; SubHeaderContent-TestimonyPage
                                 ;                          ; ParagraphContent-TestimonyPage ; ParagraphContent       ;                                                            ; ParagraphContent-TestimonyPage
+                                ;                          ; TestimonyAvatar-TestimonyPage  ; TestimonyAvatar        ;                                                            ; TestimonyAvatar-TestimonyPage
+
