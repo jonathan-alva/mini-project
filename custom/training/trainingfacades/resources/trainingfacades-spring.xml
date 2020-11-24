@@ -187,4 +187,8 @@
 	<bean id="defaultTrainingProductFacade" class="org.training.facades.product.impl.DefaultTrainingProductFacade">
 	</bean>
 
+	<alias name="defaultCustomCustomerFacade" alias="customerFacade"/>
+	<bean name="defaultCustomCustomerFacade" class="org.training.facades.customer.impl.DefaultCustomCustomerFacade" parent="defaultCustomerFacade">
+	</bean>
+
 </beans>

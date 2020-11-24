@@ -3,7 +3,6 @@
  */
 package org.training.storefront.controllers.pages;
 
-import org.training.storefront.controllers.pages.AbstractLoginPageController;
 import org.training.storefront.forms.RegisterForm;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.model.pages.AbstractPageModel;

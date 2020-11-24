@@ -8,11 +8,10 @@ import de.hybris.platform.acceleratorstorefrontcommons.controllers.util.GlobalMe
 import de.hybris.platform.acceleratorstorefrontcommons.forms.ConsentForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.GuestForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.LoginForm;
+import de.hybris.platform.cms2.model.pages.ContentPageModel;
+import org.springframework.validation.Validator;
 import org.training.storefront.forms.RegisterForm;
-import de.hybris.platform.acceleratorstorefrontcommons.strategy.CustomerConsentDataStrategy;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
-import de.hybris.platform.cms2.model.pages.AbstractPageModel;
-import de.hybris.platform.commercefacades.consent.ConsentFacade;
 import de.hybris.platform.commercefacades.consent.data.AnonymousConsentData;
 import de.hybris.platform.commercefacades.user.data.RegisterData;
 import de.hybris.platform.commerceservices.customer.DuplicateUidException;
@@ -49,6 +48,14 @@ public abstract class AbstractRegisterPageController extends de.hybris.platform.
     private static final String FORM_GLOBAL_ERROR = "form.global.error";
 
     private static final String CONSENT_FORM_GLOBAL_ERROR = "consent.form.global.error";
+
+    @Resource(name = "CustomRegistrationValidator")
+    private Validator customRegistrationValidator;
+
+    protected Validator getRegistrationValidator()
+    {
+        return customRegistrationValidator;
+    }
 
     protected String processRegisterUserRequest(final String referer, final RegisterForm form, final BindingResult bindingResult,
                                                 final Model model, final HttpServletRequest request, final HttpServletResponse response,
@@ -136,6 +143,14 @@ public abstract class AbstractRegisterPageController extends de.hybris.platform.
         customerConsentDataStrategy.populateCustomerConsentDataInSession();
 
         return REDIRECT_PREFIX + getSuccessRedirect(request, response);
+    }
+
+    protected String handleRegistrationError(final Model model) throws CMSItemNotFoundException
+    {
+        storeCmsPageInModel(model, getCmsPage());
+        setUpMetaDataForContentPage(model, (ContentPageModel) getCmsPage());
+        addRegistrationConsentDataToModel(model);
+        return getView();
     }
 
 }
