@@ -7,6 +7,17 @@
 	<bean class="de.hybris.platform.commercefacades.product.data.ProductData">
 		<property name="genders" type="java.util.List&lt;org.training.facades.product.data.GenderData>"/>
 		<property name="size" type="String"/>
+		<property name="mattress" type="String"/>
+		<property name="foam" type="String"/>
+		<property name="brand" type="String"/>
+	</bean>
+
+	<bean class="org.training.core.data.beans.TestimonyData">
+		<property name="name" type="String"/>
+		<property name="rate" type="Double"/>
+		<property name="title" type="String"/>
+		<property name="textArea" type="String"/>
+		<property name="dateTestimony" type="String"/>
 	</bean>
 
 	<bean class="org.training.facades.product.data.GenderData">
@@ -21,4 +32,9 @@
 	<bean class="de.hybris.platform.commercefacades.user.data.CustomerData">
 		<property name="id" type="String"/>
 	</bean>
+	<enum class="de.hybris.platform.commercefacades.product.ProductOption">
+		<value>PRODUCT_SIZE</value>
+	</enum>
 </beans>
+
+

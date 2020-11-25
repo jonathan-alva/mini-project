@@ -17,6 +17,7 @@
 	<import resource="classpath:/trainingcore/integration/hot-folder-store-electronics-spring.xml"/>
 	<import resource="classpath:/trainingcore/integration/hot-folder-store-apparel-spring.xml"/>
 	<import resource="classpath:/trainingcore/integration/hot-folder-common-spring.xml"/>
+	<import resource="classpath:/trainingcore/integration/hot-folder-training-spring.xml"/>
 
 	<!-- SystemSetup for the TrainingCore -->
 	<bean id="acceleratorCoreSystemSetup" class="org.training.core.setup.CoreSystemSetup"
@@ -548,6 +549,17 @@
 	<alias alias="productDao" name="defaultTrainingProductDao"/>
 	<bean id="defaultTrainingProductDao" class="org.training.core.dao.impl.DefaultTrainingProductDao"
 		  parent="defaultProductDao">
+		<property name="flexibleSearchService" ref="flexibleSearchService"/>
+	</bean>
+
+	<alias alias="productTestimonyService" name="defaultTrainingTestimonyService"/>
+	<bean id="defaultTrainingTestimonyService" class="org.training.core.service.impl.DefaultTrainingTestimonyService"
+		  parent="defaultItemService">
+	</bean>
+
+	<alias alias="productTestimonyDao" name="defaultTrainingTestimonyDao"/>
+	<bean id="defaultTrainingTestimonyDao" class="org.training.core.dao.impl.DefaultTrainingTestimonyDao"
+		  parent="defaultItemDao">
 		<property name="flexibleSearchService" ref="flexibleSearchService"/>
 	</bean>
 

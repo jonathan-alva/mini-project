@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface TrainingProductDao {
     List<ProductModel> getAllProductModels();
+    List<ProductModel> getAllProductVariant(ProductModel productModel);
 }

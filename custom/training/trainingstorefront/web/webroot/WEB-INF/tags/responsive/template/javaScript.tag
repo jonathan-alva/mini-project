@@ -35,6 +35,7 @@
 		<script src="${commonResourcePathHtml}/js/jquery.currencies.min.js"></script>
 		<script src="${commonResourcePathHtml}/js/jquery.waitforimages.min.js"></script>
 		<script src="${commonResourcePathHtml}/js/jquery.slideviewer.custom.1.2.js"></script>
+		<script src="${commonResourcePathHtml}/js/slick.min.js"></script>
 		
 		<%-- Custom ACC JS --%>
 		
@@ -89,6 +90,9 @@
 		<c:forEach items="${cmsActionsJsFiles}" var="actionJsFile">
 		    <script src="${commonResourcePathHtml}/js/cms/${fn:escapeXml(actionJsFile)}"></script>
 		</c:forEach>
+
+		<%--Custom Javascript--%>
+		<script src="${commonResourcePathHtml}/js/custom.js"></script>
 		
 		<%-- AddOn JavaScript files --%>
 		<c:forEach items="${addOnJavaScriptPaths}" var="addOnJavaScript">
