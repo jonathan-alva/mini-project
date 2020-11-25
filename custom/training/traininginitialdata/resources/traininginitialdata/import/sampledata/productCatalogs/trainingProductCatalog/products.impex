@@ -14,7 +14,7 @@ $approved = approvalstatus(code)[default='approved']
 
 # Insert Products
 INSERT_UPDATE TrainingProduct; code[unique = true]; name            ; $supercategories; variantType(code)[default = 'TrainingVariantProduct']; $approved; unit(code)[default = pieces]; $catalogVersion; foam          ; mattress
-                             ; KASURINTHEBOX      ; Kasur INTHEBOX  ; "BED"           ;                                                      ;          ;                             ;                ; Pocket Spring ; Busa Medium Soft
+                             ; KASURINTHEBOX      ; KASUR INTHEBOX  ; "BED"           ;                                                      ;          ;                             ;                ; Pocket Spring ; Busa Medium Soft
                              ; INTHEBOXX          ; INTHEBOX X      ; "BED"           ;                                                      ;          ;                             ;                ; Plush TOP     ; Busa Medium Soft
                              ; INTHEBOX101        ; INTHEBOX 101    ; "BED"           ;                                                      ;          ;                             ;                ; Pocket Spring ; Busa Medium
                              ; INTHEBOXHYBRID     ; INTHEBOX Hybrid ; "BED"           ;                                                      ;          ;                             ;                ; Memory Foam   ; Busa Medium Soft

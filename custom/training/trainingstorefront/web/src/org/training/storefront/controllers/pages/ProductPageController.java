@@ -408,12 +408,6 @@ public class ProductPageController extends AbstractPageController
 
 		getRequestContextData(request).setProduct(productModel);
 
-		// Get productVariant base on current product
-		List<ProductData> productVariantDataList = trainingProductFacade.getProductVariant(productModel);
-
-		String currentBaseProductName = ((TrainingVariantProductModel) productModel).getBaseProduct().getName();
-		String currentProductSize = ((TrainingVariantProductModel) productModel).getSize();
-
 		final List<ProductOption> options = new ArrayList<>(Arrays.asList(ProductOption.VARIANT_FIRST_VARIANT, ProductOption.BASIC,
 				ProductOption.URL, ProductOption.PRICE, ProductOption.SUMMARY, ProductOption.DESCRIPTION, ProductOption.GALLERY,
 				ProductOption.CATEGORIES, ProductOption.REVIEW, ProductOption.PROMOTIONS, ProductOption.CLASSIFICATION,
@@ -422,9 +416,16 @@ public class ProductPageController extends AbstractPageController
 
 		options.addAll(extraOptions);
 
+		// Get productVariant base on current product
+		List<ProductData> productVariantDataList = trainingProductFacade.getProductVariant(productModel);
+
+		String currentBaseProductName = ((TrainingVariantProductModel) productModel).getBaseProduct().getName();
+		String currentProductSize = ((TrainingVariantProductModel) productModel).getSize();
+
 		List<ProductData> productVariantList = new ArrayList<>();
 		final ProductData productData = productFacade.getProductForCodeAndOptions(productCode, options);
 		for (ProductData variant: productVariantDataList){
+			variant.setSize(((TrainingVariantProductModel) productModel).getSize());
 			String variantCode = variant.getCode();
 			productVariantList.add(productFacade.getProductForCodeAndOptions(variantCode, options));
 		}
@@ -432,7 +433,9 @@ public class ProductPageController extends AbstractPageController
 		sortVariantOptionData(productData);
 		storeCmsPageInModel(model, getPageForProduct(productCode));
 		populateProductData(productData, model);
+/*
 		model.addAttribute(WebConstants.BREADCRUMBS_KEY, productBreadcrumbBuilder.getBreadcrumbs(productCode));
+*/
 		model.addAttribute("variantList", productVariantList);
 		model.addAttribute("baseProductName", currentBaseProductName);
 		model.addAttribute("productSize", currentProductSize);

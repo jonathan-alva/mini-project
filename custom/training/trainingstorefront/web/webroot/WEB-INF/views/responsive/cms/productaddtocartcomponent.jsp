@@ -19,8 +19,8 @@
 
 <div class="addtocart-component">
 		<c:if test="${empty showAddToCart ? true : showAddToCart}">
-		<div class="qty-selector input-group js-qty-selector">
-			<span class="input-group-btn">
+		<div class="qty-selector input-group js-qty-selector ">
+			<span class="input-group-btn ">
 				<button class="btn btn-default js-qty-selector-minus" type="button" <c:if test="${qtyMinus <= 1}"><c:out value="disabled='disabled'"/></c:if> ><span class="glyphicon glyphicon-minus" aria-hidden="true" ></span></button>
 			</span>
 				<input type="text" maxlength="3" class="form-control js-qty-selector-input" size="1" value="${fn:escapeXml(qtyMinus)}"
@@ -46,9 +46,9 @@
 			</c:set>
 		</c:if>
 		<div class="stock-wrapper clearfix">
-			${productStockLevelHtml}
+<%--			${productStockLevelHtml}--%>
 		</div>
-		 <div class="actions">
+		 <div class="actions catalog-allbtn">
         <c:if test="${multiDimensionalProduct}" >
                 <c:url value="${product.url}/orderForm" var="productOrderFormUrl"/>
                 <a href="${productOrderFormUrl}" class="btn btn-default btn-block btn-icon js-add-to-cart glyphicon-list-alt">
