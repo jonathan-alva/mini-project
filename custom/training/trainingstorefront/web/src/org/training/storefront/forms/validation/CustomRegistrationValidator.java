@@ -43,7 +43,7 @@ public class CustomRegistrationValidator extends RegistrationValidator implement
     public void validateId(final Errors errors, final String id, final String propertyName, final String property){
         if(StringUtils.isBlank(id)){
             errors.rejectValue(propertyName,property);
-        }else if (id.matches("[0-9]+") && StringUtils.length(id)>16){
+        }else if (id.matches("[0-9]+") && StringUtils.length(id)!=16){
             errors.rejectValue(propertyName,property);
         }
     }
