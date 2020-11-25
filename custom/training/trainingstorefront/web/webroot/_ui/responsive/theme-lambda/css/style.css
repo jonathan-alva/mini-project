@@ -11016,6 +11016,9 @@ fieldset[disabled] .btn-primary.active {
 .addtocart-component {
   margin-top: 10px;
 }
+.addtocart-component .input-group {
+  width: 100%;
+}
 .addtocart-component .stock-wrapper {
   font-size: 13px;
   margin: 25px 0;
@@ -11045,14 +11048,28 @@ fieldset[disabled] .btn-primary.active {
   margin: 0;
   padding-left: 0;
   padding-right: 0;
+  border-radius: 50% !important;
+  background-color: #f7fbff!important;
+  color: #6086c2!important;
+  border-color: #f7fbff !important;
+}
+.addtocart-component .qty-selector .input-group-btn,
+#add_to_cart_storepickup_form .qty-selector .input-group-btn,
+.addtocart-component .qty-selector .btn:hover,
+#add_to_cart_storepickup_form .qty-selector .btn:hover {
+  background-color: #6086c2!important;
+  color: #f7fbff!important;
 }
 .addtocart-component .qty-selector .form-control,
 #add_to_cart_storepickup_form .qty-selector .form-control {
-  width: 50px;
+  border-color: transparent;
+  color: #6086c2;
+  font-weight: 700;
+  width: 100%;
   height: 48px;
   text-align: center;
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 24px !important;
+  font-style: italic;
 }
 @media (max-width: 1023px) {
   .addtocart-component {
@@ -19285,28 +19302,100 @@ header {
 }
 .pdp {
   margin: 40px 0;
-  font-family: Brown, sans-serif, Arial, Verdana, "Trebuchet MS", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.5;
 }
-.desc .name-product {
+.pdp-image {
+  text-align: center;
+}
+.pdp-desc-name {
   margin-top: 0;
   margin-bottom: .65rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.2;
   font-size: 2.86rem;
 }
-.desc .code-product {
-  font-weight: 400;
+.pdp-desc-subname {
   font-size: 1.95rem;
 }
-.desc .price {
-  font-style: normal;
-  font-size: 4rem;
-  line-height: .6;
+.pdp-desc-price {
+  font-size: 3rem;
+  color: #6086c2;
+  line-height: 1.6;
+  font-weight: 700;
+  font-style: italic;
 }
-@media screen and (min-width: 768px) {
+.pdp-desc-size {
+  font-size: 1.69rem;
+}
+.pdp-desc-summary {
+  font-size: 1.69rem;
+  padding-bottom: 10px;
+}
+.catalog {
+  margin: 40px 0px 0px 0px;
+}
+.catalog-allbtn {
+  margin-top: 20px;
+}
+.catalog-allbtn a {
+  font-size: 1.3rem !important;
+  font-weight: 600;
+}
+.catalog-allbtn .btn.btn-brand:hover {
+  background-color: #7fc5f9;
+  color: #6086c2!important;
+}
+.catalog .btn.btn-brand:hover {
+  background-color: #7fc5f9;
+  color: #6086c2!important;
+}
+.catalog-product {
+  width: 320px;
+  min-width: 200px;
+  padding: 0 10px;
+}
+.catalog-product-image img {
+  max-width: 100%;
+}
+.catalog-product-name {
+  color: #0f0f0f;
+  font-size: 1.82rem;
+  font-weight: 500;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+.catalog-product-size {
+  color: #0f0f0f;
+  font-size: 1.69rem;
+  line-height: 1.3;
+}
+.catalog-product-price {
+  color: #6086c2;
+  font-size: 2rem;
+  font-weight: 600;
+  font-style: italic;
+  line-height: .8;
+  margin-top: 10px;
+}
+.catalog .container .row {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+@media (max-width: 1399px) {
+  .catalog .container .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media (min-width: 768px) {
+  .catalog {
+    margin: 50px 0px 0px 0px;
+  }
   .pdp {
     margin: 50px 0;
+  }
+  .catalog-product {
+    min-width: 220px;
   }
 }
 .aboutus-wrapper {

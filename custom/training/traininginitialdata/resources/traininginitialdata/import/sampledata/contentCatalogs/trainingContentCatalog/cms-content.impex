@@ -76,6 +76,7 @@ INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]   
                               ;                          ; KonfirmasiTopHeaderLink      ; Konfirmasi Top Header Link    ; /#                                        ; KonfirmasiTopHeaderLink      ; KonfirmasiTopHeaderLink      ;                                     ;          ;         ;
                               ;                          ; CekResiTopHeaderLink         ; Cek Resi Top Header Link      ; /#                                        ; CekResiTopHeaderLink         ; CekResiTopHeaderLink         ;                                     ;          ;         ;
                               ;                          ; TestimonyLink                ; Testimony Link                ; /testimony                                ; TestimonyLink                ; TestimonyLink                ;                                     ;          ;         ;
+                              ;                          ; AllProductButtonLink         ; All Product Button Link       ; /c/FURNITURE                              ; AllProductButtonLink         ; AllProductButtonLink         ;                                     ;          ;         ;
 
 # Lightbox Banner for Mini Cart
 INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]                  ; name                                    ; &componentRef                       ; urlLink
@@ -452,12 +453,22 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        
                          ;                          ; CenterRightContentSlot-cartPage ; Center Right Content Slot for Cart Page ; true  ; CartTotalsComponent
                          ;                          ; BottomContentSlot-cartPage      ; Bottom Content Slot for Cart Page       ; true  ; CheckoutComponent,CartSuggestions
 
-INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]                ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'cartPage']; contentSlot(uid, $contentCV)[unique = true]
-                                ;                          ; TopContentSlotForCartPage         ; TopContent             ;                                                           ; TopContent-cartPage
-                                ;                          ; EmptyCartMiddleForCartPage        ; EmptyCartMiddleContent ;                                                           ; EmptyCartMiddleContent-cartPage
-                                ;                          ; CenterLeftContentSlotForCartPage  ; CenterLeftContentSlot  ;                                                           ; CenterLeftContentSlot-cartPage
-                                ;                          ; CenterRightContentSlotForCartPage ; CenterRightContentSlot ;                                                           ; CenterRightContentSlot-cartPage
-                                ;                          ; BottomContentSlotForCartPage      ; BottomContentSlot      ;                                                           ; BottomContentSlot-cartPage
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]                ; position[unique = true] ; page(uid, $contentCV)[unique = true][default = 'cartPage']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; TopContentSlotForCartPage         ; TopContent              ;                                                           ; TopContent-cartPage
+                                ;                          ; EmptyCartMiddleForCartPage        ; EmptyCartMiddleContent  ;                                                           ; EmptyCartMiddleContent-cartPage
+                                ;                          ; CenterLeftContentSlotForCartPage  ; CenterLeftContentSlot   ;                                                           ; CenterLeftContentSlot-cartPage
+                                ;                          ; CenterRightContentSlotForCartPage ; CenterRightContentSlot  ;                                                           ; CenterRightContentSlot-cartPage
+                                ;                          ; BottomContentSlotForCartPage      ; BottomContentSlot       ;                                                           ; BottomContentSlot-cartPage
+                                ;                          ; PhoneNumberImg-CartPage           ; PhoneNumberImg          ;                                                           ; PhoneNumberImg
+                                ;                          ; TextNumberImg-CartPage            ; TextNumberImg           ;                                                           ; TextNumberImg
+                                ;                          ; Garansi10TahunImg-CartPage        ; Garansi10TahunImg       ;                                                           ; Garansi10TahunImg
+                                ;                          ; FreeShippingImg-CartPage          ; FreeShippingImg         ;                                                           ; FreeShippingImg
+                                ;                          ; Garansi10TahunText-CartPage       ; Garansi10TahunText      ;                                                           ; Garansi10TahunText
+                                ;                          ; FreeShippingText-CartPage         ; FreeShippingText        ;                                                           ; FreeShippingText
+                                ;                          ; GaransiTopHeaderText-CartPage     ; GaransiTopHeaderText    ;                                                           ; GaransiTopHeaderText
+                                ;                          ; KonfirmasiTopHeaderText-CartPage  ; KonfirmasiTopHeaderText ;                                                           ; KonfirmasiTopHeaderText
+                                ;                          ; CekResiTopHeaderText-CartPage     ; CekResiTopHeaderText    ;                                                           ; CekResiTopHeaderText
+
 
 ###### Electronics Checkout Login Page ######
 
@@ -899,6 +910,7 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]        
                          ;                          ; GaransiTopHeaderText             ; GaransiTopHeaderLink
                          ;                          ; KonfirmasiTopHeaderText          ; KonfirmasiTopHeaderLink
                          ;                          ; CekResiTopHeaderText             ; CekResiTopHeaderLink
+                         ;                          ; AllProductButtonLinkContentSlot             ; AllProductButtonLink
 
 ## Home section 2A
 INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]            ; name                             ; &componentRef
@@ -1643,4 +1655,17 @@ INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = tr
                                     ;                          ; GaransiTopHeaderText-ProductGridPage     ; GaransiTopHeaderText     ;                                                                                  ; GaransiTopHeaderText                       ; true
                                     ;                          ; KonfirmasiTopHeaderText-ProductGridPage  ; KonfirmasiTopHeaderText  ;                                                                                  ; KonfirmasiTopHeaderText                    ; true
                                     ;                          ; CekResiTopHeaderText-ProductGridPage     ; CekResiTopHeaderText     ;                                                                                  ; CekResiTopHeaderText                       ; true
+
+
+INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = true]                         ; position[unique = true] ; pageTemplate(uid, $contentCV)[unique = true][default = 'ProductDetailsPageTemplate']; contentSlot(uid, $contentCV)[unique = true]; allowOverwrite
+                                    ;                          ; PhoneNumberImg-ProductDetailsPage          ; PhoneNumberImg          ;                                                                                     ; PhoneNumberImg                             ; true
+                                    ;                          ; TextNumberImg-ProductDetailsPage           ; TextNumberImg           ;                                                                                     ; TextNumberImg                              ; true
+                                    ;                          ; Garansi10TahunImg-ProductDetailsPage       ; Garansi10TahunImg       ;                                                                                     ; Garansi10TahunImg                          ; true
+                                    ;                          ; FreeShippingImg-ProductDetailsPage         ; FreeShippingImg         ;                                                                                     ; FreeShippingImg                            ; true
+                                    ;                          ; Garansi10TahunText-ProductDetailsPage      ; Garansi10TahunText      ;                                                                                     ; Garansi10TahunText                         ; true
+                                    ;                          ; FreeShippingText-ProductDetailsPage        ; FreeShippingText        ;                                                                                     ; FreeShippingText                           ; true
+                                    ;                          ; GaransiTopHeaderText-ProductDetailsPage    ; GaransiTopHeaderText    ;                                                                                     ; GaransiTopHeaderText                       ; true
+                                    ;                          ; KonfirmasiTopHeaderText-ProductDetailsPage ; KonfirmasiTopHeaderText ;                                                                                     ; KonfirmasiTopHeaderText                    ; true
+                                    ;                          ; CekResiTopHeaderText-ProductDetailsPage    ; CekResiTopHeaderText    ;                                                                                     ; CekResiTopHeaderText                       ; true
+                                    ;                          ; AllProductButtonLink-ProductDetailsPage    ; AllProductButtonLink    ;                                                                                     ; AllProductButtonLinkContentSlot                       ; true
 

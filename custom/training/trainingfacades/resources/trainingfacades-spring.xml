@@ -213,7 +213,8 @@
     </bean>
 
     <alias name="defaultTrainingTestimonyFacade" alias="trainingTestimonyFacade"/>
-    <bean id="defaultTrainingTestimonyFacade" class="org.training.facades.testimony.Impl.DefaultTrainingTestimonyFacade">
+    <bean id="defaultTrainingTestimonyFacade"
+          class="org.training.facades.testimony.Impl.DefaultTrainingTestimonyFacade">
     </bean>
 
     <!--populator size-->
@@ -237,19 +238,19 @@
 	<bean id="defaultProductMattressPopulator" class="org.training.facades.populators.ProductMattressPopulator">
 	</bean>
 
-	<alias name="defaultProductFoamPopulator" alias="productFoamPopulator"/>
-	<bean id="defaultProductFoamPopulator" class="org.training.facades.populators.ProductFoamPopulator">
-	</bean>
+    <alias name="defaultProductFoamPopulator" alias="productFoamPopulator"/>
+    <bean id="defaultProductFoamPopulator" class="org.training.facades.populators.ProductFoamPopulator">
+    </bean>
 
-	<bean parent="modifyPopulatorList">
-		<property name="list" ref="productConverter"/>
-		<property name="add" ref="productMattressPopulator"/>
-	</bean>
+    <bean parent="modifyPopulatorList">
+        <property name="list" ref="productConverter"/>
+        <property name="add" ref="productMattressPopulator"/>
+    </bean>
 
-	<bean parent="modifyPopulatorList">
-		<property name="list" ref="productConverter"/>
-		<property name="add" ref="productFoamPopulator"/>
-	</bean>
+    <bean parent="modifyPopulatorList">
+        <property name="list" ref="productConverter"/>
+        <property name="add" ref="productFoamPopulator"/>
+    </bean>
 
     <alias name="defaultProductConfiguredPopulator" alias="productConfiguredPopulator"/>
     <bean id="defaultProductConfiguredPopulator"

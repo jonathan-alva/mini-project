@@ -1,5 +1,8 @@
 .addtocart-component {
 	margin-top: @grid-gutter-width/2;
+	.input-group {
+		width: 100%;
+	}
 
 	.stock-wrapper {
 		font-size: 13px;
@@ -38,14 +41,29 @@
 			margin: 0;
 			padding-left: 0;
 			padding-right: 0;
+			border-radius: 50% !important;
+			background-color: #f7fbff!important;
+			color: #6086c2!important;
+			border-color: #f7fbff !important;
 		}
 
+		.input-group-btn,.btn:hover{
+			background-color: #6086c2!important;
+			color: #f7fbff!important;
+		}
+
+
+
 		.form-control{
-			width: @input-height-base * 1.5625;
+			//width: @input-height-base * 1.5625;
+			border-color: transparent;
+			color: #6086c2;
+			font-weight: 700;
+			width: 100%;
 			height: floor((@padding-large-vertical * 2) + (@btn-font-size * @btn-line-height) + (@btn-border-width * 2));
 			text-align: center;
-			font-size: 13px;
-			font-weight: bold;
+			font-size: 24px !important;
+			font-style: italic;
 		}
 	}
 }
