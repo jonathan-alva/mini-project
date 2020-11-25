@@ -36,19 +36,18 @@ INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]             
 INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]; name                ; &componentRef     ; urlLink
                                    ;                          ; SiteLogoComponent ; Site Logo Component ; SiteLogoComponent ; "/"
 
+#rubah
 # CMS Link Components
 INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]           ; name                          ; url                                       ; &linkRef                     ; &componentRef                ; target(code)[default = 'sameWindow']; $category; $product;
                               ;                          ; HomepageNavLink              ; Home Page Nav Link            ; /                                         ; HomepageNavLink              ; HomepageNavLink              ;                                     ;          ;         ;
                               ;                          ; StoreFinderLink              ; Store Finder Link             ; /store-finder                             ; StoreFinderLink              ; StoreFinderLink              ;                                     ;          ;         ;
                               ;                          ; LoginLink                    ; Login Link                    ; /login                                    ; LoginLink                    ; LoginLink                    ;                                     ;          ;         ;
 #                              ;                          ; AllBrandsCategoryLink        ; All Brands Category Link      ; /Bed/c/BED                                ; AllBrandsCategoryLink        ; AllBrandsCategoryLink        ;                                     ; BED      ;         ;
-#                              ;                          ; AllFashionsCategoryLink      ; All Fashions Link             ; /c/FASHION                                ; AllFashionsCategoryLink      ; AllFashionsCategoryLink      ;                                     ; FASHION  ;         ;
-#                              ;                          ; ShirtCategoryLink            ; Shirt Category Link           ; /c/SHIRT                                  ; ShirtCategoryLink            ; ShirtCategoryLink            ;                                     ; SHIRT    ;         ;
-#                              ;                          ; TrouserCategoryLink          ; Trouser Category Link         ; /c/TROUSER                                ; TrouserCategoryLink          ; TrouserCategoryLink          ;                                     ; TROUSER  ;         ;
-                              ;                          ; AboutUsLink                  ; About us Link                 ; /#                                        ; AboutUsLink                  ; AboutUsLink                  ;                                     ;          ;         ;
+                              ;                          ; AllBedsCategoryLink          ; All Brands Category Link      ; /#                                        ; AllBedsCategoryLink          ; AllBedsCategoryLink          ;                                     ;          ;         ;
+                              ;                          ; AboutUsLink                  ; About us Link                 ; /aboutus-page                             ; AboutUsLink                  ; AboutUsLink                  ;                                     ;          ;         ;
                               ;                          ; BlogsLink                    ; Blogs Link                    ; /#                                        ; BlogsLink                    ; BlogsLink                    ;                                     ;          ;         ;
-                              ;                          ; GuaranteeLink                ; Guarantee Link                ; /Bed/Sofa/c/SOFA                          ; GuaranteeLink                ; GuaranteeLink                ;                                     ;          ;         ;
-                              ;                          ; ConfirmationLink             ; Guarantee Link                ; /Bed/Sofa/c/SOFA                          ; ConfirmationLink             ; ConfirmationLink             ;                                     ;          ;         ;
+                              ;                          ; GuaranteeLink                ; Guarantee Link                ; /#                                        ; GuaranteeLink                ; GuaranteeLink                ;                                     ;          ;         ;
+                              ;                          ; ConfirmationLink             ; Guarantee Link                ; /#                                        ; ConfirmationLink             ; ConfirmationLink             ;                                     ;          ;         ;
                               ;                          ; AboutSAPCommerceLink         ; About SAP Commerce Cloud Link ; "http://www.cx.sap.com/products/commerce" ; AboutSAPCommerceLink         ; AboutSAPCommerceLink         ; newWindow                           ;          ;         ;
                               ;                          ; DocumentationLink            ; Documentation Link            ; "https://help.hybris.com"                 ; DocumentationLink            ; DocumentationLink            ; newWindow                           ;          ;         ;
                               ;                          ; VisitSAPLink                 ; Visit SAP Link                ; "http://www.cx.sap.com"                   ; VisitSAPLink                 ; VisitSAPLink                 ; newWindow                           ;          ;         ;
@@ -57,19 +56,19 @@ INSERT_UPDATE CMSLinkComponent; $contentCV[unique = true]; uid[unique = true]   
                               ;                          ; TwitterLink                  ; Twitter Link                  ; "http://www.twitter.com/SAP_CX"           ; TwitterLink                  ; TwitterLink                  ; newWindow                           ;          ;         ;
                               ;                          ; AgileCommerceBlogLink        ; Agile Commerce Blog Link      ; "http://www.agile-commerce.com/"          ; AgileCommerceBlogLink        ; AgileCommerceBlogLink        ; newWindow                           ;          ;         ;
                               ;                          ; LinkedInLink                 ; Linked In Link                ; "http://www.linkedin.com/groups/5063400"  ; LinkedInLink                 ; LinkedInLink                 ; newWindow                           ;          ;         ;
-                              ;                          ; FAQLink                      ; FAQ Link                      ; /faq                                      ; FAQLink                      ; FAQLink                      ;                                     ;          ;         ;
-                              ;                          ; TermsAndConditionsLink       ; Terms and Conditions Link     ; /termsAndConditions                       ; TermsAndConditionsLink       ; TermsAndConditionsLink       ;                                     ;          ;         ;
+                              ;                          ; FAQLink                      ; FAQ Link                      ; /#                                        ; FAQLink                      ; FAQLink                      ;                                     ;          ;         ;
+                              ;                          ; TermsAndConditionsLink       ; Terms and Conditions Link     ; /#                                        ; TermsAndConditionsLink       ; TermsAndConditionsLink       ;                                     ;          ;         ;
                               ;                          ; ProductRecommendationLink    ; Product Recommendation Link   ; /product-recommendation                   ; ProductRecommendationLink    ; ProductRecommendationLink    ;                                     ;          ;         ;
                               ;                          ; ProductRecommendationTopLink ; Product Recommendation Link   ; /product-recommendation                   ; ProductRecommendationTopLink ; ProductRecommendationTopLink ;                                     ;          ;         ;
-                              ;                          ; ProductLink                  ; Product Link                  ; /#                                        ; ProductLink                  ; ProductLink                  ;                                     ;          ;         ;
-                              ;                          ; ProductFooterLink            ; Product Footer Link           ; /#                                        ; ProductFooterLink            ; ProductFooterLink            ;                                     ;          ;         ;
+                              ;                          ; ProductLink                  ; Product Link                  ; /c/FURNITURE                              ; ProductLink                  ; ProductLink                  ;                                     ;          ;         ;
+                              ;                          ; ProductFooterLink            ; Product Footer Link           ; /c/FURNITURE                              ; ProductFooterLink            ; ProductFooterLink            ;                                     ;          ;         ;
                               ;                          ; AktivasiGaransiFooterLink    ; Aktivasi Garansi Footer Link  ; /#                                        ; AktivasiGaransiFooterLink    ; AktivasiGaransiFooterLink    ;                                     ;          ;         ;
                               ;                          ; CekResiFooterLink            ; Cek Resi Footer Link          ; /#                                        ; CekResiFooterLink            ; CekResiFooterLink            ;                                     ;          ;         ;
                               ;                          ; FAQFooterLink                ; FAQ Footer Link               ; /#                                        ; FAQFooterLink                ; FAQFooterLink                ;                                     ;          ;         ;
                               ;                          ; BantuanFooterLink            ; Bantuan Footer Link           ; /#                                        ; BantuanFooterLink            ; BantuanFooterLink            ;                                     ;          ;         ;
                               ;                          ; SyaratKetentuanFooterLink    ; Syarat Ketentuan Footer Link  ; /#                                        ; SyaratKetentuanFooterLink    ; SyaratKetentuanFooterLink    ;                                     ;          ;         ;
                               ;                          ; KebijakanPrivasiFooterLink   ; Kebijakan Privasi Footer Link ; /#                                        ; KebijakanPrivasiFooterLink   ; KebijakanPrivasiFooterLink   ;                                     ;          ;         ;
-                              ;                          ; TentangKamiFooterLink        ; Tentang Kami Footer Link      ; /#                                        ; TentangKamiFooterLink        ; TentangKamiFooterLink        ;                                     ;          ;         ;
+                              ;                          ; TentangKamiFooterLink        ; Tentang Kami Footer Link      ; /aboutus-page                             ; TentangKamiFooterLink        ; TentangKamiFooterLink        ;                                     ;          ;         ;
                               ;                          ; TokoOfflineFooterLink        ; Toko Offline Footer Link      ; /#                                        ; TokoOfflineFooterLink        ; TokoOfflineFooterLink        ;                                     ;          ;         ;
                               ;                          ; BlogFooterLink               ; Blog Footer Link              ; /#                                        ; BlogFooterLink               ; BlogFooterLink               ;                                     ;          ;         ;
                               ;                          ; TestimoniFooterLink          ; Testimoni Footer Link         ; /testimony                                ; TestimoniFooterLink          ; TestimoniFooterLink          ;                                     ;          ;         ;
@@ -155,6 +154,8 @@ INSERT_UPDATE ProductRefinementComponent; $contentCV[unique = true]; uid[unique 
 INSERT_UPDATE CMSProductListComponent; $contentCV[unique = true]; uid[unique = true]   ; name                   ; actions(uid, $contentCV)                    ; &componentRef
                                      ;                          ; ProductListComponent ; Product List Component ; ListPickUpInStoreAction,ListAddToCartAction ; ProductListComponent
 
+
+#rubah
 INSERT_UPDATE ProductGridComponent; $contentCV[unique = true]; uid[unique = true]   ; name                   ; actions(uid, $contentCV)                    ; &componentRef
                                   ;                          ; ProductGridComponent ; Product Grid Component ; ListPickUpInStoreAction,ListAddToCartAction ; ProductGridComponent
 
@@ -203,7 +204,8 @@ INSERT_UPDATE CMSNavigationNode; uid[unique = true]           ; $contentCV[uniqu
                                ; SiteRootNode                 ;                          ; SiteRootNode                  ; root                   ;                                                                                                                                  ; SiteRootNode
                                ; ElectronicsNavNode           ;                          ; Electronics Site              ; SiteRootNode           ; HomepageNavLink                                                                                                                  ; ElectronicsNavNode
                                ; DemoNavNode                  ;                          ; trainings Site                ; SiteRootNode           ; HomepageNavLink                                                                                                                  ; trainingNavNode
-#                               ; AllBedsNavNode               ;                          ; Beds Links                    ; DemoNavNode            ; AllBedsCategoryLink                                         ; AllBedsNavNode
+                               ; AllBedsNavNode               ;                          ; Beds Links                    ; DemoNavNode            ; AllBedsCategoryLink                                                                                                              ; AllBedsNavNode
+#                               ; AllFurnitureNavNode          ;                          ; Furniture Links               ; DemoNavNode            ; AllFurnitureCategoryLink                                                                                                         ; AllFurnitureNavNode
 #                               ; BrandsNavNode                ;                          ; Brand Links                   ; DemoNavNode            ; AllBrandsCategoryLink                                       ; BrandsNavNode
                                ; AboutUsNavNode               ;                          ; About Us Links                ; DemoNavNode            ; AboutUsLink                                                                                                                      ; AboutUsNavNode
                                ; BlogsNavNode                 ;                          ; Blogs Links                   ; DemoNavNode            ; BlogsLink                                                                                                                        ; BlogsNavNode
@@ -703,6 +705,8 @@ INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true];
 INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; name                               ; active; cmsComponents(&componentRef); ; ;
                          ;                          ; ProductListSlot   ; Product List Slot for Product List ; true  ; ProductListComponent        ; ; ;
 
+
+#rubah
 #### ProductGridPage
 INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; name                               ; active; cmsComponents(&componentRef); ; ;
                          ;                          ; ProductGridSlot   ; Product Grid Slot for Product List ; true  ; ProductGridComponent        ; ; ;
@@ -1017,6 +1021,15 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]  ; name
 INSERT_UPDATE Media; $contentCV[unique = true]; code[unique = true]                      ; realfilename               ; @media[translator = de.hybris.platform.impex.jalo.media.MediaDataTranslator]; mime[default = 'image/svg+xml']; altText            ; folder(qualifier)[default = 'images']
                    ;                          ; /images/theme/logo_hybris_responsive.svg ; logo_hybris_responsive.svg ; $siteResource/images/theme/logo_hybris_responsive.svg                       ; image/svg+xml                  ; hybris Accelerator ;
 #                   ;;/images/theme/logo-demo.png;log-demo.png;$siteResource/images/theme/logo-demo.png;jpg/png;In the box;
+# Banner about us
+                   ;                          ; /images/banners/site/tentang.png         ; tentang.png                ; $siteResource//images/banners/site/tentang.png                              ; image/png                      ; hybris Accelerator ;
+# Banner Produk
+                   ;                          ; /images/banners/site/headerproduk.png    ; headerproduk.png           ; $siteResource//images/banners/site/headerproduk.png                         ; image/png                      ; hybris Accelerator ;
+# Image for about us page
+                   ;                          ; /images/aboutus/image1.png               ; image1.png                 ; $siteResource//images/aboutus/image1.png                                    ; image/png                      ; hybris Accelerator ;
+                   ;                          ; /images/aboutus/image2.png               ; image2.png                 ; $siteResource//images/aboutus/image2.png                                    ; image/png                      ; hybris Accelerator ;
+                   ;                          ; /images/aboutus/image3.png               ; image3.png                 ; $siteResource//images/aboutus/image3.png                                    ; image/png                      ; hybris Accelerator ;
+
 
 ###  Responsive Error page #######
 
@@ -1334,19 +1347,22 @@ INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; cmsCom
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; name ; children(uid, $contentCV)[mode = append]
                                ; root              ;                          ; root ; ;
 
+#rubah
 # CMS Navigation Nodes
-INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; name         ; parent(uid, $contentCV); links(&linkRef); &nodeRef
-                               ; SiteRootNode      ;                          ; SiteRootNode ; root                   ;                ; SiteRootNode
-#                               ; DemoNavNode       ;                          ; Demo Site    ; SiteRootNode           ; AllFashionsCategoryLink ; DemoNavNode
+INSERT_UPDATE CMSNavigationNode; uid[unique = true]; $contentCV[unique = true]; name         ; parent(uid, $contentCV); links(&linkRef)     ; &nodeRef
+                               ; SiteRootNode      ;                          ; SiteRootNode ; root                   ;                     ; SiteRootNode
+                               ; DemoNavNode       ;                          ; Demo Site    ; SiteRootNode           ; AllBedsCategoryLink ; DemoNavNode
 
+#rubah
 ## level 2. children of SiteRoot ##
 # the following order of children is the display order on the site
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]  ; $contentCV[unique = true]; name       ; parent(uid, $contentCV); &nodeRef            ; children(uid, $contentCV)
                                ; DemoCategoryNavNode ;                          ; Categories ; DemoNavNode            ; DemoCategoryNavNode ; ProductNavNode,AboutUsNavNode,BlogsNavNode,TestimonyNavNode
 
+#rubah
 ## level 3. children of Category Nav ##
 INSERT_UPDATE CMSNavigationNode; uid[unique = true]              ; $contentCV[unique = true]; name                         ; &nodeRef                        ; children(uid, $contentCV)   ; links(&linkRef);
-#                               ; AllBedsNavNode      ;                          ; All Bed Links      ; AllBedsNavNode      ; BedLinksNavNode
+                               ; AllBedsNavNode                  ;                          ; All Bed Links                ; AllBedsNavNode                  ;
                                ; AllFashionsNavNode              ;                          ; All Fashion Links            ; AllFashionsNavNode              ; ShirtNavNode,TrouserNavNode ;
                                ; AboutUsNavNode                  ;                          ; About Us Links               ; AboutUsNavNode                  ;                             ;
                                ; BlogsNavNode                    ;                          ; Blogs Links                  ; BlogsNavNode                    ;                             ;
@@ -1357,14 +1373,16 @@ INSERT_UPDATE CMSNavigationNode; uid[unique = true]              ; $contentCV[un
                                ; ProductNavNode                  ;                          ; Product Links                ; ProductNavNode                  ;                             ;
                                ; TestimonyNavNode                ;                          ; Testimony Links              ; TestimonyNavNode                ;                             ;
 
+#rubah
 ## entries of the above navigation nodes ##
 INSERT_UPDATE CMSNavigationEntry; uid[unique = true]                   ; $contentCV[unique = true]; name                                         ; navigationNode(&nodeRef)        ; item(CMSLinkComponent.uid, CMSLinkComponent.$contentCV);
-#                                ; AllBedsNavNodeEntry      ;                          ; All Beds Category NavgaitionNode Entry ; AllBedsNavNode          ; AllBedsCategoryLink
+                                ; AllBedsNavNodeEntry                  ;                          ; All Beds Category NavgaitionNode Entry       ; AllBedsNavNode                  ; AllBedsCategoryLink
                                 ; AboutUsNavNodeEntry                  ;                          ; About Us Navigation Node Entry               ; AboutUsNavNode                  ; AboutUsLink                                            ;
                                 ; BlogsNavNodeEntry                    ;                          ; Blogs Navigation Node Entry                  ; BlogsNavNode                    ; BlogsLink                                              ;
                                 ; GuaranteeNavNodeEntry                ;                          ; Quarantee Navigation Node Entry              ; GuaranteeNavNode                ; GuaranteeLink                                          ;
                                 ; ConfirmationNavNodeEntry             ;                          ; Confirmation Navigation Node Entry           ; ConfirmationNavNode             ; ConfirmationLink                                       ;
                                 ; AllFashionsNavNodeEntry              ;                          ; All Fashions Navigation Node Entry           ; AllFashionsNavNode              ; AllFashionsCategoryLink                                ;
+#                                ; AllFurnitureNavNodeEntry             ;                          ; All Furniture Navigation Node Entry          ; AllFurnitureNavNode             ; AllFurnitureCategoryLink                               ;
                                 ; TermsAndConditionsNavNodeEntry       ;                          ; Terms And Conditions Navigation Node Entry   ; TermsAndConditionsNavNode       ; TermsAndConditionsLink                                 ;
                                 ; ProductRecommendationTopNavNodeEntry ;                          ; Product Recommendation Navigation Node Entry ; ProductRecommendationTopNavNode ; ProductRecommendationTopLink                           ;
                                 ; ProductNavNodeEntry                  ;                          ; Product Navigation Node Entry                ; ProductNavNode                  ; ProductLink                                            ;
@@ -1518,3 +1536,101 @@ INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true] 
                                 ;                          ; GaransiTopHeaderText-TestimonyPage    ; GaransiTopHeaderText    ;                                                            ; GaransiTopHeaderText
                                 ;                          ; KonfirmasiTopHeaderText-TestimonyPage ; KonfirmasiTopHeaderText ;                                                            ; KonfirmasiTopHeaderText
                                 ;                          ; CekResiTopHeaderText-TestimonyPage    ; CekResiTopHeaderText    ;                                                            ; CekResiTopHeaderText
+
+#custom
+###  About Us Page #######
+INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]       ; name             ; &componentRef            ; urlLink
+                                   ;                          ; AboutUsBannerComponent   ; About Us Banner  ; AboutUsBannerComponent   ;
+                                   ;                          ; AboutUsPicture1Component ; About Us Picture ; AboutUsPicture1Component ;
+                                   ;                          ; AboutUsPicture2Component ; About Us Picture ; AboutUsPicture2Component ;
+                                   ;                          ; AboutUsPicture3Component ; About Us Picture ; AboutUsPicture3Component ;
+
+
+INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]          ; name                           ; &componentRef
+                                   ;                          ; AboutUsParagraphComponent   ; About Us Paragraph Component   ; AboutUsParagraphComponent
+                                   ;                          ; AboutUsParagraphComponent2  ; About Us Paragraph Component2  ; AboutUsParagraphComponent2
+                                   ;                          ; AboutUsParagraphComponent3  ; About Us Paragraph Component3  ; AboutUsParagraphComponent3
+                                   ;                          ; AboutUsParagraphComponent4  ; About Us Paragraph Component4  ; AboutUsParagraphComponent4
+                                   ;                          ; AboutUsParagraphComponent5  ; About Us Paragraph Component5  ; AboutUsParagraphComponent5
+                                   ;                          ; AboutUsParagraphComponent6  ; About Us Paragraph Component6  ; AboutUsParagraphComponent6
+                                   ;                          ; AboutUsParagraphComponent7  ; About Us Paragraph Component7  ; AboutUsParagraphComponent7
+                                   ;                          ; AboutUsParagraphComponent8  ; About Us Paragraph Component8  ; AboutUsParagraphComponent8
+                                   ;                          ; AboutUsParagraphComponent9  ; About Us Paragraph Component9  ; AboutUsParagraphComponent9
+                                   ;                          ; AboutUsParagraphComponent10 ; About Us Paragraph Component10 ; AboutUsParagraphComponent10
+                                   ;                          ; AboutUsParagraphComponent11 ; About Us Paragraph Component11 ; AboutUsParagraphComponent11
+                                   ;                          ; AboutUsParagraphComponent12 ; About Us Paragraph Component12 ; AboutUsParagraphComponent12
+                                   ;                          ; AboutUsParagraphComponent13 ; About Us Paragraph Component13 ; AboutUsParagraphComponent13
+
+
+# Create ContentSlots
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; name                      ; active; cmsComponents(&componentRef); ; ;
+                         ;                          ; AboutUsPage       ; Slot 1 for About Us Page  ; true  ; AboutUsBannerComponent      ; ; ;
+                         ;                          ; AboutUsPage2      ; Slot 2 for About Us Page  ; true  ; AboutUsParagraphComponent   ; ; ;
+                         ;                          ; AboutUsPage3      ; Slot 3 for About Us Page  ; true  ; AboutUsParagraphComponent2  ; ; ;
+                         ;                          ; AboutUsPage4      ; Slot 4 for About Us Page  ; true  ; AboutUsParagraphComponent3  ; ; ;
+                         ;                          ; AboutUsPage5      ; Slot 5 for About Us Page  ; true  ; AboutUsParagraphComponent4  ; ; ;
+                         ;                          ; AboutUsPage6      ; Slot 6 for About Us Page  ; true  ; AboutUsParagraphComponent5  ; ; ;
+                         ;                          ; AboutUsPage7      ; Slot 7 for About Us Page  ; true  ; AboutUsParagraphComponent6  ; ; ;
+                         ;                          ; AboutUsPage8      ; Slot 8 for About Us Page  ; true  ; AboutUsParagraphComponent7  ; ; ;
+                         ;                          ; AboutUsPage9      ; Slot 9 for About Us Page  ; true  ; AboutUsParagraphComponent8  ; ; ;
+                         ;                          ; AboutUsPage10     ; Slot 10 for About Us Page ; true  ; AboutUsParagraphComponent9  ; ; ;
+                         ;                          ; AboutUsPage11     ; Slot 11 for About Us Page ; true  ; AboutUsParagraphComponent10 ; ; ;
+                         ;                          ; AboutUsPage12     ; Slot 12 for About Us Page ; true  ; AboutUsParagraphComponent11 ; ; ;
+                         ;                          ; AboutUsPage13     ; Slot 13 for About Us Page ; true  ; AboutUsParagraphComponent12 ; ; ;
+                         ;                          ; AboutUsPage14     ; Slot 14 for About Us Page ; true  ; AboutUsParagraphComponent13 ; ; ;
+                         ;                          ; AboutUsPage15     ; Slot 15 for About Us Page ; true  ; AboutUsPicture1Component    ; ; ;
+                         ;                          ; AboutUsPage16     ; Slot 16 for About Us Page ; true  ; AboutUsPicture2Component    ; ; ;
+                         ;                          ; AboutUsPage17     ; Slot 17 for About Us Page ; true  ; AboutUsPicture3Component    ; ; ;
+
+# Create Content Slots for Page
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]                  ; position[unique = true] ; page(uid, $contentCV)[unique = true][default = 'aboutus-page']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; AboutUsPage                         ; AboutUsPage             ;                                                               ; AboutUsPage
+                                ;                          ; AboutUsPage2                        ; AboutUsPage2            ;                                                               ; AboutUsPage2
+                                ;                          ; AboutUsPage3                        ; AboutUsPage3            ;                                                               ; AboutUsPage3
+                                ;                          ; AboutUsPage4                        ; AboutUsPage4            ;                                                               ; AboutUsPage4
+                                ;                          ; AboutUsPage5                        ; AboutUsPage5            ;                                                               ; AboutUsPage5
+                                ;                          ; AboutUsPage6                        ; AboutUsPage6            ;                                                               ; AboutUsPage6
+                                ;                          ; AboutUsPage7                        ; AboutUsPage7            ;                                                               ; AboutUsPage7
+                                ;                          ; AboutUsPage8                        ; AboutUsPage8            ;                                                               ; AboutUsPage8
+                                ;                          ; AboutUsPage9                        ; AboutUsPage9            ;                                                               ; AboutUsPage9
+                                ;                          ; AboutUsPage10                       ; AboutUsPage10           ;                                                               ; AboutUsPage10
+                                ;                          ; AboutUsPage11                       ; AboutUsPage11           ;                                                               ; AboutUsPage11
+                                ;                          ; AboutUsPage12                       ; AboutUsPage12           ;                                                               ; AboutUsPage12
+                                ;                          ; AboutUsPage13                       ; AboutUsPage13           ;                                                               ; AboutUsPage13
+                                ;                          ; AboutUsPage14                       ; AboutUsPage14           ;                                                               ; AboutUsPage14
+                                ;                          ; AboutUsPage15                       ; AboutUsPage15           ;                                                               ; AboutUsPage15
+                                ;                          ; AboutUsPage16                       ; AboutUsPage16           ;                                                               ; AboutUsPage16
+                                ;                          ; AboutUsPage17                       ; AboutUsPage17           ;                                                               ; AboutUsPage17
+                                ;                          ; PhoneNumberImg-AboutUsPage          ; PhoneNumberImg          ;                                                               ; PhoneNumberImg
+                                ;                          ; TextNumberImg-AboutUsPage           ; TextNumberImg           ;                                                               ; TextNumberImg
+                                ;                          ; Garansi10TahunImg-AboutUsPage       ; Garansi10TahunImg       ;                                                               ; Garansi10TahunImg
+                                ;                          ; FreeShippingImg-AboutUsPage         ; FreeShippingImg         ;                                                               ; FreeShippingImg
+                                ;                          ; Garansi10TahunText-AboutUsPage      ; Garansi10TahunText      ;                                                               ; Garansi10TahunText
+                                ;                          ; FreeShippingText-AboutUsPage        ; FreeShippingText        ;                                                               ; FreeShippingText
+                                ;                          ; GaransiTopHeaderText-AboutUsPage    ; GaransiTopHeaderText    ;                                                               ; GaransiTopHeaderText
+                                ;                          ; KonfirmasiTopHeaderText-AboutUsPage ; KonfirmasiTopHeaderText ;                                                               ; KonfirmasiTopHeaderText
+                                ;                          ; CekResiTopHeaderText-AboutUsPage    ; CekResiTopHeaderText    ;                                                               ; CekResiTopHeaderText
+
+
+# Banner for product grid page
+
+INSERT_UPDATE CMSParagraphComponent; $contentCV[unique = true]; uid[unique = true]            ; name                            ; &componentRef
+                                   ;                          ; ProductGridParagraphComponent ; Produc Grid Paragraph Component ; ProductGridParagraphComponent
+
+
+INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]     ; name           ; &componentRef          ; urlLink
+                                   ;                          ; ProductBannerComponent ; Product Banner ; ProductBannerComponent ;
+
+
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]       ; name                    ; active; cmsComponents(&componentRef)  ; ; ;
+                         ;                          ; ProductGridBannerSlot    ; Slot 2 for Product Page ; true  ; ProductBannerComponent        ; ; ;
+                         ;                          ; ProductGridParagraphSlot ; Slot 3 for Product Page ; true  ; ProductGridParagraphComponent ; ; ;
+
+INSERT_UPDATE ContentSlotName; name[unique = true]      ; template(uid, $contentCV)[unique = true][default = 'ProductGridPageTemplate']; validComponentTypes(code); compTypeGroup(code)
+                             ; ProductGridBannerSlot    ;                                                                              ;                          ;
+                             ; ProductGridParagraphSlot ;                                                                              ;                          ;
+
+
+INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = true]                       ; position[unique = true]  ; pageTemplate(uid, $contentCV)[unique = true][default = 'ProductGridPageTemplate']; contentSlot(uid, $contentCV)[unique = true]; allowOverwrite
+                                    ;                          ; ProductGridBannerSlot-ProductGridPage    ; ProductGridBannerSlot    ;                                                                                  ; ProductGridBannerSlot                      ; true
+                                    ;                          ; ProductGridParagraphSlot-ProductGridPage ; ProductGridParagraphSlot ;                                                                                  ; ProductGridParagraphSlot                   ; true

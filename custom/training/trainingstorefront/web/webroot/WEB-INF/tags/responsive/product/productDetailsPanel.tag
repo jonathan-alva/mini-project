@@ -1,8 +1,8 @@
-<%@ tag body-content="empty" trimDirectiveWhitespaces="true"%>
-<%@ taglib prefix="product" tagdir="/WEB-INF/tags/responsive/product"%>
-<%@ taglib prefix="cms" uri="http://hybris.com/tld/cmstags"%>
-<%@ taglib prefix="ycommerce" uri="http://hybris.com/tld/ycommercetags"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ tag body-content="empty" trimDirectiveWhitespaces="true" %>
+<%@ taglib prefix="product" tagdir="/WEB-INF/tags/responsive/product" %>
+<%@ taglib prefix="cms" uri="http://hybris.com/tld/cmstags" %>
+<%@ taglib prefix="ycommerce" uri="http://hybris.com/tld/ycommercetags" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <%--<div class="container">--%>
 <%--	<div class="product-details page-title">--%>
@@ -67,4 +67,3 @@
 		</div>
 	</div>
 </div>
-

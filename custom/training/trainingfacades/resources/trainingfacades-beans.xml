@@ -9,6 +9,7 @@
 		<property name="size" type="String"/>
 		<property name="mattress" type="String"/>
 		<property name="foam" type="String"/>
+		<property name="brand" type="String"/>
 	</bean>
 
 	<bean class="org.training.core.data.beans.TestimonyData">

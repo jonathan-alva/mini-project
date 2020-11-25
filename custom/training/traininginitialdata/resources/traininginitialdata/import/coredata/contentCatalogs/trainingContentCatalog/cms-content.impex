@@ -834,9 +834,10 @@ INSERT_UPDATE ProductPage; $contentCV[unique = true]; uid[unique = true]; name  
                          ;                          ; productDetails    ; Product Details ; ProductDetailsPageTemplate     ; true       ;
 
 # Category Pages
+#gantikegrid
 INSERT_UPDATE CategoryPage; $contentCV[unique = true]; uid[unique = true]; name                  ; masterTemplate(uid, $contentCV); defaultPage; approvalStatus(code)[default = 'approved']
-                          ;                          ; productList       ; Product List          ; ProductListPageTemplate        ; true       ;
-                          ;                          ; productGrid       ; Product Grid          ; ProductGridPageTemplate        ; false      ;
+                          ;                          ; productList       ; Product List          ; ProductListPageTemplate        ; false      ;
+                          ;                          ; productGrid       ; Product Grid          ; ProductGridPageTemplate        ; true       ;
                           ;                          ; category          ; Default Category Page ; CategoryPageTemplate           ; false      ;
 
 
@@ -918,3 +919,41 @@ INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = tr
 # Simple Content Pages
 INSERT_UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]; name           ; masterTemplate(uid, $contentCV); label; defaultPage[default = 'true']; approvalStatus(code)[default = 'approved']; homepage[default = 'false']
                          ;                          ; testimony         ; Testimony Page ; TestimonyPageTemplate          ; testimony
+#custom about us
+INSERT_UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]  ; name                        ; frontendTemplateName; restrictedPageTypes(code); active[default = true]
+                          ;                          ; AboutUsPageTemplate ; Demo About Us Page Template ; aboutus/aboutUsPage ; ContentPage
+
+
+UPDATE PageTemplate; $contentCV[unique = true]; uid[unique = true]  ; velocityTemplate[translator = de.hybris.platform.commerceservices.impex.impl.FileLoaderValueTranslator]
+                   ;                          ; AboutUsPageTemplate ; $jarResourceCms/structure-view/structure_aboutUsPageTemplate.vm
+
+INSERT_UPDATE ContentSlotName; name[unique = true]    ; template(uid, $contentCV)[unique = true][default = 'AboutUsPageTemplate']; validComponentTypes(code); compTypeGroup(code)
+                             ; SiteLogo               ;                                                                          ;                          ; logo
+                             ; HeaderLinks            ;                                                                          ;                          ; headerlinks
+                             ; SearchBox              ;                                                                          ;                          ; searchbox
+                             ; MiniCart               ;                                                                          ;                          ; minicart
+                             ; NavigationBar          ;                                                                          ;                          ; navigation
+                             ; MiddleContent          ;                                                                          ; CMSParagraphComponent,SimpleResponsiveBannerComponent
+                             ; BottomContent          ;                                                                          ;                          ; wide
+                             ; SideContent            ;                                                                          ;                          ; narrow
+                             ; Footer                 ;                                                                          ;                          ; footer
+                             ; TopHeaderSlot          ;                                                                          ;                          ; wide
+                             ; BottomHeaderSlot       ;                                                                          ;                          ; wide
+                             ; PlaceholderContentSlot ;                                                                          ;                          ;
+
+# Bind Content Slots to Page Templates
+INSERT_UPDATE ContentSlotForTemplate; $contentCV[unique = true]; uid[unique = true]                         ; position[unique = true]; pageTemplate(uid, $contentCV)[unique = true][default = 'AboutUsPageTemplate']; contentSlot(uid, $contentCV)[unique = true]; allowOverwrite
+                                    ;                          ; SiteLogo-AboutUsPageTemplate               ; SiteLogo               ;                                                                              ; SiteLogoSlot                               ; true
+                                    ;                          ; HomepageLink-AboutUsPageTemplate           ; HomepageNavLink        ;                                                                              ; HomepageNavLinkSlot                        ; true
+                                    ;                          ; NavigationBar-AboutUsPageTemplate          ; NavigationBar          ;                                                                              ; NavigationBarSlot                          ; true
+                                    ;                          ; MiniCart-AboutUsPageTemplate               ; MiniCart               ;                                                                              ; MiniCartSlot                               ; true
+                                    ;                          ; Footer-AboutUsPageTemplate                 ; Footer                 ;                                                                              ; FooterSlot                                 ; true
+                                    ;                          ; HeaderLinks-AboutUsPageTemplate            ; HeaderLinks            ;                                                                              ; HeaderLinksSlot                            ; true
+                                    ;                          ; SearchBox-AboutUsPageTemplate              ; SearchBox              ;                                                                              ; SearchBoxSlot                              ; true
+                                    ;                          ; TopHeaderSlot-AboutUsPageTemplate          ; TopHeaderSlot          ;                                                                              ; TopHeaderSlot                              ; true
+                                    ;                          ; BottomHeaderSlot-AboutUsPageTemplate       ; BottomHeaderSlot       ;                                                                              ; BottomHeaderSlot                           ; true
+                                    ;                          ; PlaceholderContentSlot-AboutUsPageTemplate ; PlaceholderContentSlot ;                                                                              ; PlaceholderContentSlot                     ; true
+
+# Simple Content Pages
+INSERT_UPDATE ContentPage; $contentCV[unique = true]; uid[unique = true]; name          ; masterTemplate(uid, $contentCV); label; defaultPage[default = 'true']; approvalStatus(code)[default = 'approved']; homepage[default = 'false']
+                         ;                          ; aboutus-page      ; About Us Page ; AboutUsPageTemplate            ; aboutus-page

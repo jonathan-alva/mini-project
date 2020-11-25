@@ -18,7 +18,8 @@ UPDATE TrainingProduct; code[unique = true]; $catalogVersion; name[lang = $lang]
                       ; INTHEBOXX          ;                ; INTHEBOX X        ; INTHEBOX X
                       ; INTHEBOX101        ;                ; INTHEBOX 101      ; INTHEBOX 101
                       ; INTHEBOXHYBRID     ;                ; INTHEBOX Hybrid   ; INTHEBOX HYBRID
-                      ; PROPSINTHEBOX      ;                ; PROPS INTHEBOX    ; Props INTHEBOX
+                      ; GULINGINTHEBOX     ;                ; GULING INTHEBOX   ; Guling INTHEBOX
+                      ; BANTALINTHEBOX     ;                ; BANTAL INTHEBOX   ; Bantal INTHEBOX
                       ; SOFABED            ;                ; SOFA BED          ; SOFA BED
 
 UPDATE TrainingVariantProduct; code[unique = true]    ; name[lang = $lang]
@@ -46,6 +47,6 @@ UPDATE TrainingVariantProduct; code[unique = true]    ; name[lang = $lang]
                              ; ITBHYBRID-QUEEN        ; Queen Size
                              ; ITBHYBRID-KING         ; King Size
                              ; ITBHYBRID-SUPER-KING   ; Super King Size
-                             ; PROPS-GULING           ; Guling INTHEBOX
-                             ; PROPS-BANTAL           ; Bantal INTHEBOX
+                             ; ITB-GULING             ; Guling
+                             ; ITB-BANTAL             ; Bantal
                              ; SOFA-BED               ; Super Single

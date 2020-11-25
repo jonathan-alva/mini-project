@@ -1,17 +1,26 @@
+/*
+ * Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+ */
 package org.training.facades.populators;
 
 import de.hybris.platform.commercefacades.product.data.ProductData;
 import de.hybris.platform.converters.Populator;
 import de.hybris.platform.core.model.product.ProductModel;
-import de.hybris.platform.servicelayer.dto.converter.ConversionException;
+import org.apache.commons.beanutils.ConversionException;
 import org.training.core.model.TrainingVariantProductModel;
+import org.training.facades.product.data.GenderData;
 
-public class ProductSizePopulator implements Populator<ProductModel, ProductData> {
+/**
+ * Populates {@link GenderData} with name and code.
+ */
+public class ProductBrandPopulator implements Populator<ProductModel, ProductData> {
     @Override
     public void populate(ProductModel source, ProductData target) throws ConversionException {
         if (source instanceof TrainingVariantProductModel) {
             TrainingVariantProductModel trainingVariantProductModel = (TrainingVariantProductModel) source;
-            target.setSize((trainingVariantProductModel.getSize()));
+            target.setBrand(trainingVariantProductModel.getBrand());
         }
     }
 }
+
+

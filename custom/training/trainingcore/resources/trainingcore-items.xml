@@ -137,6 +137,11 @@
                         <modifiers optional="true" initial="true"/>
                         <persistence type="property"/>
                     </attribute>
+                    <attribute qualifier="brand" type="java.lang.String">
+                        <description>Brand Product</description>
+                        <modifiers optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
                     <!--<attribute qualifier="activeStatus" type="ActiveStatus">-->
                     <!--<description>Active Status Product</description>-->
                     <!--<modifiers />-->
