@@ -24,6 +24,7 @@ if (!window.ACC) {
             var productList = $(".product-card-list-container");
             productList.find("img").addClass("product-list-home-img");
             productList.slick({
+                arrows: true,
                 infinite: true,
                 slidesToShow: 3,
                 adaptiveHeight: true,

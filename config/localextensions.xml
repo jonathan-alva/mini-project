@@ -103,5 +103,6 @@
     <extension name="trainingbackoffice"/>
     <extension name="trainingstorefront"/>
 	<extension name="trainingstorefrontcommons"/>
+    <extension name='trainingfulfilmentprocess'/>
   </extensions>
 </hybrisconfig>
