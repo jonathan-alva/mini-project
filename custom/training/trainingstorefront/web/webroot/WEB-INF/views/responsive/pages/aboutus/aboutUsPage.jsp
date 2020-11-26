@@ -12,17 +12,17 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <template:page pageTitle="${pageTitle}">
-    <div class="wrapper">
     <c:url value="/" var="homePageUrl"/>
 
 
-        <cms:pageSlot position="AboutUsPage" var="feature" element="div" class="aboutus-section1-slot">
-            <cms:component component="${feature}" element="div" class="aboutus-section1-component"/>
-        </cms:pageSlot>
+    <cms:pageSlot position="AboutUsPage" var="feature" element="div" class="aboutus-section1-slot">
+        <cms:component component="${feature}" element="div" class="aboutus-section1-component"/>
+    </cms:pageSlot>
 
-        <div class="aboutus-head">
-            <div class="container-aboutus">
-                <div class="head">
+    <div class="about">
+        <div class="about-up">
+            <div class="container">
+                <div class="about-up-content">
                     <cms:pageSlot position="AboutUsPage2" var="feature" element="div" class="aboutus-section2-slot">
                         <cms:component component="${feature}" element="div"
                                        class="aboutus-section2-component"/>
@@ -30,25 +30,25 @@
                 </div>
             </div>
         </div>
-        <div class="aboutus-wrapper">
-            <div class="container-aboutus">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="padding">
-                            <cms:pageSlot position="AboutUsPage3" var="feature" element="div"
-                                          class="aboutus-section3-slot">
-                                <cms:component component="${feature}" element="div"
-                                               class="aboutus-section3-component"/>
-                            </cms:pageSlot>
+
+        <div class="about-middle">
+            <div class="container">
+                <div class="about-middle-content">
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="about-middle-pad">
+                                <cms:pageSlot position="AboutUsPage3" var="feature" element="div"
+                                              class="aboutus-section3-slot">
+                                    <cms:component component="${feature}" element="div"
+                                                   class="aboutus-section3-component"/>
+                                </cms:pageSlot>
+                            </div>
+                            <a href="https://inthebox.id/id/apa-itu-kasur-inthebox"
+                               class="about-middle-btn">Selengkapnya</a>
                         </div>
-                        <div class="read-more">
-                            <a href="https://inthebox.id/id/apa-itu-kasur-inthebox" class="button">Selengkapnya</a>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="image1">
+                        <div class="col-md-8 col-lg-8 col-xl-8">
                             <cms:pageSlot position="AboutUsPage15" var="feature" element="div"
-                                          class="aboutus-section15-slot">
+                                          class="aboutus-image-right">
                                 <cms:component component="${feature}" element="div"
                                                class="aboutus-section15-component"/>
                             </cms:pageSlot>
@@ -56,49 +56,49 @@
                     </div>
                 </div>
             </div>
-            <div class="container-aboutus">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="image2">
+
+            <div class="container">
+                <div class="about-middle-content">
+                    <div class="row">
+                        <div class="col-md-8 col-lg-8 col-xl-8">
                             <cms:pageSlot position="AboutUsPage16" var="feature" element="div"
-                                          class="aboutus-section16-slot">
+                                          class="aboutus-image-left">
                                 <cms:component component="${feature}" element="div"
-                                               class=" aboutus-section16-component"/>
+                                               class="aboutus-section16-component"/>
                             </cms:pageSlot>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="padding">
-                            <cms:pageSlot position="AboutUsPage4" var="feature" element="div"
-                                          class="aboutus-section4-slot">
-                                <cms:component component="${feature}" element="div"
-                                               class="aboutus-section4-component"/>
-                            </cms:pageSlot>
-                        </div>
-                        <div class="read-more">
-                            <a href="https://inthebox.id/id/alasan-pilih-kasur-inthebox" class="button">Selengkapnya</a>
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="about-middle-pad">
+                                <cms:pageSlot position="AboutUsPage4" var="feature" element="div"
+                                              class="aboutus-section4-slot">
+                                    <cms:component component="${feature}" element="div"
+                                                   class="aboutus-section4-component"/>
+                                </cms:pageSlot>
+                            </div>
+                            <a href="https://inthebox.id/id/alasan-pilih-kasur-inthebox"
+                               class="about-middle-btn">Selengkapnya</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container-aboutus">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="padding">
-                            <cms:pageSlot position="AboutUsPage5" var="feature" element="div"
-                                          class="aboutus-section5-slot">
-                                <cms:component component="${feature}" element="div"
-                                               class="aboutus-section5-component"/>
-                            </cms:pageSlot>
+
+            <div class="container">
+                <div class="about-middle-content">
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="about-middle-pad">
+                                <cms:pageSlot position="AboutUsPage5" var="feature" element="div"
+                                              class="aboutus-section5-slot">
+                                    <cms:component component="${feature}" element="div"
+                                                   class="aboutus-section5-component"/>
+                                </cms:pageSlot>
+                            </div>
+                            <a href="https://inthebox.id/id/cara-beli-inthebox"
+                               class="about-middle-btn">Selengkapnya</a>
                         </div>
-                        <div class="read-more">
-                            <a href="https://inthebox.id/id/cara-beli-inthebox" class="button">Selengkapnya</a>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="image1">
+                        <div class="col-md-8 col-lg-8 col-xl-8">
                             <cms:pageSlot position="AboutUsPage17" var="feature" element="div"
-                                          class="aboutus-section17-slot">
+                                          class="aboutus-image-right">
                                 <cms:component component="${feature}" element="div"
                                                class="aboutus-section17-component"/>
                             </cms:pageSlot>
@@ -110,16 +110,14 @@
 
 
             <%--faq section--%>
-        <div class="faq">
-            <div class="judul">
-                <h1 class="title-aboutus"><cms:pageSlot position="AboutUsPage6" var="feature" element="div"
-                                                        class="aboutus-section6-slot">
+        <div class="about-faq">
+            <h1>
+                <cms:pageSlot position="AboutUsPage6" var="feature" element="div"
+                              class="aboutus-section6-slot">
                     <cms:component component="${feature}" element="div"
                                    class="aboutus-section6-component"/>
                 </cms:pageSlot>
-                </h1>
-            </div>
-
+            </h1>
             <a href="#que1" class="question" data-toggle="collapse">
                 <h3>
                     <cms:pageSlot position="AboutUsPage7" var="feature" element="div"
@@ -182,14 +180,9 @@
                 </cms:pageSlot>
             </div>
         </div>
-
     </div>
 
-    <script>
-        $('.question').click(function () {
-            $(this).find('span').toggleClass('expanded collapse');
-        });
-    </script>
+
 </template:page>
 
 
