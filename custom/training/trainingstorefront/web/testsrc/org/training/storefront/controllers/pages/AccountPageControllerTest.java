@@ -16,7 +16,7 @@ import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.Abstrac
 import de.hybris.platform.acceleratorstorefrontcommons.forms.AddressForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.UpdateEmailForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.UpdatePasswordForm;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.UpdateProfileForm;
+import org.training.storefront.forms.UpdateProfileForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.AddressValidator;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.EmailValidator;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.PasswordValidator;
@@ -93,6 +93,7 @@ public class AccountPageControllerTest
 	public static final String EMAIL = "hybris@hybris.com";
 	public static final String TITLE_CODE = "Mr.";
 	public static final String TEST_CODE = "12345";
+	public static final String ID = "1234567890123456";
 	public static final String TEST_COUNTRY_CODE = "US";
 	private static final String REDIRECT_TO_EDIT_ADDRESS_PAGE = "redirect:/my-account/edit-address/";
 	private static final String REDIRECT_TO_UPDATE_PROFILE = "redirect:/my-account/update-profile";
@@ -214,6 +215,7 @@ public class AccountPageControllerTest
 		BDDMockito.given(customerData.getLastName()).willReturn(LAST_NAME);
 		BDDMockito.given(customerData.getTitleCode()).willReturn(TITLE_CODE);
 		BDDMockito.given(customerData.getUid()).willReturn(FIRST_NAME);
+		BDDMockito.given(customerData.getId()).willReturn(ID);
 		BDDMockito.given(customerFacade.getCurrentCustomer()).willReturn(customerData);
 		BDDMockito.given(i18NService.getCurrentLocale()).willReturn(locale);
 		BDDMockito.given(i18NFacade.getRegionsForCountryIso(Mockito.anyString())).willReturn(Collections.singletonList(regionData));

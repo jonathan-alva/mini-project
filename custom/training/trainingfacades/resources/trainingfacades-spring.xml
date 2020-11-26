@@ -279,6 +279,10 @@
     <bean id="defaultTestimonyFacade" class="org.training.facades.testimony.Impl.DefaultTrainingTestimonyFacade">
     </bean>
 
+	<alias name="defaultCustomCustomerFacade" alias="customerFacade"/>
+	<bean name="defaultCustomCustomerFacade" class="org.training.facades.customer.impl.DefaultCustomCustomerFacade" parent="defaultCustomerFacade">
+	</bean>
+
     <bean id="testimonyPopulator" class="org.training.facades.populators.TestimonyPopulator"/>
     <alias name="defaultTestimonyConverter" alias="testimonyConverter"/>
     <bean id="defaultTestimonyConverter" parent="abstractPopulatingConverter">
