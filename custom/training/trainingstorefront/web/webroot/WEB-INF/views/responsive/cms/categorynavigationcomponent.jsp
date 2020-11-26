@@ -216,12 +216,12 @@
 							<li>
 								<div class="nav-cart">
 									<a 	href="${fn:escapeXml(cartUrl)}"
-										  class="mini-cart-link js-mini-cart-link"
-										  data-mini-cart-url="${fn:escapeXml(rolloverPopupUrl)}"
-										  data-mini-cart-refresh-url="${fn:escapeXml(refreshMiniCartUrl)}"
-										  data-mini-cart-name="<spring:theme code="text.cart"/>"
-										  data-mini-cart-empty-name="<spring:theme code="popup.cart.empty"/>"
-										  data-mini-cart-items-text="<spring:theme code="basket.items"/>"
+										  class="mini-cart-link "
+										  <%--data-mini-cart-url="${fn:escapeXml(rolloverPopupUrl)}"--%>
+										  <%--data-mini-cart-refresh-url="${fn:escapeXml(refreshMiniCartUrl)}"--%>
+										  <%--data-mini-cart-name="<spring:theme code="text.cart"/>"--%>
+										  <%--data-mini-cart-empty-name="<spring:theme code="popup.cart.empty"/>"--%>
+										  <%--data-mini-cart-items-text="<spring:theme code="basket.items"/>"--%>
 									>
 										<div class="mini-cart-icon">
 
