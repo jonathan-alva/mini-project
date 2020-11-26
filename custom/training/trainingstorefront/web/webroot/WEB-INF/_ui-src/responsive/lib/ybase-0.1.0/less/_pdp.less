@@ -1,37 +1,119 @@
 
-.pdp{
+.pdp {
   margin: 40px 0;
-  font-family: Brown, sans-serif, Arial, Verdana, "Trebuchet MS", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.5;
 
-}
+  &-image {
+    text-align: center;
+  }
 
-.desc {
-  .name-product {
+  &-desc-name {
     margin-top: 0;
     margin-bottom: .65rem;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.2;
     font-size: 2.86rem;
   }
 
-  .code-product {
-    font-weight: 400;
+  &-desc-subname {
     font-size: 1.95rem;
   }
 
-  .price {
-    font-style: normal;
-    font-size: 4rem;
-    line-height: .6;
+  &-desc-price {
+    font-size: 3rem;
+    color: #6086c2;
+    line-height: 1.6;
+    font-weight: 700;
+    font-style: italic;
+  }
+  &-desc-size {
+    font-size: 1.69rem;
+  }
+
+  &-desc-summary {
+    font-size: 1.69rem;
+    padding-bottom: 10px;
   }
 }
 
-@media screen {
-  @media (min-width: 768px) {
-    .pdp {
-      margin: 50px 0;
+
+.catalog {
+  margin: 40px 0px 0px 0px;
+
+  &-allbtn{
+    margin-top: 20px;
+  }
+
+  &-allbtn a{
+    font-size: 1.3rem !important;
+    font-weight: 600;
+  }
+  &-allbtn .btn.btn-brand:hover {
+    background-color: #7fc5f9;
+    color: #6086c2!important;
+  }
+
+  .btn.btn-brand:hover {
+    background-color: #7fc5f9;
+    color: #6086c2!important;
+  }
+
+  &-product {
+    width: 320px;
+    min-width: 200px;
+    padding: 0 10px;
+
+    &-image img {
+      max-width: 100%;
+    }
+
+    &-name {
+      color: #0f0f0f;
+      font-size: 1.82rem;
+      font-weight: 500;
+      margin-top: 0px;
+      margin-bottom: 5px;
+    }
+
+    &-size {
+      color: #0f0f0f;
+      font-size: 1.69rem;
+      line-height: 1.3;
+    }
+    &-price {
+      color: #6086c2;
+      font-size: 2rem;
+      font-weight: 600;
+      font-style: italic;
+      line-height: .8;
+      margin-top: 10px;
     }
   }
 }
 
+.catalog .container .row {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+@media (max-width: 1399px){
+  .catalog .container .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .catalog {
+    margin: 50px 0px 0px 0px;
+  }
+
+  .pdp {
+    margin: 50px 0;
+  }
+
+  .catalog-product {
+    min-width: 220px;
+  }
+}
