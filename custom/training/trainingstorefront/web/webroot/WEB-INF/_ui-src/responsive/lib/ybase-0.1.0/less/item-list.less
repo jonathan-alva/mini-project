@@ -95,11 +95,11 @@
   }
 
   .item__image {
-    width: (@max-item-image-width + (@grid-gutter-width * 2));
+    width: (@max-item-image-width + (@grid-gutter-width * 4));
     padding: 0 @grid-gutter-width;
 
     img {
-      max-width: @max-item-image-width;
+      max-width: @max-item-image-width*2;
     }
   }
 
@@ -129,6 +129,7 @@
 
   .item__total--column {
     text-align: right;
+    width:10%;
   }
 
   .item__total {
@@ -136,6 +137,7 @@
     font-weight: 700;
     text-align: right;
     padding-left: 0;
+    width:20%;
   }
 
   .item__remove, .item__menu {
@@ -265,7 +267,7 @@
     }
 
     .item__info {
-      width: 35%;
+      width: 40%;
       padding: 0 @grid-gutter-width/2;
     }
 

@@ -3443,7 +3443,6 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-block {
   display: block;
-  width: 100%;
 }
 .btn-block + .btn-block {
   margin-top: 5px;
@@ -8243,7 +8242,7 @@ button {
   font-weight: bold;
 }
 .btn {
-  border-radius: 0 !important;
+  border-radius: 5px !important;
 }
 ul,
 ol {
@@ -10384,7 +10383,7 @@ fieldset[disabled] .btn-default.active {
   background-color: #ffffff;
 }
 .btn-primary {
-  border: 3px solid;
+  border: 2px solid;
   color: #ffffff;
   background-color: #ec7205;
   border-color: #ec7205;
@@ -12810,11 +12809,11 @@ a.product__listing .product__listing--promo:focus {
   content: "\e113";
 }
 .item__list .item__image {
-  width: 136px;
+  width: 176px;
   padding: 0 20px;
 }
 .item__list .item__image img {
-  max-width: 96px;
+  max-width: 192px;
 }
 .item__list .item__name {
   font-size: 16px;
@@ -12836,12 +12835,14 @@ a.product__listing .product__listing--promo:focus {
 }
 .item__list .item__total--column {
   text-align: right;
+  width: 10%;
 }
 .item__list .item__total {
   font-size: 15px;
   font-weight: 700;
   text-align: right;
   padding-left: 0;
+  width: 20%;
 }
 .item__list .item__remove,
 .item__list .item__menu {
@@ -12943,7 +12944,7 @@ a.product__listing .product__listing--promo:focus {
     vertical-align: middle;
   }
   .item__list .item__info {
-    width: 35%;
+    width: 40%;
     padding: 0 10px;
   }
   .item__list .item__delivery {
@@ -13232,8 +13233,8 @@ a.product__listing .product__listing--promo:focus {
 }
 .cart__actions,
 .cart__actions--top {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 30%;
+  padding-right: 30%;
   padding-bottom: 32px;
 }
 @media (max-width: 1024px) {
@@ -13254,6 +13255,8 @@ a.product__listing .product__listing--promo:focus {
 .item__list__cart {
   margin-top: 15px;
   margin-bottom: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .item__list__cart table td {
   padding: 0;
@@ -13341,7 +13344,7 @@ a.product__listing .product__listing--promo:focus {
   font-weight: bold;
 }
 .item__list__cart .item__quantity {
-  text-align: left;
+  text-align: center;
 }
 .item__list__cart .notification.has-error {
   padding: 0 30px;
@@ -13442,6 +13445,9 @@ a.product__listing .product__listing--promo:focus {
     padding-right: 10px;
   }
 }
+.cart-totals .cart-totals-center {
+  position: center;
+}
 .cart-totals .cart-totals-left {
   padding-left: 50px;
 }
@@ -13466,6 +13472,7 @@ a.product__listing .product__listing--promo:focus {
   font-weight: bold;
   padding-top: 15px;
   padding-bottom: 15px;
+  position: center;
 }
 .cart-totals .cart-totals-taxes {
   clear: both;

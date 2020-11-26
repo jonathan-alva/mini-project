@@ -21,7 +21,7 @@
 
 <c:set var="errorStatus" value="<%= de.hybris.platform.catalog.enums.ProductInfoStatus.valueOf(\"ERROR\") %>" />
 <c:set var="entryNumberHtml" value="${fn:escapeXml(entry.entryNumber)}"/>
-<c:set var="productCodeHtml" value="${fn:escapeXml(entry.product.code)}"/>
+<c:set var="productCodeHtml" value="${fn:escapeXml(entry.product.name)}"/>
 <c:set var="quantityHtml" value="${fn:escapeXml(entry.quantity)}"/>
 
 <c:if test="${empty index}">
@@ -51,15 +51,15 @@
 
         <li class="item__list--item">
             <%-- chevron for multi-d products --%>
-            <div class="hidden-xs hidden-sm item__toggle">
-                <c:if test="${entry.product.multidimensional}" >
-                    <div class="js-show-editable-grid" data-index="${fn:escapeXml(index)}" data-read-only-multid-grid="${not entry.updateable}">
-                        <ycommerce:testId code="cart_product_updateQuantity">
-                            <span class="glyphicon glyphicon-chevron-down"></span>
-                        </ycommerce:testId>
-                    </div>
-                </c:if>
-            </div>
+<%--            <div class="hidden-xs hidden-sm item__toggle">--%>
+<%--                <c:if test="${entry.product.multidimensional}" >--%>
+<%--                    <div class="js-show-editable-grid" data-index="${fn:escapeXml(index)}" data-read-only-multid-grid="${not entry.updateable}">--%>
+<%--                        <ycommerce:testId code="cart_product_updateQuantity">--%>
+<%--                            <span class="glyphicon glyphicon-chevron-down"></span>--%>
+<%--                        </ycommerce:testId>--%>
+<%--                    </div>--%>
+<%--                </c:if>--%>
+<%--            </div>--%>
 
             <%-- product image --%>
             <div class="item__image">
@@ -69,7 +69,7 @@
             <%-- product name, code, promotions --%>
             <div class="item__info">
                 <ycommerce:testId code="cart_product_name">
-                    <a href="${fn:escapeXml(productUrl)}"><span class="item__name">${fn:escapeXml(entry.product.name)}</span></a>
+                    <a href="${fn:escapeXml(productUrl)}"><span class="item__name">${fn:escapeXml(entry.product.baseProduct)}</span></a>
                 </ycommerce:testId>
 
                 <div class="item__code">${productCodeHtml}</div>
@@ -169,10 +169,10 @@
             </div>
 
             <%-- price --%>
-            <div class="item__price">
-                <span class="visible-xs visible-sm"><spring:theme code="basket.page.itemPrice"/>: </span>
-                <format:price priceData="${entry.basePrice}" displayFreeForZero="true"/>
-            </div>
+<%--            <div class="item__price">--%>
+<%--                <span class="visible-xs visible-sm"><spring:theme code="basket.page.itemPrice"/>: </span>--%>
+<%--                <format:price priceData="${entry.basePrice}" displayFreeForZero="true"/>--%>
+<%--            </div>--%>
 
             <%-- quantity --%>
             <div class="item__quantity hidden-xs hidden-sm">
@@ -210,22 +210,17 @@
             </div>
 
             <%-- delivery --%>
-            <div class="item__delivery">
-                <c:if test="${entry.product.purchasable}">
-                    <c:if test="${not empty entryStock and entryStock ne 'outOfStock'}">
-                        <c:if test="${entry.deliveryPointOfService eq null or not entry.product.availableForPickup}">
-                            <span class="item__delivery--label"><spring:theme code="basket.page.shipping.ship"/></span>
-                        </c:if>
-                    </c:if>
-                    <c:if test="${not empty entry.deliveryPointOfService.name}">
-                        <span class="item__delivery--label"><spring:theme code="basket.page.shipping.pickup"/></span>
-                    </c:if>
+<%--            <div class="item__delivery">--%>
+<%--                <c:if test="${entry.product.purchasable}">--%>
+<%--                    <c:if test="${not empty entry.deliveryPointOfService.name}">--%>
+<%--                        <span class="item__delivery--label"><spring:theme code="basket.page.shipping.pickup"/></span>--%>
+<%--                    </c:if>--%>
 
-                    <c:if test="${entry.product.availableForPickup and not empty entry.deliveryPointOfService.name}">
-                        <div class="item__delivery--store">${fn:escapeXml(entry.deliveryPointOfService.name)}</div>
-                    </c:if>
-                </c:if>
-            </div>
+<%--                    <c:if test="${entry.product.availableForPickup and not empty entry.deliveryPointOfService.name}">--%>
+<%--                        <div class="item__delivery--store">${fn:escapeXml(entry.deliveryPointOfService.name)}</div>--%>
+<%--                    </c:if>--%>
+<%--                </c:if>--%>
+<%--            </div>--%>
 
             <%-- total --%>
             <ycommerce:testId code="cart_totalProductPrice_label">
