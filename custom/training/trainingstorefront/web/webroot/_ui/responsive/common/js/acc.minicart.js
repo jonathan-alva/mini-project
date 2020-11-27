@@ -35,7 +35,7 @@ ACC.minicart = {
 			dataType: 'json',
 			success: function(jsonData){
 				var $cartItems = $("<span>").addClass("items-desktop hidden-xs hidden-sm").text(" " + cartItems);
-				var $numberItem = $("<span>").addClass("nav-items-total").text(jsonData.miniCartCount);
+				var $numberItem = $("<span>").addClass("nav-items-total").text(jsonData.miniCartCount).append($cartItems);
 				$(".js-mini-cart-link .js-mini-cart-count").empty();
 				$(".js-mini-cart-link .js-mini-cart-count").append($numberItem);
 				$(".js-mini-cart-link .js-mini-cart-price").text(jsonData.miniCartPrice);	

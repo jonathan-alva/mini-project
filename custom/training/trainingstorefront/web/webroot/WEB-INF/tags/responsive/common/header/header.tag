@@ -18,7 +18,7 @@
 <header class="js-mainHeader wrapper header">
     <div class="container top-header display-flex flex-wrap justify-content-between align-items-center py-3">
         <div class="display-flex flex-wrap top-header-item">
-            <div class="display-flex align-items-center mr-5 flex-wrap ">
+            <div class="display-flex align-items-center mr-5 flex-wrap top-header-item">
                 <cms:pageSlot position="Garansi10TahunImg" var="feature">
                     <cms:component component="${feature}" element="div" class="display-flex top-header-item"/>
                 </cms:pageSlot>
