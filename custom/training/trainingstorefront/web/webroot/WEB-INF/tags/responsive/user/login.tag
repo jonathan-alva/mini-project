@@ -11,15 +11,15 @@
 
 <c:set var="hideDescription" value="checkout.login.loginAndCheckout" />
 
-<div class="login-page__headline">
+<div class="login-page__headline text-center">
 	<spring:theme code="login.title" />
 </div>
 
-<c:if test="${actionNameKey ne hideDescription}">
-	<p>
-		<spring:theme code="login.description" />
-	</p>
-</c:if>
+<%--<c:if test="${actionNameKey ne hideDescription}">--%>
+<%--	<p>--%>
+<%--		<spring:theme code="login.description" />--%>
+<%--	</p>--%>
+<%--</c:if>--%>
 
 <form:form action="${action}" method="post" modelAttribute="loginForm">
 	<c:if test="${not empty message}">
@@ -41,7 +41,7 @@
 				</ycommerce:testId>
 			</div>
 		<ycommerce:testId code="loginAndCheckoutButton">
-			<button type="submit" class="btn btn-primary btn-block">
+			<button type="submit" class="btn btn-primary">
 				<spring:theme code="${actionNameKey}" />
 			</button>
 		</ycommerce:testId>

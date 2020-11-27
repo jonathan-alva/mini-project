@@ -16,9 +16,9 @@
 <div class="user-register__headline">
     <spring:theme code="register.new.customer"/>
 </div>
-<p>
-    <spring:theme code="register.description"/>
-</p>
+<%--<p>--%>
+<%--    <spring:theme code="register.description"/>--%>
+<%--</p>--%>
 
 <form:form method="post" modelAttribute="registerForm" action="${action}">
     <formElement:formSelectBoxDefaultEnabled idKey="register.title"

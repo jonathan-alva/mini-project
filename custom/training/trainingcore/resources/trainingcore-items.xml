@@ -218,6 +218,14 @@
                     </attribute>
                 </attributes>
             </itemtype>
+            
+            <itemtype code="Cart" generate="false" autocreate="false">
+                <attributes>
+                    <attribute qualifier="note" type="java.lang.String">
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
         </typegroup>
 
     </itemtypes>

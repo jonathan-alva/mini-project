@@ -32,6 +32,11 @@
 	<bean class="de.hybris.platform.commercefacades.user.data.CustomerData">
 		<property name="id" type="String"/>
 	</bean>
+
+	<bean class="de.hybris.platform.commercefacades.order.data.CartData">
+		<property name="note" type="String"/>
+	</bean>
+
 	<enum class="de.hybris.platform.commercefacades.product.ProductOption">
 		<value>PRODUCT_SIZE</value>
 	</enum>
