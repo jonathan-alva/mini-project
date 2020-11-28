@@ -17,12 +17,12 @@
 
 <div class="nav-cart">
 	<a 	href="${fn:escapeXml(cartUrl)}"
-		class="mini-cart-link js-mini-cart-link"
-		data-mini-cart-url="${fn:escapeXml(rolloverPopupUrl)}"
-		data-mini-cart-refresh-url="${fn:escapeXml(refreshMiniCartUrl)}"
-		data-mini-cart-name="<spring:theme code="text.cart"/>"
-		data-mini-cart-empty-name="<spring:theme code="popup.cart.empty"/>"
-		data-mini-cart-items-text="<spring:theme code="basket.items"/>"
+		class="mini-cart-link "
+		<%--data-mini-cart-url="${fn:escapeXml(rolloverPopupUrl)}"--%>
+		<%--data-mini-cart-refresh-url="${fn:escapeXml(refreshMiniCartUrl)}"--%>
+		<%--data-mini-cart-name="<spring:theme code="text.cart"/>"--%>
+		<%--data-mini-cart-empty-name="<spring:theme code="popup.cart.empty"/>"--%>
+		<%--data-mini-cart-items-text="<spring:theme code="basket.items"/>"--%>
 		>
 		<div class="mini-cart-icon">
 			<span class="glyphicon glyphicon-shopping-cart "></span>
@@ -42,7 +42,7 @@
 					<format:price priceData="${totalNoDelivery}" />
 				</c:if>
 			</div>
-			<div class="mini-cart-count js-mini-cart-count"><span class="nav-items-total">${totalItems lt 100 ? fn:escapeXml(totalItems) : "99+"}<span class="items-desktop hidden-xs">&nbsp;<spring:theme code="basket.items"/></span></span></div>
+			<div class="mini-cart-count js-mini-cart-count"><span class="nav-items-total">${totalItems lt 100 ? fn:escapeXml(totalItems) : "99+"}</span></div>
 		</ycommerce:testId>
 
 	</a>

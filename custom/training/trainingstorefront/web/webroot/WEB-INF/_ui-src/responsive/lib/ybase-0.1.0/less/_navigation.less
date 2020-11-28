@@ -421,7 +421,7 @@ ul.nav__links {
   }
 
   .componentContainer {
-    @media (max-width: @screen-xs-max) {
+    @media (max-width: @screen-sm-max) {
       text-align: center;
       vertical-align: top;
       border-left: 1px solid @nav-border-color;
@@ -453,7 +453,7 @@ ul.nav__links {
       //padding-left: 30px;
     }
 
-    @media (max-width: @screen-xs-max) {
+    @media (max-width: @screen-sm-max) {
       position: relative;
       float: none;
       padding: 0;
@@ -482,7 +482,7 @@ ul.nav__links {
         white-space: nowrap;
       }
 
-      @media (max-width: @screen-xs-max) {
+      @media (max-width: @screen-sm-max) {
         display: block;
 
         .mini-cart-icon {
@@ -547,11 +547,11 @@ ul.nav__links {
     }
 
     .mini-cart-icon {
-      @media (min-width: @screen-sm) {
-        float: right;
-        position: relative;
-        top: 5px;
-      }
+      //@media (min-width: @screen-sm) {
+      //  float: right;
+      //  position: relative;
+      //  top: 5px;
+      //}
 
       .glyphicon-shopping-cart {
         font-size: 22px;
@@ -565,7 +565,7 @@ ul.nav__links {
 
   .mobile__nav__row {
 
-    @media (max-width: @screen-xs-max) {
+    @media (max-width: @screen-sm-max) {
       &.mobile__nav__row--table,
       .mobile__nav__row--table {
         display: table !important;
@@ -633,7 +633,7 @@ ul.nav__links {
   }
 
   .mobile__nav__row--btn {
-    @media (max-width: @screen-xs-max) {
+    @media (max-width: @screen-sm-max) {
       padding: 0;
       vertical-align: top;
       height: @navigation--middle-height;
@@ -1618,4 +1618,28 @@ main.offcanvas {
 }
 .top-header-menu {
   padding: 1rem;
+}
+
+.top-header-item {
+  @media(max-width: 730px){
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.li-nav-logo {
+  @media(max-width: 1024px){
+    display: none !important;
+  }
+}
+.li-nav-account {
+  @media(max-width: 1024px){
+    display: none !important;
+  }
+}
+.nav__links--primary {
+  @media(max-width: 1024px){
+    display: unset !important;
+    border-bottom: unset !important;
+  }
 }

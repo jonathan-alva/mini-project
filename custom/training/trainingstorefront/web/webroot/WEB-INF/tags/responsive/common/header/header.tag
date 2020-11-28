@@ -17,16 +17,16 @@
 
 <header class="js-mainHeader wrapper header">
     <div class="container top-header display-flex flex-wrap justify-content-between align-items-center py-3">
-        <div class="display-flex flex-wrap ">
-            <div class="display-flex align-items-center mr-5 flex-wrap">
+        <div class="display-flex flex-wrap top-header-item">
+            <div class="display-flex align-items-center mr-5 flex-wrap top-header-item">
                 <cms:pageSlot position="Garansi10TahunImg" var="feature">
-                    <cms:component component="${feature}" element="div" class="display-flex"/>
+                    <cms:component component="${feature}" element="div" class="display-flex top-header-item"/>
                 </cms:pageSlot>
                 <cms:pageSlot position="Garansi10TahunText" var="comp">
-                    <cms:component component="${comp}" element="div" class="display-flex top-header-text"/>
+                    <cms:component component="${comp}" element="div" class="display-flex top-header-text top-header-item"/>
                 </cms:pageSlot>
             </div>
-            <div class="display-flex align-items-center flex-wrap">
+            <div class="display-flex align-items-center flex-wrap top-header-item">
                 <cms:pageSlot position="FreeShippingImg" var="feature">
                     <cms:component component="${feature}" element="div" class="display-flex"/>
                 </cms:pageSlot>
@@ -35,7 +35,7 @@
                 </cms:pageSlot>
             </div>
         </div>
-        <div class="display-flex flex-wrap ">
+        <div class="display-flex flex-wrap top-header-item">
             <cms:pageSlot position="GaransiTopHeaderText" var="comp">
                 <cms:component component="${comp}" element="div" class="display-flex top-header-menu"/>
             </cms:pageSlot>
@@ -47,17 +47,17 @@
             </cms:pageSlot>
         </div>
     </div>
-    <nav class="navigation navigation--top hidden-xs hidden-sm">
-        <div class="row">
-            <div class="col-sm-12 col-md-4">
-                <div class="nav__left js-site-logo">
+    <%--<nav class="navigation navigation--top hidden-xs hidden-sm">--%>
+        <%--<div class="row">--%>
+            <%--<div class="col-sm-12 col-md-4">--%>
+                <%--<div class="nav__left js-site-logo">--%>
                     <%--<cms:pageSlot position="SiteLogo" var="logo" limit="1">--%>
                         <%--<cms:component component="${logo}" element="div" class="yComponentWrapper"/>--%>
                     <%--</cms:pageSlot>--%>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-8">
-                <div class="nav__right">
+                <%--</div>--%>
+            <%--</div>--%>
+            <%--<div class="col-sm-12 col-md-8">--%>
+                <%--<div class="nav__right">--%>
                     <%--<ul class="nav__links nav__links--account">--%>
                         <%--<c:if test="${empty hideHeaderLinks}">--%>
                             <%--<c:if test="${uiExperienceOverride}">--%>
@@ -112,10 +112,10 @@
 
                         <%--</c:if>--%>
                     <%--</ul>--%>
-                </div>
-            </div>
-        </div>
-    </nav>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+    <%--</nav>--%>
     <%-- a hook for the my account links in desktop/wide desktop--%>
     <div class="hidden-xs hidden-sm js-secondaryNavAccount collapse" id="accNavComponentDesktopOne">
         <ul class="nav__links">

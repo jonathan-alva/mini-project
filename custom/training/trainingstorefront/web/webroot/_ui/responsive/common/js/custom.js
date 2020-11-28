@@ -11,7 +11,7 @@ if (!window.ACC) {
         home: function () {
             var mainBanner = $(".main-banner");
             mainBanner.slick({
-                arrows: false,
+                arrows: true,
                 dots: true,
                 infinite: true,
                 autoplay: true,
@@ -19,8 +19,11 @@ if (!window.ACC) {
                 slidesToShow: 1,
                 adaptiveHeight: true,
                 swipe: true,
-                swipeToSlide: true
+                swipeToSlide: true,
+                mobileFirst: true
             });
+            mainBanner.find(".slick-slide").addClass("main-banner-item");
+
             var productList = $(".product-card-list-container");
             productList.find("img").addClass("product-list-home-img");
             productList.slick({
@@ -58,6 +61,7 @@ if (!window.ACC) {
                 slidesToShow: 4,
                 adaptiveHeight: true,
                 swipe: true,
+                arrows: false,
                 swipeToSlide: true,
                 responsive: [
                     {
