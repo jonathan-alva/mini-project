@@ -19545,7 +19545,6 @@ h1.first {
 .cart-jumlah-add {
   text-align: center;
   margin-right: 0;
-  border: none;
 }
 .cart-price-style {
   text-align: right;
@@ -19570,9 +19569,10 @@ h1.first {
   margin-right: 300px;
 }
 .notes-desc {
-  resize: vertical;
-  text-align: center;
-  height: 5em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 .skip,
 .skiptocontent,

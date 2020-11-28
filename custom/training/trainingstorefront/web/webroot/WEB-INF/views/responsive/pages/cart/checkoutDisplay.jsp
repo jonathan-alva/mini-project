@@ -40,7 +40,7 @@
     <form:form method="post" modelAttribute="orderNote" cssStyle="text-align: center">
         <formElement:formTextArea idKey="cart.note"
                                   labelKey="cart.note" path="note"
-                                  mandatory="false" areaCSS="form-control"/>
+                                  mandatory="false" areaCSS="form-control notes-desc"/>
     </form:form>
 </div>
 
