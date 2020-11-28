@@ -1,0 +1,42 @@
+.plp {
+  &-con {
+    margin-right: 40px;
+  }
+
+  &-image img {
+    max-width: 150%;
+    padding-bottom: 25px;
+  }
+
+  &-details {
+    line-height: 1.6;
+    font-size: 1.6rem;
+
+    &-price {
+      font-size: 2rem !important;
+      color: #6086c2;
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    &-name {
+      color: black;
+      font-weight: bold;
+    }
+  }
+}
+
+@media (max-width: @screen-sm-max) {
+  .plp {
+    &-details {
+      font-size: 3.6vw;
+
+      &-price {
+        font-size: 4vw !important;
+      }
+    }
+  }
+}
+
+
+

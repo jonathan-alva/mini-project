@@ -19492,20 +19492,34 @@ header {
     min-width: 220px;
   }
 }
-.aboutus-wrapper {
-  padding-top: 50px;
-  background-color: #7FC5F9;
+.about-up {
+  background-color: #5F86C2;
 }
-h1.first {
+.about-up-content {
+  line-height: 1.5;
   text-align: center;
-}
-.container-aboutus {
-  font-size: 15px;
+  color: white;
+  font-size: 2rem;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 25px;
   padding-bottom: 50px;
-  padding-left: 60px;
+}
+.about-middle {
+  background-color: #7FC5F9;
+  font-size: 1.8rem;
+  padding-bottom: 50px;
+}
+.about-middle-content {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 55px;
   padding-right: 55px;
 }
-.button {
+.about-middle-pad {
+  padding-bottom: 40px;
+}
+.about-middle-btn {
   background-color: #5F86C2;
   color: white;
   font-weight: bold;
@@ -19516,33 +19530,71 @@ h1.first {
   padding-left: 20px;
   padding-right: 20px;
 }
-.aboutus-head {
+.about-faq {
+  font-size: 1.8rem;
   text-align: center;
-  background-color: #5F86C2;
-  color: white;
+  background-color: white;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.image {
+  width: 88%;
+  height: auto;
   padding-top: 25px;
 }
-.padding {
-  padding-bottom: 40px;
-}
-.image1 {
+.aboutus-image-left {
   width: 88%;
   height: auto;
-  float: right;
-}
-.image2 {
-  width: 88%;
-  height: auto;
+  padding-top: 25px;
   float: left;
 }
-.faq {
-  text-align: center;
+.aboutus-image-right {
+  width: 88%;
+  height: auto;
+  padding-top: 25px;
+  float: right;
 }
-.title-aboutus {
-  padding-top: 30px;
-  padding-bottom: 30px;
+@media (max-width: 1023px) {
+  .image {
+    width: 100%;
+  }
+  .aboutus-image-left {
+    width: 100%;
+    float: left;
+  }
+  .aboutus-image-right {
+    width: 100%;
+    float: left;
+  }
+}
+.plp-con {
+  margin-right: 40px;
+}
+.plp-image img {
+  max-width: 150%;
+  padding-bottom: 25px;
+}
+.plp-details {
+  line-height: 1.6;
+  font-size: 1.6rem;
+}
+.plp-details-price {
+  font-size: 2rem !important;
+  color: #6086c2;
+  font-weight: 700;
+  font-style: italic;
+}
+.plp-details-name {
+  color: black;
   font-weight: bold;
-  text-align: center;
+}
+@media (max-width: 1023px) {
+  .plp-details {
+    font-size: 3.6vw;
+  }
+  .plp-details-price {
+    font-size: 4vw !important;
+  }
 }
 .skip,
 .skiptocontent,
