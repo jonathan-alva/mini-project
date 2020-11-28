@@ -5,6 +5,10 @@
 <%@ taglib prefix="ycommerce" uri="http://hybris.com/tld/ycommercetags" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
+<%--<%@ attribute name="action" required="false" type="java.lang.String" %>--%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="formElement" tagdir="/WEB-INF/tags/responsive/formElement" %>
+
 <spring:htmlEscape defaultHtmlEscape="true" />
 
 <c:url value="/cart/checkout" var="checkoutUrl" scope="session"/>
@@ -32,6 +36,18 @@
 <%--        </div>--%>
 <%--    </div>--%>
 <%--</div>--%>
+<div>
+    <form:form method="post" modelAttribute="orderNote" cssStyle="text-align: center">
+        <formElement:formTextArea idKey="cart.note"
+                                  labelKey="cart.note" path="note"
+                                  mandatory="false" areaCSS="form-control"/>
+    </form:form>
+</div>
+
+<div class="cart-totals">
+    <cart:cartTotals cartData="${cartData}"/>
+    <cart:ajaxCartTotals/>
+</div>
 
 <div class="cart__actions">
     <div class="row">

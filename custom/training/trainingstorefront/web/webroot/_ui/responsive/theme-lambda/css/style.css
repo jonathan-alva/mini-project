@@ -19499,7 +19499,7 @@ h1.first {
 }
 .cart-remove {
   text-align: center;
-  margin-left: 75px;
+  margin-left: 0;
 }
 .cart-price {
   color: #6086c2;
@@ -19543,8 +19543,9 @@ h1.first {
   font-weight: bold;
 }
 .cart-jumlah-add {
-  text-align: right;
-  margin-right: 75px;
+  text-align: center;
+  margin-right: 0;
+  border: none;
 }
 .cart-price-style {
   text-align: right;
@@ -19556,10 +19557,10 @@ h1.first {
   font-weight: bold;
 }
 .itemcart-jumlah {
-  margin-left: 535px;
+  margin-left: 48.5%;
 }
 .itemcart-total {
-  margin-left: 300px;
+  margin-left: 38.5%;
 }
 .notes {
   text-align: center;

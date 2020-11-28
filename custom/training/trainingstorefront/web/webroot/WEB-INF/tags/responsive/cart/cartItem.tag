@@ -207,7 +207,7 @@
                                             for="quantity${entry.entryNumber}"></form:label>
                                 <form:input cssClass="qty-number js-update-entry-quantity-input"
                                             disabled="${not entry.updateable}" type="text" size="1"
-                                            id="quantity_${entry.entryNumber}" path="quantity"/>
+                                            id="quantity_${entry.entryNumber}" path="quantity" cssStyle="border: none"/>
                             </ycommerce:testId>
                         </div>
                     </form:form>
