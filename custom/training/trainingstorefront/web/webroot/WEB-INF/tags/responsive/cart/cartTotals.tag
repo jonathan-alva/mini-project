@@ -52,8 +52,9 @@
 <%--		</div>--%>
 <%--	</c:if>--%>
 
-    <div class="col-md-6 cart-totals text-right grand-total"><spring:theme code="basket.page.totals.total"/></div>
-    <div class="col-md-6 cart-totals text-left grand-total">
+<%--    <div class="col-md-6 cart-totals text-right grand-total"><spring:theme code="basket.page.totals.total"/></div>--%>
+    <div class="cart-totals text-center grand-total">
+        <spring:theme code="basket.page.totals.total"/>
         <ycommerce:testId code="cart_totalPrice_label">
             <c:choose>
                 <c:when test="${showTax}">
