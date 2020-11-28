@@ -30,12 +30,20 @@
                 </div>
             </div>
         </div>
-
         <div class="about-middle">
             <div class="container">
                 <div class="about-middle-content">
                     <div class="row">
-                        <div class="col-md-4 col-lg-4 col-xl-4">
+
+                        <div class="col-md-push-4 col-md-8 col-lg-8 col-xl-8">
+                            <cms:pageSlot position="AboutUsPage15" var="feature" element="div"
+                                          class="aboutus-image-right">
+                                <cms:component component="${feature}" element="div"
+                                               class="aboutus-section15-component"/>
+                            </cms:pageSlot>
+                        </div>
+
+                        <div class="col-md-pull-8 col-md-4 col-lg-4 col-xl-4">
                             <div class="about-middle-pad">
                                 <cms:pageSlot position="AboutUsPage3" var="feature" element="div"
                                               class="aboutus-section3-slot">
@@ -46,13 +54,7 @@
                             <a href="https://inthebox.id/id/apa-itu-kasur-inthebox"
                                class="about-middle-btn">Selengkapnya</a>
                         </div>
-                        <div class="col-md-8 col-lg-8 col-xl-8">
-                            <cms:pageSlot position="AboutUsPage15" var="feature" element="div"
-                                          class="aboutus-image-right">
-                                <cms:component component="${feature}" element="div"
-                                               class="aboutus-section15-component"/>
-                            </cms:pageSlot>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -85,7 +87,14 @@
             <div class="container">
                 <div class="about-middle-content">
                     <div class="row">
-                        <div class="col-md-4 col-lg-4 col-xl-4">
+                        <div class="col-md-push-4 col-md-8 col-lg-8 col-xl-8">
+                            <cms:pageSlot position="AboutUsPage17" var="feature" element="div"
+                                          class="aboutus-image-right">
+                                <cms:component component="${feature}" element="div"
+                                               class="aboutus-section17-component"/>
+                            </cms:pageSlot>
+                        </div>
+                        <div class="col-md-pull-8 col-md-4 col-lg-4 col-xl-4">
                             <div class="about-middle-pad">
                                 <cms:pageSlot position="AboutUsPage5" var="feature" element="div"
                                               class="aboutus-section5-slot">
@@ -96,13 +105,6 @@
                             <a href="https://inthebox.id/id/cara-beli-inthebox"
                                class="about-middle-btn">Selengkapnya</a>
                         </div>
-                        <div class="col-md-8 col-lg-8 col-xl-8">
-                            <cms:pageSlot position="AboutUsPage17" var="feature" element="div"
-                                          class="aboutus-image-right">
-                                <cms:component component="${feature}" element="div"
-                                               class="aboutus-section17-component"/>
-                            </cms:pageSlot>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -111,73 +113,75 @@
 
             <%--faq section--%>
         <div class="about-faq">
-            <h1>
-                <cms:pageSlot position="AboutUsPage6" var="feature" element="div"
-                              class="aboutus-section6-slot">
-                    <cms:component component="${feature}" element="div"
-                                   class="aboutus-section6-component"/>
-                </cms:pageSlot>
-            </h1>
-            <a href="#que1" class="question" data-toggle="collapse">
-                <h3>
-                    <cms:pageSlot position="AboutUsPage7" var="feature" element="div"
-                                  class="aboutus-section7-slot">
+            <div class="container">
+                <h1>
+                    <cms:pageSlot position="AboutUsPage6" var="feature" element="div"
+                                  class="aboutus-section6-slot">
                         <cms:component component="${feature}" element="div"
-                                       class="yComponentWrapper aboutus-section7-component"/>
-                    </cms:pageSlot></h3>
-            </a>
-            <div class="answer collapse" id="que1">
-                <cms:pageSlot position="AboutUsPage8" var="feature" element="div"
-                              class="aboutus-section8-slot">
-                    <cms:component component="${feature}" element="div"
-                                   class="yComponentWrapper aboutus-section8-component"/>
-                </cms:pageSlot>
-            </div>
-            <a href="#que2" class="question" data-toggle="collapse">
-                <h3>
-                    <cms:pageSlot position="AboutUsPage9" var="feature" element="div"
-                                  class="aboutus-section9-slot">
-                        <cms:component component="${feature}" element="div"
-                                       class="yComponentWrapper aboutus-section9-component"/>
-                    </cms:pageSlot></h3>
-            </a>
-            <div class="answer collapse" id="que2">
-                <cms:pageSlot position="AboutUsPage10" var="feature" element="div"
-                              class="aboutus-section10-slot">
-                    <cms:component component="${feature}" element="div"
-                                   class="yComponentWrapper aboutus-section10-component"/>
-                </cms:pageSlot>
-            </div>
-            <a href="#que3" class="question" data-toggle="collapse">
-                <h3>
-                    <cms:pageSlot position="AboutUsPage11" var="feature" element="div"
-                                  class="aboutus-section11-slot">
-                        <cms:component component="${feature}" element="div"
-                                       class="yComponentWrapper aboutus-section11-component"/>
-                    </cms:pageSlot></h3>
-            </a>
-            <div class="answer collapse" id="que3">
-                <cms:pageSlot position="AboutUsPage12" var="feature" element="div"
-                              class="aboutus-section12-slot">
-                    <cms:component component="${feature}" element="div"
-                                   class="yComponentWrapper aboutus-section12-component"/>
-                </cms:pageSlot>
-            </div>
-            <a href="#que4" class="question" data-toggle="collapse">
-                <h3>
-                    <cms:pageSlot position="AboutUsPage13" var="feature" element="div"
-                                  class="aboutus-section13-slot">
-                        <cms:component component="${feature}" element="div"
-                                       class="yComponentWrapper aboutus-section13-component"/>
+                                       class="aboutus-section6-component"/>
                     </cms:pageSlot>
-                </h3>
-            </a>
-            <div class="answer collapse" id="que4">
-                <cms:pageSlot position="AboutUsPage14" var="feature" element="div"
-                              class="aboutus-section14-slot">
-                    <cms:component component="${feature}" element="div"
-                                   class="yComponentWrapper aboutus-section14-component"/>
-                </cms:pageSlot>
+                </h1>
+                <a href="#que1" class="question" data-toggle="collapse">
+                    <h3>
+                        <cms:pageSlot position="AboutUsPage7" var="feature" element="div"
+                                      class="aboutus-section7-slot">
+                            <cms:component component="${feature}" element="div"
+                                           class="yComponentWrapper aboutus-section7-component"/>
+                        </cms:pageSlot></h3>
+                </a>
+                <div class="answer collapse" id="que1">
+                    <cms:pageSlot position="AboutUsPage8" var="feature" element="div"
+                                  class="aboutus-section8-slot">
+                        <cms:component component="${feature}" element="div"
+                                       class="yComponentWrapper aboutus-section8-component"/>
+                    </cms:pageSlot>
+                </div>
+                <a href="#que2" class="question" data-toggle="collapse">
+                    <h3>
+                        <cms:pageSlot position="AboutUsPage9" var="feature" element="div"
+                                      class="aboutus-section9-slot">
+                            <cms:component component="${feature}" element="div"
+                                           class="yComponentWrapper aboutus-section9-component"/>
+                        </cms:pageSlot></h3>
+                </a>
+                <div class="answer collapse" id="que2">
+                    <cms:pageSlot position="AboutUsPage10" var="feature" element="div"
+                                  class="aboutus-section10-slot">
+                        <cms:component component="${feature}" element="div"
+                                       class="yComponentWrapper aboutus-section10-component"/>
+                    </cms:pageSlot>
+                </div>
+                <a href="#que3" class="question" data-toggle="collapse">
+                    <h3>
+                        <cms:pageSlot position="AboutUsPage11" var="feature" element="div"
+                                      class="aboutus-section11-slot">
+                            <cms:component component="${feature}" element="div"
+                                           class="yComponentWrapper aboutus-section11-component"/>
+                        </cms:pageSlot></h3>
+                </a>
+                <div class="answer collapse" id="que3">
+                    <cms:pageSlot position="AboutUsPage12" var="feature" element="div"
+                                  class="aboutus-section12-slot">
+                        <cms:component component="${feature}" element="div"
+                                       class="yComponentWrapper aboutus-section12-component"/>
+                    </cms:pageSlot>
+                </div>
+                <a href="#que4" class="question" data-toggle="collapse">
+                    <h3>
+                        <cms:pageSlot position="AboutUsPage13" var="feature" element="div"
+                                      class="aboutus-section13-slot">
+                            <cms:component component="${feature}" element="div"
+                                           class="yComponentWrapper aboutus-section13-component"/>
+                        </cms:pageSlot>
+                    </h3>
+                </a>
+                <div class="answer collapse" id="que4">
+                    <cms:pageSlot position="AboutUsPage14" var="feature" element="div"
+                                  class="aboutus-section14-slot">
+                        <cms:component component="${feature}" element="div"
+                                       class="yComponentWrapper aboutus-section14-component"/>
+                    </cms:pageSlot>
+                </div>
             </div>
         </div>
     </div>
