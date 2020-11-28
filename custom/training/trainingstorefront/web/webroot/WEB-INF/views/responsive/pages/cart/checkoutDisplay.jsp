@@ -45,15 +45,16 @@
             </c:if>
         </sec:authorize>
 
+
         <div class="col-sm-4 col-md-3 pull-left">
-            <button class="btn btn-default btn-block btn--continue-shopping js-continue-shopping-button" data-continue-shopping-url="${fn:escapeXml(continueShoppingUrl)}">
+            <button class="btn btn-block btn--continue-shopping js-continue-shopping-button button-cart-left" data-continue-shopping-url="${fn:escapeXml(continueShoppingUrl)}">
                 <spring:theme code="cart.page.continue"/>
             </button>
         </div>
 
         <div class="col-sm-4 col-md-3 pull-right">
             <ycommerce:testId code="checkoutButton">
-                <button class="btn btn-primary btn-block btn--continue-checkout js-continue-checkout-button" data-checkout-url="${fn:escapeXml(checkoutUrl)}">
+                <button class="btn btn-block btn--continue-checkout js-continue-checkout-button button-cart-right" data-checkout-url="${fn:escapeXml(checkoutUrl)}">
                     <spring:theme code="checkout.checkout"/>
                 </button>
             </ycommerce:testId>
