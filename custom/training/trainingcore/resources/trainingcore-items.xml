@@ -104,5 +104,129 @@
             </itemtype>
         </typegroup>
 
+        <typegroup name="Training">
+            <itemtype code="TrainingProduct" autocreate="true" generate="true" extends="Product">
+                <attributes>
+                    <attribute qualifier="searchable" type="java.lang.Boolean">
+                        <description>Is searchable Product</description>
+                        <modifiers/>
+                        <defaultvalue>Boolean.valueOf(true)</defaultvalue>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="mattress" type="java.lang.String">
+                        <description>Mattress Type</description>
+                        <modifiers optional="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="foam" type="java.lang.String">
+                        <description>Foam Type</description>
+                        <modifiers optional="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+            <itemtype code="TrainingVariantProduct" autocreate="true" generate="true" extends="VariantProduct">
+                <attributes>
+                    <!--<attribute qualifier="sku" type="java.lang.String">-->
+                    <!--<description>SKU Product</description>-->
+                    <!--<modifiers optional="true" initial="true"/>-->
+                    <!--<defaultvalue>Boolean.valueOf(true)</defaultvalue>-->
+                    <!--<persistence type="property"/>-->
+                    <!--</attribute>-->
+                    <attribute qualifier="size" type="java.lang.String">
+                        <description>Size Product</description>
+                        <modifiers optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="brand" type="java.lang.String">
+                        <description>Brand Product</description>
+                        <modifiers optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <!--<attribute qualifier="activeStatus" type="ActiveStatus">-->
+                    <!--<description>Active Status Product</description>-->
+                    <!--<modifiers />-->
+                    <!--<defaultvalue>em().getEnumerationValue("ActiveStatus","Active")</defaultvalue>-->
+                    <!--<persistence type="property"/>-->
+                    <!--</attribute>-->
+                </attributes>
+            </itemtype>
+            <itemtype code="TrainingTestimony" autocreate="true" generate="true">
+                <deployment table="TrainingTestimony" typecode="10300"/>
+                <attributes>
+                    <attribute qualifier="name" type="java.lang.String">
+                        <description>Name of Customer</description>
+                        <modifiers optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="rate" type="java.lang.Double">
+                        <description>Rate Testimony</description>
+                        <modifiers optional="false" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="title" type="java.lang.String">
+                        <description>Title Testimony</description>
+                        <modifiers optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="textArea" type="java.lang.String">
+                        <description>Text Area Testimony</description>
+                        <modifiers optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="dateTestimony" type="java.lang.String">
+                        <description>Date of Testimony</description>
+                        <modifiers optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+            <!--<itemtype code="TestActionProcess" extends="BusinessProcess" autocreate="true" generate="true" jaloclass="de.hybris.platform.commerceservices.jalo.process.TestActionProcess">-->
+            <!--<attributes>-->
+            <!--<attribute qualifier="something" type="java.lang.String">-->
+            <!--<persistence type="property"/>-->
+            <!--<description>Something</description>-->
+            <!--</attribute>-->
+            <!--</attributes>-->
+            <!--</itemtype>-->
+            <itemtype code="FooterNavigationComponent" autocreate="false"
+                      generate="true" extends="NavigationComponent">
+                <attributes>
+                    <attribute qualifier="phoneNumber" type="java.lang.String">
+                        <description>Phone Number</description>
+                        <modifiers optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="textNumber" type="java.lang.String">
+                        <description>Text Number</description>
+                        <modifiers optional="true" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="footerLogo" type="Media">
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+        </typegroup>
+
+        <typegroup>
+            <itemtype code="Customer" generate="false" autocreate="false">
+                <attributes>
+                    <attribute qualifier="id" type="java.lang.String">
+                        <modifiers/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+            
+            <itemtype code="Cart" generate="false" autocreate="false">
+                <attributes>
+                    <attribute qualifier="note" type="java.lang.String">
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+        </typegroup>
+
     </itemtypes>
 </items>

@@ -14,7 +14,7 @@ import de.hybris.platform.acceleratorstorefrontcommons.controllers.util.GlobalMe
 import de.hybris.platform.acceleratorstorefrontcommons.forms.AddressForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.UpdateEmailForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.UpdatePasswordForm;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.UpdateProfileForm;
+import org.training.storefront.forms.UpdateProfileForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.AddressValidator;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.EmailValidator;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.PasswordValidator;
@@ -488,6 +488,7 @@ public class AccountPageController extends AbstractSearchPageController
 		updateProfileForm.setTitleCode(customerData.getTitleCode());
 		updateProfileForm.setFirstName(customerData.getFirstName());
 		updateProfileForm.setLastName(customerData.getLastName());
+		updateProfileForm.setId(customerData.getId());
 
 		model.addAttribute("updateProfileForm", updateProfileForm);
 
@@ -513,6 +514,7 @@ public class AccountPageController extends AbstractSearchPageController
 		customerData.setTitleCode(updateProfileForm.getTitleCode());
 		customerData.setFirstName(updateProfileForm.getFirstName());
 		customerData.setLastName(updateProfileForm.getLastName());
+		customerData.setId(updateProfileForm.getId());
 		customerData.setUid(currentCustomerData.getUid());
 		customerData.setDisplayUid(currentCustomerData.getDisplayUid());
 

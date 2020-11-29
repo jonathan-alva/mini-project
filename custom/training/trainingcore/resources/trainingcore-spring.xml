@@ -17,6 +17,7 @@
 	<import resource="classpath:/trainingcore/integration/hot-folder-store-electronics-spring.xml"/>
 	<import resource="classpath:/trainingcore/integration/hot-folder-store-apparel-spring.xml"/>
 	<import resource="classpath:/trainingcore/integration/hot-folder-common-spring.xml"/>
+	<import resource="classpath:/trainingcore/integration/hot-folder-training-spring.xml"/>
 
 	<!-- SystemSetup for the TrainingCore -->
 	<bean id="acceleratorCoreSystemSetup" class="org.training.core.setup.CoreSystemSetup"
@@ -537,5 +538,33 @@
 	<bean id="defaultCSTicketStagnationAction" class="org.training.core.retention.impl.DefaultCSTicketStagnationAction" parent="abstractExtensibleRemoveCleanupAction">
 		<property name="itemCleanupHooks" ref="csTicketRetentionHooks"/>
 		<property name="ticketBusinessService" ref="ticketBusinessService"/>
+	</bean>
+
+
+	<alias alias="productService" name="defaultTrainingProductService"/>
+	<bean id="defaultTrainingProductService" class="org.training.core.service.impl.DefaultTrainingProductService"
+		  parent="defaultProductService">
+	</bean>
+
+	<alias alias="productDao" name="defaultTrainingProductDao"/>
+	<bean id="defaultTrainingProductDao" class="org.training.core.dao.impl.DefaultTrainingProductDao"
+		  parent="defaultProductDao">
+		<property name="flexibleSearchService" ref="flexibleSearchService"/>
+	</bean>
+
+	<alias alias="productTestimonyService" name="defaultTrainingTestimonyService"/>
+	<bean id="defaultTrainingTestimonyService" class="org.training.core.service.impl.DefaultTrainingTestimonyService"
+		  parent="defaultItemService">
+	</bean>
+
+	<alias alias="productTestimonyDao" name="defaultTrainingTestimonyDao"/>
+	<bean id="defaultTrainingTestimonyDao" class="org.training.core.dao.impl.DefaultTrainingTestimonyDao"
+		  parent="defaultItemDao">
+		<property name="flexibleSearchService" ref="flexibleSearchService"/>
+	</bean>
+
+	<alias name="defaultGenericProductDao" alias="trainingGenericProductDao"/>
+	<bean name="defaultGenericProductDao" class="de.hybris.platform.servicelayer.internal.dao.DefaultGenericDao">
+		<constructor-arg value="Product"/>
 	</bean>
 </beans>

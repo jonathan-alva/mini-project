@@ -9,7 +9,6 @@
 <spring:htmlEscape defaultHtmlEscape="true" />
 
 <div class="image-gallery js-gallery">
-    <span class="image-gallery__zoom-icon glyphicon glyphicon-resize-full"></span>
 
     <c:choose>
         <c:when test="${galleryImages == null || galleryImages.size() == 0}">
@@ -19,14 +18,14 @@
                         <spring:theme code="img.missingProductImage.responsive.product" var="imagePath" htmlEscape="false"/>
                         <c:choose>
                             <c:when test="${originalContextPath ne null}">
-								<c:choose>
-									<c:when test='${fn:startsWith(imagePath, originalContextPath)}'>	
-										<c:url value="${imagePath}" var="imageUrl" context="/"/>
-									</c:when>
-									<c:otherwise>
-										<c:url value="${imagePath}" var="imageUrl" context="${originalContextPath}"/>
-									</c:otherwise>
-								</c:choose>
+                                <c:choose>
+                                    <c:when test='${fn:startsWith(imagePath, originalContextPath)}'>
+                                        <c:url value="${imagePath}" var="imageUrl" context="/"/>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <c:url value="${imagePath}" var="imageUrl" context="${originalContextPath}"/>
+                                    </c:otherwise>
+                                </c:choose>
                             </c:when>
                             <c:otherwise>
                                 <c:url value="${imagePath}" var="imageUrl" />

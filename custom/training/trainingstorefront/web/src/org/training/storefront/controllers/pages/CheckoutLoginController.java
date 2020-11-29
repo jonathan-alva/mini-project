@@ -4,9 +4,8 @@
 package org.training.storefront.controllers.pages;
 
 import de.hybris.platform.acceleratorfacades.flow.CheckoutFlowFacade;
-import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractLoginPageController;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.GuestForm;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.RegisterForm;
+import org.training.storefront.forms.RegisterForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.GuestValidator;
 import de.hybris.platform.acceleratorstorefrontcommons.security.GUIDCookieStrategy;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;

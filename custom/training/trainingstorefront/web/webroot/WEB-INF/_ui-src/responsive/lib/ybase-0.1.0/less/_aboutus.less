@@ -1,0 +1,89 @@
+.about {
+
+  &-up {
+    background-color: #5F86C2;
+
+    &-content {
+      line-height: 1.5;
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 25px;
+      padding-bottom: 50px;
+    }
+  }
+
+  &-middle {
+    background-color: #7FC5F9;
+    font-size: 1.8rem;
+    padding-bottom: 50px;
+
+    &-content {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      padding-left: 55px;
+      padding-right: 55px;
+    }
+
+    &-pad {
+      padding-bottom: 40px;
+    }
+
+    &-btn {
+      background-color: #5F86C2;
+      color: white;
+      font-weight: bold;
+      text-transform: capitalize;
+      border-radius: 5px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &-faq {
+    font-size: 1.8rem;
+    text-align: center;
+    background-color: white;
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+  }
+}
+
+.image {
+  width: 88%;
+  height: auto;
+  padding-top: 25px;
+}
+
+.aboutus-image-left {
+  .image();
+  float: left;
+}
+
+.aboutus-image-right {
+  .image();
+  float: right;
+}
+
+@media (max-width: @screen-sm-max) {
+  .image {
+    width: 100%;
+  }
+
+  .aboutus-image-left {
+    .image();
+    float: left;
+  }
+
+  .aboutus-image-right {
+    .image();
+    float: left;
+  }
+}
+
+

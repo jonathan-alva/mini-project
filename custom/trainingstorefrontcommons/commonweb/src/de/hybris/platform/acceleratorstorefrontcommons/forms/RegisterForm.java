@@ -6,8 +6,7 @@ package de.hybris.platform.acceleratorstorefrontcommons.forms;
 /**
  * Form object for registration
  */
-public class RegisterForm
-{
+public class RegisterForm{
 
 	private String titleCode;
 	private String firstName;
@@ -17,6 +16,16 @@ public class RegisterForm
 	private String checkPwd;
 	private ConsentForm consentForm;
 	private boolean termsCheck;
+
+	private String id;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 
 	/**
 	 * @return the titleCode

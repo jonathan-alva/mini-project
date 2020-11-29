@@ -1,0 +1,52 @@
+# -----------------------------------------------------------------------
+# Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+# -----------------------------------------------------------------------
+# ImpEx for Importing Product Localisations
+
+# Macros / Replacement Parameter definitions
+$productCatalog = trainingProductCatalog
+$productCatalogName = Training Product Catalog
+
+$catalogVersion = catalogversion(catalog(id[default=$productCatalog]), version[default='Staged'])[unique=true, default=$productCatalog:Staged]
+
+# Language
+$lang = en
+
+# Update allProducts with localisations
+UPDATE TrainingProduct; code[unique = true]; $catalogVersion; name[lang = $lang]; description[lang = $lang]
+                      ; KASURINTHEBOX      ;                ; Kasur INTHEBOX    ; Kasur INTHEBOX
+                      ; INTHEBOXX          ;                ; INTHEBOX X        ; INTHEBOX X
+                      ; INTHEBOX101        ;                ; INTHEBOX 101      ; INTHEBOX 101
+                      ; INTHEBOXHYBRID     ;                ; INTHEBOX Hybrid   ; INTHEBOX HYBRID
+                      ; GULINGINTHEBOX     ;                ; GULING INTHEBOX   ; Guling INTHEBOX
+                      ; BANTALINTHEBOX     ;                ; BANTAL INTHEBOX   ; Bantal INTHEBOX
+                      ; SOFABED            ;                ; SOFA BED          ; SOFA BED
+
+UPDATE TrainingVariantProduct; code[unique = true]    ; name[lang = $lang]
+                             ; ITB-SINGLE             ; Single Size
+                             ; ITB-SUPER-SINGLE       ; Super Single Size
+                             ; ITB-FULL               ; Full Size
+                             ; ITB-QUEEN              ; Queen Size
+                             ; ITB-KING               ; King Size
+                             ; ITB-SUPER-KING         ; Super King Size
+                             ; ITBX-SINGLE            ; Single Size
+                             ; ITBX-SUPER-SINGLE      ; Super Single Size
+                             ; ITBX-FULL              ; Full Size
+                             ; ITBX-QUEEN             ; Queen Size
+                             ; ITBX-KING              ; King Size
+                             ; ITBX-SUPER-KING        ; Super King Size
+                             ; ITB101-SINGLE          ; Single Size
+                             ; ITB101-SUPER-SINGLE    ; Super Single Size
+                             ; ITB101-FULL            ; Full Size
+                             ; ITB101-QUEEN           ; Queen Size
+                             ; ITB101-KING            ; King Size
+                             ; ITB101-SUPER-KING      ; Super King Size
+                             ; ITBHYBRID-SINGLE       ; Single Size
+                             ; ITBHYBRID-SUPER-SINGLE ; Super Single Size
+                             ; ITBHYBRID-FULL         ; Full Size
+                             ; ITBHYBRID-QUEEN        ; Queen Size
+                             ; ITBHYBRID-KING         ; King Size
+                             ; ITBHYBRID-SUPER-KING   ; Super King Size
+                             ; ITB-GULING             ; Guling
+                             ; ITB-BANTAL             ; Bantal
+                             ; SOFA-BED               ; Super Single

@@ -10,7 +10,7 @@
 
 
 <c:choose>
-	<c:when test="${showCategoriesOnly}">	
+	<c:when test="${showCategoriesOnly}">
 		<nav:categoryNavLinks categories="${pageData.subCategories}"/>
 	</c:when>
 
