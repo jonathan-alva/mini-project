@@ -19,7 +19,7 @@
 <spring:url value="/checkout/multi/termsAndConditions" var="getTermsAndConditionsUrl" htmlEscape="false"/>
 
 <div class="checkout-summary-headline hidden-xs">
-    <spring:theme code="checkout.multi.order.summary" />
+    <spring:theme code="checkout.multi.order.summary.final" />
 </div>
 <div class="checkout-order-summary">
     <ycommerce:testId code="orderSummary">

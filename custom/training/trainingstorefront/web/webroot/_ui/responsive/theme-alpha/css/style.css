@@ -2547,7 +2547,7 @@ output {
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccc;
-  border-radius: 0;
+  border-radius: 20px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
@@ -3443,7 +3443,6 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-block {
   display: block;
-  width: 100%;
 }
 .btn-block + .btn-block {
   margin-top: 5px;
@@ -8243,7 +8242,7 @@ button {
   font-weight: bold;
 }
 .btn {
-  border-radius: 0 !important;
+  border-radius: 5px !important;
 }
 ul,
 ol {
@@ -10411,7 +10410,7 @@ fieldset[disabled] .btn-default.active {
   background-color: #ffffff;
 }
 .btn-primary {
-  border: 3px solid;
+  border: 2px solid;
   color: #ffffff;
   background-color: #ec7205;
   border-color: #ec7205;
@@ -12854,11 +12853,11 @@ a.product__listing .product__listing--promo:focus {
   content: "\e113";
 }
 .item__list .item__image {
-  width: 136px;
+  width: 176px;
   padding: 0 20px;
 }
 .item__list .item__image img {
-  max-width: 96px;
+  max-width: 192px;
 }
 .item__list .item__name {
   font-size: 16px;
@@ -12880,12 +12879,14 @@ a.product__listing .product__listing--promo:focus {
 }
 .item__list .item__total--column {
   text-align: right;
+  width: 10%;
 }
 .item__list .item__total {
   font-size: 15px;
   font-weight: 700;
   text-align: right;
   padding-left: 0;
+  width: 20%;
 }
 .item__list .item__remove,
 .item__list .item__menu {
@@ -12987,7 +12988,7 @@ a.product__listing .product__listing--promo:focus {
     vertical-align: middle;
   }
   .item__list .item__info {
-    width: 35%;
+    width: 40%;
     padding: 0 10px;
   }
   .item__list .item__delivery {
@@ -13276,8 +13277,8 @@ a.product__listing .product__listing--promo:focus {
 }
 .cart__actions,
 .cart__actions--top {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 30%;
+  padding-right: 30%;
   padding-bottom: 32px;
 }
 @media (max-width: 1024px) {
@@ -13298,6 +13299,8 @@ a.product__listing .product__listing--promo:focus {
 .item__list__cart {
   margin-top: 15px;
   margin-bottom: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .item__list__cart table td {
   padding: 0;
@@ -13385,7 +13388,7 @@ a.product__listing .product__listing--promo:focus {
   font-weight: bold;
 }
 .item__list__cart .item__quantity {
-  text-align: left;
+  text-align: center;
 }
 .item__list__cart .notification.has-error {
   padding: 0 30px;
@@ -13486,6 +13489,9 @@ a.product__listing .product__listing--promo:focus {
     padding-right: 10px;
   }
 }
+.cart-totals .cart-totals-center {
+  position: center;
+}
 .cart-totals .cart-totals-left {
   padding-left: 50px;
 }
@@ -13510,6 +13516,7 @@ a.product__listing .product__listing--promo:focus {
   font-weight: bold;
   padding-top: 15px;
   padding-bottom: 15px;
+  position: center;
 }
 .cart-totals .cart-totals-taxes {
   clear: both;
@@ -14954,15 +14961,11 @@ form .forgotten-password {
 .checkout-body-styling {
   padding: 30px 20px 15px;
   border: 1px solid #cccccc;
-  border-top: 0;
-}
-.checkout-steps {
-  padding-left: 30px;
+  border-radius: 16px;
 }
 .checkout-steps .step-head {
-  background: #ffffff;
+  background: #a6a6a6;
   color: #154259;
-  border: 1px solid #cccccc;
   font-size: 18px;
   font-weight: 600;
   position: relative;
@@ -15003,7 +15006,7 @@ form .forgotten-password {
 .checkout-steps .step-body .step-body-form {
   padding: 30px 20px 15px;
   border: 1px solid #cccccc;
-  border-top: 0;
+  border-radius: 16px;
 }
 .checkout-steps .step-body .step-body-form .radiobuttons_paymentselection {
   margin-bottom: 5px;
@@ -15041,7 +15044,7 @@ form .forgotten-password {
 .checkout-shipping {
   padding: 30px 20px 15px;
   border: 1px solid #cccccc;
-  border-top: 0;
+  border-radius: 16px;
   padding-top: 0;
   padding-bottom: 10px;
 }
@@ -15123,7 +15126,7 @@ form .forgotten-password {
 .checkout-paymentmethod {
   padding: 30px 20px 15px;
   border: 1px solid #cccccc;
-  border-top: 0;
+  border-radius: 16px;
   padding-top: 0;
 }
 .step-body .checkout-paymentmethod hr {
@@ -15306,7 +15309,7 @@ form .forgotten-password {
   .checkout-order-summary {
     padding: 30px 20px 15px;
     border: 1px solid #cccccc;
-    border-top: 0;
+    border-radius: 16px;
     margin-left: 20px;
     margin-right: 20px;
     padding-left: 0;
@@ -15320,7 +15323,7 @@ form .forgotten-password {
     padding: 0;
   }
   .checkout-order-summary .checkout-order-summary-list .checkout-order-summary-list-heading {
-    background-color: transparent!important;
+    background-color: transparent !important;
     color: #19212b;
     padding: 25px 20px;
     border-color: #e5e5e5;
@@ -15339,7 +15342,7 @@ form .forgotten-password {
 .checkout-review {
   padding: 30px 20px 15px;
   border: 1px solid #cccccc;
-  border-top: 0;
+  border-radius: 16px;
 }
 .checkout-review .checkout-order-summary .subtotals {
   margin-top: 0;
@@ -15476,6 +15479,42 @@ fieldset#startDate .form-group .control-label {
   .page-multiStepCheckoutSummaryPage #colorbox.read-only-grid td .grid-price {
     float: right;
   }
+}
+.checkout {
+  margin: 40px 0;
+}
+.checkout-heading {
+  font-size: 3.25rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .checkout {
+    margin: 50px 0;
+  }
+  .checkout-portlet {
+    display: flex;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.05);
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  .checkout-body {
+    padding: 25px;
+  }
+  .checkout-heading {
+    font-size: 3.9rem;
+  }
+}
+.btn.btn-brand:hover {
+  background-color: #7fc5f9;
+  color: #6086c2!important;
 }
 @media (max-width: 639px) {
   .checkout-coupon-list {
@@ -19601,6 +19640,91 @@ header {
   .plp-details-price {
     font-size: 4vw !important;
   }
+}
+.cart-item {
+  margin-left: 50px;
+  margin-top: 20px;
+  line-height: 2;
+}
+.cart-item-name {
+  color: black;
+}
+.cart-remove {
+  text-align: center;
+  margin-left: 0;
+}
+.cart-price {
+  color: #6086c2;
+  font-size: 2rem;
+  font-weight: 600;
+  font-style: italic;
+  padding-top: 20px;
+}
+.cart-qty {
+  color: #6086c2;
+  font-size: 2rem;
+  font-weight: 600;
+  font-style: italic;
+  line-height: .8;
+}
+.grand-total {
+  color: #6086c2;
+  font-weight: 600;
+  font-style: italic;
+}
+.button-cart-left {
+  background-color: white;
+  color: #A7ADCA;
+}
+.button-cart-right {
+  background-color: #5F86C2;
+  color: white;
+}
+.button-cart-left:hover {
+  background-color: #7FC5F9;
+  color: white;
+}
+.button-cart-right:hover {
+  background-color: #7FC5F9;
+  color: #5F86C2;
+}
+.qty-number {
+  color: #6086c2;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: bold;
+}
+.cart-jumlah-add {
+  text-align: center;
+  margin-right: 0;
+}
+.cart-price-style {
+  text-align: right;
+}
+.item__list li {
+  display: inline;
+}
+.itemcart {
+  font-weight: bold;
+}
+.itemcart-jumlah {
+  margin-left: 48.5%;
+}
+.itemcart-total {
+  margin-left: 38.5%;
+}
+.notes {
+  text-align: center;
+  padding-top: 30px;
+}
+.notes-title {
+  margin-right: 300px;
+}
+.notes-desc {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 .skip,
 .skiptocontent,

@@ -12,7 +12,7 @@
 
 <spring:htmlEscape defaultHtmlEscape="true" />
 
-<div class="checkout-summary-headline"><spring:theme code="checkout.multi.order.summary" /></div>
+<%--<div class="checkout-summary-headline"><spring:theme code="checkout.multi.order.summary" /></div>--%>
 
 <div class="checkout-order-summary">
     <multi-checkout:deliveryCartItems cartData="${cartData}" showDeliveryAddress="${showDeliveryAddress}" />

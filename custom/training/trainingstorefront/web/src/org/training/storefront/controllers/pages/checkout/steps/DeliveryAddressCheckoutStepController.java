@@ -21,12 +21,6 @@ import de.hybris.platform.commercefacades.user.data.AddressData;
 import de.hybris.platform.commercefacades.user.data.CountryData;
 import de.hybris.platform.commerceservices.address.AddressVerificationDecision;
 import de.hybris.platform.util.Config;
-import org.training.storefront.controllers.ControllerConstants;
-
-import java.util.Set;
-
-import javax.annotation.Resource;
-
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Controller;
@@ -36,6 +30,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.training.storefront.controllers.ControllerConstants;
+
+import javax.annotation.Resource;
+import java.util.Set;
 
 
 @Controller
