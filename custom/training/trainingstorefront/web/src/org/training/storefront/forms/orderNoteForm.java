@@ -1,13 +1,13 @@
 package org.training.storefront.forms;
 
 public class orderNoteForm {
-    public String note;
+    public String notes;
 
     public String getNote() {
-        return note;
+        return notes;
     }
 
-    public void setNote(String note) {
-        this.note = note;
+    public void setNote(String notes) {
+        this.notes = notes;
     }
 }
