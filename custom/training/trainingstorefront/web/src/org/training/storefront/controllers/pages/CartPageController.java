@@ -86,7 +86,7 @@ public class CartPageController extends AbstractCartPageController
 	public static final String SITE_QUOTES_ENABLED = "site.quotes.enabled.";
 	private static final String CART_CHECKOUT_ERROR = "cart.checkout.error";
 
-	private static final String ORDER_NOTE = "orderNote";
+	private static final String ORDER_NOTES = "orderNote";
 
 	private static final String ACTION_CODE_PATH_VARIABLE_PATTERN = "{actionCode:.*}";
 
@@ -330,7 +330,7 @@ public class CartPageController extends AbstractCartPageController
 			model.addAttribute(VOUCHER_FORM, new VoucherForm());
 		}
 
-		model.addAttribute(ORDER_NOTE, new orderNoteForm());
+		model.addAttribute(ORDER_NOTES, new orderNoteForm());
 
 		// Because DefaultSiteConfigService.getProperty() doesn't set default boolean value for undefined property,
 		// this property key was generated to use Config.getBoolean() method

@@ -207,9 +207,7 @@
                     </attribute>
                 </attributes>
             </itemtype>
-        </typegroup>
 
-        <typegroup>
             <itemtype code="Customer" generate="false" autocreate="false">
                 <attributes>
                     <attribute qualifier="id" type="java.lang.String">
@@ -218,15 +216,16 @@
                     </attribute>
                 </attributes>
             </itemtype>
-            
+
             <itemtype code="Cart" generate="false" autocreate="false">
                 <attributes>
-                    <attribute qualifier="note" type="java.lang.String">
+                    <attribute qualifier="notes" type="java.lang.String">
                         <persistence type="property"/>
                     </attribute>
                 </attributes>
             </itemtype>
         </typegroup>
+
 
     </itemtypes>
 </items>
