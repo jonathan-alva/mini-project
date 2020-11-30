@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface TrainingProductFacade {
     List<ProductData> getAllProductsData();
-    List<Object> getSomeBedsProductData();
+    List<ProductData> getSomeBedsProductData();
     List<ProductData> getProductVariant(ProductModel productModel);
 }

@@ -222,6 +222,11 @@
     <bean id="defaultProductSizePopulator" class="org.training.facades.populators.ProductSizePopulator">
     </bean>
 
+    <!--populator brand-->
+    <alias name="defaultProductBrandPopulator" alias="productBrandPopulator"/>
+    <bean id="defaultProductBrandPopulator" class="org.training.facades.populators.ProductBrandPopulator">
+    </bean>
+
     <!--search result populator-->
     <alias name="defaultTrainingSearchResultProductPopulator" alias="trainingSearchResultProductPopulator"/>
     <bean id="defaultTrainingSearchResultProductPopulator"
@@ -258,6 +263,9 @@
         <property name="populators">
             <map key-type="de.hybris.platform.commercefacades.product.ProductOption">
                 <entry key="PRODUCT_SIZE" value-ref="productSizePopulator"/>
+                <entry key="FOAM" value-ref="productFoamPopulator"/>
+                <entry key="MATTRESS" value-ref="productMattressPopulator"/>
+                <entry key="BRAND" value-ref="productBrandPopulator"/>
                 <entry key="PRICE" value-ref="productPricePopulator"/>
                 <entry key="CATEGORIES" value-ref="productCategoriesPopulatorList"/>
                 <entry key="GALLERY" value-ref="productGalleryImagesPopulator"/>

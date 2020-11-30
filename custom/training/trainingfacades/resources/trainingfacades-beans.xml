@@ -42,6 +42,9 @@
 	</bean>
 	<enum class="de.hybris.platform.commercefacades.product.ProductOption">
 		<value>PRODUCT_SIZE</value>
+		<value>FOAM</value>
+		<value>MATTRESS</value>
+		<value>BRAND</value>
 	</enum>
 </beans>
 
