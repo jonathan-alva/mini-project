@@ -1,6 +1,8 @@
 package org.training.storefront.forms;
 
-public class UpdateProfileForm extends de.hybris.platform.acceleratorstorefrontcommons.forms.UpdateProfileForm {
+import de.hybris.platform.acceleratorstorefrontcommons.forms.UpdateProfileForm;
+
+public class CustomUpdateProfileForm extends UpdateProfileForm {
 
     private String id;
 

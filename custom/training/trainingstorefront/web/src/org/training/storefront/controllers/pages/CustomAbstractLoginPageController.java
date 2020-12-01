@@ -8,7 +8,7 @@ import de.hybris.platform.acceleratorstorefrontcommons.controllers.ThirdPartyCon
 import de.hybris.platform.acceleratorstorefrontcommons.controllers.util.GlobalMessages;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.GuestForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.LoginForm;
-import org.training.storefront.forms.RegisterForm;
+import org.training.storefront.forms.CustomRegisterForm;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.model.pages.ContentPageModel;
 import org.springframework.ui.Model;
@@ -20,7 +20,7 @@ import java.util.Collections;
 /**
  * Abstract base class for login page controllers
  */
-public abstract class AbstractLoginPageController extends AbstractRegisterPageController
+public abstract class CustomAbstractLoginPageController extends CustomAbstractRegisterPageController
 {
 	protected static final String SPRING_SECURITY_LAST_USERNAME = "SPRING_SECURITY_LAST_USERNAME";
 
@@ -29,7 +29,7 @@ public abstract class AbstractLoginPageController extends AbstractRegisterPageCo
 	{
 		final LoginForm loginForm = new LoginForm();
 		model.addAttribute(loginForm);
-		model.addAttribute(new RegisterForm());
+		model.addAttribute(new CustomRegisterForm());
 		model.addAttribute(new GuestForm());
 
 		final String username = (String) session.getAttribute(SPRING_SECURITY_LAST_USERNAME);

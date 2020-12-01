@@ -9,7 +9,6 @@ import de.hybris.platform.acceleratorstorefrontcommons.controllers.util.GlobalMe
 import de.hybris.platform.acceleratorstorefrontcommons.forms.ConsentForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.GuestForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.LoginForm;
-import de.hybris.platform.acceleratorstorefrontcommons.forms.RegisterForm;
 import de.hybris.platform.acceleratorstorefrontcommons.security.AutoLoginStrategy;
 import de.hybris.platform.acceleratorstorefrontcommons.security.GUIDCookieStrategy;
 import de.hybris.platform.acceleratorstorefrontcommons.strategy.CustomerConsentDataStrategy;
@@ -46,6 +45,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.util.WebUtils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.training.storefront.forms.CustomRegisterForm;
 
 import static de.hybris.platform.commercefacades.constants.CommerceFacadesConstants.CONSENT_GIVEN;
 
@@ -122,7 +122,7 @@ public abstract class AbstractRegisterPageController extends AbstractPageControl
 		final Breadcrumb loginBreadcrumbEntry = new Breadcrumb("#",
 				getMessageSource().getMessage("header.link.login", null, getI18nService().getCurrentLocale()), null);
 		model.addAttribute("breadcrumbs", Collections.singletonList(loginBreadcrumbEntry));
-		model.addAttribute(new RegisterForm());
+		model.addAttribute(new CustomRegisterForm());
 		return getView();
 	}
 
@@ -133,9 +133,9 @@ public abstract class AbstractRegisterPageController extends AbstractPageControl
 	 * @return true if there are no binding errors or the account does not already exists.
 	 * @throws CMSItemNotFoundException
 	 */
-	protected String processRegisterUserRequest(final String referer, final RegisterForm form, final BindingResult bindingResult,
-			final Model model, final HttpServletRequest request, final HttpServletResponse response,
-			final RedirectAttributes redirectModel) throws CMSItemNotFoundException // NOSONAR
+	protected String processRegisterUserRequest(final String referer, final CustomRegisterForm form, final BindingResult bindingResult,
+												final Model model, final HttpServletRequest request, final HttpServletResponse response,
+												final RedirectAttributes redirectModel) throws CMSItemNotFoundException // NOSONAR
 	{
 		if (bindingResult.hasErrors())
 		{
@@ -240,7 +240,7 @@ public abstract class AbstractRegisterPageController extends AbstractPageControl
 			{
 				model.addAttribute(form);
 				model.addAttribute(new LoginForm());
-				model.addAttribute(new RegisterForm());
+				model.addAttribute(new CustomRegisterForm());
 				GlobalMessages.addErrorMessage(model, FORM_GLOBAL_ERROR);
 				return handleRegistrationError(model);
 			}

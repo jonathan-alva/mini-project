@@ -4,13 +4,14 @@
 package org.training.storefront.controllers.pages;
 
 import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
+import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractRegisterPageController;
 import de.hybris.platform.acceleratorstorefrontcommons.controllers.util.GlobalMessages;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.ConsentForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.GuestForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.LoginForm;
 import de.hybris.platform.cms2.model.pages.ContentPageModel;
 import org.springframework.validation.Validator;
-import org.training.storefront.forms.RegisterForm;
+import org.training.storefront.forms.CustomRegisterForm;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.commercefacades.consent.data.AnonymousConsentData;
 import de.hybris.platform.commercefacades.user.data.RegisterData;
@@ -39,11 +40,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import static de.hybris.platform.commercefacades.constants.CommerceFacadesConstants.CONSENT_GIVEN;
 
 
-public abstract class AbstractRegisterPageController extends de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.AbstractRegisterPageController
+public abstract class CustomAbstractRegisterPageController extends AbstractRegisterPageController
 {
     protected static final String CHECKOUT_ORDER_CONFIRMATION_CMS_PAGE_LABEL = "orderConfirmation";
 
-    private static final Logger LOGGER = Logger.getLogger(AbstractRegisterPageController.class);
+    private static final Logger LOGGER = Logger.getLogger(CustomAbstractRegisterPageController.class);
 
     private static final String FORM_GLOBAL_ERROR = "form.global.error";
 
@@ -57,7 +58,7 @@ public abstract class AbstractRegisterPageController extends de.hybris.platform.
         return customRegistrationValidator;
     }
 
-    protected String processRegisterUserRequest(final String referer, final RegisterForm form, final BindingResult bindingResult,
+    protected String processRegisterUserRequest(final String referer, final CustomRegisterForm form, final BindingResult bindingResult,
                                                 final Model model, final HttpServletRequest request, final HttpServletResponse response,
                                                 final RedirectAttributes redirectModel) throws CMSItemNotFoundException // NOSONAR
     {

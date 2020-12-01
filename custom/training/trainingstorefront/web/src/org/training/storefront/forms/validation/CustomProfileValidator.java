@@ -1,6 +1,6 @@
 package org.training.storefront.forms.validation;
 
-import org.training.storefront.forms.UpdateProfileForm;
+import org.training.storefront.forms.CustomUpdateProfileForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.ProfileValidator;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
@@ -12,7 +12,7 @@ public class CustomProfileValidator extends ProfileValidator implements Validato
 
     @Override
     public void validate(Object object, Errors errors) {
-        final UpdateProfileForm profileForm = (UpdateProfileForm) object;
+        final CustomUpdateProfileForm profileForm = (CustomUpdateProfileForm) object;
         final String title = profileForm.getTitleCode();
         final String firstName = profileForm.getFirstName();
         final String lastName = profileForm.getLastName();

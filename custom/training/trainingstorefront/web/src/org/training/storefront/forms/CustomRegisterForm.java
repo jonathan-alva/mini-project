@@ -3,12 +3,12 @@
  */
 package org.training.storefront.forms;
 
-import de.hybris.platform.acceleratorstorefrontcommons.forms.ConsentForm;
+import de.hybris.platform.acceleratorstorefrontcommons.forms.RegisterForm;
 
 /**
  * Form object for registration
  */
-public class RegisterForm extends de.hybris.platform.acceleratorstorefrontcommons.forms.RegisterForm
+public class CustomRegisterForm extends RegisterForm
 {
 
 	private String id;

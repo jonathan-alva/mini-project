@@ -1,6 +1,6 @@
 package org.training.storefront.forms;
 
-public class orderNoteForm {
+public class OrderNoteForm {
     public String notes;
 
     public String getNote() {
