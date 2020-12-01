@@ -19465,7 +19465,7 @@ header {
   padding-bottom: 10px;
 }
 .catalog {
-  margin: 40px 0px 0px 0px;
+  margin: 40px 0px;
 }
 .catalog-allbtn {
   margin-top: 20px;
@@ -19488,7 +19488,7 @@ header {
   padding: 0 10px;
 }
 .catalog-product-image img {
-  max-width: 100%;
+  width: 100%;
 }
 .catalog-product-name {
   color: #0f0f0f;
@@ -19522,7 +19522,7 @@ header {
 }
 @media (min-width: 768px) {
   .catalog {
-    margin: 50px 0px 0px 0px;
+    margin: 50px 0px;
   }
   .pdp {
     margin: 50px 0;
