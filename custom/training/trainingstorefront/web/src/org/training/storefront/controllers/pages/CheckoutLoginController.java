@@ -5,7 +5,7 @@ package org.training.storefront.controllers.pages;
 
 import de.hybris.platform.acceleratorfacades.flow.CheckoutFlowFacade;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.GuestForm;
-import org.training.storefront.forms.RegisterForm;
+import org.training.storefront.forms.CustomRegisterForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.GuestValidator;
 import de.hybris.platform.acceleratorstorefrontcommons.security.GUIDCookieStrategy;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
@@ -33,7 +33,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
  */
 @Controller
 @RequestMapping(value = "/login/checkout")
-public class CheckoutLoginController extends AbstractLoginPageController
+public class CheckoutLoginController extends CustomAbstractLoginPageController
 {
 	@Resource(name = "checkoutFlowFacade")
 	private CheckoutFlowFacade checkoutFlowFacade;
@@ -62,8 +62,8 @@ public class CheckoutLoginController extends AbstractLoginPageController
 	}
 
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
-	public String doCheckoutRegister(final RegisterForm form, final BindingResult bindingResult, final Model model,
-			final HttpServletRequest request, final HttpServletResponse response, final RedirectAttributes redirectModel)
+	public String doCheckoutRegister(final CustomRegisterForm form, final BindingResult bindingResult, final Model model,
+									 final HttpServletRequest request, final HttpServletResponse response, final RedirectAttributes redirectModel)
 			throws CMSItemNotFoundException
 	{
 		getRegistrationValidator().validate(form, bindingResult);

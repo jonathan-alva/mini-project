@@ -12,6 +12,11 @@
 		<property name="brand" type="String"/>
 	</bean>
 
+	<bean class="de.hybris.platform.commercefacades.product.data.VariantOptionData">
+		<property name="size" type="String"/>
+		<property name="name" type="String"/>
+	</bean>
+
 	<bean class="org.training.core.data.beans.TestimonyData">
 		<property name="name" type="String"/>
 		<property name="rate" type="Double"/>
@@ -42,6 +47,9 @@
 	</bean>
 	<enum class="de.hybris.platform.commercefacades.product.ProductOption">
 		<value>PRODUCT_SIZE</value>
+		<value>FOAM</value>
+		<value>MATTRESS</value>
+		<value>BRAND</value>
 	</enum>
 </beans>
 

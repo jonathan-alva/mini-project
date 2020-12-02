@@ -42,11 +42,10 @@ public class DefaultTrainingProductFacade implements TrainingProductFacade {
     }
 
     @Override
-    public List<Object> getSomeBedsProductData() {
+    public List<ProductData> getSomeBedsProductData() {
         List<ProductModel> productModels = productroductService.getAllProductModels();
         if(CollectionUtils.isNotEmpty(productModels)){
-//            final List<ProductData> productDataList = new ArrayList<>();
-            final List<Object> data = new ArrayList<>();
+            final List<ProductData> data = new ArrayList<>();
             List<String> baseProductNameList = new ArrayList<>();
             for(final ProductModel productModel: productModels){
                 // Check if category code of the product is "BED"
@@ -55,13 +54,10 @@ public class DefaultTrainingProductFacade implements TrainingProductFacade {
                     if(productCategory.equals("BED")){
                         String baseProductName = ((TrainingVariantProductModel) productModel).getBaseProduct().getName();
                         if(!baseProductNameList.contains(baseProductName)){
-                            final List<ProductOption> options = new ArrayList<>(Arrays.asList(ProductOption.PRICE));
+                            final List<ProductOption> options = new ArrayList<>(Arrays.asList(ProductOption.PRICE,ProductOption.FOAM, ProductOption.MATTRESS, ProductOption.PRODUCT_SIZE, ProductOption.BRAND));
                             final ProductData productDataConvert = productFacade.getProductForCodeAndOptions(productModel.getCode(), options);
-//                        ProductData productDataConvert = productConverter.convert(productModel);
-                            Object object[] = {productDataConvert,productModel};
                             baseProductNameList.add(baseProductName);
-//                        productDataList.add(productConverter.convert(productModel));
-                            data.add(object);
+                            data.add(productDataConvert);
                         }
                     }
                 }

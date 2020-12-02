@@ -30,7 +30,6 @@ public class TestimonyPageController extends AbstractPageController {
         storeCmsPageInModel(model, contentPageModel);
         setUpMetaDataForContentPage(model, contentPageModel);
 
-
         List<TestimonyData> testimonyDataList = testimonyFacade.getAllTestimonyModels();
         model.addAttribute("testimonyList", testimonyDataList);
 

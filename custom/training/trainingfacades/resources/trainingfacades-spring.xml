@@ -222,6 +222,11 @@
     <bean id="defaultProductSizePopulator" class="org.training.facades.populators.ProductSizePopulator">
     </bean>
 
+    <!--populator brand-->
+    <alias name="defaultProductBrandPopulator" alias="productBrandPopulator"/>
+    <bean id="defaultProductBrandPopulator" class="org.training.facades.populators.ProductBrandPopulator">
+    </bean>
+
     <!--search result populator-->
     <alias name="defaultTrainingSearchResultProductPopulator" alias="trainingSearchResultProductPopulator"/>
     <bean id="defaultTrainingSearchResultProductPopulator"
@@ -234,9 +239,9 @@
         <property name="add" ref="trainingSearchResultProductPopulator"/>
     </bean>
 
-	<alias name="defaultProductMattressPopulator" alias="productMattressPopulator"/>
-	<bean id="defaultProductMattressPopulator" class="org.training.facades.populators.ProductMattressPopulator">
-	</bean>
+    <alias name="defaultProductMattressPopulator" alias="productMattressPopulator"/>
+    <bean id="defaultProductMattressPopulator" class="org.training.facades.populators.ProductMattressPopulator">
+    </bean>
 
     <alias name="defaultProductFoamPopulator" alias="productFoamPopulator"/>
     <bean id="defaultProductFoamPopulator" class="org.training.facades.populators.ProductFoamPopulator">
@@ -252,12 +257,20 @@
         <property name="add" ref="productFoamPopulator"/>
     </bean>
 
+    <bean parent="modifyPopulatorList">
+        <property name="list" ref="productConverter"/>
+        <property name="add" ref="productSizePopulator"/>
+    </bean>
+
     <alias name="defaultProductConfiguredPopulator" alias="productConfiguredPopulator"/>
     <bean id="defaultProductConfiguredPopulator"
           class="de.hybris.platform.commercefacades.converter.impl.DefaultConfigurablePopulator">
         <property name="populators">
             <map key-type="de.hybris.platform.commercefacades.product.ProductOption">
                 <entry key="PRODUCT_SIZE" value-ref="productSizePopulator"/>
+                <entry key="FOAM" value-ref="productFoamPopulator"/>
+                <entry key="MATTRESS" value-ref="productMattressPopulator"/>
+                <entry key="BRAND" value-ref="productBrandPopulator"/>
                 <entry key="PRICE" value-ref="productPricePopulator"/>
                 <entry key="CATEGORIES" value-ref="productCategoriesPopulatorList"/>
                 <entry key="GALLERY" value-ref="productGalleryImagesPopulator"/>
@@ -279,9 +292,10 @@
     <bean id="defaultTestimonyFacade" class="org.training.facades.testimony.Impl.DefaultTrainingTestimonyFacade">
     </bean>
 
-	<alias name="defaultCustomCustomerFacade" alias="customerFacade"/>
-	<bean name="defaultCustomCustomerFacade" class="org.training.facades.customer.impl.DefaultCustomCustomerFacade" parent="defaultCustomerFacade">
-	</bean>
+    <alias name="defaultCustomCustomerFacade" alias="customerFacade"/>
+    <bean name="defaultCustomCustomerFacade" class="org.training.facades.customer.impl.DefaultCustomCustomerFacade"
+          parent="defaultCustomerFacade">
+    </bean>
 
     <bean id="testimonyPopulator" class="org.training.facades.populators.TestimonyPopulator"/>
     <alias name="defaultTestimonyConverter" alias="testimonyConverter"/>
@@ -292,5 +306,13 @@
                 <ref bean="testimonyPopulator"/>
             </list>
         </property>
+    </bean>
+
+    <alias name="defaultVariantProductPopulator" alias="variantProductPopulator"/>
+    <bean id="defaultVariantProductPopulator" class="org.training.facades.populators.VariantTrainingProductPopulator">
+    </bean>
+    <bean parent="modifyPopulatorList">
+        <property name="list" ref="variantOptionDataConverter"/>
+        <property name="add" ref="variantProductPopulator"/>
     </bean>
 </beans>

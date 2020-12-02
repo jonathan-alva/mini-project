@@ -3,7 +3,7 @@
  */
 package org.training.storefront.controllers.pages;
 
-import org.training.storefront.forms.RegisterForm;
+import org.training.storefront.forms.CustomRegisterForm;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
 import de.hybris.platform.cms2.model.pages.AbstractPageModel;
 import org.training.storefront.controllers.ControllerConstants;
@@ -24,7 +24,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
  */
 @Controller
 @RequestMapping(value = "/register/checkout")
-public class CheckoutRegisterController extends AbstractRegisterPageController
+public class CheckoutRegisterController extends CustomAbstractRegisterPageController
 {
 	@Override
 	protected AbstractPageModel getCmsPage() throws CMSItemNotFoundException
@@ -52,8 +52,8 @@ public class CheckoutRegisterController extends AbstractRegisterPageController
 	}
 
 	@RequestMapping(value = "/newcustomer", method = RequestMethod.POST)
-	public String doCheckoutRegister(final RegisterForm form, final BindingResult bindingResult, final Model model,
-			final HttpServletRequest request, final HttpServletResponse response, final RedirectAttributes redirectModel)
+	public String doCheckoutRegister(final CustomRegisterForm form, final BindingResult bindingResult, final Model model,
+									 final HttpServletRequest request, final HttpServletResponse response, final RedirectAttributes redirectModel)
 			throws CMSItemNotFoundException
 	{
 		getRegistrationValidator().validate(form, bindingResult);

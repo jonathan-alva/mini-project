@@ -34,19 +34,19 @@
                     <div class="product-card-home">
                         <div class="product-card-home-body">
                                 <%--IMG--%>
-                            <product:productPrimaryImage product="${product[0]}" format="thumbnail"/>
+                            <product:productPrimaryImage product="${product}" format="thumbnail"/>
                             <div class="product-card-home-title">
-                                <h3>${product[1].getBaseProduct().getName()}</h3>
+                                <h3>${product.brand}</h3>
                             </div>
                             <div class="product-card-home-subtitle">
-                                    ${product[1].getBaseProduct().getFoam()}
+                                    ${product.foam}
                                 <br/>
-                                    ${product[1].getBaseProduct().getMattress()}
+                                    ${product.mattress}
                             </div>
                             <div class="product-card-home-price">
-                                <product:productListerItemPrice product="${product[0]}"/>
+                                <product:productListerItemPrice product="${product}"/>
                             </div>
-                            <a class="product-card-home-btn" href=".${fn:escapeXml(product[0].url)}">
+                            <a class="product-card-home-btn" href=".${fn:escapeXml(product.url)}">
                                 Beli Sekarang
                             </a>
                         </div>
