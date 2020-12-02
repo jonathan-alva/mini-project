@@ -239,9 +239,9 @@
         <property name="add" ref="trainingSearchResultProductPopulator"/>
     </bean>
 
-	<alias name="defaultProductMattressPopulator" alias="productMattressPopulator"/>
-	<bean id="defaultProductMattressPopulator" class="org.training.facades.populators.ProductMattressPopulator">
-	</bean>
+    <alias name="defaultProductMattressPopulator" alias="productMattressPopulator"/>
+    <bean id="defaultProductMattressPopulator" class="org.training.facades.populators.ProductMattressPopulator">
+    </bean>
 
     <alias name="defaultProductFoamPopulator" alias="productFoamPopulator"/>
     <bean id="defaultProductFoamPopulator" class="org.training.facades.populators.ProductFoamPopulator">
@@ -255,6 +255,11 @@
     <bean parent="modifyPopulatorList">
         <property name="list" ref="productConverter"/>
         <property name="add" ref="productFoamPopulator"/>
+    </bean>
+
+    <bean parent="modifyPopulatorList">
+        <property name="list" ref="productConverter"/>
+        <property name="add" ref="productSizePopulator"/>
     </bean>
 
     <alias name="defaultProductConfiguredPopulator" alias="productConfiguredPopulator"/>
@@ -287,9 +292,10 @@
     <bean id="defaultTestimonyFacade" class="org.training.facades.testimony.Impl.DefaultTrainingTestimonyFacade">
     </bean>
 
-	<alias name="defaultCustomCustomerFacade" alias="customerFacade"/>
-	<bean name="defaultCustomCustomerFacade" class="org.training.facades.customer.impl.DefaultCustomCustomerFacade" parent="defaultCustomerFacade">
-	</bean>
+    <alias name="defaultCustomCustomerFacade" alias="customerFacade"/>
+    <bean name="defaultCustomCustomerFacade" class="org.training.facades.customer.impl.DefaultCustomCustomerFacade"
+          parent="defaultCustomerFacade">
+    </bean>
 
     <bean id="testimonyPopulator" class="org.training.facades.populators.TestimonyPopulator"/>
     <alias name="defaultTestimonyConverter" alias="testimonyConverter"/>
@@ -300,5 +306,13 @@
                 <ref bean="testimonyPopulator"/>
             </list>
         </property>
+    </bean>
+
+    <alias name="defaultVariantProductPopulator" alias="variantProductPopulator"/>
+    <bean id="defaultVariantProductPopulator" class="org.training.facades.populators.VariantTrainingProductPopulator">
+    </bean>
+    <bean parent="modifyPopulatorList">
+        <property name="list" ref="variantOptionDataConverter"/>
+        <property name="add" ref="variantProductPopulator"/>
     </bean>
 </beans>
