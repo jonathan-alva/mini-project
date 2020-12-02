@@ -20,7 +20,7 @@
 <%--    <spring:theme code="register.description"/>--%>
 <%--</p>--%>
 
-<form:form method="post" modelAttribute="registerForm" action="${action}">
+<form:form method="post" modelAttribute="customRegisterForm" action="${action}">
     <formElement:formSelectBoxDefaultEnabled idKey="register.title"
                                              labelKey="register.title" selectCSSClass="form-control"
                                              path="titleCode" mandatory="true" skipBlank="false"
