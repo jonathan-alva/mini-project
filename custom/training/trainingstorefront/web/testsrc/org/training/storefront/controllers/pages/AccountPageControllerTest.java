@@ -16,7 +16,7 @@ import de.hybris.platform.acceleratorstorefrontcommons.controllers.pages.Abstrac
 import de.hybris.platform.acceleratorstorefrontcommons.forms.AddressForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.UpdateEmailForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.UpdatePasswordForm;
-import org.training.storefront.forms.UpdateProfileForm;
+import org.training.storefront.forms.CustomUpdateProfileForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.AddressValidator;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.EmailValidator;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.PasswordValidator;
@@ -159,7 +159,7 @@ public class AccountPageControllerTest
 	@Mock
 	private UpdateEmailForm emailForm;
 	@Mock
-	private UpdateProfileForm profileForm;
+	private CustomUpdateProfileForm profileForm;
 	@Mock
 	private UpdatePasswordForm passwordForm;
 	@Mock

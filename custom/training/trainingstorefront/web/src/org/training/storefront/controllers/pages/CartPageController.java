@@ -69,7 +69,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.training.storefront.forms.orderNoteForm;
+import org.training.storefront.forms.OrderNoteForm;
 
 
 /**
@@ -330,7 +330,7 @@ public class CartPageController extends AbstractCartPageController
 			model.addAttribute(VOUCHER_FORM, new VoucherForm());
 		}
 
-		model.addAttribute(ORDER_NOTES, new orderNoteForm());
+		model.addAttribute(ORDER_NOTES, new OrderNoteForm());
 
 		// Because DefaultSiteConfigService.getProperty() doesn't set default boolean value for undefined property,
 		// this property key was generated to use Config.getBoolean() method

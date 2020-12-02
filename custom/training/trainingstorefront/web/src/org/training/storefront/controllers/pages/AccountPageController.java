@@ -14,7 +14,7 @@ import de.hybris.platform.acceleratorstorefrontcommons.controllers.util.GlobalMe
 import de.hybris.platform.acceleratorstorefrontcommons.forms.AddressForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.UpdateEmailForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.UpdatePasswordForm;
-import org.training.storefront.forms.UpdateProfileForm;
+import org.training.storefront.forms.CustomUpdateProfileForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.AddressValidator;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.EmailValidator;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.validation.PasswordValidator;
@@ -483,7 +483,7 @@ public class AccountPageController extends AbstractSearchPageController
 		model.addAttribute(TITLE_DATA_ATTR, userFacade.getTitles());
 
 		final CustomerData customerData = customerFacade.getCurrentCustomer();
-		final UpdateProfileForm updateProfileForm = new UpdateProfileForm();
+		final CustomUpdateProfileForm updateProfileForm = new CustomUpdateProfileForm();
 
 		updateProfileForm.setTitleCode(customerData.getTitleCode());
 		updateProfileForm.setFirstName(customerData.getFirstName());
@@ -503,8 +503,8 @@ public class AccountPageController extends AbstractSearchPageController
 
 	@RequestMapping(value = "/update-profile", method = RequestMethod.POST)
 	@RequireHardLogIn
-	public String updateProfile(final UpdateProfileForm updateProfileForm, final BindingResult bindingResult, final Model model,
-			final RedirectAttributes redirectAttributes) throws CMSItemNotFoundException
+	public String updateProfile(final CustomUpdateProfileForm updateProfileForm, final BindingResult bindingResult, final Model model,
+								final RedirectAttributes redirectAttributes) throws CMSItemNotFoundException
 	{
 		getProfileValidator().validate(updateProfileForm, bindingResult);
 
